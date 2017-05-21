@@ -24,6 +24,5 @@ public class moveStage : MonoBehaviour {
 
 	void ScrollEnd() {
 		transform.Translate (-1 * (endPosition - startPosition), 0, 0);
-
 	}
 }
