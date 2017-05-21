@@ -49,10 +49,7 @@
      <Compile Include="Assets\script\control.cs" />
      <Compile Include="Assets\script\moveStage.cs" />
      <Compile Include="Assets\script\player.cs" />
-<<<<<<< HEAD
-=======
      <Compile Include="Assets\script\stage_create.cs" />
->>>>>>> master
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity5.6/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
