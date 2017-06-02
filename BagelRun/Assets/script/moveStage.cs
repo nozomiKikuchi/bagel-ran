@@ -19,6 +19,9 @@ public class moveStage : MonoBehaviour {
 		if (transform.position.x <= endPosition) {
 			ScrollEnd ();
 		}
+		if (PlayerPrefs.GetInt ("isGameOver") == 1) {
+			speed = 0;
+		}
 
 	}
 
