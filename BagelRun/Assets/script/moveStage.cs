@@ -9,15 +9,18 @@ public class moveStage : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		transform.Translate (-1 * speed * Time.deltaTime, 0, 0);
 
 		if (transform.position.x <= endPosition) {
 			ScrollEnd ();
+		}
+		if (PlayerPrefs.GetInt ("isGameOver") == 1) {
+			speed = 0;
 		}
 
 	}
