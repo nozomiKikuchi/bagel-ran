@@ -11,7 +11,7 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.gameObject.transform.Rotate (0, 0, -5);
+		this.gameObject.transform.Rotate (0, 0, -6);
 
 	}
 	void OnCollisionEnter2D(Collision2D col){

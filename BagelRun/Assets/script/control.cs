@@ -18,7 +18,7 @@ public class control : MonoBehaviour {
 	void OnMouseDown(){
 		if (PlayerPrefs.GetInt ("jumpping", -1) == 1) {
 			PlayerPrefs.SetInt ("jumpping", 0);
-			bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
+			bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 400);
 
 		}
 

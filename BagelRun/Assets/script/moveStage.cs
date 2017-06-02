@@ -19,7 +19,6 @@ public class moveStage : MonoBehaviour {
 		if (transform.position.x <= endPosition) {
 			ScrollEnd ();
 		}
-
 	}
 
 	void ScrollEnd() {

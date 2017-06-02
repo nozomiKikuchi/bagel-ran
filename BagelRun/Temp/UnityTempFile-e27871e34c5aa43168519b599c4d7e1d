@@ -88,6 +88,7 @@
 'Assets/script/control.cs'
 'Assets/script/moveStage.cs'
 'Assets/script/player.cs'
+'Assets/script/stage_create.cs'
 -r:'/Applications/Unity5.6/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity5.6/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
 -r:'/Applications/Unity5.6/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.dll'
