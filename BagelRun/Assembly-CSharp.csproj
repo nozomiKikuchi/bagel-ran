@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\script\UFOController.cs" />
+     <Compile Include="Assets\script\WheatController.cs" />
      <Compile Include="Assets\script\control.cs" />
      <Compile Include="Assets\script\moveStage.cs" />
      <Compile Include="Assets\script\player.cs" />
