@@ -11,5 +11,13 @@ public class button : MonoBehaviour {
 
 		SceneManager.LoadScene (0);
 	}
+	public void BackHome(){
+
+		Application.LoadLevel ("startScene");
+	}
+	public void gameStart(){
+
+		Application.LoadLevel ("mainScene");
+	}
 
 }
