@@ -6,11 +6,13 @@ using UnityEngine;
 public class gameOver : MonoBehaviour {
 	public GameObject text;
 	public GameObject reset;
+	public GameObject home;
 	// Use this for initialization
 	void Start () {
 		PlayerPrefs.SetInt ("isGameOver", 0);
 		text.gameObject.SetActive (false);
 		reset.gameObject.SetActive (false);
+		home.gameObject.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -18,6 +20,7 @@ public class gameOver : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("isGameOver") == 1) {
 			reset.gameObject.SetActive (true);
 			text.gameObject.SetActive (true);
+			home.gameObject.SetActive (true);
 		}
 
 
