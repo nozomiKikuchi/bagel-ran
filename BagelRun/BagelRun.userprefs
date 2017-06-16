@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\stage_create.cs">
@@ -27,6 +28,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 =======
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
+=======
+<Properties StartupItem="Assembly-CSharp.csproj">
+>>>>>>> fix conflict
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/control.cs">
     <Files>
@@ -42,7 +46,10 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> commit
 >>>>>>> commit
+=======
+>>>>>>> fix conflict
 </Properties>
