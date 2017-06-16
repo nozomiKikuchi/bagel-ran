@@ -18,14 +18,10 @@ MonoBehaviour:
     width: 1387
     height: 856
   m_ShowMode: 4
-  m_Title: 
-<<<<<<< HEAD
-  m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 492}
-=======
+  m_Title:
+
   m_RootView: {fileID: 6}
   m_MinSize: {x: 950, y: 392}
->>>>>>> commit
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -67,13 +63,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1105
     y: 0
-<<<<<<< HEAD
-    width: 1920
-    height: 30
-  m_MinSize: {x: 0, y: 0}
-  m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: 2 by 3
-=======
     width: 282
     height: 806
   m_MinSize: {x: 275, y: 50}
@@ -83,7 +72,6 @@ MonoBehaviour:
   - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 0
->>>>>>> commit
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,15 +87,6 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 30
-    width: 1920
-    height: 947
-  m_MinSize: {x: 915, y: 442}
-  m_MaxSize: {x: 22010, y: 10021}
-  vertical: 0
-  controlID: 195
-=======
     y: 0
     width: 202
     height: 488
@@ -118,7 +97,6 @@ MonoBehaviour:
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
->>>>>>> commit
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,19 +142,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 908
-    height: 947
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
-  vertical: 1
-  controlID: 237
-=======
     width: 1387
     height: 856
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
->>>>>>> commit
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,19 +160,6 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 908
-    y: 0
-    width: 308
-    height: 947
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 12}
-  m_Panes:
-  - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 0
-=======
     x: 0
     y: 0
     width: 1387
@@ -211,7 +167,6 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
->>>>>>> commit
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,26 +181,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1216
-    y: 0
-    width: 275
-    height: 947
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 0
-=======
     x: 0
     y: 836
     width: 1387
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
->>>>>>> commit
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -262,19 +203,6 @@ MonoBehaviour:
   - {fileID: 5}
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1491
-    y: 0
-    width: 429
-    height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
-  m_Panes:
-  - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 0
-=======
     x: 0
     y: 0
     width: 1105
@@ -283,7 +211,6 @@ MonoBehaviour:
   m_MaxSize: {x: 8004, y: 8042}
   vertical: 1
   controlID: 22
->>>>>>> commit
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,24 +229,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 908
-    height: 486
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 0
-=======
     width: 1105
     height: 488
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
   controlID: 23
->>>>>>> commit
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -334,15 +249,6 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 0
-    y: 486
-    width: 908
-    height: 461
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
-=======
     x: 202
     y: 0
     width: 903
@@ -350,7 +256,6 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
->>>>>>> commit
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
@@ -379,43 +284,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 910
-    y: 92
-    width: 304
-    height: 926
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-  m_ExpandedScenes: []
-  m_CurrenRootInstanceID: 0
-  m_Locked: 0
-  m_CurrentSortingName: TransformSorting
-=======
     x: 468
     y: 181
     width: 973
     height: 501
->>>>>>> commit
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -424,42 +296,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-<<<<<<< HEAD
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AutoRepaintOnSceneChange: 0
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_DepthBufferBits: 0
-  m_Pos:
-    serializedVersion: 2
-    x: 1493
-    y: 92
-    width: 427
-    height: 926
-  m_ScrollPosition: {x: 0, y: 0}
-  m_InspectorMode: 0
-  m_PreviewResizer:
-    m_CachedPref: -160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &14
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-=======
->>>>>>> commit
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -474,17 +310,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1218
-    y: 92
-    width: 271
-    height: 926
-=======
     x: 53
     y: 582
     width: 1103
     height: 297
->>>>>>> commit
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -497,11 +326,7 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
     - Assets/script
-<<<<<<< HEAD
-  m_ViewMode: 0
-=======
   m_ViewMode: 1
->>>>>>> commit
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/script
@@ -510,15 +335,9 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-    m_SelectedIDs: f0240000
-    m_LastClickedID: 9456
-    m_ExpandedIDs: 00000000e0240000f02400003e2500004c250000a42500009426000000ca9a3bffffff7f
-=======
     m_SelectedIDs: fa240000
     m_LastClickedID: 9466
     m_ExpandedIDs: 00000000b0240000fa24000058250000f225000000ca9a3bffffff7f
->>>>>>> commit
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -546,11 +365,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000e0240000f02400003e2500004c250000a42500009426000000ca9a3bffffff7f
-=======
     m_ExpandedIDs: 00000000b0240000fa24000058250000f2250000
->>>>>>> commit
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -605,8 +420,6 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 115
-<<<<<<< HEAD
-=======
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -640,7 +453,6 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
->>>>>>> commit
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -663,7 +475,6 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 0
     y: 578
     width: 906
@@ -718,7 +529,7 @@ MonoBehaviour:
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
-=======
+solutionForAspectRatios: 01000000000100000100
     x: 53
     y: 94
     width: 200
@@ -749,7 +560,6 @@ MonoBehaviour:
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
->>>>>>> commit
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -772,32 +582,19 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 0
-    y: 92
-    width: 906
-    height: 465
-=======
     x: 257
     y: 94
     width: 899
     height: 467
->>>>>>> commit
   m_SceneLighting: 1
   lastFramingTime: 3964.6784279942513
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-    m_Target: {x: 0, y: 0, z: 0}
-    speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
-=======
     m_Target: {x: 4.2072678, y: 0.1364849, z: 0}
     speed: 2
     m_Value: {x: 4.2072678, y: 0.1364849, z: 0}
->>>>>>> commit
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -824,15 +621,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
-    m_Target: 10
-    speed: 2
-    m_Value: 10
-=======
     m_Target: 25.117085
     speed: 2
     m_Value: 25.117085
->>>>>>> commit
   m_Ortho:
     m_Target: 1
     speed: 2
