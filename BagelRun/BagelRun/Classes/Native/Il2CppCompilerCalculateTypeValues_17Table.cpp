@@ -21,6 +21,7 @@
 #include "UnityEngine_UI_U3CPrivateImplementationDetailsU3E1486305137.h"
 #include "UnityEngine_UI_U3CPrivateImplementationDetailsU3E_1568637717.h"
 #include "AssemblyU2DCSharp_U3CModuleU3E3783534214.h"
+#include "AssemblyU2DCSharp_UfoControllerScript1959917385.h"
 #include "AssemblyU2DCSharp_button1265659864.h"
 #include "AssemblyU2DCSharp_control2399976437.h"
 #include "AssemblyU2DCSharp_gameOver1155260296.h"
@@ -58,32 +59,33 @@ extern const int32_t g_FieldOffsetTable1705[1] =
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1706 = { sizeof (U24ArrayTypeU3D12_t1568637717)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU3D12_t1568637717 ), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1707 = { sizeof (U3CModuleU3E_t3783534221), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1708 = { sizeof (button_t1265659864), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1709 = { sizeof (control_t2399976437), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1709[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1708 = { sizeof (UfoControllerScript_t1959917385), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1709 = { sizeof (button_t1265659864), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1710 = { sizeof (control_t2399976437), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1710[1] = 
 {
 	control_t2399976437::get_offset_of_bagel_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1710 = { sizeof (gameOver_t1155260296), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1710[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1711 = { sizeof (gameOver_t1155260296), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1711[3] = 
 {
 	gameOver_t1155260296::get_offset_of_text_2(),
 	gameOver_t1155260296::get_offset_of_reset_3(),
 	gameOver_t1155260296::get_offset_of_home_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1711 = { sizeof (moveStage_t2931930111), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1711[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1712 = { sizeof (moveStage_t2931930111), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1712[3] = 
 {
 	moveStage_t2931930111::get_offset_of_speed_2(),
 	moveStage_t2931930111::get_offset_of_startPosition_3(),
 	moveStage_t2931930111::get_offset_of_endPosition_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1712 = { sizeof (player_t1147742565), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1712[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1713 = { sizeof (player_t1147742565), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1713[1] = 
 {
 	player_t1147742565::get_offset_of__rigid_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1713 = { sizeof (stage_create_t365957765), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1714 = { sizeof (stage_create_t365957765), -1, 0, 0 };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

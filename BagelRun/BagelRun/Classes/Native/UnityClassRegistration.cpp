@@ -370,23 +370,23 @@ RegisterBuiltinTypes();
 	RegisterClass<UnityConnectSettings>();
 	//58. LevelGameManager
 	RegisterClass<LevelGameManager>();
-	//59. Collider2D
-	RegisterClass<Collider2D>();
-	//60. CircleCollider2D
-	RegisterClass<CircleCollider2D>();
-	//61. BoxCollider2D
-	RegisterClass<BoxCollider2D>();
-	//62. AudioListener
+	//59. AudioListener
 	RegisterClass<AudioListener>();
-	//63. AudioBehaviour
+	//60. AudioBehaviour
 	RegisterClass<AudioBehaviour>();
-	//64. RenderSettings
+	//61. RenderSettings
 	RegisterClass<RenderSettings>();
-	//65. FlareLayer
+	//62. FlareLayer
 	RegisterClass<FlareLayer>();
-	//66. LightmapSettings
+	//63. LightmapSettings
 	RegisterClass<LightmapSettings>();
-	//67. SpriteRenderer
+	//64. SpriteRenderer
 	RegisterClass<SpriteRenderer>();
+	//65. Collider2D
+	RegisterClass<Collider2D>();
+	//66. CircleCollider2D
+	RegisterClass<CircleCollider2D>();
+	//67. BoxCollider2D
+	RegisterClass<BoxCollider2D>();
 
 }
