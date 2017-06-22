@@ -36,6 +36,7 @@
 #include "AssemblyU2DCSharp_player1147742565.h"
 #include "UnityEngine_UnityEngine_Collision2D1539500754.h"
 #include "AssemblyU2DCSharp_stage_create365957765.h"
+#include "AssemblyU2DCSharp_UfoControllerScript1959917385.h"
 
 // button
 struct button_t1265659864;
@@ -65,6 +66,8 @@ struct player_t1147742565;
 struct Collision2D_t1539500754;
 // stage_create
 struct stage_create_t365957765;
+// UfoControllerScript
+struct UfoControllerScript_t1959917385;
 extern Il2CppCodeGenString* _stringLiteral1031738974;
 extern const uint32_t button_BackHome_m3998730249_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral1686649077;
@@ -155,7 +158,10 @@ extern "C"  void button__ctor_m3999060637 (button_t1265659864 * __this, const Me
 extern "C"  void button_Restart_m768831664 (button_t1265659864 * __this, const MethodInfo* method)
 {
 	{
+		// SceneManager.LoadScene (0);
+		// SceneManager.LoadScene (0);
 		SceneManager_LoadScene_m87258056(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		// }
 		return;
 	}
 }
@@ -169,7 +175,10 @@ extern "C"  void button_BackHome_m3998730249 (button_t1265659864 * __this, const
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// Application.LoadLevel ("startScene");
+		// Application.LoadLevel ("startScene");
 		Application_LoadLevel_m393995325(NULL /*static, unused*/, _stringLiteral1031738974, /*hidden argument*/NULL);
+		// }
 		return;
 	}
 }
@@ -183,7 +192,10 @@ extern "C"  void button_gameStart_m105574067 (button_t1265659864 * __this, const
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// Application.LoadLevel ("mainScene");
+		// Application.LoadLevel ("mainScene");
 		Application_LoadLevel_m393995325(NULL /*static, unused*/, _stringLiteral1686649077, /*hidden argument*/NULL);
+		// }
 		return;
 	}
 }
@@ -199,6 +211,7 @@ extern "C"  void control__ctor_m2144534888 (control_t2399976437 * __this, const 
 extern "C"  void control_Start_m3516908368 (control_t2399976437 * __this, const MethodInfo* method)
 {
 	{
+		// }
 		return;
 	}
 }
@@ -206,6 +219,7 @@ extern "C"  void control_Start_m3516908368 (control_t2399976437 * __this, const 
 extern "C"  void control_Update_m3897501109 (control_t2399976437 * __this, const MethodInfo* method)
 {
 	{
+		// }
 		return;
 	}
 }
@@ -219,25 +233,35 @@ extern "C"  void control_OnMouseDown_m2686697076 (control_t2399976437 * __this, 
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// if (PlayerPrefs.GetInt ("jumpping", -1) == 1) {
+		// if (PlayerPrefs.GetInt ("jumpping", -1) == 1) {
 		int32_t L_0 = PlayerPrefs_GetInt_m136681260(NULL /*static, unused*/, _stringLiteral3854275810, (-1), /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
-			goto IL_003b;
+			goto IL_003e;
 		}
 	}
 	{
+		// PlayerPrefs.SetInt ("jumpping", 0);
+		// PlayerPrefs.SetInt ("jumpping", 0);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3854275810, 0, /*hidden argument*/NULL);
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
 		GameObject_t1756533147 * L_1 = __this->get_bagel_2();
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
 		NullCheck(L_1);
 		Rigidbody2D_t502193897 * L_2 = GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143(L_1, /*hidden argument*/GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143_MethodInfo_var);
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
 		Vector2_t2243707579  L_3 = Vector2_get_up_m977201173(NULL /*static, unused*/, /*hidden argument*/NULL);
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
 		Vector2_t2243707579  L_4 = Vector2_op_Multiply_m4236139442(NULL /*static, unused*/, L_3, (300.0f), /*hidden argument*/NULL);
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
 		NullCheck(L_2);
 		Rigidbody2D_AddForce_m3200488178(L_2, L_4, /*hidden argument*/NULL);
 	}
 
-IL_003b:
+IL_003e:
 	{
+		// }
 		return;
 	}
 }
@@ -259,22 +283,34 @@ extern "C"  void gameOver_Start_m2596220231 (gameOver_t1155260296 * __this, cons
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// PlayerPrefs.SetInt ("isGameOver", 0);
+		// PlayerPrefs.SetInt ("isGameOver", 0);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2800021594, 0, /*hidden argument*/NULL);
+		// text.gameObject.SetActive (false);
 		GameObject_t1756533147 * L_0 = __this->get_text_2();
+		// text.gameObject.SetActive (false);
 		NullCheck(L_0);
 		GameObject_t1756533147 * L_1 = GameObject_get_gameObject_m3662236595(L_0, /*hidden argument*/NULL);
+		// text.gameObject.SetActive (false);
 		NullCheck(L_1);
 		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		// reset.gameObject.SetActive (false);
 		GameObject_t1756533147 * L_2 = __this->get_reset_3();
+		// reset.gameObject.SetActive (false);
 		NullCheck(L_2);
 		GameObject_t1756533147 * L_3 = GameObject_get_gameObject_m3662236595(L_2, /*hidden argument*/NULL);
+		// reset.gameObject.SetActive (false);
 		NullCheck(L_3);
 		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		// home.gameObject.SetActive (false);
 		GameObject_t1756533147 * L_4 = __this->get_home_4();
+		// home.gameObject.SetActive (false);
 		NullCheck(L_4);
 		GameObject_t1756533147 * L_5 = GameObject_get_gameObject_m3662236595(L_4, /*hidden argument*/NULL);
+		// home.gameObject.SetActive (false);
 		NullCheck(L_5);
 		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		// }
 		return;
 	}
 }
@@ -288,32 +324,44 @@ extern "C"  void gameOver_Update_m3787536330 (gameOver_t1155260296 * __this, con
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// if (PlayerPrefs.GetInt ("isGameOver") == 1) {
+		// if (PlayerPrefs.GetInt ("isGameOver") == 1) {
 		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2800021594, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
-			goto IL_0043;
+			goto IL_0046;
 		}
 	}
 	{
+		// reset.gameObject.SetActive (true);
 		GameObject_t1756533147 * L_1 = __this->get_reset_3();
+		// reset.gameObject.SetActive (true);
 		NullCheck(L_1);
 		GameObject_t1756533147 * L_2 = GameObject_get_gameObject_m3662236595(L_1, /*hidden argument*/NULL);
+		// reset.gameObject.SetActive (true);
 		NullCheck(L_2);
 		GameObject_SetActive_m2887581199(L_2, (bool)1, /*hidden argument*/NULL);
+		// text.gameObject.SetActive (true);
 		GameObject_t1756533147 * L_3 = __this->get_text_2();
+		// text.gameObject.SetActive (true);
 		NullCheck(L_3);
 		GameObject_t1756533147 * L_4 = GameObject_get_gameObject_m3662236595(L_3, /*hidden argument*/NULL);
+		// text.gameObject.SetActive (true);
 		NullCheck(L_4);
 		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
+		// home.gameObject.SetActive (true);
 		GameObject_t1756533147 * L_5 = __this->get_home_4();
+		// home.gameObject.SetActive (true);
 		NullCheck(L_5);
 		GameObject_t1756533147 * L_6 = GameObject_get_gameObject_m3662236595(L_5, /*hidden argument*/NULL);
+		// home.gameObject.SetActive (true);
 		NullCheck(L_6);
 		GameObject_SetActive_m2887581199(L_6, (bool)1, /*hidden argument*/NULL);
 	}
 
-IL_0043:
+IL_0046:
 	{
+		// }
 		return;
 	}
 }
@@ -321,6 +369,7 @@ IL_0043:
 extern "C"  void moveStage__ctor_m2094883096 (moveStage_t2931930111 * __this, const MethodInfo* method)
 {
 	{
+		// public float speed = 1.0f;
 		__this->set_speed_2((1.0f));
 		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
 		return;
@@ -330,6 +379,7 @@ extern "C"  void moveStage__ctor_m2094883096 (moveStage_t2931930111 * __this, co
 extern "C"  void moveStage_Start_m2832591684 (moveStage_t2931930111 * __this, const MethodInfo* method)
 {
 	{
+		// }
 		return;
 	}
 }
@@ -345,12 +395,19 @@ extern "C"  void moveStage_Update_m3646796779 (moveStage_t2931930111 * __this, c
 	Vector3_t2243707580  V_0;
 	memset(&V_0, 0, sizeof(V_0));
 	{
+		// transform.Translate (-1 * speed * Time.deltaTime, 0, 0);
+		// transform.Translate (-1 * speed * Time.deltaTime, 0, 0);
 		Transform_t3275118058 * L_0 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
 		float L_1 = __this->get_speed_2();
+		// transform.Translate (-1 * speed * Time.deltaTime, 0, 0);
 		float L_2 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		// transform.Translate (-1 * speed * Time.deltaTime, 0, 0);
 		NullCheck(L_0);
 		Transform_Translate_m3577349508(L_0, ((float)((float)((float)((float)(-1.0f)*(float)L_1))*(float)L_2)), (0.0f), (0.0f), /*hidden argument*/NULL);
+		// if (transform.position.x <= endPosition) {
+		// if (transform.position.x <= endPosition) {
 		Transform_t3275118058 * L_3 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		// if (transform.position.x <= endPosition) {
 		NullCheck(L_3);
 		Vector3_t2243707580  L_4 = Transform_get_position_m1104419803(L_3, /*hidden argument*/NULL);
 		V_0 = L_4;
@@ -358,27 +415,33 @@ extern "C"  void moveStage_Update_m3646796779 (moveStage_t2931930111 * __this, c
 		float L_6 = __this->get_endPosition_4();
 		if ((!(((float)L_5) <= ((float)L_6))))
 		{
-			goto IL_004b;
+			goto IL_004e;
 		}
 	}
 	{
+		// ScrollEnd ();
+		// ScrollEnd ();
 		moveStage_ScrollEnd_m295650058(__this, /*hidden argument*/NULL);
 	}
 
-IL_004b:
+IL_004e:
 	{
+		// if (PlayerPrefs.GetInt ("isGameOver") == 1) {
+		// if (PlayerPrefs.GetInt ("isGameOver") == 1) {
 		int32_t L_7 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2800021594, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_7) == ((uint32_t)1))))
 		{
-			goto IL_0066;
+			goto IL_006b;
 		}
 	}
 	{
+		// speed = 0;
 		__this->set_speed_2((0.0f));
 	}
 
-IL_0066:
+IL_006b:
 	{
+		// }
 		return;
 	}
 }
@@ -386,11 +449,15 @@ IL_0066:
 extern "C"  void moveStage_ScrollEnd_m295650058 (moveStage_t2931930111 * __this, const MethodInfo* method)
 {
 	{
+		// transform.Translate (-1 * (endPosition - startPosition), 0, 0);
+		// transform.Translate (-1 * (endPosition - startPosition), 0, 0);
 		Transform_t3275118058 * L_0 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
 		float L_1 = __this->get_endPosition_4();
 		float L_2 = __this->get_startPosition_3();
+		// transform.Translate (-1 * (endPosition - startPosition), 0, 0);
 		NullCheck(L_0);
 		Transform_Translate_m3577349508(L_0, ((float)((float)(-1.0f)*(float)((float)((float)L_1-(float)L_2)))), (0.0f), (0.0f), /*hidden argument*/NULL);
+		// }
 		return;
 	}
 }
@@ -412,8 +479,11 @@ extern "C"  void player_Start_m1004576464 (player_t1147742565 * __this, const Me
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// _rigid = this.GetComponent<Rigidbody2D> ();
+		// _rigid = this.GetComponent<Rigidbody2D> ();
 		Rigidbody2D_t502193897 * L_0 = Component_GetComponent_TisRigidbody2D_t502193897_m3702757851(__this, /*hidden argument*/Component_GetComponent_TisRigidbody2D_t502193897_m3702757851_MethodInfo_var);
 		__this->set__rigid_2(L_0);
+		// }
 		return;
 	}
 }
@@ -431,59 +501,79 @@ extern "C"  void player_Update_m2878195153 (player_t1147742565 * __this, const M
 	Vector3_t2243707580  V_1;
 	memset(&V_1, 0, sizeof(V_1));
 	{
+		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0)
+		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0)
 		GameObject_t1756533147 * L_0 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0)
 		NullCheck(L_0);
 		Transform_t3275118058 * L_1 = GameObject_get_transform_m909382139(L_0, /*hidden argument*/NULL);
+		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0)
 		NullCheck(L_1);
 		Vector3_t2243707580  L_2 = Transform_get_position_m1104419803(L_1, /*hidden argument*/NULL);
 		V_0 = L_2;
 		float L_3 = (&V_0)->get_x_1();
 		if ((!(((float)L_3) < ((float)(-10.0f)))))
 		{
-			goto IL_0060;
+			goto IL_0063;
 		}
 	}
 	{
+		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0)
 		int32_t L_4 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2800021594, /*hidden argument*/NULL);
 		if (L_4)
 		{
-			goto IL_0060;
+			goto IL_0063;
 		}
 	}
 	{
+		// this.gameObject.transform.Rotate (0, 0, 0);
+		// this.gameObject.transform.Rotate (0, 0, 0);
 		GameObject_t1756533147 * L_5 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// this.gameObject.transform.Rotate (0, 0, 0);
 		NullCheck(L_5);
 		Transform_t3275118058 * L_6 = GameObject_get_transform_m909382139(L_5, /*hidden argument*/NULL);
+		// this.gameObject.transform.Rotate (0, 0, 0);
 		NullCheck(L_6);
 		Transform_Rotate_m4255273365(L_6, (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("isGameOver", 1);
+		// PlayerPrefs.SetInt ("isGameOver", 1);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2800021594, 1, /*hidden argument*/NULL);
-		goto IL_00a1;
+		goto IL_00a4;
 	}
 
-IL_0060:
+IL_0063:
 	{
+		// else  if(this.gameObject.transform.position.x > -10)
+		// else  if(this.gameObject.transform.position.x > -10)
 		GameObject_t1756533147 * L_7 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// else  if(this.gameObject.transform.position.x > -10)
 		NullCheck(L_7);
 		Transform_t3275118058 * L_8 = GameObject_get_transform_m909382139(L_7, /*hidden argument*/NULL);
+		// else  if(this.gameObject.transform.position.x > -10)
 		NullCheck(L_8);
 		Vector3_t2243707580  L_9 = Transform_get_position_m1104419803(L_8, /*hidden argument*/NULL);
 		V_1 = L_9;
 		float L_10 = (&V_1)->get_x_1();
 		if ((!(((float)L_10) > ((float)(-10.0f)))))
 		{
-			goto IL_00a1;
+			goto IL_00a4;
 		}
 	}
 	{
+		// this.gameObject.transform.Rotate (0, 0, -5);
+		// this.gameObject.transform.Rotate (0, 0, -5);
 		GameObject_t1756533147 * L_11 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// this.gameObject.transform.Rotate (0, 0, -5);
 		NullCheck(L_11);
 		Transform_t3275118058 * L_12 = GameObject_get_transform_m909382139(L_11, /*hidden argument*/NULL);
+		// this.gameObject.transform.Rotate (0, 0, -5);
 		NullCheck(L_12);
 		Transform_Rotate_m4255273365(L_12, (0.0f), (0.0f), (-5.0f), /*hidden argument*/NULL);
 	}
 
-IL_00a1:
+IL_00a4:
 	{
+		// }
 		return;
 	}
 }
@@ -497,24 +587,31 @@ extern "C"  void player_OnCollisionEnter2D_m3701593854 (player_t1147742565 * __t
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// if (col.gameObject.tag == "stage") {
 		Collision2D_t1539500754 * L_0 = ___col0;
+		// if (col.gameObject.tag == "stage") {
 		NullCheck(L_0);
 		GameObject_t1756533147 * L_1 = Collision2D_get_gameObject_m4234358314(L_0, /*hidden argument*/NULL);
+		// if (col.gameObject.tag == "stage") {
 		NullCheck(L_1);
 		String_t* L_2 = GameObject_get_tag_m1425941094(L_1, /*hidden argument*/NULL);
+		// if (col.gameObject.tag == "stage") {
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_3 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_2, _stringLiteral2549549024, /*hidden argument*/NULL);
 		if (!L_3)
 		{
-			goto IL_0025;
+			goto IL_0028;
 		}
 	}
 	{
+		// PlayerPrefs.SetInt ("jumpping", 1);
+		// PlayerPrefs.SetInt ("jumpping", 1);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3854275810, 1, /*hidden argument*/NULL);
 	}
 
-IL_0025:
+IL_0028:
 	{
+		// }
 		return;
 	}
 }
@@ -530,6 +627,7 @@ extern "C"  void stage_create__ctor_m1793309730 (stage_create_t365957765 * __thi
 extern "C"  void stage_create_Start_m3851390866 (stage_create_t365957765 * __this, const MethodInfo* method)
 {
 	{
+		// }
 		return;
 	}
 }
@@ -537,6 +635,31 @@ extern "C"  void stage_create_Start_m3851390866 (stage_create_t365957765 * __thi
 extern "C"  void stage_create_Update_m799586761 (stage_create_t365957765 * __this, const MethodInfo* method)
 {
 	{
+		// }
+		return;
+	}
+}
+// System.Void UfoControllerScript::.ctor()
+extern "C"  void UfoControllerScript__ctor_m3733302702 (UfoControllerScript_t1959917385 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UfoControllerScript::Start()
+extern "C"  void UfoControllerScript_Start_m3478285518 (UfoControllerScript_t1959917385 * __this, const MethodInfo* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void UfoControllerScript::Update()
+extern "C"  void UfoControllerScript_Update_m3761321201 (UfoControllerScript_t1959917385 * __this, const MethodInfo* method)
+{
+	{
+		// }
 		return;
 	}
 }

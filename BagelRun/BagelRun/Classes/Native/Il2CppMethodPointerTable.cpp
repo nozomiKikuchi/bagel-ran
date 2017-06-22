@@ -10940,7 +10940,10 @@ extern "C" void player_OnCollisionEnter2D_m3701593854 ();
 extern "C" void stage_create__ctor_m1793309730 ();
 extern "C" void stage_create_Start_m3851390866 ();
 extern "C" void stage_create_Update_m799586761 ();
-extern const Il2CppMethodPointer g_MethodPointers[10926] = 
+extern "C" void UfoControllerScript__ctor_m3733302702 ();
+extern "C" void UfoControllerScript_Start_m3478285518 ();
+extern "C" void UfoControllerScript_Update_m3761321201 ();
+extern const Il2CppMethodPointer g_MethodPointers[10929] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -21868,4 +21871,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10926] =
 	stage_create__ctor_m1793309730,
 	stage_create_Start_m3851390866,
 	stage_create_Update_m799586761,
+	UfoControllerScript__ctor_m3733302702,
+	UfoControllerScript_Start_m3478285518,
+	UfoControllerScript_Update_m3761321201,
 };

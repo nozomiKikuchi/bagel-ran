@@ -61,7 +61,7 @@
 	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UnityCloudProjectID</key>
 	<string>001a3a32-8a9e-4ad1-920e-a2bc4d6b0b6c</string>
