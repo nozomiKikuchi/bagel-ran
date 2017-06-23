@@ -17,18 +17,12 @@ public class StartSceneButtonController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		float alpha = currentRemainTime / fadeTime;
-//		SpriteRenderer color = spRenderer.color;
-//		color.a = alpha;
-//		spRenderer.color = color;
-//		bagel.GetComponent<SpriteRenderer> ().color = new Color(1.0f, 1.0f, 1.0f, color);
-//		run.GetComponent<SpriteRenderer> ().color = new Color(1.0f, 1.0f, 1.0f, color);
 	}
 
 	public void OnClick() { // MUST public
 		PlayerPrefs.SetInt("StartButton", 1);
-		bagel.gameObject.SetActive (false);
-		run.gameObject.SetActive (false);
+//		bagel.gameObject.SetActive (false);
+//		run.gameObject.SetActive (false);
 		print ("clicked");
 	}
 }
