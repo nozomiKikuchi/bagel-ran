@@ -14,7 +14,7 @@ public class player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0) 
+		if (this.gameObject.transform.position.x <= -9.3 && PlayerPrefs.GetInt ("isGameOver") == 0) 
 		{
 			
 
@@ -23,10 +23,10 @@ public class player : MonoBehaviour {
 			PlayerPrefs.SetInt ("isGameOver", 1);
 
 		}
-		else  if(this.gameObject.transform.position.x > -10)
+		else  if(this.gameObject.transform.position.x > -9.3)
 			
 
-			this.gameObject.transform.Rotate (0, 0, -5);
+			this.gameObject.transform.Rotate (0, 0, -7);
 
 		}
 
