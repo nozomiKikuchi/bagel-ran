@@ -7,6 +7,7 @@ public class UfoControllerScript : MonoBehaviour {
 	public GameObject ufo;
 	public GameObject wheat1;
 	public GameObject wheat2;
+	public GameObject textbagel;
 	private float speed;
 	private float radius;
 	private float yPosition;
@@ -21,20 +22,27 @@ public class UfoControllerScript : MonoBehaviour {
 		yPosition = 30;
 		PlayerPrefs.SetInt("StartButton", 0);
 		PlayerPrefs.SetInt ("StopUFO", 0);
-
+		PlayerPrefs.SetInt ("ufoMoveRight", 0);
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (PlayerPrefs.GetInt ("StartButton") == 1) {
-			if (ufo.transform.position.x >= 5) {
+			if (ufo.transform.position.x >= 4.5) {
 				ufo.transform.position += new Vector3 (0, 0, 0);
-				if (wheat1.transform.position.y >= 2.5) {
-					wheat1.transform.position += new Vector3 (0, 0, 0);
-					wheat2.transform.position += new Vector3 (0, 0, 0);
+				if (wheat1.transform.position.y >= 2.0) {
+					wheat1.SetActive (false);
+					wheat2.SetActive (false);
+					if (ufo.transform.position.x > 20) {
+						ufo.transform.position += new Vector3 (0, 0, 0);
+						Application.LoadLevel ("mainScene");
+					} else {
+						ufo.transform.position += new Vector3 (0.1f, 0, 0);
+						PlayerPrefs.SetInt ("ufoMoveRight", 1);
+					}
 				} else {
-					wheat1.transform.position += new Vector3 (0, 0.1f, 0);
-					wheat2.transform.position += new Vector3 (0, 0.1f, 0);
+					wheat1.transform.position += new Vector3 (0, 0.08f, 0);
+					wheat2.transform.position += new Vector3 (0, 0.08f, 0);
 				}
 
 				PlayerPrefs.SetInt ("StopUFO", 1);
