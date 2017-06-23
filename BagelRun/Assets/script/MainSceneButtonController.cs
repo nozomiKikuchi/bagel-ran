@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class button : MonoBehaviour {
+public class MainSceneButtonController : MonoBehaviour {
 
 	// Use this for initialization
 
@@ -21,6 +21,5 @@ public class button : MonoBehaviour {
 
 		Application.LoadLevel ("mainScene");
 	}
-
 }
 
