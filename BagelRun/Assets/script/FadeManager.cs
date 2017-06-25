@@ -19,7 +19,7 @@ public class FadeManager : MonoBehaviour {
 
 	void Update () {
 		if (PlayerPrefs.GetInt ("ufoMoveRight") == 1) {
-			print("alpha");
+//			print("alpha");
 			GetComponent<Image>().color = new Color(red, green, blue, alfa);
 			alfa += speed;
 		}
