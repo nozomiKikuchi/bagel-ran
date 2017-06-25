@@ -21,8 +21,8 @@ public class StartSceneButtonController : MonoBehaviour {
 
 	public void OnClick() { // MUST public
 		PlayerPrefs.SetInt("StartButton", 1);
-//		bagel.gameObject.SetActive (false);
-//		run.gameObject.SetActive (false);
+		bagel.gameObject.SetActive (false);
+		run.gameObject.SetActive (false);
 		print ("clicked");
 	}
 }
