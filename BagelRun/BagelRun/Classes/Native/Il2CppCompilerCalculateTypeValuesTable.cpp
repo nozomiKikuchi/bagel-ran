@@ -1120,15 +1120,16 @@ extern const int32_t g_FieldOffsetTable1705[2];
 extern const int32_t g_FieldOffsetTable1706[6];
 extern const int32_t g_FieldOffsetTable1708[5];
 extern const int32_t g_FieldOffsetTable1709[8];
-extern const int32_t g_FieldOffsetTable1711[4];
-extern const int32_t g_FieldOffsetTable1712[5];
-extern const int32_t g_FieldOffsetTable1713[10];
-extern const int32_t g_FieldOffsetTable1714[1];
-extern const int32_t g_FieldOffsetTable1715[3];
+extern const int32_t g_FieldOffsetTable1711[6];
+extern const int32_t g_FieldOffsetTable1712[2];
+extern const int32_t g_FieldOffsetTable1713[5];
+extern const int32_t g_FieldOffsetTable1714[10];
+extern const int32_t g_FieldOffsetTable1715[1];
 extern const int32_t g_FieldOffsetTable1716[3];
-extern const int32_t g_FieldOffsetTable1717[1];
+extern const int32_t g_FieldOffsetTable1717[3];
+extern const int32_t g_FieldOffsetTable1718[1];
 
-extern const int32_t* g_FieldOffsetTable[1719] = 
+extern const int32_t* g_FieldOffsetTable[1720] = 
 {
 	NULL,
 	NULL,
@@ -2848,6 +2849,7 @@ extern const int32_t* g_FieldOffsetTable[1719] =
 	g_FieldOffsetTable1715,
 	g_FieldOffsetTable1716,
 	g_FieldOffsetTable1717,
+	g_FieldOffsetTable1718,
 	NULL,
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize0;
@@ -4569,7 +4571,8 @@ extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1715;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1716;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1717;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1718;
-extern const Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTable[1719] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1719;
+extern const Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTable[1720] = 
 {
 	&g_typeDefinitionSize0,
 	&g_typeDefinitionSize1,
@@ -6290,4 +6293,5 @@ extern const Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTable[1719] =
 	&g_typeDefinitionSize1716,
 	&g_typeDefinitionSize1717,
 	&g_typeDefinitionSize1718,
+	&g_typeDefinitionSize1719,
 };

@@ -7610,6 +7610,7 @@ extern "C" void Camera_INTERNAL_CALL_ScreenToViewportPoint_m529506484 ();
 extern "C" void Camera_ScreenPointToRay_m614889538 ();
 extern "C" void Camera_INTERNAL_CALL_ScreenPointToRay_m2752248646 ();
 extern "C" void Camera_get_main_m475173995 ();
+extern "C" void Camera_get_current_m2639890517 ();
 extern "C" void Camera_get_allCamerasCount_m989474043 ();
 extern "C" void Camera_GetAllCameras_m2922515227 ();
 extern "C" void Camera_FireOnPreCull_m1679634170 ();
@@ -8130,8 +8131,6 @@ extern "C" void GameObject_get_activeSelf_m313590879 ();
 extern "C" void GameObject_get_activeInHierarchy_m4242915935 ();
 extern "C" void GameObject_get_tag_m1425941094 ();
 extern "C" void GameObject_set_tag_m717375123 ();
-extern "C" void GameObject_FindGameObjectWithTag_m829057129 ();
-extern "C" void GameObject_FindWithTag_m1929006324 ();
 extern "C" void GameObject_SendMessage_m71956653 ();
 extern "C" void GameObject_Internal_AddComponentWithType_m214735204 ();
 extern "C" void GameObject_AddComponent_m3757565614 ();
@@ -10942,9 +10941,14 @@ extern "C" void MainSceneButtonController__ctor_m2887304150 ();
 extern "C" void MainSceneButtonController_Restart_m3661489295 ();
 extern "C" void MainSceneButtonController_BackHome_m104322040 ();
 extern "C" void MainSceneButtonController_gameStart_m2311023768 ();
+extern "C" void MoveCamera__ctor_m3742198839 ();
+extern "C" void MoveCamera_Start_m2614974443 ();
+extern "C" void MoveCamera_Update_m2357030312 ();
+extern "C" void MoveCamera_OnRightArrow_m3989916971 ();
+extern "C" void MoveCamera_OnLeftArrow_m2476212928 ();
 extern "C" void MovePanel__ctor_m1414208644 ();
-extern "C" void MovePanel_Start_m2112567348 ();
 extern "C" void MovePanel_Update_m71417553 ();
+extern "C" void MovePanel_OnWillRenderObject_m3890863828 ();
 extern "C" void moveStage__ctor_m2094883096 ();
 extern "C" void moveStage_Start_m2832591684 ();
 extern "C" void moveStage_Update_m3646796779 ();
@@ -10963,7 +10967,7 @@ extern "C" void StartSceneButtonController_OnClick_m38327000 ();
 extern "C" void UfoControllerScript__ctor_m3733302702 ();
 extern "C" void UfoControllerScript_Start_m3478285518 ();
 extern "C" void UfoControllerScript_Update_m3761321201 ();
-extern const Il2CppMethodPointer g_MethodPointers[10949] = 
+extern const Il2CppMethodPointer g_MethodPointers[10953] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -18561,6 +18565,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Camera_ScreenPointToRay_m614889538,
 	Camera_INTERNAL_CALL_ScreenPointToRay_m2752248646,
 	Camera_get_main_m475173995,
+	Camera_get_current_m2639890517,
 	Camera_get_allCamerasCount_m989474043,
 	Camera_GetAllCameras_m2922515227,
 	Camera_FireOnPreCull_m1679634170,
@@ -19081,8 +19086,6 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	GameObject_get_activeInHierarchy_m4242915935,
 	GameObject_get_tag_m1425941094,
 	GameObject_set_tag_m717375123,
-	GameObject_FindGameObjectWithTag_m829057129,
-	GameObject_FindWithTag_m1929006324,
 	GameObject_SendMessage_m71956653,
 	GameObject_Internal_AddComponentWithType_m214735204,
 	GameObject_AddComponent_m3757565614,
@@ -21893,9 +21896,14 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	MainSceneButtonController_Restart_m3661489295,
 	MainSceneButtonController_BackHome_m104322040,
 	MainSceneButtonController_gameStart_m2311023768,
+	MoveCamera__ctor_m3742198839,
+	MoveCamera_Start_m2614974443,
+	MoveCamera_Update_m2357030312,
+	MoveCamera_OnRightArrow_m3989916971,
+	MoveCamera_OnLeftArrow_m2476212928,
 	MovePanel__ctor_m1414208644,
-	MovePanel_Start_m2112567348,
 	MovePanel_Update_m71417553,
+	MovePanel_OnWillRenderObject_m3890863828,
 	moveStage__ctor_m2094883096,
 	moveStage_Start_m2832591684,
 	moveStage_Update_m3646796779,

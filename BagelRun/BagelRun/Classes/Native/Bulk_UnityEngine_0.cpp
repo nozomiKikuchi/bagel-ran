@@ -6923,6 +6923,15 @@ extern "C"  Camera_t189460977 * Camera_get_main_m475173995 (Il2CppObject * __thi
 	_il2cpp_icall_func = (Camera_get_main_m475173995_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::get_main()");
 	return _il2cpp_icall_func();
 }
+// UnityEngine.Camera UnityEngine.Camera::get_current()
+extern "C"  Camera_t189460977 * Camera_get_current_m2639890517 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef Camera_t189460977 * (*Camera_get_current_m2639890517_ftn) ();
+	static Camera_get_current_m2639890517_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Camera_get_current_m2639890517_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::get_current()");
+	return _il2cpp_icall_func();
+}
 // System.Int32 UnityEngine.Camera::get_allCamerasCount()
 extern "C"  int32_t Camera_get_allCamerasCount_m989474043 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
 {
