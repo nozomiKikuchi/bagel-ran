@@ -26,6 +26,7 @@
 #include "AssemblyU2DCSharp_FadeManager2205509615.h"
 #include "AssemblyU2DCSharp_FlickController77099233.h"
 #include "AssemblyU2DCSharp_MainSceneButtonController3316297225.h"
+#include "AssemblyU2DCSharp_MoveCamera3193441886.h"
 #include "AssemblyU2DCSharp_MovePanel3417660653.h"
 #include "AssemblyU2DCSharp_StartSceneButtonController2644416436.h"
 #include "AssemblyU2DCSharp_UfoControllerScript1959917385.h"
@@ -113,16 +114,24 @@ extern const int32_t g_FieldOffsetTable1709[8] =
 	FlickController_t77099233::get_offset_of_SignValueY_9(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1710 = { sizeof (MainSceneButtonController_t3316297225), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1711 = { sizeof (MovePanel_t3417660653), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1711[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1711 = { sizeof (MoveCamera_t3193441886), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1711[6] = 
 {
-	MovePanel_t3417660653::get_offset_of_look_2(),
-	MovePanel_t3417660653::get_offset_of_redPanel_3(),
-	MovePanel_t3417660653::get_offset_of_bluePanel_4(),
-	MovePanel_t3417660653::get_offset_of_greenPanel_5(),
+	MoveCamera_t3193441886::get_offset_of_redPanel_2(),
+	MoveCamera_t3193441886::get_offset_of_greenPanel_3(),
+	MoveCamera_t3193441886::get_offset_of_bluePanel_4(),
+	MoveCamera_t3193441886::get_offset_of_look_5(),
+	MoveCamera_t3193441886::get_offset_of_rightArrow_6(),
+	MoveCamera_t3193441886::get_offset_of_leftArrow_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1712 = { sizeof (StartSceneButtonController_t2644416436), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1712[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1712 = { sizeof (MovePanel_t3417660653), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1712[2] = 
+{
+	0,
+	MovePanel_t3417660653::get_offset_of__isRendered_3(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1713 = { sizeof (StartSceneButtonController_t2644416436), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1713[5] = 
 {
 	StartSceneButtonController_t2644416436::get_offset_of_bagel_2(),
 	StartSceneButtonController_t2644416436::get_offset_of_run_3(),
@@ -130,8 +139,8 @@ extern const int32_t g_FieldOffsetTable1712[5] =
 	StartSceneButtonController_t2644416436::get_offset_of_spRenderer_5(),
 	StartSceneButtonController_t2644416436::get_offset_of_fadeTime_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1713 = { sizeof (UfoControllerScript_t1959917385), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1713[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1714 = { sizeof (UfoControllerScript_t1959917385), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1714[10] = 
 {
 	UfoControllerScript_t1959917385::get_offset_of_ufo_2(),
 	UfoControllerScript_t1959917385::get_offset_of_wheat1_3(),
@@ -144,31 +153,31 @@ extern const int32_t g_FieldOffsetTable1713[10] =
 	UfoControllerScript_t1959917385::get_offset_of_y_10(),
 	UfoControllerScript_t1959917385::get_offset_of_z_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1714 = { sizeof (control_t2399976437), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1714[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1715 = { sizeof (control_t2399976437), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1715[1] = 
 {
 	control_t2399976437::get_offset_of_bagel_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1715 = { sizeof (gameOver_t1155260296), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1715[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1716 = { sizeof (gameOver_t1155260296), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1716[3] = 
 {
 	gameOver_t1155260296::get_offset_of_text_2(),
 	gameOver_t1155260296::get_offset_of_reset_3(),
 	gameOver_t1155260296::get_offset_of_home_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1716 = { sizeof (moveStage_t2931930111), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1716[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1717 = { sizeof (moveStage_t2931930111), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1717[3] = 
 {
 	moveStage_t2931930111::get_offset_of_speed_2(),
 	moveStage_t2931930111::get_offset_of_startPosition_3(),
 	moveStage_t2931930111::get_offset_of_endPosition_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1717 = { sizeof (player_t1147742565), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1717[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1718 = { sizeof (player_t1147742565), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1718[1] = 
 {
 	player_t1147742565::get_offset_of__rigid_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1718 = { sizeof (stage_create_t365957765), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1719 = { sizeof (stage_create_t365957765), -1, 0, 0 };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

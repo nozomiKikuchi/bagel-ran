@@ -39,8 +39,10 @@
 #include "AssemblyU2DCSharp_gameOver1155260296.h"
 #include "mscorlib_System_Boolean3825574718.h"
 #include "AssemblyU2DCSharp_MainSceneButtonController3316297225.h"
-#include "AssemblyU2DCSharp_MovePanel3417660653.h"
+#include "AssemblyU2DCSharp_MoveCamera3193441886.h"
 #include "UnityEngine_UnityEngine_Transform3275118058.h"
+#include "AssemblyU2DCSharp_MovePanel3417660653.h"
+#include "UnityEngine_UnityEngine_Camera189460977.h"
 #include "AssemblyU2DCSharp_moveStage2931930111.h"
 #include "AssemblyU2DCSharp_player1147742565.h"
 #include "UnityEngine_UnityEngine_Collision2D1539500754.h"
@@ -74,10 +76,14 @@ struct TouchU5BU5D_t3887265178;
 struct gameOver_t1155260296;
 // MainSceneButtonController
 struct MainSceneButtonController_t3316297225;
-// MovePanel
-struct MovePanel_t3417660653;
+// MoveCamera
+struct MoveCamera_t3193441886;
 // UnityEngine.Transform
 struct Transform_t3275118058;
+// MovePanel
+struct MovePanel_t3417660653;
+// UnityEngine.Camera
+struct Camera_t189460977;
 // moveStage
 struct moveStage_t2931930111;
 // player
@@ -103,9 +109,7 @@ extern Il2CppClass* Debug_t1368543263_il2cpp_TypeInfo_var;
 extern Il2CppClass* Mathf_t2336485820_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral372029430;
 extern Il2CppCodeGenString* _stringLiteral372029429;
-extern Il2CppCodeGenString* _stringLiteral833969642;
 extern Il2CppCodeGenString* _stringLiteral720514442;
-extern Il2CppCodeGenString* _stringLiteral2971133203;
 extern Il2CppCodeGenString* _stringLiteral2587790671;
 extern Il2CppCodeGenString* _stringLiteral1117181065;
 extern Il2CppCodeGenString* _stringLiteral450408760;
@@ -118,11 +122,14 @@ extern Il2CppCodeGenString* _stringLiteral1031738974;
 extern const uint32_t MainSceneButtonController_BackHome_m104322040_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral1686649077;
 extern const uint32_t MainSceneButtonController_gameStart_m2311023768_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral2115673192;
-extern const uint32_t MovePanel_Start_m2112567348_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral3783028378;
-extern Il2CppCodeGenString* _stringLiteral3822812305;
+extern Il2CppCodeGenString* _stringLiteral3731991939;
+extern const uint32_t MoveCamera_Start_m2614974443_MetadataUsageId;
+extern const uint32_t MoveCamera_OnRightArrow_m3989916971_MetadataUsageId;
+extern const uint32_t MoveCamera_OnLeftArrow_m2476212928_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2565608231;
 extern const uint32_t MovePanel_Update_m71417553_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2115673192;
+extern const uint32_t MovePanel_OnWillRenderObject_m3890863828_MetadataUsageId;
 extern const uint32_t moveStage_Update_m3646796779_MetadataUsageId;
 extern const MethodInfo* Component_GetComponent_TisRigidbody2D_t502193897_m3702757851_MethodInfo_var;
 extern const uint32_t player_Start_m1004576464_MetadataUsageId;
@@ -235,14 +242,18 @@ extern "C"  void GameObject_SetActive_m2887581199 (GameObject_t1756533147 * __th
 extern "C"  void SceneManager_LoadScene_m87258056 (Il2CppObject * __this /* static, unused */, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Application::LoadLevel(System.String)
 extern "C"  void Application_LoadLevel_m393995325 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.GameObject UnityEngine.GameObject::FindWithTag(System.String)
-extern "C"  GameObject_t1756533147 * GameObject_FindWithTag_m1929006324 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Transform UnityEngine.GameObject::get_transform()
 extern "C"  Transform_t3275118058 * GameObject_get_transform_m909382139 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Transform::get_position()
 extern "C"  Vector3_t2243707580  Transform_get_position_m1104419803 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::LookAt(UnityEngine.Vector3)
 extern "C"  void Transform_LookAt_m3314153180 (Transform_t3275118058 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Camera UnityEngine.Camera::get_current()
+extern "C"  Camera_t189460977 * Camera_get_current_m2639890517 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.Component::get_tag()
+extern "C"  String_t* Component_get_tag_m357168014 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.String::op_Equality(System.String,System.String)
+extern "C"  bool String_op_Equality_m1790663636 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Transform UnityEngine.Component::get_transform()
 extern "C"  Transform_t3275118058 * Component_get_transform_m2697483695 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Time::get_deltaTime()
@@ -261,8 +272,6 @@ extern "C"  void Transform_Rotate_m4255273365 (Transform_t3275118058 * __this, f
 extern "C"  GameObject_t1756533147 * Collision2D_get_gameObject_m4234358314 (Collision2D_t1539500754 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.GameObject::get_tag()
 extern "C"  String_t* GameObject_get_tag_m1425941094 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean System.String::op_Equality(System.String,System.String)
-extern "C"  bool String_op_Equality_m1790663636 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
 extern "C"  Vector3_t2243707580  Vector3_op_Addition_m3146764857 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Vector3_t2243707580  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
@@ -488,7 +497,7 @@ extern "C"  void FlickController_Update_m3090610249 (FlickController_t77099233 *
 		int32_t L_0 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if ((((int32_t)L_0) <= ((int32_t)0)))
 		{
-			goto IL_0291;
+			goto IL_027b;
 		}
 	}
 	{
@@ -516,7 +525,7 @@ extern "C"  void FlickController_Update_m3090610249 (FlickController_t77099233 *
 		}
 	}
 	{
-		goto IL_0290;
+		goto IL_027a;
 	}
 
 IL_0038:
@@ -528,7 +537,7 @@ IL_0038:
 		Vector3_t2243707580  L_6 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
 		__this->set_startPos_4(L_6);
 		// break;
-		goto IL_0290;
+		goto IL_027a;
 	}
 
 IL_004f:
@@ -608,7 +617,7 @@ IL_004f:
 		float L_36 = __this->get_swipeDistY_7();
 		if ((!(((float)L_35) > ((float)L_36))))
 		{
-			goto IL_01eb;
+			goto IL_01d5;
 		}
 	}
 	{
@@ -616,7 +625,7 @@ IL_004f:
 		float L_38 = __this->get_minSwipeDistX_2();
 		if ((!(((float)L_37) > ((float)L_38))))
 		{
-			goto IL_01eb;
+			goto IL_01d5;
 		}
 	}
 	{
@@ -633,50 +642,44 @@ IL_004f:
 		float L_44 = __this->get_SignValueX_8();
 		if ((!(((float)L_44) > ((float)(0.0f)))))
 		{
-			goto IL_01be;
+			goto IL_01b3;
 		}
 	}
 	{
-		// PlayerPrefs.SetInt("SwipeRight", 1);
-		// PlayerPrefs.SetInt("SwipeRight", 1);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral833969642, 1, /*hidden argument*/NULL);
 		// print("Swipe Right");
 		// print("Swipe Right");
 		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, _stringLiteral720514442, /*hidden argument*/NULL);
-		goto IL_01e5;
+		goto IL_01cf;
 	}
 
-IL_01be:
+IL_01b3:
 	{
 		// } else if (SignValueX < 0) {
 		float L_45 = __this->get_SignValueX_8();
 		if ((!(((float)L_45) < ((float)(0.0f)))))
 		{
-			goto IL_01e5;
+			goto IL_01cf;
 		}
 	}
 	{
-		// PlayerPrefs.SetInt("SwipeLeft", 1);
-		// PlayerPrefs.SetInt("SwipeLeft", 1);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2971133203, 1, /*hidden argument*/NULL);
 		// print("Swipe Left");
 		// print("Swipe Left");
 		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, _stringLiteral2587790671, /*hidden argument*/NULL);
 	}
 
-IL_01e5:
+IL_01cf:
 	{
-		goto IL_025d;
+		goto IL_0247;
 	}
 
-IL_01eb:
+IL_01d5:
 	{
 		// } else if (swipeDistY > minSwipeDistY) {
 		float L_46 = __this->get_swipeDistY_7();
 		float L_47 = __this->get_minSwipeDistY_3();
 		if ((!(((float)L_46) > ((float)L_47))))
 		{
-			goto IL_025d;
+			goto IL_0247;
 		}
 	}
 	{
@@ -693,23 +696,23 @@ IL_01eb:
 		float L_53 = __this->get_SignValueY_9();
 		if ((!(((float)L_53) > ((float)(0.0f)))))
 		{
-			goto IL_0240;
+			goto IL_022a;
 		}
 	}
 	{
 		// print("Swipe Up");
 		// print("Swipe Up");
 		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, _stringLiteral1117181065, /*hidden argument*/NULL);
-		goto IL_025c;
+		goto IL_0246;
 	}
 
-IL_0240:
+IL_022a:
 	{
 		// } else if (SignValueY < 0) {
 		float L_54 = __this->get_SignValueY_9();
 		if ((!(((float)L_54) < ((float)(0.0f)))))
 		{
-			goto IL_025c;
+			goto IL_0246;
 		}
 	}
 	{
@@ -718,18 +721,18 @@ IL_0240:
 		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, _stringLiteral450408760, /*hidden argument*/NULL);
 	}
 
-IL_025c:
+IL_0246:
 	{
 	}
 
-IL_025d:
+IL_0247:
 	{
 		// if (swipeDistX < minSwipeDistX && swipeDistY < minSwipeDistY) {
 		float L_55 = __this->get_swipeDistX_6();
 		float L_56 = __this->get_minSwipeDistX_2();
 		if ((!(((float)L_55) < ((float)L_56))))
 		{
-			goto IL_028b;
+			goto IL_0275;
 		}
 	}
 	{
@@ -737,7 +740,7 @@ IL_025d:
 		float L_58 = __this->get_minSwipeDistY_3();
 		if ((!(((float)L_57) < ((float)L_58))))
 		{
-			goto IL_028b;
+			goto IL_0275;
 		}
 	}
 	{
@@ -746,17 +749,17 @@ IL_025d:
 		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, _stringLiteral696030901, /*hidden argument*/NULL);
 	}
 
-IL_028b:
+IL_0275:
 	{
 		// break;
-		goto IL_0290;
+		goto IL_027a;
 	}
 
-IL_0290:
+IL_027a:
 	{
 	}
 
-IL_0291:
+IL_027b:
 	{
 		// }
 		return;
@@ -874,9 +877,9 @@ extern "C"  void MainSceneButtonController__ctor_m2887304150 (MainSceneButtonCon
 extern "C"  void MainSceneButtonController_Restart_m3661489295 (MainSceneButtonController_t3316297225 * __this, const MethodInfo* method)
 {
 	{
-		// SceneManager.LoadScene (0);
-		// SceneManager.LoadScene (0);
-		SceneManager_LoadScene_m87258056(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		// SceneManager.LoadScene (2);
+		// SceneManager.LoadScene (2);
+		SceneManager_LoadScene_m87258056(NULL /*static, unused*/, 2, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -915,29 +918,220 @@ extern "C"  void MainSceneButtonController_gameStart_m2311023768 (MainSceneButto
 		return;
 	}
 }
-// System.Void MovePanel::.ctor()
-extern "C"  void MovePanel__ctor_m1414208644 (MovePanel_t3417660653 * __this, const MethodInfo* method)
+// System.Void MoveCamera::.ctor()
+extern "C"  void MoveCamera__ctor_m3742198839 (MoveCamera_t3193441886 * __this, const MethodInfo* method)
 {
 	{
 		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Void MovePanel::Start()
-extern "C"  void MovePanel_Start_m2112567348 (MovePanel_t3417660653 * __this, const MethodInfo* method)
+// System.Void MoveCamera::Start()
+extern "C"  void MoveCamera_Start_m2614974443 (MoveCamera_t3193441886 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (MovePanel_Start_m2112567348_MetadataUsageId);
+		il2cpp_codegen_initialize_method (MoveCamera_Start_m2614974443_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// look = GameObject.FindWithTag("MainCamera");
-		// look = GameObject.FindWithTag("MainCamera");
-		GameObject_t1756533147 * L_0 = GameObject_FindWithTag_m1929006324(NULL /*static, unused*/, _stringLiteral2115673192, /*hidden argument*/NULL);
-		__this->set_look_2(L_0);
+		// PlayerPrefs.SetInt ("panelColor", 2);
+		// PlayerPrefs.SetInt ("panelColor", 2);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 2, /*hidden argument*/NULL);
 		// }
+		return;
+	}
+}
+// System.Void MoveCamera::Update()
+extern "C"  void MoveCamera_Update_m2357030312 (MoveCamera_t3193441886 * __this, const MethodInfo* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void MoveCamera::OnRightArrow()
+extern "C"  void MoveCamera_OnRightArrow_m3989916971 (MoveCamera_t3193441886 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MoveCamera_OnRightArrow_m3989916971_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
+		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
+		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_0) == ((uint32_t)2))))
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		// look.transform.LookAt (redPanel.transform.position);
+		GameObject_t1756533147 * L_1 = __this->get_look_5();
+		// look.transform.LookAt (redPanel.transform.position);
+		NullCheck(L_1);
+		Transform_t3275118058 * L_2 = GameObject_get_transform_m909382139(L_1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_redPanel_2();
+		// look.transform.LookAt (redPanel.transform.position);
+		NullCheck(L_3);
+		Transform_t3275118058 * L_4 = GameObject_get_transform_m909382139(L_3, /*hidden argument*/NULL);
+		// look.transform.LookAt (redPanel.transform.position);
+		NullCheck(L_4);
+		Vector3_t2243707580  L_5 = Transform_get_position_m1104419803(L_4, /*hidden argument*/NULL);
+		// look.transform.LookAt (redPanel.transform.position);
+		NullCheck(L_2);
+		Transform_LookAt_m3314153180(L_2, L_5, /*hidden argument*/NULL);
+		// rightArrow.SetActive (false);
+		GameObject_t1756533147 * L_6 = __this->get_rightArrow_6();
+		// rightArrow.SetActive (false);
+		NullCheck(L_6);
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("panelColor", 3);
+		// PlayerPrefs.SetInt ("panelColor", 3);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 3, /*hidden argument*/NULL);
+		goto IL_0098;
+	}
+
+IL_004f:
+	{
+		// } else if (PlayerPrefs.GetInt ("panelColor") == 1){
+		// } else if (PlayerPrefs.GetInt ("panelColor") == 1){
+		int32_t L_7 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_7) == ((uint32_t)1))))
+		{
+			goto IL_0098;
+		}
+	}
+	{
+		// look.transform.LookAt (greenPanel.transform.position);
+		GameObject_t1756533147 * L_8 = __this->get_look_5();
+		// look.transform.LookAt (greenPanel.transform.position);
+		NullCheck(L_8);
+		Transform_t3275118058 * L_9 = GameObject_get_transform_m909382139(L_8, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_greenPanel_3();
+		// look.transform.LookAt (greenPanel.transform.position);
+		NullCheck(L_10);
+		Transform_t3275118058 * L_11 = GameObject_get_transform_m909382139(L_10, /*hidden argument*/NULL);
+		// look.transform.LookAt (greenPanel.transform.position);
+		NullCheck(L_11);
+		Vector3_t2243707580  L_12 = Transform_get_position_m1104419803(L_11, /*hidden argument*/NULL);
+		// look.transform.LookAt (greenPanel.transform.position);
+		NullCheck(L_9);
+		Transform_LookAt_m3314153180(L_9, L_12, /*hidden argument*/NULL);
+		// leftArrow.SetActive (true);
+		GameObject_t1756533147 * L_13 = __this->get_leftArrow_7();
+		// leftArrow.SetActive (true);
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)1, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("panelColor", 2);
+		// PlayerPrefs.SetInt ("panelColor", 2);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 2, /*hidden argument*/NULL);
+	}
+
+IL_0098:
+	{
+		// }
+		return;
+	}
+}
+// System.Void MoveCamera::OnLeftArrow()
+extern "C"  void MoveCamera_OnLeftArrow_m2476212928 (MoveCamera_t3193441886 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MoveCamera_OnLeftArrow_m2476212928_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
+		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
+		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_0) == ((uint32_t)2))))
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		// look.transform.LookAt (bluePanel.transform.position);
+		GameObject_t1756533147 * L_1 = __this->get_look_5();
+		// look.transform.LookAt (bluePanel.transform.position);
+		NullCheck(L_1);
+		Transform_t3275118058 * L_2 = GameObject_get_transform_m909382139(L_1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_bluePanel_4();
+		// look.transform.LookAt (bluePanel.transform.position);
+		NullCheck(L_3);
+		Transform_t3275118058 * L_4 = GameObject_get_transform_m909382139(L_3, /*hidden argument*/NULL);
+		// look.transform.LookAt (bluePanel.transform.position);
+		NullCheck(L_4);
+		Vector3_t2243707580  L_5 = Transform_get_position_m1104419803(L_4, /*hidden argument*/NULL);
+		// look.transform.LookAt (bluePanel.transform.position);
+		NullCheck(L_2);
+		Transform_LookAt_m3314153180(L_2, L_5, /*hidden argument*/NULL);
+		// leftArrow.SetActive (false);
+		GameObject_t1756533147 * L_6 = __this->get_leftArrow_7();
+		// leftArrow.SetActive (false);
+		NullCheck(L_6);
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("panelColor", 1);
+		// PlayerPrefs.SetInt ("panelColor", 1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 1, /*hidden argument*/NULL);
+		goto IL_0098;
+	}
+
+IL_004f:
+	{
+		// } else if (PlayerPrefs.GetInt ("panelColor") == 3) {
+		// } else if (PlayerPrefs.GetInt ("panelColor") == 3) {
+		int32_t L_7 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_7) == ((uint32_t)3))))
+		{
+			goto IL_0098;
+		}
+	}
+	{
+		// look.transform.LookAt (greenPanel.transform.position);
+		GameObject_t1756533147 * L_8 = __this->get_look_5();
+		// look.transform.LookAt (greenPanel.transform.position);
+		NullCheck(L_8);
+		Transform_t3275118058 * L_9 = GameObject_get_transform_m909382139(L_8, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_greenPanel_3();
+		// look.transform.LookAt (greenPanel.transform.position);
+		NullCheck(L_10);
+		Transform_t3275118058 * L_11 = GameObject_get_transform_m909382139(L_10, /*hidden argument*/NULL);
+		// look.transform.LookAt (greenPanel.transform.position);
+		NullCheck(L_11);
+		Vector3_t2243707580  L_12 = Transform_get_position_m1104419803(L_11, /*hidden argument*/NULL);
+		// look.transform.LookAt (greenPanel.transform.position);
+		NullCheck(L_9);
+		Transform_LookAt_m3314153180(L_9, L_12, /*hidden argument*/NULL);
+		// rightArrow.SetActive (true);
+		GameObject_t1756533147 * L_13 = __this->get_rightArrow_6();
+		// rightArrow.SetActive (true);
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)1, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("panelColor", 2);
+		// PlayerPrefs.SetInt ("panelColor", 2);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 2, /*hidden argument*/NULL);
+	}
+
+IL_0098:
+	{
+		// }
+		return;
+	}
+}
+// System.Void MovePanel::.ctor()
+extern "C"  void MovePanel__ctor_m1414208644 (MovePanel_t3417660653 * __this, const MethodInfo* method)
+{
+	{
+		// private bool _isRendered = false;
+		__this->set__isRendered_3((bool)0);
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -951,62 +1145,57 @@ extern "C"  void MovePanel_Update_m71417553 (MovePanel_t3417660653 * __this, con
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (PlayerPrefs.GetInt ("SwiopRight") == 1) {
-		// if (PlayerPrefs.GetInt ("SwiopRight") == 1) {
-		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3783028378, /*hidden argument*/NULL);
-		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
+		// if(_isRendered){
+		bool L_0 = __this->get__isRendered_3();
+		if (!L_0)
 		{
-			goto IL_0038;
+			goto IL_0018;
 		}
 	}
 	{
-		// look.transform.LookAt (redPanel.transform.position);
-		GameObject_t1756533147 * L_1 = __this->get_look_2();
-		// look.transform.LookAt (redPanel.transform.position);
-		NullCheck(L_1);
-		Transform_t3275118058 * L_2 = GameObject_get_transform_m909382139(L_1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_3 = __this->get_redPanel_3();
-		// look.transform.LookAt (redPanel.transform.position);
-		NullCheck(L_3);
-		Transform_t3275118058 * L_4 = GameObject_get_transform_m909382139(L_3, /*hidden argument*/NULL);
-		// look.transform.LookAt (redPanel.transform.position);
-		NullCheck(L_4);
-		Vector3_t2243707580  L_5 = Transform_get_position_m1104419803(L_4, /*hidden argument*/NULL);
-		// look.transform.LookAt (redPanel.transform.position);
-		NullCheck(L_2);
-		Transform_LookAt_m3314153180(L_2, L_5, /*hidden argument*/NULL);
-		goto IL_006a;
+		// Debug.Log ("カメラに映ってるよ！");
+		// Debug.Log ("カメラに映ってるよ！");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2565608231, /*hidden argument*/NULL);
 	}
 
-IL_0038:
+IL_0018:
 	{
-		// } else if (PlayerPrefs.GetInt ("SwiopLeft") == 1) {
-		// } else if (PlayerPrefs.GetInt ("SwiopLeft") == 1) {
-		int32_t L_6 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3822812305, /*hidden argument*/NULL);
-		if ((!(((uint32_t)L_6) == ((uint32_t)1))))
+		// _isRendered = false;
+		__this->set__isRendered_3((bool)0);
+		// }
+		return;
+	}
+}
+// System.Void MovePanel::OnWillRenderObject()
+extern "C"  void MovePanel_OnWillRenderObject_m3890863828 (MovePanel_t3417660653 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MovePanel_OnWillRenderObject_m3890863828_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if(Camera.current.tag == MAIN_CAMERA_TAG_NAME){
+		Camera_t189460977 * L_0 = Camera_get_current_m2639890517(NULL /*static, unused*/, /*hidden argument*/NULL);
+		// if(Camera.current.tag == MAIN_CAMERA_TAG_NAME){
+		NullCheck(L_0);
+		String_t* L_1 = Component_get_tag_m357168014(L_0, /*hidden argument*/NULL);
+		// if(Camera.current.tag == MAIN_CAMERA_TAG_NAME){
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_2 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_1, _stringLiteral2115673192, /*hidden argument*/NULL);
+		if (!L_2)
 		{
-			goto IL_006a;
+			goto IL_0023;
 		}
 	}
 	{
-		// look.transform.LookAt (bluePanel.transform.position);
-		GameObject_t1756533147 * L_7 = __this->get_look_2();
-		// look.transform.LookAt (bluePanel.transform.position);
-		NullCheck(L_7);
-		Transform_t3275118058 * L_8 = GameObject_get_transform_m909382139(L_7, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_9 = __this->get_bluePanel_4();
-		// look.transform.LookAt (bluePanel.transform.position);
-		NullCheck(L_9);
-		Transform_t3275118058 * L_10 = GameObject_get_transform_m909382139(L_9, /*hidden argument*/NULL);
-		// look.transform.LookAt (bluePanel.transform.position);
-		NullCheck(L_10);
-		Vector3_t2243707580  L_11 = Transform_get_position_m1104419803(L_10, /*hidden argument*/NULL);
-		// look.transform.LookAt (bluePanel.transform.position);
-		NullCheck(L_8);
-		Transform_LookAt_m3314153180(L_8, L_11, /*hidden argument*/NULL);
+		// _isRendered = true;
+		__this->set__isRendered_3((bool)1);
 	}
 
-IL_006a:
+IL_0023:
 	{
 		// }
 		return;
