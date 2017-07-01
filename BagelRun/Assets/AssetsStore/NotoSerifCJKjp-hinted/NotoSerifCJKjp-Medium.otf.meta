@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 94880ef05ad6c4eb5b4a8706f7deeddb
+timeCreated: 1498891372
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Noto Serif CJK JP
+  fontNames:
+  - Noto Serif CJK JP
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3c66e086b060b47828311eb04daf8b07, type: 3}
+  - {fileID: 12800000, guid: 416229e9db5d5473e94ad0892386ab94, type: 3}
+  - {fileID: 12800000, guid: 5655667d397a3460496857893698fcd9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

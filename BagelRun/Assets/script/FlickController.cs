@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class FlickController : MonoBehaviour {
 	private float minSwipeDistX;
 	private float minSwipeDistY;
 	Vector3 startPos, endPos;
 	float swipeDistX, swipeDistY, SignValueX, SignValueY;
-
 
 	// Use this for initialization
 	void Start () {
@@ -41,7 +41,7 @@ public class FlickController : MonoBehaviour {
 					SignValueX = Mathf.Sign (endPos.x - startPos.x);
 					if (SignValueX > 0) {
 						//右方向にスワイプしたとき
-//						look.transform.LookAt (rightPanel.transform.position);
+
 						print("Swipe Right");
 					} else if (SignValueX < 0) {
 						//左方向にスワイプしたとき
