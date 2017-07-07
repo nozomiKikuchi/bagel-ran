@@ -12,6 +12,7 @@
 -r:'/Applications/Unity5.6/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll'
 -r:'/Applications/Unity5.6/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'
 -r:'/Applications/Unity5.6/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll'
+-r:'Assets/AssetStore/DOTween/DOTween.dll'
 -r:'/Applications/Unity5.6/Unity.app/Contents/Managed/UnityEditor.dll'
 -define:UNITY_5_3_OR_NEWER
 -define:UNITY_5_4_OR_NEWER
@@ -103,6 +104,7 @@
 'Assets/script/MainSceneButtonController.cs'
 'Assets/script/MoveCamera.cs'
 'Assets/script/MovePanel.cs'
+'Assets/script/SliderController.cs'
 'Assets/script/StartSceneButtonController.cs'
 'Assets/script/UfoControllerScript.cs'
 'Assets/script/control.cs'
