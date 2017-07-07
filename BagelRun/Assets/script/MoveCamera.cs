@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MoveCamera : MonoBehaviour {
 
@@ -18,11 +19,15 @@ public class MoveCamera : MonoBehaviour {
 
 	public void OnRightArrow() {
 		if (PlayerPrefs.GetInt ("panelColor") == 2) {
-			look.transform.LookAt (redPanel.transform.position);
+			redPanel.gameObject.transform.DOLocalMove (new Vector3(-1750f, 0f, 0f), 1f);
+			greenPanel.gameObject.transform.DOLocalMove (new Vector3(-875f, 0f, 0f), 1f);
+			bluePanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
 			rightArrow.SetActive (false);
 			PlayerPrefs.SetInt ("panelColor", 3);
 		} else if (PlayerPrefs.GetInt ("panelColor") == 1){
-			look.transform.LookAt (greenPanel.transform.position);
+			redPanel.gameObject.transform.DOLocalMove (new Vector3(-875f, 0f, 0f), 1f);
+			greenPanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
+			bluePanel.gameObject.transform.DOLocalMove (new Vector3(875f, 0f, 0f), 1f);
 			leftArrow.SetActive (true);
 			PlayerPrefs.SetInt ("panelColor", 2);
 		}
@@ -30,11 +35,15 @@ public class MoveCamera : MonoBehaviour {
 
 	public void OnLeftArrow() {
 		if (PlayerPrefs.GetInt ("panelColor") == 2) {
-			look.transform.LookAt (bluePanel.transform.position);
+			redPanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
+			greenPanel.gameObject.transform.DOLocalMove (new Vector3(875f, 0f, 0f), 1f);
+			bluePanel.gameObject.transform.DOLocalMove (new Vector3(1750f, 0f, 0f), 1f);
 			leftArrow.SetActive (false);
 			PlayerPrefs.SetInt ("panelColor", 1);
 		} else if (PlayerPrefs.GetInt ("panelColor") == 3) {
-			look.transform.LookAt (greenPanel.transform.position);
+			redPanel.gameObject.transform.DOLocalMove (new Vector3(-875f, 0f, 0f), 1f);
+			greenPanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
+			bluePanel.gameObject.transform.DOLocalMove (new Vector3(875f, 0f, 0f), 1f);
 			rightArrow.SetActive (true);
 			PlayerPrefs.SetInt ("panelColor", 2);
 		}

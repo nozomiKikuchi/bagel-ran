@@ -25,4 +25,8 @@ public class StartSceneButtonController : MonoBehaviour {
 		run.gameObject.SetActive (false);
 		print ("clicked");
 	}
+
+	public void TapStart() {
+		Application.LoadLevel ("mainScene");
+	}
 }
