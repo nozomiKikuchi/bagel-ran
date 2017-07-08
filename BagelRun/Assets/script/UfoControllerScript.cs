@@ -18,7 +18,7 @@ public class UfoControllerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		speed = 3.0f;
+		speed = 4.0f;
 		radius = 0.5f;
 		yPosition = 30;
 		PlayerPrefs.SetInt("StartButton", 0);

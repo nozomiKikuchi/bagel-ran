@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class MoveCamera : MonoBehaviour {
 
 	public GameObject redPanel, greenPanel, bluePanel;
 	public GameObject look;
 	public GameObject rightArrow, leftArrow;
+
 	// Use this for initialization
 	void Start () {
 		PlayerPrefs.SetInt ("panelColor", 2);
@@ -15,6 +17,7 @@ public class MoveCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 	}
 
 	public void OnRightArrow() {
@@ -45,6 +48,7 @@ public class MoveCamera : MonoBehaviour {
 			greenPanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
 			bluePanel.gameObject.transform.DOLocalMove (new Vector3(800f, 0f, 0f), 1f);
 			rightArrow.SetActive (true);
+
 			PlayerPrefs.SetInt ("panelColor", 2);
 		}
 	}
