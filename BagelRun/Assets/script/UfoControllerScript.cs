@@ -18,7 +18,7 @@ public class UfoControllerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		speed = 3.0f;
+		speed = 4.0f;
 		radius = 0.5f;
 		yPosition = 30;
 		PlayerPrefs.SetInt("StartButton", 0);
@@ -29,7 +29,7 @@ public class UfoControllerScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (PlayerPrefs.GetInt ("StartButton") == 1) {
+		if (PlayerPrefs.GetInt ("StartButton") == 1) { 
 			if (ufo.transform.position.x >= 4.5) {
 				uforight.SetActive (true);
 				ufo.transform.position += new Vector3 (0, 0, 0);
