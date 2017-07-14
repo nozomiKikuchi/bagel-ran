@@ -9,10 +9,11 @@ public class StartSceneButtonController : MonoBehaviour {
 	private float currentRemainTime;
 	private SpriteRenderer spRenderer;
 	public float fadeTime = 1f;
+	private AudioSource sound01;
 
 	// Use this for initialization
 	void Start () {
-		
+		sound01 = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -23,6 +24,11 @@ public class StartSceneButtonController : MonoBehaviour {
 		PlayerPrefs.SetInt("StartButton", 1);
 		bagel.gameObject.SetActive (false);
 		run.gameObject.SetActive (false);
+		sound01.PlayOneShot(sound01.clip);
 		print ("clicked");
+	}
+
+	public void TapStart() {
+		Application.LoadLevel ("mainScene");
 	}
 }
