@@ -8130,6 +8130,8 @@ extern "C" void GameObject_get_activeSelf_m313590879 ();
 extern "C" void GameObject_get_activeInHierarchy_m4242915935 ();
 extern "C" void GameObject_get_tag_m1425941094 ();
 extern "C" void GameObject_set_tag_m717375123 ();
+extern "C" void GameObject_FindGameObjectWithTag_m829057129 ();
+extern "C" void GameObject_FindWithTag_m1929006324 ();
 extern "C" void GameObject_SendMessage_m71956653 ();
 extern "C" void GameObject_Internal_AddComponentWithType_m214735204 ();
 extern "C" void GameObject_AddComponent_m3757565614 ();
@@ -8463,6 +8465,7 @@ extern "C" void Input_INTERNAL_get_mousePosition_m2302165941 ();
 extern "C" void Input_get_mouseScrollDelta_m3430638853 ();
 extern "C" void Input_INTERNAL_get_mouseScrollDelta_m1140491498 ();
 extern "C" void Input_get_mousePresent_m1434891730 ();
+extern "C" void Input_get_touches_m388011594 ();
 extern "C" void Input_GetTouch_m1463942798 ();
 extern "C" void Input_INTERNAL_CALL_GetTouch_m1737132542 ();
 extern "C" void Input_get_touchCount_m2050827666 ();
@@ -9204,6 +9207,7 @@ extern "C" void Texture2D_get_whiteTexture_m1979591766 ();
 extern "C" void Texture2D_GetPixelBilinear_m3063031185 ();
 extern "C" void Texture2D_INTERNAL_CALL_GetPixelBilinear_m570286059 ();
 extern "C" void ThreadAndSerializationSafeAttribute__ctor_m3736564847 ();
+extern "C" void Time_get_time_m2216684562 ();
 extern "C" void Time_get_deltaTime_m2233168104 ();
 extern "C" void Time_get_unscaledTime_m862335845 ();
 extern "C" void Time_get_unscaledDeltaTime_m4281640537 ();
@@ -9270,6 +9274,8 @@ extern "C" void Transform_Translate_m1198703821 ();
 extern "C" void Transform_Rotate_m2612876682 ();
 extern "C" void Transform_Rotate_m4255273365 ();
 extern "C" void Transform_Rotate_m2449860094 ();
+extern "C" void Transform_LookAt_m3314153180 ();
+extern "C" void Transform_INTERNAL_CALL_LookAt_m1443061981 ();
 extern "C" void Transform_TransformDirection_m1639585047 ();
 extern "C" void Transform_INTERNAL_CALL_TransformDirection_m2899991790 ();
 extern "C" void Transform_TransformPoint_m3272254198 ();
@@ -9328,6 +9334,7 @@ extern "C" void Vector3_get_normalized_m936072361_AdjustorThunk ();
 extern "C" void Vector3_Dot_m3161182818 ();
 extern "C" void Vector3_Distance_m1859670022 ();
 extern "C" void Vector3_Magnitude_m1349200714 ();
+extern "C" void Vector3_get_magnitude_m860342598_AdjustorThunk ();
 extern "C" void Vector3_SqrMagnitude_m3759098164 ();
 extern "C" void Vector3_get_sqrMagnitude_m1814096310_AdjustorThunk ();
 extern "C" void Vector3_Min_m4249067335 ();
@@ -9377,38 +9384,6 @@ extern "C" void TypeInferenceRuleAttribute__ctor_m470566337 ();
 extern "C" void TypeInferenceRuleAttribute_ToString_m3941510216 ();
 extern "C" void WebRequestUtils_RedirectTo_m3803295888 ();
 extern "C" void WebRequestUtils__cctor_m893658947 ();
-extern "C" void AnalyticsTracker__ctor_m47609255 ();
-extern "C" void AnalyticsTracker_get_eventName_m492472474 ();
-extern "C" void AnalyticsTracker_set_eventName_m3418854143 ();
-extern "C" void AnalyticsTracker_get_TP_m2972917566 ();
-extern "C" void AnalyticsTracker_set_TP_m2860685991 ();
-extern "C" void AnalyticsTracker_Awake_m2456570402 ();
-extern "C" void AnalyticsTracker_Start_m90834595 ();
-extern "C" void AnalyticsTracker_OnEnable_m1011291651 ();
-extern "C" void AnalyticsTracker_OnDisable_m2590423102 ();
-extern "C" void AnalyticsTracker_OnApplicationPause_m112444632 ();
-extern "C" void AnalyticsTracker_OnDestroy_m2461673364 ();
-extern "C" void AnalyticsTracker_TriggerEvent_m1494303835 ();
-extern "C" void AnalyticsTracker_SendEvent_m374303143 ();
-extern "C" void AnalyticsTracker_BuildParameters_m1716991151 ();
-extern "C" void TrackableProperty__ctor_m462583363 ();
-extern "C" void TrackableProperty_get_fields_m3107932385 ();
-extern "C" void TrackableProperty_set_fields_m4153705492 ();
-extern "C" void TrackableProperty_GetHashCode_m1993064614 ();
-extern "C" void FieldWithTarget__ctor_m3122216809 ();
-extern "C" void FieldWithTarget_get_paramName_m2715104421 ();
-extern "C" void FieldWithTarget_set_paramName_m786299954 ();
-extern "C" void FieldWithTarget_get_target_m1391127050 ();
-extern "C" void FieldWithTarget_set_target_m1859868783 ();
-extern "C" void FieldWithTarget_get_fieldPath_m354282076 ();
-extern "C" void FieldWithTarget_set_fieldPath_m4229814661 ();
-extern "C" void FieldWithTarget_get_typeString_m124716110 ();
-extern "C" void FieldWithTarget_set_typeString_m2154747307 ();
-extern "C" void FieldWithTarget_get_doStatic_m86470931 ();
-extern "C" void FieldWithTarget_set_doStatic_m3820651670 ();
-extern "C" void FieldWithTarget_get_staticString_m3599225804 ();
-extern "C" void FieldWithTarget_set_staticString_m2234360111 ();
-extern "C" void FieldWithTarget_GetValue_m3773769385 ();
 extern "C" void AbstractEventData__ctor_m3586111519 ();
 extern "C" void AbstractEventData_Reset_m15186946 ();
 extern "C" void AbstractEventData_Use_m1797212290 ();
@@ -10918,17 +10893,58 @@ extern "C" void VerticalLayoutGroup_CalculateLayoutInputHorizontal_m497637066 ()
 extern "C" void VerticalLayoutGroup_CalculateLayoutInputVertical_m3227111700 ();
 extern "C" void VerticalLayoutGroup_SetLayoutHorizontal_m2935499508 ();
 extern "C" void VerticalLayoutGroup_SetLayoutVertical_m1302409034 ();
-extern "C" void button__ctor_m3999060637 ();
-extern "C" void button_Restart_m768831664 ();
-extern "C" void button_BackHome_m3998730249 ();
-extern "C" void button_gameStart_m105574067 ();
+extern "C" void AnalyticsTracker__ctor_m47609255 ();
+extern "C" void AnalyticsTracker_get_eventName_m492472474 ();
+extern "C" void AnalyticsTracker_set_eventName_m3418854143 ();
+extern "C" void AnalyticsTracker_get_TP_m2972917566 ();
+extern "C" void AnalyticsTracker_set_TP_m2860685991 ();
+extern "C" void AnalyticsTracker_Awake_m2456570402 ();
+extern "C" void AnalyticsTracker_Start_m90834595 ();
+extern "C" void AnalyticsTracker_OnEnable_m1011291651 ();
+extern "C" void AnalyticsTracker_OnDisable_m2590423102 ();
+extern "C" void AnalyticsTracker_OnApplicationPause_m112444632 ();
+extern "C" void AnalyticsTracker_OnDestroy_m2461673364 ();
+extern "C" void AnalyticsTracker_TriggerEvent_m1494303835 ();
+extern "C" void AnalyticsTracker_SendEvent_m374303143 ();
+extern "C" void AnalyticsTracker_BuildParameters_m1716991151 ();
+extern "C" void TrackableProperty__ctor_m462583363 ();
+extern "C" void TrackableProperty_get_fields_m3107932385 ();
+extern "C" void TrackableProperty_set_fields_m4153705492 ();
+extern "C" void TrackableProperty_GetHashCode_m1993064614 ();
+extern "C" void FieldWithTarget__ctor_m3122216809 ();
+extern "C" void FieldWithTarget_get_paramName_m2715104421 ();
+extern "C" void FieldWithTarget_set_paramName_m786299954 ();
+extern "C" void FieldWithTarget_get_target_m1391127050 ();
+extern "C" void FieldWithTarget_set_target_m1859868783 ();
+extern "C" void FieldWithTarget_get_fieldPath_m354282076 ();
+extern "C" void FieldWithTarget_set_fieldPath_m4229814661 ();
+extern "C" void FieldWithTarget_get_typeString_m124716110 ();
+extern "C" void FieldWithTarget_set_typeString_m2154747307 ();
+extern "C" void FieldWithTarget_get_doStatic_m86470931 ();
+extern "C" void FieldWithTarget_set_doStatic_m3820651670 ();
+extern "C" void FieldWithTarget_get_staticString_m3599225804 ();
+extern "C" void FieldWithTarget_set_staticString_m2234360111 ();
+extern "C" void FieldWithTarget_GetValue_m3773769385 ();
 extern "C" void control__ctor_m2144534888 ();
 extern "C" void control_Start_m3516908368 ();
 extern "C" void control_Update_m3897501109 ();
 extern "C" void control_OnMouseDown_m2686697076 ();
+extern "C" void FadeManager__ctor_m1847423336 ();
+extern "C" void FadeManager_Start_m4209179252 ();
+extern "C" void FadeManager_Update_m705433723 ();
+extern "C" void FlickController__ctor_m496695670 ();
+extern "C" void FlickController_Start_m1763023718 ();
+extern "C" void FlickController_Update_m3090610249 ();
 extern "C" void gameOver__ctor_m2948236363 ();
 extern "C" void gameOver_Start_m2596220231 ();
 extern "C" void gameOver_Update_m3787536330 ();
+extern "C" void MainSceneButtonController__ctor_m2887304150 ();
+extern "C" void MainSceneButtonController_Restart_m3661489295 ();
+extern "C" void MainSceneButtonController_BackHome_m104322040 ();
+extern "C" void MainSceneButtonController_gameStart_m2311023768 ();
+extern "C" void MovePanel__ctor_m1414208644 ();
+extern "C" void MovePanel_Start_m2112567348 ();
+extern "C" void MovePanel_Update_m71417553 ();
 extern "C" void moveStage__ctor_m2094883096 ();
 extern "C" void moveStage_Start_m2832591684 ();
 extern "C" void moveStage_Update_m3646796779 ();
@@ -10940,10 +10956,14 @@ extern "C" void player_OnCollisionEnter2D_m3701593854 ();
 extern "C" void stage_create__ctor_m1793309730 ();
 extern "C" void stage_create_Start_m3851390866 ();
 extern "C" void stage_create_Update_m799586761 ();
+extern "C" void StartSceneButtonController__ctor_m3817771263 ();
+extern "C" void StartSceneButtonController_Start_m647388595 ();
+extern "C" void StartSceneButtonController_Update_m4040313750 ();
+extern "C" void StartSceneButtonController_OnClick_m38327000 ();
 extern "C" void UfoControllerScript__ctor_m3733302702 ();
 extern "C" void UfoControllerScript_Start_m3478285518 ();
 extern "C" void UfoControllerScript_Update_m3761321201 ();
-extern const Il2CppMethodPointer g_MethodPointers[10929] = 
+extern const Il2CppMethodPointer g_MethodPointers[10949] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -19061,6 +19081,8 @@ extern const Il2CppMethodPointer g_MethodPointers[10929] =
 	GameObject_get_activeInHierarchy_m4242915935,
 	GameObject_get_tag_m1425941094,
 	GameObject_set_tag_m717375123,
+	GameObject_FindGameObjectWithTag_m829057129,
+	GameObject_FindWithTag_m1929006324,
 	GameObject_SendMessage_m71956653,
 	GameObject_Internal_AddComponentWithType_m214735204,
 	GameObject_AddComponent_m3757565614,
@@ -19394,6 +19416,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10929] =
 	Input_get_mouseScrollDelta_m3430638853,
 	Input_INTERNAL_get_mouseScrollDelta_m1140491498,
 	Input_get_mousePresent_m1434891730,
+	Input_get_touches_m388011594,
 	Input_GetTouch_m1463942798,
 	Input_INTERNAL_CALL_GetTouch_m1737132542,
 	Input_get_touchCount_m2050827666,
@@ -20135,6 +20158,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10929] =
 	Texture2D_GetPixelBilinear_m3063031185,
 	Texture2D_INTERNAL_CALL_GetPixelBilinear_m570286059,
 	ThreadAndSerializationSafeAttribute__ctor_m3736564847,
+	Time_get_time_m2216684562,
 	Time_get_deltaTime_m2233168104,
 	Time_get_unscaledTime_m862335845,
 	Time_get_unscaledDeltaTime_m4281640537,
@@ -20201,6 +20225,8 @@ extern const Il2CppMethodPointer g_MethodPointers[10929] =
 	Transform_Rotate_m2612876682,
 	Transform_Rotate_m4255273365,
 	Transform_Rotate_m2449860094,
+	Transform_LookAt_m3314153180,
+	Transform_INTERNAL_CALL_LookAt_m1443061981,
 	Transform_TransformDirection_m1639585047,
 	Transform_INTERNAL_CALL_TransformDirection_m2899991790,
 	Transform_TransformPoint_m3272254198,
@@ -20259,6 +20285,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10929] =
 	Vector3_Dot_m3161182818,
 	Vector3_Distance_m1859670022,
 	Vector3_Magnitude_m1349200714,
+	Vector3_get_magnitude_m860342598_AdjustorThunk,
 	Vector3_SqrMagnitude_m3759098164,
 	Vector3_get_sqrMagnitude_m1814096310_AdjustorThunk,
 	Vector3_Min_m4249067335,
@@ -20308,38 +20335,6 @@ extern const Il2CppMethodPointer g_MethodPointers[10929] =
 	TypeInferenceRuleAttribute_ToString_m3941510216,
 	WebRequestUtils_RedirectTo_m3803295888,
 	WebRequestUtils__cctor_m893658947,
-	AnalyticsTracker__ctor_m47609255,
-	AnalyticsTracker_get_eventName_m492472474,
-	AnalyticsTracker_set_eventName_m3418854143,
-	AnalyticsTracker_get_TP_m2972917566,
-	AnalyticsTracker_set_TP_m2860685991,
-	AnalyticsTracker_Awake_m2456570402,
-	AnalyticsTracker_Start_m90834595,
-	AnalyticsTracker_OnEnable_m1011291651,
-	AnalyticsTracker_OnDisable_m2590423102,
-	AnalyticsTracker_OnApplicationPause_m112444632,
-	AnalyticsTracker_OnDestroy_m2461673364,
-	AnalyticsTracker_TriggerEvent_m1494303835,
-	AnalyticsTracker_SendEvent_m374303143,
-	AnalyticsTracker_BuildParameters_m1716991151,
-	TrackableProperty__ctor_m462583363,
-	TrackableProperty_get_fields_m3107932385,
-	TrackableProperty_set_fields_m4153705492,
-	TrackableProperty_GetHashCode_m1993064614,
-	FieldWithTarget__ctor_m3122216809,
-	FieldWithTarget_get_paramName_m2715104421,
-	FieldWithTarget_set_paramName_m786299954,
-	FieldWithTarget_get_target_m1391127050,
-	FieldWithTarget_set_target_m1859868783,
-	FieldWithTarget_get_fieldPath_m354282076,
-	FieldWithTarget_set_fieldPath_m4229814661,
-	FieldWithTarget_get_typeString_m124716110,
-	FieldWithTarget_set_typeString_m2154747307,
-	FieldWithTarget_get_doStatic_m86470931,
-	FieldWithTarget_set_doStatic_m3820651670,
-	FieldWithTarget_get_staticString_m3599225804,
-	FieldWithTarget_set_staticString_m2234360111,
-	FieldWithTarget_GetValue_m3773769385,
 	AbstractEventData__ctor_m3586111519,
 	AbstractEventData_Reset_m15186946,
 	AbstractEventData_Use_m1797212290,
@@ -21849,17 +21844,58 @@ extern const Il2CppMethodPointer g_MethodPointers[10929] =
 	VerticalLayoutGroup_CalculateLayoutInputVertical_m3227111700,
 	VerticalLayoutGroup_SetLayoutHorizontal_m2935499508,
 	VerticalLayoutGroup_SetLayoutVertical_m1302409034,
-	button__ctor_m3999060637,
-	button_Restart_m768831664,
-	button_BackHome_m3998730249,
-	button_gameStart_m105574067,
+	AnalyticsTracker__ctor_m47609255,
+	AnalyticsTracker_get_eventName_m492472474,
+	AnalyticsTracker_set_eventName_m3418854143,
+	AnalyticsTracker_get_TP_m2972917566,
+	AnalyticsTracker_set_TP_m2860685991,
+	AnalyticsTracker_Awake_m2456570402,
+	AnalyticsTracker_Start_m90834595,
+	AnalyticsTracker_OnEnable_m1011291651,
+	AnalyticsTracker_OnDisable_m2590423102,
+	AnalyticsTracker_OnApplicationPause_m112444632,
+	AnalyticsTracker_OnDestroy_m2461673364,
+	AnalyticsTracker_TriggerEvent_m1494303835,
+	AnalyticsTracker_SendEvent_m374303143,
+	AnalyticsTracker_BuildParameters_m1716991151,
+	TrackableProperty__ctor_m462583363,
+	TrackableProperty_get_fields_m3107932385,
+	TrackableProperty_set_fields_m4153705492,
+	TrackableProperty_GetHashCode_m1993064614,
+	FieldWithTarget__ctor_m3122216809,
+	FieldWithTarget_get_paramName_m2715104421,
+	FieldWithTarget_set_paramName_m786299954,
+	FieldWithTarget_get_target_m1391127050,
+	FieldWithTarget_set_target_m1859868783,
+	FieldWithTarget_get_fieldPath_m354282076,
+	FieldWithTarget_set_fieldPath_m4229814661,
+	FieldWithTarget_get_typeString_m124716110,
+	FieldWithTarget_set_typeString_m2154747307,
+	FieldWithTarget_get_doStatic_m86470931,
+	FieldWithTarget_set_doStatic_m3820651670,
+	FieldWithTarget_get_staticString_m3599225804,
+	FieldWithTarget_set_staticString_m2234360111,
+	FieldWithTarget_GetValue_m3773769385,
 	control__ctor_m2144534888,
 	control_Start_m3516908368,
 	control_Update_m3897501109,
 	control_OnMouseDown_m2686697076,
+	FadeManager__ctor_m1847423336,
+	FadeManager_Start_m4209179252,
+	FadeManager_Update_m705433723,
+	FlickController__ctor_m496695670,
+	FlickController_Start_m1763023718,
+	FlickController_Update_m3090610249,
 	gameOver__ctor_m2948236363,
 	gameOver_Start_m2596220231,
 	gameOver_Update_m3787536330,
+	MainSceneButtonController__ctor_m2887304150,
+	MainSceneButtonController_Restart_m3661489295,
+	MainSceneButtonController_BackHome_m104322040,
+	MainSceneButtonController_gameStart_m2311023768,
+	MovePanel__ctor_m1414208644,
+	MovePanel_Start_m2112567348,
+	MovePanel_Update_m71417553,
 	moveStage__ctor_m2094883096,
 	moveStage_Start_m2832591684,
 	moveStage_Update_m3646796779,
@@ -21871,6 +21907,10 @@ extern const Il2CppMethodPointer g_MethodPointers[10929] =
 	stage_create__ctor_m1793309730,
 	stage_create_Start_m3851390866,
 	stage_create_Update_m799586761,
+	StartSceneButtonController__ctor_m3817771263,
+	StartSceneButtonController_Start_m647388595,
+	StartSceneButtonController_Update_m4040313750,
+	StartSceneButtonController_OnClick_m38327000,
 	UfoControllerScript__ctor_m3733302702,
 	UfoControllerScript_Start_m3478285518,
 	UfoControllerScript_Update_m3761321201,

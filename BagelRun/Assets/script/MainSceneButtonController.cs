@@ -11,7 +11,9 @@ public class MainSceneButtonController : MonoBehaviour {
 
 	public void Restart(){
 
+
 		SceneManager.LoadScene (1);
+
 	}
 	public void BackHome(){
 
@@ -21,5 +23,7 @@ public class MainSceneButtonController : MonoBehaviour {
 
 		Application.LoadLevel ("mainScene");
 	}
+
+
 }
 
