@@ -7,7 +7,7 @@ public class control : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		PlayerPrefs.SetInt ("jumpping", 0);
 	}
 	
 	// Update is called once per frame
