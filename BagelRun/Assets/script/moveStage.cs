@@ -6,16 +6,22 @@ public class moveStage : MonoBehaviour {
 	public float speed = 1.0f;
 	public float startPosition;
 	public float endPosition;
+	int start;
 
 	// Use this for initialization
 	void Start () {
-
+		start = 0;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		transform.Translate (-1 * speed * Time.deltaTime, 0, 0);
-
+		if (PlayerPrefs.GetInt ("jumpping") == 1) {
+			start = 1;
+		}
+		if (start == 1) {
+			
+			transform.Translate (-1 * speed * Time.deltaTime, 0, 0);
+		}
 		if (transform.position.x <= endPosition) {
 			ScrollEnd ();
 		}
