@@ -29,7 +29,7 @@ public class UfoControllerScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (PlayerPrefs.GetInt ("StartButton") == 1) {
+		if (PlayerPrefs.GetInt ("StartButton") == 1) { 
 			if (ufo.transform.position.x >= 4.5) {
 				uforight.SetActive (true);
 				ufo.transform.position += new Vector3 (0, 0, 0);
