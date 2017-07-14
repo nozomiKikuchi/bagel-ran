@@ -59,6 +59,7 @@
      <Compile Include="Assets\script\moveStage.cs" />
      <Compile Include="Assets\script\player.cs" />
      <Compile Include="Assets\script\stage_create.cs" />
+     <None Include="Assets\AssetStore\ChunkFive\SIL Open Font License.txt" />
      <None Include="Assets\AssetStore\DOTween\readme.txt" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
