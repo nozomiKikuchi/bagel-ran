@@ -1,0 +1,18 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="StartSceneButtonController">
+			<method name="OnClick"/>
+			<method name="TapStart"/>
+		</type>
+		<type fullname="MoveCamera">
+			<method name="OnRightArrow"/>
+			<method name="OnLeftArrow"/>
+		</type>
+		<type fullname="MainSceneButtonController">
+			<method name="BackHome"/>
+			<method name="Restart"/>
+			<method name="BackHome"/>
+			<method name="BackHome"/>
+		</type>
+	</assembly>
+</linker>
