@@ -66,7 +66,6 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 2 by 3
-
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
