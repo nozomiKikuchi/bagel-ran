@@ -14,6 +14,8 @@
 
 // UnityEngine.GameObject
 struct GameObject_t1756533147;
+// UnityEngine.UI.Slider
+struct Slider_t297367283;
 
 
 
@@ -28,45 +30,51 @@ struct GameObject_t1756533147;
 struct  MoveCamera_t3193441886  : public MonoBehaviour_t1158329972
 {
 public:
-	// UnityEngine.GameObject MoveCamera::redPanel
-	GameObject_t1756533147 * ___redPanel_2;
-	// UnityEngine.GameObject MoveCamera::greenPanel
-	GameObject_t1756533147 * ___greenPanel_3;
-	// UnityEngine.GameObject MoveCamera::bluePanel
-	GameObject_t1756533147 * ___bluePanel_4;
+	// UnityEngine.GameObject MoveCamera::nomalBagel
+	GameObject_t1756533147 * ___nomalBagel_2;
+	// UnityEngine.GameObject MoveCamera::greenBagel
+	GameObject_t1756533147 * ___greenBagel_3;
+	// UnityEngine.GameObject MoveCamera::purpleBagel
+	GameObject_t1756533147 * ___purpleBagel_4;
 	// UnityEngine.GameObject MoveCamera::look
 	GameObject_t1756533147 * ___look_5;
 	// UnityEngine.GameObject MoveCamera::rightArrow
 	GameObject_t1756533147 * ___rightArrow_6;
 	// UnityEngine.GameObject MoveCamera::leftArrow
 	GameObject_t1756533147 * ___leftArrow_7;
+	// UnityEngine.UI.Slider MoveCamera::weight
+	Slider_t297367283 * ___weight_8;
+	// UnityEngine.UI.Slider MoveCamera::speed
+	Slider_t297367283 * ___speed_9;
+	// UnityEngine.UI.Slider MoveCamera::luck
+	Slider_t297367283 * ___luck_10;
 
 public:
-	inline static int32_t get_offset_of_redPanel_2() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___redPanel_2)); }
-	inline GameObject_t1756533147 * get_redPanel_2() const { return ___redPanel_2; }
-	inline GameObject_t1756533147 ** get_address_of_redPanel_2() { return &___redPanel_2; }
-	inline void set_redPanel_2(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_nomalBagel_2() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___nomalBagel_2)); }
+	inline GameObject_t1756533147 * get_nomalBagel_2() const { return ___nomalBagel_2; }
+	inline GameObject_t1756533147 ** get_address_of_nomalBagel_2() { return &___nomalBagel_2; }
+	inline void set_nomalBagel_2(GameObject_t1756533147 * value)
 	{
-		___redPanel_2 = value;
-		Il2CppCodeGenWriteBarrier(&___redPanel_2, value);
+		___nomalBagel_2 = value;
+		Il2CppCodeGenWriteBarrier(&___nomalBagel_2, value);
 	}
 
-	inline static int32_t get_offset_of_greenPanel_3() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___greenPanel_3)); }
-	inline GameObject_t1756533147 * get_greenPanel_3() const { return ___greenPanel_3; }
-	inline GameObject_t1756533147 ** get_address_of_greenPanel_3() { return &___greenPanel_3; }
-	inline void set_greenPanel_3(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_greenBagel_3() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___greenBagel_3)); }
+	inline GameObject_t1756533147 * get_greenBagel_3() const { return ___greenBagel_3; }
+	inline GameObject_t1756533147 ** get_address_of_greenBagel_3() { return &___greenBagel_3; }
+	inline void set_greenBagel_3(GameObject_t1756533147 * value)
 	{
-		___greenPanel_3 = value;
-		Il2CppCodeGenWriteBarrier(&___greenPanel_3, value);
+		___greenBagel_3 = value;
+		Il2CppCodeGenWriteBarrier(&___greenBagel_3, value);
 	}
 
-	inline static int32_t get_offset_of_bluePanel_4() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___bluePanel_4)); }
-	inline GameObject_t1756533147 * get_bluePanel_4() const { return ___bluePanel_4; }
-	inline GameObject_t1756533147 ** get_address_of_bluePanel_4() { return &___bluePanel_4; }
-	inline void set_bluePanel_4(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_purpleBagel_4() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___purpleBagel_4)); }
+	inline GameObject_t1756533147 * get_purpleBagel_4() const { return ___purpleBagel_4; }
+	inline GameObject_t1756533147 ** get_address_of_purpleBagel_4() { return &___purpleBagel_4; }
+	inline void set_purpleBagel_4(GameObject_t1756533147 * value)
 	{
-		___bluePanel_4 = value;
-		Il2CppCodeGenWriteBarrier(&___bluePanel_4, value);
+		___purpleBagel_4 = value;
+		Il2CppCodeGenWriteBarrier(&___purpleBagel_4, value);
 	}
 
 	inline static int32_t get_offset_of_look_5() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___look_5)); }
@@ -94,6 +102,33 @@ public:
 	{
 		___leftArrow_7 = value;
 		Il2CppCodeGenWriteBarrier(&___leftArrow_7, value);
+	}
+
+	inline static int32_t get_offset_of_weight_8() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___weight_8)); }
+	inline Slider_t297367283 * get_weight_8() const { return ___weight_8; }
+	inline Slider_t297367283 ** get_address_of_weight_8() { return &___weight_8; }
+	inline void set_weight_8(Slider_t297367283 * value)
+	{
+		___weight_8 = value;
+		Il2CppCodeGenWriteBarrier(&___weight_8, value);
+	}
+
+	inline static int32_t get_offset_of_speed_9() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___speed_9)); }
+	inline Slider_t297367283 * get_speed_9() const { return ___speed_9; }
+	inline Slider_t297367283 ** get_address_of_speed_9() { return &___speed_9; }
+	inline void set_speed_9(Slider_t297367283 * value)
+	{
+		___speed_9 = value;
+		Il2CppCodeGenWriteBarrier(&___speed_9, value);
+	}
+
+	inline static int32_t get_offset_of_luck_10() { return static_cast<int32_t>(offsetof(MoveCamera_t3193441886, ___luck_10)); }
+	inline Slider_t297367283 * get_luck_10() const { return ___luck_10; }
+	inline Slider_t297367283 ** get_address_of_luck_10() { return &___luck_10; }
+	inline void set_luck_10(Slider_t297367283 * value)
+	{
+		___luck_10 = value;
+		Il2CppCodeGenWriteBarrier(&___luck_10, value);
 	}
 };
 

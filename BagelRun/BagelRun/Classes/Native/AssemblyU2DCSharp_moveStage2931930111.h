@@ -32,6 +32,8 @@ public:
 	float ___startPosition_3;
 	// System.Single moveStage::endPosition
 	float ___endPosition_4;
+	// System.Int32 moveStage::start
+	int32_t ___start_5;
 
 public:
 	inline static int32_t get_offset_of_speed_2() { return static_cast<int32_t>(offsetof(moveStage_t2931930111, ___speed_2)); }
@@ -56,6 +58,14 @@ public:
 	inline void set_endPosition_4(float value)
 	{
 		___endPosition_4 = value;
+	}
+
+	inline static int32_t get_offset_of_start_5() { return static_cast<int32_t>(offsetof(moveStage_t2931930111, ___start_5)); }
+	inline int32_t get_start_5() const { return ___start_5; }
+	inline int32_t* get_address_of_start_5() { return &___start_5; }
+	inline void set_start_5(int32_t value)
+	{
+		___start_5 = value;
 	}
 };
 

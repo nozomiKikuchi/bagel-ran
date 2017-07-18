@@ -35329,6 +35329,42 @@ extern "C"  double Math_Round_m2632426160 (Il2CppObject * __this /* static, unus
 {
 	return bankers_round(___a0);
 }
+// System.Double System.Math::Truncate(System.Double)
+extern "C"  double Math_Truncate_m2511675028 (Il2CppObject * __this /* static, unused */, double ___d0, const MethodInfo* method)
+{
+	{
+		double L_0 = ___d0;
+		if ((!(((double)L_0) > ((double)(0.0)))))
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		double L_1 = ___d0;
+		double L_2 = floor(L_1);
+		return L_2;
+	}
+
+IL_0016:
+	{
+		double L_3 = ___d0;
+		if ((!(((double)L_3) < ((double)(0.0)))))
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		double L_4 = ___d0;
+		double L_5 = ceil(L_4);
+		return L_5;
+	}
+
+IL_002c:
+	{
+		double L_6 = ___d0;
+		return L_6;
+	}
+}
 // System.Double System.Math::Sin(System.Double)
 extern "C"  double Math_Sin_m2320256962 (Il2CppObject * __this /* static, unused */, double ___a0, const MethodInfo* method)
 {
@@ -35338,6 +35374,16 @@ extern "C"  double Math_Sin_m2320256962 (Il2CppObject * __this /* static, unused
 extern "C"  double Math_Cos_m43596019 (Il2CppObject * __this /* static, unused */, double ___d0, const MethodInfo* method)
 {
 	return cos(___d0);
+}
+// System.Double System.Math::Acos(System.Double)
+extern "C"  double Math_Acos_m2218287828 (Il2CppObject * __this /* static, unused */, double ___d0, const MethodInfo* method)
+{
+	return acos(___d0);
+}
+// System.Double System.Math::Asin(System.Double)
+extern "C"  double Math_Asin_m347297897 (Il2CppObject * __this /* static, unused */, double ___d0, const MethodInfo* method)
+{
+	return asin(___d0);
 }
 // System.Double System.Math::Log(System.Double)
 extern "C"  double Math_Log_m3371716878 (Il2CppObject * __this /* static, unused */, double ___d0, const MethodInfo* method)
@@ -36396,7 +36442,7 @@ IL_0135:
 		Hashtable_t909839986 * L_62 = V_4;
 		Type_t * L_63 = V_12;
 		NullCheck(L_62);
-		Il2CppObject * L_64 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_62, L_63);
+		Il2CppObject * L_64 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_62, L_63);
 		V_13 = ((AttributeInfo_t2366110328 *)CastclassClass(L_64, AttributeInfo_t2366110328_il2cpp_TypeInfo_var));
 		AttributeInfo_t2366110328 * L_65 = V_13;
 		if (!L_65)
@@ -36497,7 +36543,7 @@ IL_01a8:
 		AttributeInfo_t2366110328 * L_87 = (AttributeInfo_t2366110328 *)il2cpp_codegen_object_new(AttributeInfo_t2366110328_il2cpp_TypeInfo_var);
 		AttributeInfo__ctor_m3292826569(L_87, L_85, L_86, /*hidden argument*/NULL);
 		NullCheck(L_83);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_83, L_84, L_87);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_83, L_84, L_87);
 	}
 
 IL_01c1:
@@ -37426,7 +37472,7 @@ extern "C"  void MonoEnumInfo_GetInfo_m899954493 (Il2CppObject * __this /* stati
 		Hashtable_t909839986 * L_0 = MonoEnumInfo_get_Cache_m3551569711(NULL /*static, unused*/, /*hidden argument*/NULL);
 		Type_t * L_1 = ___enumType0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(30 /* System.Boolean System.Collections.Hashtable::ContainsKey(System.Object) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(31 /* System.Boolean System.Collections.Hashtable::ContainsKey(System.Object) */, L_0, L_1);
 		if (!L_2)
 		{
 			goto IL_0027;
@@ -37438,7 +37484,7 @@ extern "C"  void MonoEnumInfo_GetInfo_m899954493 (Il2CppObject * __this /* stati
 		Hashtable_t909839986 * L_4 = ((MonoEnumInfo_t2335995564_ThreadStaticFields*)il2cpp_codegen_get_thread_static_data(MonoEnumInfo_t2335995564_il2cpp_TypeInfo_var))->get_cache_4();
 		Type_t * L_5 = ___enumType0;
 		NullCheck(L_4);
-		Il2CppObject * L_6 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_4, L_5);
+		Il2CppObject * L_6 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_4, L_5);
 		(*(MonoEnumInfo_t2335995564 *)L_3) = ((*(MonoEnumInfo_t2335995564 *)((MonoEnumInfo_t2335995564 *)UnBox(L_6, MonoEnumInfo_t2335995564_il2cpp_TypeInfo_var))));
 		return;
 	}
@@ -37460,7 +37506,7 @@ IL_0033:
 			Hashtable_t909839986 * L_9 = ((MonoEnumInfo_t2335995564_StaticFields*)MonoEnumInfo_t2335995564_il2cpp_TypeInfo_var->static_fields)->get_global_cache_5();
 			Type_t * L_10 = ___enumType0;
 			NullCheck(L_9);
-			bool L_11 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(30 /* System.Boolean System.Collections.Hashtable::ContainsKey(System.Object) */, L_9, L_10);
+			bool L_11 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(31 /* System.Boolean System.Collections.Hashtable::ContainsKey(System.Object) */, L_9, L_10);
 			if (!L_11)
 			{
 				goto IL_006c;
@@ -37473,13 +37519,13 @@ IL_0043:
 			Hashtable_t909839986 * L_12 = ((MonoEnumInfo_t2335995564_StaticFields*)MonoEnumInfo_t2335995564_il2cpp_TypeInfo_var->static_fields)->get_global_cache_5();
 			Type_t * L_13 = ___enumType0;
 			NullCheck(L_12);
-			Il2CppObject * L_14 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_12, L_13);
+			Il2CppObject * L_14 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_12, L_13);
 			V_1 = L_14;
 			Hashtable_t909839986 * L_15 = ((MonoEnumInfo_t2335995564_ThreadStaticFields*)il2cpp_codegen_get_thread_static_data(MonoEnumInfo_t2335995564_il2cpp_TypeInfo_var))->get_cache_4();
 			Type_t * L_16 = ___enumType0;
 			Il2CppObject * L_17 = V_1;
 			NullCheck(L_15);
-			VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_15, L_16, L_17);
+			VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(24 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_15, L_16, L_17);
 			MonoEnumInfo_t2335995564 * L_18 = ___info1;
 			Il2CppObject * L_19 = V_1;
 			(*(MonoEnumInfo_t2335995564 *)L_18) = ((*(MonoEnumInfo_t2335995564 *)((MonoEnumInfo_t2335995564 *)UnBox(L_19, MonoEnumInfo_t2335995564_il2cpp_TypeInfo_var))));
@@ -37652,7 +37698,7 @@ IL_0163:
 		int32_t L_62 = L_61;
 		Il2CppObject * L_63 = Box(Int32_t2071877448_il2cpp_TypeInfo_var, &L_62);
 		NullCheck(L_55);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_55, L_60, L_63);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(24 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_55, L_60, L_63);
 		int32_t L_64 = V_3;
 		V_3 = ((int32_t)((int32_t)L_64+(int32_t)1));
 	}
@@ -37690,7 +37736,7 @@ IL_01a9:
 		MonoEnumInfo_t2335995564  L_74 = L_73;
 		Il2CppObject * L_75 = Box(MonoEnumInfo_t2335995564_il2cpp_TypeInfo_var, &L_74);
 		NullCheck(L_71);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_71, L_72, L_75);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(24 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_71, L_72, L_75);
 		IL2CPP_LEAVE(0x1C8, FINALLY_01c0);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
