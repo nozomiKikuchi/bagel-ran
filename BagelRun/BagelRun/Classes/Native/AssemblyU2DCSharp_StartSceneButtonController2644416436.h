@@ -16,6 +16,8 @@
 struct GameObject_t1756533147;
 // UnityEngine.SpriteRenderer
 struct SpriteRenderer_t1209076198;
+// UnityEngine.AudioSource
+struct AudioSource_t1135106623;
 
 
 
@@ -40,6 +42,8 @@ public:
 	SpriteRenderer_t1209076198 * ___spRenderer_5;
 	// System.Single StartSceneButtonController::fadeTime
 	float ___fadeTime_6;
+	// UnityEngine.AudioSource StartSceneButtonController::sound01
+	AudioSource_t1135106623 * ___sound01_7;
 
 public:
 	inline static int32_t get_offset_of_bagel_2() { return static_cast<int32_t>(offsetof(StartSceneButtonController_t2644416436, ___bagel_2)); }
@@ -83,6 +87,15 @@ public:
 	inline void set_fadeTime_6(float value)
 	{
 		___fadeTime_6 = value;
+	}
+
+	inline static int32_t get_offset_of_sound01_7() { return static_cast<int32_t>(offsetof(StartSceneButtonController_t2644416436, ___sound01_7)); }
+	inline AudioSource_t1135106623 * get_sound01_7() const { return ___sound01_7; }
+	inline AudioSource_t1135106623 ** get_address_of_sound01_7() { return &___sound01_7; }
+	inline void set_sound01_7(AudioSource_t1135106623 * value)
+	{
+		___sound01_7 = value;
+		Il2CppCodeGenWriteBarrier(&___sound01_7, value);
 	}
 };
 

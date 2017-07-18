@@ -38010,7 +38010,7 @@ extern "C"  ASN1_t924533535 * PKCS12_CertificateSafeBag_m547206291 (PKCS12_t1362
 		V_4 = L_18;
 		Il2CppObject * L_19 = ___attributes1;
 		NullCheck(L_19);
-		Il2CppObject * L_20 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(3 /* System.Collections.IDictionaryEnumerator System.Collections.IDictionary::GetEnumerator() */, IDictionary_t596158605_il2cpp_TypeInfo_var, L_19);
+		Il2CppObject * L_20 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(4 /* System.Collections.IDictionaryEnumerator System.Collections.IDictionary::GetEnumerator() */, IDictionary_t596158605_il2cpp_TypeInfo_var, L_19);
 		V_5 = L_20;
 		goto IL_0265;
 	}
@@ -47148,7 +47148,7 @@ IL_0048:
 		Hashtable_t909839986 * L_9 = V_1;
 		String_t* L_10 = V_0;
 		NullCheck(L_9);
-		bool L_11 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(27 /* System.Boolean System.Collections.Hashtable::Contains(System.Object) */, L_9, L_10);
+		bool L_11 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(28 /* System.Boolean System.Collections.Hashtable::Contains(System.Object) */, L_9, L_10);
 		if (!L_11)
 		{
 			goto IL_0056;
@@ -47164,7 +47164,7 @@ IL_0056:
 		String_t* L_13 = V_0;
 		String_t* L_14 = V_0;
 		NullCheck(L_12);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_12, L_13, L_14);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(24 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_12, L_13, L_14);
 	}
 
 IL_005e:
@@ -47249,7 +47249,7 @@ FINALLY_00bc:
 		Hashtable_t909839986 * L_31 = V_1;
 		String_t* L_32 = V_0;
 		NullCheck(L_31);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(29 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_31, L_32);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(30 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_31, L_32);
 		IL2CPP_END_FINALLY(188)
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(188)

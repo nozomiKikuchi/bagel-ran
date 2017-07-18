@@ -1591,6 +1591,7 @@ extern "C" void Decimal_decimalFloorAndTrunc_m3655683429 ();
 extern "C" void Decimal_decimalMult_m3318413437 ();
 extern "C" void Decimal_decimalDiv_m900036616 ();
 extern "C" void Decimal_decimalCompare_m26009298 ();
+extern "C" void Decimal_op_Addition_m3630245203 ();
 extern "C" void Decimal_op_Increment_m2012286538 ();
 extern "C" void Decimal_op_Subtraction_m4281620403 ();
 extern "C" void Decimal_op_Multiply_m363076371 ();
@@ -2540,8 +2541,11 @@ extern "C" void Math_Min_m105057611 ();
 extern "C" void Math_Min_m4290821911 ();
 extern "C" void Math_Round_m565516458 ();
 extern "C" void Math_Round_m2632426160 ();
+extern "C" void Math_Truncate_m2511675028 ();
 extern "C" void Math_Sin_m2320256962 ();
 extern "C" void Math_Cos_m43596019 ();
+extern "C" void Math_Acos_m2218287828 ();
+extern "C" void Math_Asin_m347297897 ();
 extern "C" void Math_Log_m3371716878 ();
 extern "C" void Math_Pow_m3099781906 ();
 extern "C" void Math_Sqrt_m932242488 ();
@@ -3488,6 +3492,7 @@ extern "C" void RuntimeResourceSet_GetObject_m3586640176 ();
 extern "C" void RuntimeResourceSet_GetObject_m802265983 ();
 extern "C" void RuntimeResourceSet_CloneDisposableObjectIfPossible_m344935759 ();
 extern "C" void SatelliteContractVersionAttribute__ctor_m2605651717 ();
+extern "C" void CompilationRelaxationsAttribute__ctor_m3925978058 ();
 extern "C" void CompilationRelaxationsAttribute__ctor_m2800984288 ();
 extern "C" void CompilerGeneratedAttribute__ctor_m3017743394 ();
 extern "C" void DecimalConstantAttribute__ctor_m71487003 ();
@@ -3812,6 +3817,7 @@ extern "C" void MethodDictionary_GetMethodProperty_m4085857742 ();
 extern "C" void MethodDictionary_SetMethodProperty_m1502558295 ();
 extern "C" void MethodDictionary_get_Values_m3868590366 ();
 extern "C" void MethodDictionary_Add_m1424332128 ();
+extern "C" void MethodDictionary_Contains_m3698411800 ();
 extern "C" void MethodDictionary_Remove_m3965014965 ();
 extern "C" void MethodDictionary_get_Count_m3214848709 ();
 extern "C" void MethodDictionary_get_IsSynchronized_m800297790 ();
@@ -6477,6 +6483,7 @@ extern "C" void HybridDictionary_get_Item_m1077394870 ();
 extern "C" void HybridDictionary_set_Item_m4049906479 ();
 extern "C" void HybridDictionary_get_SyncRoot_m1170821686 ();
 extern "C" void HybridDictionary_Add_m1037587952 ();
+extern "C" void HybridDictionary_Contains_m1057090920 ();
 extern "C" void HybridDictionary_CopyTo_m2422525990 ();
 extern "C" void HybridDictionary_GetEnumerator_m3570171579 ();
 extern "C" void HybridDictionary_Remove_m2059808027 ();
@@ -6495,6 +6502,7 @@ extern "C" void ListDictionary_get_Item_m3967158800 ();
 extern "C" void ListDictionary_set_Item_m972551921 ();
 extern "C" void ListDictionary_Add_m4276262662 ();
 extern "C" void ListDictionary_Clear_m3646179034 ();
+extern "C" void ListDictionary_Contains_m2267260730 ();
 extern "C" void ListDictionary_GetEnumerator_m1511032609 ();
 extern "C" void ListDictionary_Remove_m2294694061 ();
 extern "C" void DictionaryNode__ctor_m2839151850 ();
@@ -6913,7 +6921,14 @@ extern "C" void X509SubjectKeyIdentifierExtension_Decode_m4102819207 ();
 extern "C" void X509SubjectKeyIdentifierExtension_Encode_m4237278042 ();
 extern "C" void X509SubjectKeyIdentifierExtension_ToString_m4073475390 ();
 extern "C" void BaseMachine__ctor_m2327544039 ();
+extern "C" void BaseMachine_Replace_m2446015132 ();
 extern "C" void BaseMachine_Scan_m122450399 ();
+extern "C" void BaseMachine_LTRReplace_m1094774497 ();
+extern "C" void BaseMachine_RTLReplace_m25431723 ();
+extern "C" void MatchAppendEvaluator__ctor_m3486625178 ();
+extern "C" void MatchAppendEvaluator_Invoke_m3703737128 ();
+extern "C" void MatchAppendEvaluator_BeginInvoke_m3482977851 ();
+extern "C" void MatchAppendEvaluator_EndInvoke_m269118460 ();
 extern "C" void Capture__ctor_m885749277 ();
 extern "C" void Capture__ctor_m2965900721 ();
 extern "C" void Capture_get_Index_m819425556 ();
@@ -7057,6 +7072,10 @@ extern "C" void Enumerator__ctor_m2631783353 ();
 extern "C" void Enumerator_System_Collections_IEnumerator_Reset_m1745379511 ();
 extern "C" void Enumerator_System_Collections_IEnumerator_get_Current_m1429268283 ();
 extern "C" void Enumerator_System_Collections_IEnumerator_MoveNext_m3313126804 ();
+extern "C" void MatchEvaluator__ctor_m3633185959 ();
+extern "C" void MatchEvaluator_Invoke_m3037466252 ();
+extern "C" void MatchEvaluator_BeginInvoke_m503772792 ();
+extern "C" void MatchEvaluator_EndInvoke_m3902136768 ();
 extern "C" void MRUList__ctor_m2726533367 ();
 extern "C" void MRUList_Use_m1589089668 ();
 extern "C" void MRUList_Evict_m2430323183 ();
@@ -7121,24 +7140,42 @@ extern "C" void Regex__ctor_m2521903438 ();
 extern "C" void Regex__ctor_m392221833 ();
 extern "C" void Regex__cctor_m3397544801 ();
 extern "C" void Regex_System_Runtime_Serialization_ISerializable_GetObjectData_m4035555909 ();
+extern "C" void Regex_Match_m92265676 ();
+extern "C" void Regex_Match_m1680452684 ();
+extern "C" void Regex_Replace_m4096557757 ();
+extern "C" void Regex_Replace_m566725221 ();
 extern "C" void Regex_validate_options_m3563464259 ();
 extern "C" void Regex_Init_m1873144192 ();
 extern "C" void Regex_InitNewRegex_m692548389 ();
 extern "C" void Regex_CreateMachineFactory_m3035817687 ();
 extern "C" void Regex_get_Options_m2450064630 ();
 extern "C" void Regex_get_RightToLeft_m529734879 ();
+extern "C" void Regex_GroupNumberFromName_m3228736983 ();
 extern "C" void Regex_GetGroupIndex_m1686599756 ();
 extern "C" void Regex_default_startat_m2116037983 ();
 extern "C" void Regex_IsMatch_m2159202025 ();
 extern "C" void Regex_IsMatch_m1286520424 ();
+extern "C" void Regex_Match_m3287354872 ();
 extern "C" void Regex_Match_m4277133443 ();
 extern "C" void Regex_Matches_m3834294444 ();
 extern "C" void Regex_Matches_m1377235443 ();
+extern "C" void Regex_Replace_m2510734387 ();
+extern "C" void Regex_Replace_m2887768543 ();
 extern "C" void Regex_ToString_m3687329849 ();
+extern "C" void Regex_get_GroupCount_m1188068377 ();
 extern "C" void Regex_get_Gap_m2028850051 ();
 extern "C" void Regex_CreateMachine_m1003508921 ();
 extern "C" void Regex_GetGroupNamesArray_m2600772921 ();
 extern "C" void Regex_get_GroupNumbers_m2242327956 ();
+extern "C" void ReplacementEvaluator__ctor_m3746900384 ();
+extern "C" void ReplacementEvaluator_Evaluate_m197194936 ();
+extern "C" void ReplacementEvaluator_EvaluateAppend_m4165611689 ();
+extern "C" void ReplacementEvaluator_get_NeedsGroupsOrCaptures_m3532058782 ();
+extern "C" void ReplacementEvaluator_Ensure_m2025598273 ();
+extern "C" void ReplacementEvaluator_AddFromReplacement_m3891576415 ();
+extern "C" void ReplacementEvaluator_AddInt_m2149831105 ();
+extern "C" void ReplacementEvaluator_Compile_m1875719451 ();
+extern "C" void ReplacementEvaluator_CompileTerm_m1895109616 ();
 extern "C" void Alternation__ctor_m3881095545 ();
 extern "C" void Alternation_get_Alternatives_m1445219249 ();
 extern "C" void Alternation_AddAlternative_m623421443 ();
@@ -7445,6 +7482,11 @@ extern "C" void AnimationCurve__ctor_m2814448007 ();
 extern "C" void AnimationCurve__ctor_m3707994114 ();
 extern "C" void AnimationCurve_Cleanup_m2190142678 ();
 extern "C" void AnimationCurve_Finalize_m3393741894 ();
+extern "C" void AnimationCurve_Evaluate_m3698879322 ();
+extern "C" void AnimationCurve_get_Item_m3780274863 ();
+extern "C" void AnimationCurve_get_length_m1757155287 ();
+extern "C" void AnimationCurve_GetKey_Internal_m4198730374 ();
+extern "C" void AnimationCurve_INTERNAL_CALL_GetKey_Internal_m4032409550 ();
 extern "C" void AnimationCurve_Init_m1486386337 ();
 extern "C" void AnimationEvent__ctor_m3458990599 ();
 extern "C" void AnimationEvent_get_data_m1944226119 ();
@@ -7548,6 +7590,13 @@ extern "C" void AudioConfigurationChangeHandler__ctor_m114228029 ();
 extern "C" void AudioConfigurationChangeHandler_Invoke_m635374412 ();
 extern "C" void AudioConfigurationChangeHandler_BeginInvoke_m2418670597 ();
 extern "C" void AudioConfigurationChangeHandler_EndInvoke_m2237100787 ();
+extern "C" void AudioSource_get_volume_m66289169 ();
+extern "C" void AudioSource_set_volume_m2777308722 ();
+extern "C" void AudioSource_get_pitch_m4220572439 ();
+extern "C" void AudioSource_set_pitch_m3064416458 ();
+extern "C" void AudioSource_get_clip_m2127996365 ();
+extern "C" void AudioSource_PlayOneShot_m4118899740 ();
+extern "C" void AudioSource_PlayOneShot_m286472761 ();
 extern "C" void Behaviour__ctor_m2699265412 ();
 extern "C" void Behaviour_get_enabled_m4079055610 ();
 extern "C" void Behaviour_set_enabled_m1796096907 ();
@@ -7595,13 +7644,31 @@ extern "C" void Bounds_op_Inequality_m2315096783 ();
 extern "C" void Bounds_SetMinMax_m1523110422_AdjustorThunk ();
 extern "C" void Bounds_Encapsulate_m3688171368_AdjustorThunk ();
 extern "C" void Bounds_ToString_m1966597703_AdjustorThunk ();
+extern "C" void Camera_get_fieldOfView_m3384007405 ();
+extern "C" void Camera_set_fieldOfView_m3974156396 ();
 extern "C" void Camera_get_nearClipPlane_m3536967407 ();
+extern "C" void Camera_set_nearClipPlane_m3510849382 ();
 extern "C" void Camera_get_farClipPlane_m3137713566 ();
+extern "C" void Camera_set_farClipPlane_m1845065941 ();
+extern "C" void Camera_get_orthographicSize_m1801974358 ();
+extern "C" void Camera_set_orthographicSize_m2708824189 ();
 extern "C" void Camera_get_depth_m1329692468 ();
+extern "C" void Camera_get_aspect_m935361871 ();
+extern "C" void Camera_set_aspect_m792328692 ();
 extern "C" void Camera_get_cullingMask_m73686965 ();
 extern "C" void Camera_get_eventMask_m4241372419 ();
+extern "C" void Camera_get_backgroundColor_m2767968515 ();
+extern "C" void Camera_set_backgroundColor_m2927893592 ();
+extern "C" void Camera_INTERNAL_get_backgroundColor_m2704073336 ();
+extern "C" void Camera_INTERNAL_set_backgroundColor_m3660646068 ();
+extern "C" void Camera_get_rect_m2873096661 ();
+extern "C" void Camera_set_rect_m1838810502 ();
+extern "C" void Camera_INTERNAL_get_rect_m3971999434 ();
+extern "C" void Camera_INTERNAL_set_rect_m610424166 ();
 extern "C" void Camera_get_pixelRect_m2084185953 ();
+extern "C" void Camera_set_pixelRect_m1366013782 ();
 extern "C" void Camera_INTERNAL_get_pixelRect_m1785951490 ();
+extern "C" void Camera_INTERNAL_set_pixelRect_m3301406310 ();
 extern "C" void Camera_get_targetTexture_m705925974 ();
 extern "C" void Camera_get_clearFlags_m1743144302 ();
 extern "C" void Camera_get_targetDisplay_m835278314 ();
@@ -7610,6 +7677,7 @@ extern "C" void Camera_INTERNAL_CALL_ScreenToViewportPoint_m529506484 ();
 extern "C" void Camera_ScreenPointToRay_m614889538 ();
 extern "C" void Camera_INTERNAL_CALL_ScreenPointToRay_m2752248646 ();
 extern "C" void Camera_get_main_m475173995 ();
+extern "C" void Camera_get_current_m2639890517 ();
 extern "C" void Camera_get_allCamerasCount_m989474043 ();
 extern "C" void Camera_GetAllCameras_m2922515227 ();
 extern "C" void Camera_FireOnPreCull_m1679634170 ();
@@ -7691,6 +7759,19 @@ extern "C" void NativeContainerSupportsMinMaxWriteRestrictionAttribute__ctor_m15
 extern "C" void ReadOnlyAttribute__ctor_m1597711262 ();
 extern "C" void ReadWriteAttribute__ctor_m2566248501 ();
 extern "C" void WriteOnlyAttribute__ctor_m3761552155 ();
+extern "C" void Collider_get_attachedRigidbody_m3279305420 ();
+extern "C" void Collision__ctor_m635081107 ();
+extern "C" void Collision_get_relativeVelocity_m2302609283 ();
+extern "C" void Collision_get_rigidbody_m3671561778 ();
+extern "C" void Collision_get_collider_m3340328360 ();
+extern "C" void Collision_get_transform_m4132935520 ();
+extern "C" void Collision_get_gameObject_m1370363400 ();
+extern "C" void Collision_get_contacts_m266635379 ();
+extern "C" void Collision_GetEnumerator_m4009889947 ();
+extern "C" void Collision_get_impulse_m1836134987 ();
+extern "C" void Collision_get_impactForceSum_m521972354 ();
+extern "C" void Collision_get_frictionForceSum_m3438602686 ();
+extern "C" void Collision_get_other_m4238363497 ();
 extern "C" void Collision2D__ctor_m2559810705 ();
 extern "C" void Collision2D_get_collider_m3330356936 ();
 extern "C" void Collision2D_get_otherCollider_m4079883492 ();
@@ -7706,6 +7787,8 @@ extern "C" void Color__ctor_m3811852957_AdjustorThunk ();
 extern "C" void Color_ToString_m4028093047_AdjustorThunk ();
 extern "C" void Color_GetHashCode_m3182525367_AdjustorThunk ();
 extern "C" void Color_Equals_m661618137_AdjustorThunk ();
+extern "C" void Color_op_Addition_m1759335993 ();
+extern "C" void Color_op_Subtraction_m3931992385 ();
 extern "C" void Color_op_Multiply_m325555950 ();
 extern "C" void Color_op_Equality_m3156451394 ();
 extern "C" void Color_Lerp_m3323752807 ();
@@ -7713,6 +7796,10 @@ extern "C" void Color_get_red_m2410286591 ();
 extern "C" void Color_get_white_m3987539815 ();
 extern "C" void Color_get_black_m2650940523 ();
 extern "C" void Color_get_clear_m1469108305 ();
+extern "C" void Color_get_grayscale_m2989668074_AdjustorThunk ();
+extern "C" void Color_get_linear_m3851532985_AdjustorThunk ();
+extern "C" void Color_get_gamma_m1982353575_AdjustorThunk ();
+extern "C" void Color_get_maxColorComponent_m1239472485_AdjustorThunk ();
 extern "C" void Color_op_Implicit_m1067945802 ();
 extern "C" void Color32__ctor_m1932627809_AdjustorThunk ();
 extern "C" void Color32_op_Implicit_m624191464 ();
@@ -7755,6 +7842,18 @@ extern "C" void ContactFilter2D_CreateLegacyFilter_m1912787689 ();
 extern "C" void ContextMenu__ctor_m666643627 ();
 extern "C" void ContextMenu__ctor_m1669818156 ();
 extern "C" void ContextMenu__ctor_m3931483141 ();
+extern "C" void ControllerColliderHit__ctor_m2990717326 ();
+extern "C" void ControllerColliderHit_get_controller_m531319176 ();
+extern "C" void ControllerColliderHit_get_collider_m3897495767 ();
+extern "C" void ControllerColliderHit_get_rigidbody_m4025380167 ();
+extern "C" void ControllerColliderHit_get_gameObject_m3793104279 ();
+extern "C" void ControllerColliderHit_get_transform_m3183428555 ();
+extern "C" void ControllerColliderHit_get_point_m3573703281 ();
+extern "C" void ControllerColliderHit_get_normal_m1098215280 ();
+extern "C" void ControllerColliderHit_get_moveDirection_m3053186297 ();
+extern "C" void ControllerColliderHit_get_moveLength_m94453726 ();
+extern "C" void ControllerColliderHit_get_push_m2528314697 ();
+extern "C" void ControllerColliderHit_set_push_m3582188484 ();
 extern "C" void Coroutine__ctor_m1253937571 ();
 extern "C" void Coroutine_ReleaseCoroutine_m833118514 ();
 extern "C" void Coroutine_Finalize_m3953619693 ();
@@ -8130,13 +8229,19 @@ extern "C" void GameObject_get_activeSelf_m313590879 ();
 extern "C" void GameObject_get_activeInHierarchy_m4242915935 ();
 extern "C" void GameObject_get_tag_m1425941094 ();
 extern "C" void GameObject_set_tag_m717375123 ();
-extern "C" void GameObject_FindGameObjectWithTag_m829057129 ();
-extern "C" void GameObject_FindWithTag_m1929006324 ();
 extern "C" void GameObject_SendMessage_m71956653 ();
 extern "C" void GameObject_Internal_AddComponentWithType_m214735204 ();
 extern "C" void GameObject_AddComponent_m3757565614 ();
 extern "C" void GameObject_Internal_CreateGameObject_m3428198595 ();
 extern "C" void GameObject_get_gameObject_m3662236595 ();
+extern "C" void Gizmos_DrawLine_m1315654064 ();
+extern "C" void Gizmos_INTERNAL_CALL_DrawLine_m1667943171 ();
+extern "C" void Gizmos_DrawWireSphere_m3395547818 ();
+extern "C" void Gizmos_INTERNAL_CALL_DrawWireSphere_m2482278875 ();
+extern "C" void Gizmos_DrawSphere_m695677545 ();
+extern "C" void Gizmos_INTERNAL_CALL_DrawSphere_m3000536410 ();
+extern "C" void Gizmos_set_color_m494992840 ();
+extern "C" void Gizmos_INTERNAL_set_color_m3356916140 ();
 extern "C" void Gradient__ctor_m954570311 ();
 extern "C" void Gradient_Init_m4156899649 ();
 extern "C" void Gradient_Cleanup_m3573871739 ();
@@ -8535,6 +8640,19 @@ extern "C" void Keyframe_get_tangentMode_m1869200796_AdjustorThunk ();
 extern "C" void Keyframe_set_tangentMode_m1073266123_AdjustorThunk ();
 extern "C" void LayerMask_op_Implicit_m2135076047 ();
 extern "C" void LayerMask_op_Implicit_m3804506591 ();
+extern "C" void Light_get_color_m2617173338 ();
+extern "C" void Light_set_color_m3975955621 ();
+extern "C" void Light_INTERNAL_get_color_m2896497767 ();
+extern "C" void Light_INTERNAL_set_color_m2851094611 ();
+extern "C" void Light_get_intensity_m392824783 ();
+extern "C" void Light_set_intensity_m1790590300 ();
+extern "C" void Light_get_shadowStrength_m1628863523 ();
+extern "C" void Light_set_shadowStrength_m677056102 ();
+extern "C" void LineRenderer_set_startColor_m794347594 ();
+extern "C" void LineRenderer_INTERNAL_set_startColor_m1760197194 ();
+extern "C" void LineRenderer_set_endColor_m764753847 ();
+extern "C" void LineRenderer_INTERNAL_set_endColor_m2406927749 ();
+extern "C" void LineRenderer_SetColors_m3539990388 ();
 extern "C" void Logger__ctor_m3834134587 ();
 extern "C" void Logger_get_logHandler_m4190583509 ();
 extern "C" void Logger_set_logHandler_m2851576632 ();
@@ -8549,20 +8667,65 @@ extern "C" void Logger_Log_m4012064130 ();
 extern "C" void Logger_LogFormat_m193464629 ();
 extern "C" void Logger_LogException_m206035446 ();
 extern "C" void Material__ctor_m1440882780 ();
+extern "C" void Material_get_color_m668215843 ();
+extern "C" void Material_set_color_m577844242 ();
 extern "C" void Material_get_mainTexture_m432794412 ();
+extern "C" void Material_get_mainTextureOffset_m786294629 ();
+extern "C" void Material_set_mainTextureOffset_m3533368774 ();
+extern "C" void Material_get_mainTextureScale_m2123078452 ();
+extern "C" void Material_set_mainTextureScale_m723074403 ();
+extern "C" void Material_SetFloatImpl_m2784769558 ();
 extern "C" void Material_SetIntImpl_m4157631275 ();
+extern "C" void Material_SetColorImpl_m3789287710 ();
+extern "C" void Material_INTERNAL_CALL_SetColorImpl_m1235596565 ();
+extern "C" void Material_SetVectorImpl_m4150689490 ();
+extern "C" void Material_INTERNAL_CALL_SetVectorImpl_m2827882321 ();
+extern "C" void Material_GetFloatImpl_m419099295 ();
+extern "C" void Material_GetColorImpl_m3117633001 ();
+extern "C" void Material_INTERNAL_CALL_GetColorImpl_m747148073 ();
+extern "C" void Material_GetVectorImpl_m16712461 ();
+extern "C" void Material_INTERNAL_CALL_GetVectorImpl_m4248368229 ();
 extern "C" void Material_GetTextureImpl_m623159197 ();
+extern "C" void Material_GetTextureScaleAndOffsetImpl_m3382929137 ();
+extern "C" void Material_INTERNAL_CALL_GetTextureScaleAndOffsetImpl_m4257699065 ();
+extern "C" void Material_SetTextureOffsetImpl_m265610963 ();
+extern "C" void Material_INTERNAL_CALL_SetTextureOffsetImpl_m2764639336 ();
+extern "C" void Material_SetTextureScaleImpl_m239768112 ();
+extern "C" void Material_INTERNAL_CALL_SetTextureScaleImpl_m3213275093 ();
 extern "C" void Material_HasProperty_m3511389613 ();
 extern "C" void Material_HasProperty_m3175512802 ();
 extern "C" void Material_Internal_CreateWithMaterial_m2907597451 ();
 extern "C" void Material_EnableKeyword_m3724752646 ();
 extern "C" void Material_DisableKeyword_m1204728089 ();
+extern "C" void Material_SetFloat_m1926275467 ();
+extern "C" void Material_SetFloat_m953675160 ();
 extern "C" void Material_SetInt_m522302436 ();
 extern "C" void Material_SetInt_m977568583 ();
+extern "C" void Material_SetColor_m650857509 ();
+extern "C" void Material_SetColor_m1191533068 ();
+extern "C" void Material_SetVector_m3298399397 ();
+extern "C" void Material_SetVector_m1395004512 ();
+extern "C" void Material_SetTextureOffset_m3084369360 ();
+extern "C" void Material_SetTextureOffset_m1086333799 ();
+extern "C" void Material_SetTextureScale_m1622979841 ();
+extern "C" void Material_SetTextureScale_m2121704514 ();
+extern "C" void Material_GetFloat_m562289878 ();
+extern "C" void Material_GetFloat_m4250722315 ();
+extern "C" void Material_GetColor_m2326771174 ();
+extern "C" void Material_GetColor_m2968960621 ();
+extern "C" void Material_GetVector_m4150288440 ();
+extern "C" void Material_GetVector_m3102037793 ();
 extern "C" void Material_GetTexture_m1257877102 ();
 extern "C" void Material_GetTexture_m648312929 ();
+extern "C" void Material_GetTextureOffset_m4148619067 ();
+extern "C" void Material_GetTextureOffset_m4252250174 ();
+extern "C" void Material_GetTextureScale_m1359469258 ();
+extern "C" void Material_GetTextureScale_m3139376717 ();
+extern "C" void Mathf_GammaToLinearSpace_m3697142437 ();
+extern "C" void Mathf_LinearToGammaSpace_m1586839609 ();
 extern "C" void Mathf_Sin_m831310046 ();
 extern "C" void Mathf_Cos_m238853451 ();
+extern "C" void Mathf_Acos_m3800958570 ();
 extern "C" void Mathf_Sqrt_m2213915910 ();
 extern "C" void Mathf_Abs_m1942863256 ();
 extern "C" void Mathf_Min_m1648492575 ();
@@ -8759,6 +8922,35 @@ extern "C" void Object_FindObjectOfType_m2330404063 ();
 extern "C" void Object_op_Equality_m3764089466 ();
 extern "C" void Object_op_Inequality_m2402264703 ();
 extern "C" void Object__cctor_m2991092887 ();
+extern "C" void Physics_Raycast_m2874007225 ();
+extern "C" void Physics_Raycast_m89212106 ();
+extern "C" void Physics_Raycast_m2667915561 ();
+extern "C" void Physics_Raycast_m3475924638 ();
+extern "C" void Physics_Raycast_m1929115794 ();
+extern "C" void Physics_Raycast_m2994111303 ();
+extern "C" void Physics_Raycast_m4027183840 ();
+extern "C" void Physics_Raycast_m2036777053 ();
+extern "C" void Physics_Raycast_m2691929452 ();
+extern "C" void Physics_Raycast_m780162053 ();
+extern "C" void Physics_Raycast_m2686676054 ();
+extern "C" void Physics_Raycast_m1844392139 ();
+extern "C" void Physics_Raycast_m2009151399 ();
+extern "C" void Physics_Raycast_m2308457076 ();
+extern "C" void Physics_Raycast_m2736931691 ();
+extern "C" void Physics_Raycast_m233619224 ();
+extern "C" void Physics_RaycastAll_m233036521 ();
+extern "C" void Physics_RaycastAll_m3928448900 ();
+extern "C" void Physics_RaycastAll_m1246652201 ();
+extern "C" void Physics_RaycastAll_m410413656 ();
+extern "C" void Physics_RaycastAll_m3908263591 ();
+extern "C" void Physics_RaycastAll_m3256436970 ();
+extern "C" void Physics_RaycastAll_m3484190429 ();
+extern "C" void Physics_RaycastAll_m3650851272 ();
+extern "C" void Physics_INTERNAL_CALL_RaycastAll_m2126789092 ();
+extern "C" void Physics_Internal_Raycast_m1160243045 ();
+extern "C" void Physics_INTERNAL_CALL_Internal_Raycast_m93849932 ();
+extern "C" void Physics_Internal_RaycastTest_m3442924926 ();
+extern "C" void Physics_INTERNAL_CALL_Internal_RaycastTest_m3440840981 ();
 extern "C" void Physics2D_get_queriesHitTriggers_m361275035 ();
 extern "C" void Physics2D_Raycast_m1220041042 ();
 extern "C" void Physics2D_Raycast_m122312471 ();
@@ -8790,19 +8982,32 @@ extern "C" void PlayerPrefsException__ctor_m1748847897 ();
 extern "C" void PreferBinarySerialization__ctor_m2043201510 ();
 extern "C" void PropertyAttribute__ctor_m3663555848 ();
 extern "C" void Quaternion__ctor_m3196903881_AdjustorThunk ();
+extern "C" void Quaternion_AngleAxis_m2806222563 ();
+extern "C" void Quaternion_INTERNAL_CALL_AngleAxis_m3310327005 ();
+extern "C" void Quaternion_LookRotation_m700700634 ();
+extern "C" void Quaternion_INTERNAL_CALL_LookRotation_m3606560944 ();
 extern "C" void Quaternion_Inverse_m3931399088 ();
 extern "C" void Quaternion_INTERNAL_CALL_Inverse_m1043108654 ();
+extern "C" void Quaternion_get_eulerAngles_m3302573991_AdjustorThunk ();
 extern "C" void Quaternion_Euler_m2887458175 ();
+extern "C" void Quaternion_Euler_m3586339259 ();
+extern "C" void Quaternion_Internal_ToEulerRad_m2807508879 ();
+extern "C" void Quaternion_INTERNAL_CALL_Internal_ToEulerRad_m1077217777 ();
 extern "C" void Quaternion_Internal_FromEulerRad_m1121344272 ();
 extern "C" void Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m1113788132 ();
+extern "C" void Quaternion_get_identity_m1561886418 ();
 extern "C" void Quaternion_op_Multiply_m2426727589 ();
 extern "C" void Quaternion_op_Multiply_m1483423721 ();
 extern "C" void Quaternion_op_Equality_m2308156925 ();
 extern "C" void Quaternion_op_Inequality_m3629786166 ();
 extern "C" void Quaternion_Dot_m952616600 ();
+extern "C" void Quaternion_Internal_MakePositive_m2921671247 ();
 extern "C" void Quaternion_GetHashCode_m2270520528_AdjustorThunk ();
 extern "C" void Quaternion_Equals_m3730391696_AdjustorThunk ();
 extern "C" void Quaternion_ToString_m2638853272_AdjustorThunk ();
+extern "C" void Random_Range_m2884721203 ();
+extern "C" void Random_Range_m694320887 ();
+extern "C" void Random_RandomRangeInt_m374035151 ();
 extern "C" void RangeAttribute__ctor_m1657271662 ();
 extern "C" void RangeInt_get_end_m913869897_AdjustorThunk ();
 extern "C" void Ray__ctor_m3379034047_AdjustorThunk ();
@@ -8852,6 +9057,7 @@ extern "C" void Rect_Equals_m3806390726_AdjustorThunk ();
 extern "C" void Rect_ToString_m2728794442_AdjustorThunk ();
 extern "C" void RectOffset__ctor_m2227510254 ();
 extern "C" void RectOffset__ctor_m1265077918 ();
+extern "C" void RectOffset__ctor_m4133355596 ();
 extern "C" void RectOffset_Init_m4361650 ();
 extern "C" void RectOffset_Cleanup_m3198970074 ();
 extern "C" void RectOffset_get_left_m439065308 ();
@@ -8929,14 +9135,29 @@ extern "C" void RenderTexture_get_height_m1108175848 ();
 extern "C" void RequireComponent__ctor_m3475141952 ();
 extern "C" void ResourceRequest__ctor_m3340010930 ();
 extern "C" void ResourceRequest_get_asset_m3527928488 ();
+extern "C" void Resources_Load_m2041782325 ();
 extern "C" void Resources_Load_m243305716 ();
 extern "C" void Resources_GetBuiltinResource_m582410469 ();
+extern "C" void Rigidbody_get_position_m3465583110 ();
+extern "C" void Rigidbody_INTERNAL_get_position_m2227872991 ();
+extern "C" void Rigidbody_get_rotation_m4203325509 ();
+extern "C" void Rigidbody_set_rotation_m2752020144 ();
+extern "C" void Rigidbody_INTERNAL_get_rotation_m109669412 ();
+extern "C" void Rigidbody_INTERNAL_set_rotation_m1385731864 ();
+extern "C" void Rigidbody_MovePosition_m1810529681 ();
+extern "C" void Rigidbody_INTERNAL_CALL_MovePosition_m2709492198 ();
+extern "C" void Rigidbody_MoveRotation_m3412525692 ();
+extern "C" void Rigidbody_INTERNAL_CALL_MoveRotation_m2205051919 ();
 extern "C" void Rigidbody2D_AddForce_m3200488178 ();
 extern "C" void Rigidbody2D_INTERNAL_CALL_AddForce_m1958598324 ();
 extern "C" void RPC__ctor_m1432086380 ();
 extern "C" void Scene_get_handle_m1555912301_AdjustorThunk ();
+extern "C" void Scene_get_name_m745914591_AdjustorThunk ();
 extern "C" void Scene_GetHashCode_m3223653899_AdjustorThunk ();
 extern "C" void Scene_Equals_m3588907349_AdjustorThunk ();
+extern "C" void Scene_GetNameInternal_m3140297940 ();
+extern "C" void SceneManager_GetActiveScene_m2964039490 ();
+extern "C" void SceneManager_INTERNAL_CALL_GetActiveScene_m1595803318 ();
 extern "C" void SceneManager_LoadScene_m1386820036 ();
 extern "C" void SceneManager_LoadScene_m87258056 ();
 extern "C" void SceneManager_LoadScene_m592643733 ();
@@ -9211,6 +9432,8 @@ extern "C" void Time_get_time_m2216684562 ();
 extern "C" void Time_get_deltaTime_m2233168104 ();
 extern "C" void Time_get_unscaledTime_m862335845 ();
 extern "C" void Time_get_unscaledDeltaTime_m4281640537 ();
+extern "C" void Time_get_smoothDeltaTime_m1294084638 ();
+extern "C" void Time_get_timeScale_m3151482970 ();
 extern "C" void Time_get_realtimeSinceStartup_m357614587 ();
 extern "C" void TooltipAttribute__ctor_m2640804852 ();
 extern "C" void Touch_get_fingerId_m4109475843_AdjustorThunk ();
@@ -9238,6 +9461,12 @@ extern "C" void TouchScreenKeyboard_GetSelectionInternal_m760950334 ();
 extern "C" void TrackedReference_op_Equality_m3491334086 ();
 extern "C" void TrackedReference_Equals_m3153703389 ();
 extern "C" void TrackedReference_GetHashCode_m811248179 ();
+extern "C" void TrailRenderer_get_time_m3449437864 ();
+extern "C" void TrailRenderer_set_time_m2582670875 ();
+extern "C" void TrailRenderer_get_startWidth_m1625094787 ();
+extern "C" void TrailRenderer_set_startWidth_m2858856800 ();
+extern "C" void TrailRenderer_get_endWidth_m3952779290 ();
+extern "C" void TrailRenderer_set_endWidth_m3133306587 ();
 extern "C" void Transform_get_position_m1104419803 ();
 extern "C" void Transform_set_position_m2469242620 ();
 extern "C" void Transform_INTERNAL_get_position_m1881704498 ();
@@ -9246,6 +9475,9 @@ extern "C" void Transform_get_localPosition_m2533925116 ();
 extern "C" void Transform_set_localPosition_m1026930133 ();
 extern "C" void Transform_INTERNAL_get_localPosition_m94028171 ();
 extern "C" void Transform_INTERNAL_set_localPosition_m432504087 ();
+extern "C" void Transform_get_eulerAngles_m4066505159 ();
+extern "C" void Transform_get_localEulerAngles_m4231787854 ();
+extern "C" void Transform_get_up_m1603627763 ();
 extern "C" void Transform_get_forward_m1833488937 ();
 extern "C" void Transform_get_rotation_m1033555130 ();
 extern "C" void Transform_set_rotation_m3411284563 ();
@@ -9274,8 +9506,6 @@ extern "C" void Transform_Translate_m1198703821 ();
 extern "C" void Transform_Rotate_m2612876682 ();
 extern "C" void Transform_Rotate_m4255273365 ();
 extern "C" void Transform_Rotate_m2449860094 ();
-extern "C" void Transform_LookAt_m3314153180 ();
-extern "C" void Transform_INTERNAL_CALL_LookAt_m1443061981 ();
 extern "C" void Transform_TransformDirection_m1639585047 ();
 extern "C" void Transform_INTERNAL_CALL_TransformDirection_m2899991790 ();
 extern "C" void Transform_TransformPoint_m3272254198 ();
@@ -9305,11 +9535,15 @@ extern "C" void Vector2__ctor_m3067419446_AdjustorThunk ();
 extern "C" void Vector2_get_Item_m2792130561_AdjustorThunk ();
 extern "C" void Vector2_set_Item_m3881967114_AdjustorThunk ();
 extern "C" void Vector2_Scale_m3228063809 ();
+extern "C" void Vector2_Normalize_m2465777963_AdjustorThunk ();
+extern "C" void Vector2_get_normalized_m2985402409_AdjustorThunk ();
 extern "C" void Vector2_ToString_m775491729_AdjustorThunk ();
 extern "C" void Vector2_GetHashCode_m2353429373_AdjustorThunk ();
 extern "C" void Vector2_Equals_m1405920279_AdjustorThunk ();
 extern "C" void Vector2_Dot_m778921987 ();
+extern "C" void Vector2_get_magnitude_m33802565_AdjustorThunk ();
 extern "C" void Vector2_get_sqrMagnitude_m1226294581_AdjustorThunk ();
+extern "C" void Vector2_Angle_m1064580737 ();
 extern "C" void Vector2_op_Addition_m1389598521 ();
 extern "C" void Vector2_op_Subtraction_m1984215297 ();
 extern "C" void Vector2_op_Multiply_m4236139442 ();
@@ -9327,12 +9561,15 @@ extern "C" void Vector3__ctor_m2720820983_AdjustorThunk ();
 extern "C" void Vector3_Lerp_m2935648359 ();
 extern "C" void Vector3_get_Item_m3616014016_AdjustorThunk ();
 extern "C" void Vector3_set_Item_m499708011_AdjustorThunk ();
+extern "C" void Vector3_Cross_m4149044051 ();
 extern "C" void Vector3_GetHashCode_m1754570744_AdjustorThunk ();
 extern "C" void Vector3_Equals_m2692262876_AdjustorThunk ();
 extern "C" void Vector3_Normalize_m2140428981 ();
+extern "C" void Vector3_Normalize_m3679112426_AdjustorThunk ();
 extern "C" void Vector3_get_normalized_m936072361_AdjustorThunk ();
 extern "C" void Vector3_Dot_m3161182818 ();
 extern "C" void Vector3_Distance_m1859670022 ();
+extern "C" void Vector3_ClampMagnitude_m2652735362 ();
 extern "C" void Vector3_Magnitude_m1349200714 ();
 extern "C" void Vector3_get_magnitude_m860342598_AdjustorThunk ();
 extern "C" void Vector3_SqrMagnitude_m3759098164 ();
@@ -9349,7 +9586,9 @@ extern "C" void Vector3_get_left_m2429378123 ();
 extern "C" void Vector3_get_right_m1884123822 ();
 extern "C" void Vector3_op_Addition_m3146764857 ();
 extern "C" void Vector3_op_Subtraction_m2407545601 ();
+extern "C" void Vector3_op_UnaryNegation_m3383802608 ();
 extern "C" void Vector3_op_Multiply_m1351554733 ();
+extern "C" void Vector3_op_Multiply_m3872631309 ();
 extern "C" void Vector3_op_Division_m3315615850 ();
 extern "C" void Vector3_op_Equality_m305888255 ();
 extern "C" void Vector3_op_Inequality_m799191452 ();
@@ -9360,9 +9599,12 @@ extern "C" void Vector4_set_Item_m3077071044_AdjustorThunk ();
 extern "C" void Vector4_GetHashCode_m1576457715_AdjustorThunk ();
 extern "C" void Vector4_Equals_m3783731577_AdjustorThunk ();
 extern "C" void Vector4_Dot_m2285943745 ();
+extern "C" void Vector4_get_magnitude_m4049434951_AdjustorThunk ();
 extern "C" void Vector4_get_sqrMagnitude_m2115578799_AdjustorThunk ();
 extern "C" void Vector4_get_zero_m3810945132 ();
+extern "C" void Vector4_op_Addition_m3367537977 ();
 extern "C" void Vector4_op_Subtraction_m2837269249 ();
+extern "C" void Vector4_op_Multiply_m3204903356 ();
 extern "C" void Vector4_op_Division_m130892763 ();
 extern "C" void Vector4_op_Equality_m1825453464 ();
 extern "C" void Vector4_ToString_m2340321043_AdjustorThunk ();
@@ -9384,6 +9626,962 @@ extern "C" void TypeInferenceRuleAttribute__ctor_m470566337 ();
 extern "C" void TypeInferenceRuleAttribute_ToString_m3941510216 ();
 extern "C" void WebRequestUtils_RedirectTo_m3803295888 ();
 extern "C" void WebRequestUtils__cctor_m893658947 ();
+extern "C" void Color2__ctor_m2417174790_AdjustorThunk ();
+extern "C" void Color2_op_Addition_m1918240656 ();
+extern "C" void Color2_op_Subtraction_m3002763776 ();
+extern "C" void Color2_op_Multiply_m3636588472 ();
+extern "C" void ABSSequentiable__ctor_m1457763740 ();
+extern "C" void Debugger_Log_m2834227361 ();
+extern "C" void Debugger_LogWarning_m1294243619 ();
+extern "C" void Debugger_LogError_m949546549 ();
+extern "C" void Debugger_LogReport_m963317535 ();
+extern "C" void Debugger_LogInvalidTween_m3454295394 ();
+extern "C" void Debugger_LogNestedTween_m3109520726 ();
+extern "C" void Debugger_LogNullTween_m832479276 ();
+extern "C" void Debugger_LogNonPathTween_m951639391 ();
+extern "C" void Debugger_LogMissingMaterialProperty_m3310745525 ();
+extern "C" void Debugger_LogRemoveActiveTweenError_m2297126192 ();
+extern "C" void Debugger_SetLogPriority_m1610107306 ();
+extern "C" void DOTweenComponent_Awake_m307634654 ();
+extern "C" void DOTweenComponent_Start_m2273654179 ();
+extern "C" void DOTweenComponent_Update_m2952167292 ();
+extern "C" void DOTweenComponent_LateUpdate_m3720781760 ();
+extern "C" void DOTweenComponent_FixedUpdate_m1532856798 ();
+extern "C" void DOTweenComponent_OnDrawGizmos_m711619515 ();
+extern "C" void DOTweenComponent_OnDestroy_m768162796 ();
+extern "C" void DOTweenComponent_OnApplicationQuit_m3566070717 ();
+extern "C" void DOTweenComponent_SetCapacity_m4268164513 ();
+extern "C" void DOTweenComponent_WaitForCompletion_m1897980136 ();
+extern "C" void DOTweenComponent_WaitForRewind_m2522663097 ();
+extern "C" void DOTweenComponent_WaitForKill_m1046269594 ();
+extern "C" void DOTweenComponent_WaitForElapsedLoops_m2314686214 ();
+extern "C" void DOTweenComponent_WaitForPosition_m3964012032 ();
+extern "C" void DOTweenComponent_WaitForStart_m3782525310 ();
+extern "C" void DOTweenComponent_Create_m1411710227 ();
+extern "C" void DOTweenComponent_DestroyInstance_m1740700608 ();
+extern "C" void DOTweenComponent__ctor_m1855129471 ();
+extern "C" void U3CWaitForCompletionU3Ed__13__ctor_m1500940881 ();
+extern "C" void U3CWaitForCompletionU3Ed__13_System_IDisposable_Dispose_m4042820963 ();
+extern "C" void U3CWaitForCompletionU3Ed__13_MoveNext_m2642612068 ();
+extern "C" void U3CWaitForCompletionU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3575789325 ();
+extern "C" void U3CWaitForCompletionU3Ed__13_System_Collections_IEnumerator_Reset_m1970706518 ();
+extern "C" void U3CWaitForCompletionU3Ed__13_System_Collections_IEnumerator_get_Current_m1875371376 ();
+extern "C" void U3CWaitForElapsedLoopsU3Ed__16__ctor_m721687953 ();
+extern "C" void U3CWaitForElapsedLoopsU3Ed__16_System_IDisposable_Dispose_m3624934307 ();
+extern "C" void U3CWaitForElapsedLoopsU3Ed__16_MoveNext_m3447844618 ();
+extern "C" void U3CWaitForElapsedLoopsU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2123559821 ();
+extern "C" void U3CWaitForElapsedLoopsU3Ed__16_System_Collections_IEnumerator_Reset_m2109009536 ();
+extern "C" void U3CWaitForElapsedLoopsU3Ed__16_System_Collections_IEnumerator_get_Current_m2697209294 ();
+extern "C" void U3CWaitForKillU3Ed__15__ctor_m383464461 ();
+extern "C" void U3CWaitForKillU3Ed__15_System_IDisposable_Dispose_m1633665715 ();
+extern "C" void U3CWaitForKillU3Ed__15_MoveNext_m1537769148 ();
+extern "C" void U3CWaitForKillU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m918810409 ();
+extern "C" void U3CWaitForKillU3Ed__15_System_Collections_IEnumerator_Reset_m1981393790 ();
+extern "C" void U3CWaitForKillU3Ed__15_System_Collections_IEnumerator_get_Current_m1860616400 ();
+extern "C" void U3CWaitForPositionU3Ed__17__ctor_m2032821274 ();
+extern "C" void U3CWaitForPositionU3Ed__17_System_IDisposable_Dispose_m731458714 ();
+extern "C" void U3CWaitForPositionU3Ed__17_MoveNext_m3794080375 ();
+extern "C" void U3CWaitForPositionU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4242636580 ();
+extern "C" void U3CWaitForPositionU3Ed__17_System_Collections_IEnumerator_Reset_m1580275791 ();
+extern "C" void U3CWaitForPositionU3Ed__17_System_Collections_IEnumerator_get_Current_m2895331511 ();
+extern "C" void U3CWaitForRewindU3Ed__14__ctor_m2599254525 ();
+extern "C" void U3CWaitForRewindU3Ed__14_System_IDisposable_Dispose_m2673538587 ();
+extern "C" void U3CWaitForRewindU3Ed__14_MoveNext_m1776446236 ();
+extern "C" void U3CWaitForRewindU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m821810625 ();
+extern "C" void U3CWaitForRewindU3Ed__14_System_Collections_IEnumerator_Reset_m3291569966 ();
+extern "C" void U3CWaitForRewindU3Ed__14_System_Collections_IEnumerator_get_Current_m1161433784 ();
+extern "C" void U3CWaitForStartU3Ed__18__ctor_m3014617818 ();
+extern "C" void U3CWaitForStartU3Ed__18_System_IDisposable_Dispose_m1119218126 ();
+extern "C" void U3CWaitForStartU3Ed__18_MoveNext_m1398096001 ();
+extern "C" void U3CWaitForStartU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3691048774 ();
+extern "C" void U3CWaitForStartU3Ed__18_System_Collections_IEnumerator_Reset_m3457456717 ();
+extern "C" void U3CWaitForStartU3Ed__18_System_Collections_IEnumerator_get_Current_m1804430085 ();
+extern "C" void DOTweenSettings__ctor_m887379349 ();
+extern "C" void Bounce_EaseIn_m3887019168 ();
+extern "C" void Bounce_EaseOut_m4239383085 ();
+extern "C" void Bounce_EaseInOut_m2246762374 ();
+extern "C" void EaseCurve__ctor_m442291200 ();
+extern "C" void EaseCurve_Evaluate_m4151423631 ();
+extern "C" void EaseManager_Evaluate_m1048646038 ();
+extern "C" void EaseManager_Evaluate_m74870165 ();
+extern "C" void EaseManager_ToEaseFunction_m1173633506 ();
+extern "C" void EaseManager_IsFlashEase_m2818956000 ();
+extern "C" void U3CU3Ec__cctor_m933983471 ();
+extern "C" void U3CU3Ec__ctor_m1068847482 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_0_m2721836512 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_1_m1426024031 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_2_m3849412322 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_3_m4002960225 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_4_m963089380 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_5_m3962244195 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_6_m2090665190 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_7_m2244213093 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_8_m3074343400 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_9_m1778530919 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_10_m2753388371 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_11_m2533843000 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_12_m1924838281 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_13_m4292818030 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_14_m3345003455 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_15_m3125458084 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_16_m2516453365 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_17_m589465818 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_18_m102719531 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_19_m4178141456 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_20_m3541146612 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_21_m3321601241 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_22_m2712596522 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_23_m785608975 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_24_m4132761696 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_25_m3913216325 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_26_m3304211606 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_27_m1377224059 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_28_m890477772 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_29_m670932401 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_30_m3757667477 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_31_m3538122106 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_32_m2929117387 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_33_m1002129840 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_34_m54315265 ();
+extern "C" void U3CU3Ec_U3CToEaseFunctionU3Eb__4_35_m4129737190 ();
+extern "C" void Flash_Ease_m4276233543 ();
+extern "C" void Flash_EaseIn_m1600134034 ();
+extern "C" void Flash_EaseOut_m3479091121 ();
+extern "C" void Flash_EaseInOut_m3738681292 ();
+extern "C" void Flash_WeightedEase_m4109024196 ();
+extern "C" void SequenceCallback__ctor_m106728995 ();
+extern "C" void ColorWrapper__ctor_m1281075933_AdjustorThunk ();
+extern "C" void ColorWrapper_op_Implicit_m1605786519 ();
+extern "C" void ColorWrapper_op_Implicit_m3508648404 ();
+extern "C" void ColorWrapper_op_Implicit_m2452350099 ();
+extern "C" void ColorWrapper_op_Implicit_m1742881980 ();
+extern "C" void QuaternionWrapper__ctor_m2063213917_AdjustorThunk ();
+extern "C" void QuaternionWrapper_op_Implicit_m2049866530 ();
+extern "C" void QuaternionWrapper_op_Implicit_m2977407408 ();
+extern "C" void Vector2Wrapper__ctor_m364751229_AdjustorThunk ();
+extern "C" void Vector2Wrapper__ctor_m1937055205_AdjustorThunk ();
+extern "C" void Vector2Wrapper_op_Implicit_m2749274437 ();
+extern "C" void Vector2Wrapper_op_Implicit_m2218031533 ();
+extern "C" void Vector3Wrapper__ctor_m3577102173_AdjustorThunk ();
+extern "C" void Vector3Wrapper_op_Implicit_m3215807942 ();
+extern "C" void Vector3Wrapper_op_Implicit_m285019116 ();
+extern "C" void Vector4Wrapper__ctor_m1437280573_AdjustorThunk ();
+extern "C" void Vector4Wrapper_op_Implicit_m3648553539 ();
+extern "C" void Vector4Wrapper_op_Implicit_m3095412647 ();
+extern "C" void TweenManager_GetSequence_m1013349775 ();
+extern "C" void TweenManager_SetUpdateType_m3684972442 ();
+extern "C" void TweenManager_AddActiveTweenToSequence_m3601486235 ();
+extern "C" void TweenManager_DespawnAll_m879780213 ();
+extern "C" void TweenManager_Despawn_m1933822120 ();
+extern "C" void TweenManager_PurgeAll_m2608239790 ();
+extern "C" void TweenManager_PurgePools_m1427576330 ();
+extern "C" void TweenManager_ResetCapacities_m882991915 ();
+extern "C" void TweenManager_SetCapacities_m2919421098 ();
+extern "C" void TweenManager_Validate_m3353907304 ();
+extern "C" void TweenManager_Update_m378595860 ();
+extern "C" void TweenManager_FilteredOperation_m1159879057 ();
+extern "C" void TweenManager_Complete_m1525644904 ();
+extern "C" void TweenManager_Flip_m3276392302 ();
+extern "C" void TweenManager_ForceInit_m163553463 ();
+extern "C" void TweenManager_Goto_m3404683021 ();
+extern "C" void TweenManager_Pause_m1492466245 ();
+extern "C" void TweenManager_Play_m1289143583 ();
+extern "C" void TweenManager_PlayBackwards_m156468731 ();
+extern "C" void TweenManager_PlayForward_m1226939652 ();
+extern "C" void TweenManager_Restart_m197886568 ();
+extern "C" void TweenManager_Rewind_m2873713783 ();
+extern "C" void TweenManager_SmoothRewind_m1990583008 ();
+extern "C" void TweenManager_TogglePause_m3731650299 ();
+extern "C" void TweenManager_TotalPooledTweens_m1221755943 ();
+extern "C" void TweenManager_TotalPlayingTweens_m3937211462 ();
+extern "C" void TweenManager_GetActiveTweens_m586218945 ();
+extern "C" void TweenManager_GetTweensById_m2700268389 ();
+extern "C" void TweenManager_GetTweensByTarget_m1060452997 ();
+extern "C" void TweenManager_MarkForKilling_m1319382931 ();
+extern "C" void TweenManager_AddActiveTween_m1611214199 ();
+extern "C" void TweenManager_ReorganizeActiveTweens_m3706676790 ();
+extern "C" void TweenManager_DespawnActiveTweens_m3761818125 ();
+extern "C" void TweenManager_RemoveActiveTween_m3416564700 ();
+extern "C" void TweenManager_ClearTweenArray_m1588603360 ();
+extern "C" void TweenManager_IncreaseCapacities_m2843870263 ();
+extern "C" void TweenManager__cctor_m3795227095 ();
+extern "C" void Utils_Vector3FromAngle_m3600790458 ();
+extern "C" void Utils_Angle2D_m2378361568 ();
+extern "C" void PureQuaternionPlugin_Plug_m3044542140 ();
+extern "C" void PureQuaternionPlugin_Reset_m1622149370 ();
+extern "C" void PureQuaternionPlugin_SetFrom_m4265139358 ();
+extern "C" void PureQuaternionPlugin_ConvertToStartValue_m707750533 ();
+extern "C" void PureQuaternionPlugin_SetRelativeEndValue_m487649591 ();
+extern "C" void PureQuaternionPlugin_SetChangeValue_m1416200996 ();
+extern "C" void PureQuaternionPlugin_GetSpeedBasedDuration_m2190623658 ();
+extern "C" void PureQuaternionPlugin_EvaluateAndApply_m1454595347 ();
+extern "C" void PureQuaternionPlugin__ctor_m2869270851 ();
+extern "C" void DOTween_get_logBehaviour_m2168492577 ();
+extern "C" void DOTween_set_logBehaviour_m2124595076 ();
+extern "C" void DOTween__cctor_m3994335352 ();
+extern "C" void DOTween_Init_m4079336309 ();
+extern "C" void DOTween_AutoInit_m4125144064 ();
+extern "C" void DOTween_Init_m3935563765 ();
+extern "C" void DOTween_SetTweensCapacity_m299576005 ();
+extern "C" void DOTween_Clear_m1972800791 ();
+extern "C" void DOTween_ClearCachedTweens_m3592210690 ();
+extern "C" void DOTween_Validate_m2145836181 ();
+extern "C" void DOTween_To_m914278462 ();
+extern "C" void DOTween_To_m3247828180 ();
+extern "C" void DOTween_To_m3136369265 ();
+extern "C" void DOTween_To_m983137922 ();
+extern "C" void DOTween_To_m1576341974 ();
+extern "C" void DOTween_To_m1946796431 ();
+extern "C" void DOTween_To_m2764928386 ();
+extern "C" void DOTween_To_m3776518642 ();
+extern "C" void DOTween_To_m3775355191 ();
+extern "C" void DOTween_To_m2148570216 ();
+extern "C" void DOTween_To_m3818371046 ();
+extern "C" void DOTween_To_m1616870542 ();
+extern "C" void DOTween_To_m732165036 ();
+extern "C" void DOTween_To_m1374276420 ();
+extern "C" void DOTween_ToAxis_m1546794660 ();
+extern "C" void DOTween_ToAlpha_m1017298269 ();
+extern "C" void DOTween_To_m1374977403 ();
+extern "C" void DOTween_Punch_m2093241430 ();
+extern "C" void DOTween_Shake_m2491128678 ();
+extern "C" void DOTween_Shake_m683174647 ();
+extern "C" void DOTween_Shake_m1527020091 ();
+extern "C" void DOTween_ToArray_m2997520276 ();
+extern "C" void DOTween_To_m1462453879 ();
+extern "C" void DOTween_Sequence_m3562267366 ();
+extern "C" void DOTween_CompleteAll_m4221744420 ();
+extern "C" void DOTween_Complete_m2005563247 ();
+extern "C" void DOTween_CompleteAndReturnKilledTot_m1303820179 ();
+extern "C" void DOTween_CompleteAndReturnKilledTot_m3308320837 ();
+extern "C" void DOTween_CompleteAndReturnKilledTotExceptFor_m2244397851 ();
+extern "C" void DOTween_FlipAll_m3075944589 ();
+extern "C" void DOTween_Flip_m3578827124 ();
+extern "C" void DOTween_GotoAll_m2362950379 ();
+extern "C" void DOTween_Goto_m3890627630 ();
+extern "C" void DOTween_KillAll_m1102144471 ();
+extern "C" void DOTween_KillAll_m3780178527 ();
+extern "C" void DOTween_Kill_m211473084 ();
+extern "C" void DOTween_PauseAll_m4101906706 ();
+extern "C" void DOTween_Pause_m4110474415 ();
+extern "C" void DOTween_PlayAll_m1299085894 ();
+extern "C" void DOTween_Play_m164738169 ();
+extern "C" void DOTween_Play_m32308619 ();
+extern "C" void DOTween_PlayBackwardsAll_m700876428 ();
+extern "C" void DOTween_PlayBackwards_m2839273377 ();
+extern "C" void DOTween_PlayBackwards_m544554603 ();
+extern "C" void DOTween_PlayForwardAll_m1846124281 ();
+extern "C" void DOTween_PlayForward_m3077912960 ();
+extern "C" void DOTween_PlayForward_m1591690666 ();
+extern "C" void DOTween_RestartAll_m1603653256 ();
+extern "C" void DOTween_Restart_m570313680 ();
+extern "C" void DOTween_Restart_m590221510 ();
+extern "C" void DOTween_RewindAll_m1008678220 ();
+extern "C" void DOTween_Rewind_m660085617 ();
+extern "C" void DOTween_SmoothRewindAll_m4292133471 ();
+extern "C" void DOTween_SmoothRewind_m1245411966 ();
+extern "C" void DOTween_TogglePauseAll_m336422306 ();
+extern "C" void DOTween_TogglePause_m1571016433 ();
+extern "C" void DOTween_IsTweening_m2800478603 ();
+extern "C" void DOTween_TotalPlayingTweens_m3668081427 ();
+extern "C" void DOTween_PlayingTweens_m3712978333 ();
+extern "C" void DOTween_PausedTweens_m1007284995 ();
+extern "C" void DOTween_TweensById_m2371039200 ();
+extern "C" void DOTween_TweensByTarget_m2730695796 ();
+extern "C" void DOTween_InitCheck_m691380157 ();
+extern "C" void DOTween__ctor_m3410313657 ();
+extern "C" void U3CU3Ec__DisplayClass53_0__ctor_m876624288 ();
+extern "C" void U3CU3Ec__DisplayClass53_0_U3CToU3Eb__0_m2724231979 ();
+extern "C" void U3CU3Ec__DisplayClass53_0_U3CToU3Eb__1_m4247796025 ();
+extern "C" void DOVirtual_Float_m1627525319 ();
+extern "C" void DOVirtual_EasedValue_m1602872611 ();
+extern "C" void DOVirtual_EasedValue_m3612873406 ();
+extern "C" void DOVirtual_EasedValue_m3005505411 ();
+extern "C" void DOVirtual_EasedValue_m2153709637 ();
+extern "C" void DOVirtual_DelayedCall_m1093540967 ();
+extern "C" void U3CU3Ec__DisplayClass0_0__ctor_m573884160 ();
+extern "C" void U3CU3Ec__DisplayClass0_0_U3CFloatU3Eb__0_m4185883154 ();
+extern "C" void U3CU3Ec__DisplayClass0_0_U3CFloatU3Eb__1_m3483606204 ();
+extern "C" void U3CU3Ec__DisplayClass0_0_U3CFloatU3Eb__2_m64240142 ();
+extern "C" void EaseFactory_StopMotion_m2300428264 ();
+extern "C" void EaseFactory_StopMotion_m3743262361 ();
+extern "C" void EaseFactory_StopMotion_m810640373 ();
+extern "C" void EaseFactory__ctor_m2540174781 ();
+extern "C" void U3CU3Ec__DisplayClass2_0__ctor_m98975214 ();
+extern "C" void U3CU3Ec__DisplayClass2_0_U3CStopMotionU3Eb__0_m1536854436 ();
+extern "C" void EaseFunction__ctor_m70174455 ();
+extern "C" void EaseFunction_Invoke_m4001665929 ();
+extern "C" void EaseFunction_BeginInvoke_m1915830106 ();
+extern "C" void EaseFunction_EndInvoke_m1686794003 ();
+extern "C" void Color2Plugin_Reset_m1040404076 ();
+extern "C" void Color2Plugin_SetFrom_m1687712394 ();
+extern "C" void Color2Plugin_ConvertToStartValue_m1627227983 ();
+extern "C" void Color2Plugin_SetRelativeEndValue_m2002112229 ();
+extern "C" void Color2Plugin_SetChangeValue_m1983329186 ();
+extern "C" void Color2Plugin_GetSpeedBasedDuration_m1878874090 ();
+extern "C" void Color2Plugin_EvaluateAndApply_m1350282949 ();
+extern "C" void Color2Plugin__ctor_m2361216917 ();
+extern "C" void ColorWrapperPlugin_Reset_m2913956871 ();
+extern "C" void ColorWrapperPlugin_SetFrom_m67200453 ();
+extern "C" void ColorWrapperPlugin_ConvertToStartValue_m3890305038 ();
+extern "C" void ColorWrapperPlugin_SetRelativeEndValue_m1407840736 ();
+extern "C" void ColorWrapperPlugin_SetChangeValue_m2846381341 ();
+extern "C" void ColorWrapperPlugin_GetSpeedBasedDuration_m3678181558 ();
+extern "C" void ColorWrapperPlugin_EvaluateAndApply_m880055882 ();
+extern "C" void ColorWrapperPlugin__ctor_m3972909968 ();
+extern "C" void ABSPathDecoder__ctor_m986200161 ();
+extern "C" void CatmullRomDecoder_FinalizePath_m2016177675 ();
+extern "C" void CatmullRomDecoder_GetPoint_m889044054 ();
+extern "C" void CatmullRomDecoder_SetTimeToLengthTables_m786122248 ();
+extern "C" void CatmullRomDecoder_SetWaypointsLengths_m132628524 ();
+extern "C" void CatmullRomDecoder__ctor_m31802828 ();
+extern "C" void ControlPoint__ctor_m2181047301_AdjustorThunk ();
+extern "C" void ControlPoint_op_Addition_m2476705731 ();
+extern "C" void LinearDecoder_FinalizePath_m493312366 ();
+extern "C" void LinearDecoder_GetPoint_m2014065135 ();
+extern "C" void LinearDecoder_SetTimeToLengthTables_m2287316015 ();
+extern "C" void LinearDecoder_SetWaypointsLengths_m3654082159 ();
+extern "C" void LinearDecoder__ctor_m1815788553 ();
+extern "C" void Path__ctor_m4253660657 ();
+extern "C" void Path__ctor_m109627495 ();
+extern "C" void Path_FinalizePath_m2340227616 ();
+extern "C" void Path_GetPoint_m685987541 ();
+extern "C" void Path_ConvertToConstantPathPerc_m4225215567 ();
+extern "C" void Path_GetWaypointIndexFromPerc_m1857218744 ();
+extern "C" void Path_GetDrawPoints_m2671420849 ();
+extern "C" void Path_RefreshNonLinearDrawWps_m692037076 ();
+extern "C" void Path_Destroy_m2187283033 ();
+extern "C" void Path_CloneIncremental_m3267316450 ();
+extern "C" void Path_AssignWaypoints_m1568093980 ();
+extern "C" void Path_AssignDecoder_m3072882543 ();
+extern "C" void Path_Draw_m755263667 ();
+extern "C" void Path_Draw_m3671593897 ();
+extern "C" void PluginsManager_PurgeAll_m2309351391 ();
+extern "C" void SpecialPluginsUtils_SetLookAt_m3611307139 ();
+extern "C" void SpecialPluginsUtils_SetPunch_m2968676958 ();
+extern "C" void SpecialPluginsUtils_SetShake_m1141163400 ();
+extern "C" void SpecialPluginsUtils_SetCameraShakePosition_m757028890 ();
+extern "C" void DoublePlugin_Reset_m4097767476 ();
+extern "C" void DoublePlugin_SetFrom_m287034312 ();
+extern "C" void DoublePlugin_ConvertToStartValue_m2828371137 ();
+extern "C" void DoublePlugin_SetRelativeEndValue_m743829071 ();
+extern "C" void DoublePlugin_SetChangeValue_m2620647386 ();
+extern "C" void DoublePlugin_GetSpeedBasedDuration_m3485989573 ();
+extern "C" void DoublePlugin_EvaluateAndApply_m986922907 ();
+extern "C" void DoublePlugin__ctor_m472028567 ();
+extern "C" void FloatPlugin_Reset_m1409276442 ();
+extern "C" void FloatPlugin_SetFrom_m3628140100 ();
+extern "C" void FloatPlugin_ConvertToStartValue_m1262983801 ();
+extern "C" void FloatPlugin_SetRelativeEndValue_m3966531475 ();
+extern "C" void FloatPlugin_SetChangeValue_m134531078 ();
+extern "C" void FloatPlugin_GetSpeedBasedDuration_m1649918496 ();
+extern "C" void FloatPlugin_EvaluateAndApply_m3138927159 ();
+extern "C" void FloatPlugin__ctor_m585502968 ();
+extern "C" void IntPlugin_Reset_m473564686 ();
+extern "C" void IntPlugin_SetFrom_m2590773846 ();
+extern "C" void IntPlugin_ConvertToStartValue_m2826582483 ();
+extern "C" void IntPlugin_SetRelativeEndValue_m3715330301 ();
+extern "C" void IntPlugin_SetChangeValue_m2318505996 ();
+extern "C" void IntPlugin_GetSpeedBasedDuration_m2752808202 ();
+extern "C" void IntPlugin_EvaluateAndApply_m576724549 ();
+extern "C" void IntPlugin__ctor_m291784073 ();
+extern "C" void LongPlugin_Reset_m4261321919 ();
+extern "C" void LongPlugin_SetFrom_m2682161757 ();
+extern "C" void LongPlugin_ConvertToStartValue_m603421758 ();
+extern "C" void LongPlugin_SetRelativeEndValue_m4267326736 ();
+extern "C" void LongPlugin_SetChangeValue_m3050133269 ();
+extern "C" void LongPlugin_GetSpeedBasedDuration_m2541162194 ();
+extern "C" void LongPlugin_EvaluateAndApply_m2985682968 ();
+extern "C" void LongPlugin__ctor_m2586876812 ();
+extern "C" void ColorOptions_Reset_m2624799597_AdjustorThunk ();
+extern "C" void FloatOptions_Reset_m1378398748_AdjustorThunk ();
+extern "C" void NoOptions_Reset_m532649001_AdjustorThunk ();
+extern "C" void PathOptions_Reset_m4016313393_AdjustorThunk ();
+extern "C" void QuaternionOptions_Reset_m4116534850_AdjustorThunk ();
+extern "C" void RectOptions_Reset_m297368492_AdjustorThunk ();
+extern "C" void StringOptions_Reset_m530675817_AdjustorThunk ();
+extern "C" void UintOptions_Reset_m3831863362_AdjustorThunk ();
+extern "C" void Vector3ArrayOptions_Reset_m277565119_AdjustorThunk ();
+extern "C" void VectorOptions_Reset_m245768289_AdjustorThunk ();
+extern "C" void PathPlugin_Reset_m3087254235 ();
+extern "C" void PathPlugin_SetFrom_m4091676017 ();
+extern "C" void PathPlugin_Get_m3476918268 ();
+extern "C" void PathPlugin_ConvertToStartValue_m460648741 ();
+extern "C" void PathPlugin_SetRelativeEndValue_m970240972 ();
+extern "C" void PathPlugin_SetChangeValue_m2144720161 ();
+extern "C" void PathPlugin_GetSpeedBasedDuration_m3202608197 ();
+extern "C" void PathPlugin_EvaluateAndApply_m2953483135 ();
+extern "C" void PathPlugin_SetOrientation_m3023070977 ();
+extern "C" void PathPlugin__ctor_m4017481171 ();
+extern "C" void QuaternionWrapperPlugin_Reset_m3123969673 ();
+extern "C" void QuaternionWrapperPlugin_SetFrom_m3425181839 ();
+extern "C" void QuaternionWrapperPlugin_ConvertToStartValue_m1835135070 ();
+extern "C" void QuaternionWrapperPlugin_SetRelativeEndValue_m1161287112 ();
+extern "C" void QuaternionWrapperPlugin_SetChangeValue_m1016963411 ();
+extern "C" void QuaternionWrapperPlugin_GetSpeedBasedDuration_m1945985053 ();
+extern "C" void QuaternionWrapperPlugin_EvaluateAndApply_m3283481956 ();
+extern "C" void QuaternionWrapperPlugin__ctor_m4196786501 ();
+extern "C" void RectOffsetPlugin_Reset_m4095272056 ();
+extern "C" void RectOffsetPlugin_SetFrom_m140944448 ();
+extern "C" void RectOffsetPlugin_ConvertToStartValue_m3269101313 ();
+extern "C" void RectOffsetPlugin_SetRelativeEndValue_m3222695535 ();
+extern "C" void RectOffsetPlugin_SetChangeValue_m4017675218 ();
+extern "C" void RectOffsetPlugin_GetSpeedBasedDuration_m3064219017 ();
+extern "C" void RectOffsetPlugin_EvaluateAndApply_m2322178099 ();
+extern "C" void RectOffsetPlugin__ctor_m3970399647 ();
+extern "C" void RectOffsetPlugin__cctor_m4059289360 ();
+extern "C" void RectPlugin_Reset_m36067126 ();
+extern "C" void RectPlugin_SetFrom_m3503117286 ();
+extern "C" void RectPlugin_ConvertToStartValue_m4260783945 ();
+extern "C" void RectPlugin_SetRelativeEndValue_m1255493911 ();
+extern "C" void RectPlugin_SetChangeValue_m2964213558 ();
+extern "C" void RectPlugin_GetSpeedBasedDuration_m4207891958 ();
+extern "C" void RectPlugin_EvaluateAndApply_m120801595 ();
+extern "C" void RectPlugin__ctor_m403056936 ();
+extern "C" void StringPlugin_SetFrom_m1109720958 ();
+extern "C" void StringPlugin_Reset_m77394362 ();
+extern "C" void StringPlugin_ConvertToStartValue_m202643461 ();
+extern "C" void StringPlugin_SetRelativeEndValue_m3015982295 ();
+extern "C" void StringPlugin_SetChangeValue_m2758686388 ();
+extern "C" void StringPlugin_GetSpeedBasedDuration_m3607809797 ();
+extern "C" void StringPlugin_EvaluateAndApply_m3214475539 ();
+extern "C" void StringPlugin_Append_m915403987 ();
+extern "C" void StringPlugin_ScrambledCharsToUse_m3337172010 ();
+extern "C" void StringPlugin__ctor_m4132855087 ();
+extern "C" void StringPlugin__cctor_m4075694604 ();
+extern "C" void StringPluginExtensions__cctor_m216118382 ();
+extern "C" void StringPluginExtensions_ScrambleChars_m2357882848 ();
+extern "C" void StringPluginExtensions_AppendScrambledChars_m2999297406 ();
+extern "C" void UintPlugin_Reset_m3049541632 ();
+extern "C" void UintPlugin_SetFrom_m3149814748 ();
+extern "C" void UintPlugin_ConvertToStartValue_m765651541 ();
+extern "C" void UintPlugin_SetRelativeEndValue_m2418783195 ();
+extern "C" void UintPlugin_SetChangeValue_m3466217300 ();
+extern "C" void UintPlugin_GetSpeedBasedDuration_m1986785747 ();
+extern "C" void UintPlugin_EvaluateAndApply_m3628556239 ();
+extern "C" void UintPlugin__ctor_m1851929470 ();
+extern "C" void UlongPlugin_Reset_m465097296 ();
+extern "C" void UlongPlugin_SetFrom_m175352084 ();
+extern "C" void UlongPlugin_ConvertToStartValue_m77481419 ();
+extern "C" void UlongPlugin_SetRelativeEndValue_m3409537757 ();
+extern "C" void UlongPlugin_SetChangeValue_m4268888190 ();
+extern "C" void UlongPlugin_GetSpeedBasedDuration_m721011258 ();
+extern "C" void UlongPlugin_EvaluateAndApply_m248710881 ();
+extern "C" void UlongPlugin__ctor_m2560758085 ();
+extern "C" void Vector2WrapperPlugin_Reset_m3042757129 ();
+extern "C" void Vector2WrapperPlugin_SetFrom_m984374511 ();
+extern "C" void Vector2WrapperPlugin_ConvertToStartValue_m3514524042 ();
+extern "C" void Vector2WrapperPlugin_SetRelativeEndValue_m791739472 ();
+extern "C" void Vector2WrapperPlugin_SetChangeValue_m3448329875 ();
+extern "C" void Vector2WrapperPlugin_GetSpeedBasedDuration_m1880710800 ();
+extern "C" void Vector2WrapperPlugin_EvaluateAndApply_m4006909412 ();
+extern "C" void Vector2WrapperPlugin__ctor_m2362136928 ();
+extern "C" void Vector3ArrayPlugin_Reset_m2592336274 ();
+extern "C" void Vector3ArrayPlugin_SetFrom_m2442655110 ();
+extern "C" void Vector3ArrayPlugin_ConvertToStartValue_m1953175333 ();
+extern "C" void Vector3ArrayPlugin_SetRelativeEndValue_m1899894737 ();
+extern "C" void Vector3ArrayPlugin_SetChangeValue_m1701422420 ();
+extern "C" void Vector3ArrayPlugin_GetSpeedBasedDuration_m2617333706 ();
+extern "C" void Vector3ArrayPlugin_EvaluateAndApply_m2521440271 ();
+extern "C" void Vector3ArrayPlugin__ctor_m1114023449 ();
+extern "C" void Vector3WrapperPlugin_Reset_m806348708 ();
+extern "C" void Vector3WrapperPlugin_SetFrom_m2245036820 ();
+extern "C" void Vector3WrapperPlugin_ConvertToStartValue_m2069321893 ();
+extern "C" void Vector3WrapperPlugin_SetRelativeEndValue_m3299014347 ();
+extern "C" void Vector3WrapperPlugin_SetChangeValue_m2206227022 ();
+extern "C" void Vector3WrapperPlugin_GetSpeedBasedDuration_m2319773456 ();
+extern "C" void Vector3WrapperPlugin_EvaluateAndApply_m1275957311 ();
+extern "C" void Vector3WrapperPlugin__ctor_m2408724031 ();
+extern "C" void Vector4WrapperPlugin_Reset_m251397479 ();
+extern "C" void Vector4WrapperPlugin_SetFrom_m3643710609 ();
+extern "C" void Vector4WrapperPlugin_ConvertToStartValue_m4146983784 ();
+extern "C" void Vector4WrapperPlugin_SetRelativeEndValue_m1976125126 ();
+extern "C" void Vector4WrapperPlugin_SetChangeValue_m1101493041 ();
+extern "C" void Vector4WrapperPlugin_GetSpeedBasedDuration_m2477711888 ();
+extern "C" void Vector4WrapperPlugin_EvaluateAndApply_m4224129966 ();
+extern "C" void Vector4WrapperPlugin__ctor_m1319505434 ();
+extern "C" void Sequence__ctor_m3160015202 ();
+extern "C" void Sequence_DoPrepend_m3692126219 ();
+extern "C" void Sequence_DoInsert_m2233051341 ();
+extern "C" void Sequence_DoAppendInterval_m4156058788 ();
+extern "C" void Sequence_DoPrependInterval_m33614792 ();
+extern "C" void Sequence_DoInsertCallback_m2417658513 ();
+extern "C" void Sequence_Reset_m1194713657 ();
+extern "C" void Sequence_Validate_m2655851536 ();
+extern "C" void Sequence_Startup_m2282350177 ();
+extern "C" void Sequence_ApplyTween_m4207260438 ();
+extern "C" void Sequence_Setup_m1914808042 ();
+extern "C" void Sequence_DoStartup_m1514469211 ();
+extern "C" void Sequence_DoApplyTween_m2567737122 ();
+extern "C" void Sequence_ApplyInternalCycle_m4170225852 ();
+extern "C" void Sequence_SortSequencedObjs_m3886496447 ();
+extern "C" void ShortcutExtensions_DOFade_m3908825903 ();
+extern "C" void ShortcutExtensions_DOPitch_m1466203827 ();
+extern "C" void ShortcutExtensions_DOAspect_m4263503343 ();
+extern "C" void ShortcutExtensions_DOColor_m4070360217 ();
+extern "C" void ShortcutExtensions_DOFarClipPlane_m1788230568 ();
+extern "C" void ShortcutExtensions_DOFieldOfView_m2729074193 ();
+extern "C" void ShortcutExtensions_DONearClipPlane_m3946677591 ();
+extern "C" void ShortcutExtensions_DOOrthoSize_m3058874688 ();
+extern "C" void ShortcutExtensions_DOPixelRect_m1451235077 ();
+extern "C" void ShortcutExtensions_DORect_m1672543897 ();
+extern "C" void ShortcutExtensions_DOShakePosition_m3912240257 ();
+extern "C" void ShortcutExtensions_DOShakePosition_m1939458561 ();
+extern "C" void ShortcutExtensions_DOShakeRotation_m1826964640 ();
+extern "C" void ShortcutExtensions_DOShakeRotation_m3224386616 ();
+extern "C" void ShortcutExtensions_DOColor_m2540950828 ();
+extern "C" void ShortcutExtensions_DOIntensity_m2263101207 ();
+extern "C" void ShortcutExtensions_DOShadowStrength_m1596018935 ();
+extern "C" void ShortcutExtensions_DOColor_m3644171909 ();
+extern "C" void ShortcutExtensions_DOColor_m1029787631 ();
+extern "C" void ShortcutExtensions_DOColor_m331992445 ();
+extern "C" void ShortcutExtensions_DOFade_m2221070795 ();
+extern "C" void ShortcutExtensions_DOFade_m4201395497 ();
+extern "C" void ShortcutExtensions_DOFloat_m2495122819 ();
+extern "C" void ShortcutExtensions_DOOffset_m2137547141 ();
+extern "C" void ShortcutExtensions_DOOffset_m1515150151 ();
+extern "C" void ShortcutExtensions_DOTiling_m2024748893 ();
+extern "C" void ShortcutExtensions_DOTiling_m2236894419 ();
+extern "C" void ShortcutExtensions_DOVector_m2339305057 ();
+extern "C" void ShortcutExtensions_DOMove_m1933953753 ();
+extern "C" void ShortcutExtensions_DOMoveX_m3420231689 ();
+extern "C" void ShortcutExtensions_DOMoveY_m2397857768 ();
+extern "C" void ShortcutExtensions_DOMoveZ_m1621316935 ();
+extern "C" void ShortcutExtensions_DORotate_m458975576 ();
+extern "C" void ShortcutExtensions_DOLookAt_m3791687253 ();
+extern "C" void ShortcutExtensions_DOJump_m841256827 ();
+extern "C" void ShortcutExtensions_DOPath_m1262144308 ();
+extern "C" void ShortcutExtensions_DOLocalPath_m3950589509 ();
+extern "C" void ShortcutExtensions_DOPath_m1344615108 ();
+extern "C" void ShortcutExtensions_DOLocalPath_m3055576589 ();
+extern "C" void ShortcutExtensions_DOResize_m1464567070 ();
+extern "C" void ShortcutExtensions_DOTime_m4195941374 ();
+extern "C" void ShortcutExtensions_DOMove_m813241662 ();
+extern "C" void ShortcutExtensions_DOMoveX_m369816864 ();
+extern "C" void ShortcutExtensions_DOMoveY_m3000263681 ();
+extern "C" void ShortcutExtensions_DOMoveZ_m977316578 ();
+extern "C" void ShortcutExtensions_DOLocalMove_m1432977613 ();
+extern "C" void ShortcutExtensions_DOLocalMoveX_m1551758153 ();
+extern "C" void ShortcutExtensions_DOLocalMoveY_m2789795598 ();
+extern "C" void ShortcutExtensions_DOLocalMoveZ_m2334840511 ();
+extern "C" void ShortcutExtensions_DORotate_m3434569207 ();
+extern "C" void ShortcutExtensions_DORotateQuaternion_m4202237645 ();
+extern "C" void ShortcutExtensions_DOLocalRotate_m2660994480 ();
+extern "C" void ShortcutExtensions_DOLocalRotateQuaternion_m176125184 ();
+extern "C" void ShortcutExtensions_DOScale_m2754995414 ();
+extern "C" void ShortcutExtensions_DOScale_m562799890 ();
+extern "C" void ShortcutExtensions_DOScaleX_m4195392706 ();
+extern "C" void ShortcutExtensions_DOScaleY_m3589951495 ();
+extern "C" void ShortcutExtensions_DOScaleZ_m1484201804 ();
+extern "C" void ShortcutExtensions_DOLookAt_m1204733618 ();
+extern "C" void ShortcutExtensions_DOPunchPosition_m4022188990 ();
+extern "C" void ShortcutExtensions_DOPunchScale_m3609052310 ();
+extern "C" void ShortcutExtensions_DOPunchRotation_m1103244634 ();
+extern "C" void ShortcutExtensions_DOShakePosition_m2336714075 ();
+extern "C" void ShortcutExtensions_DOShakePosition_m2989795727 ();
+extern "C" void ShortcutExtensions_DOShakeRotation_m4273867949 ();
+extern "C" void ShortcutExtensions_DOShakeRotation_m3190170693 ();
+extern "C" void ShortcutExtensions_DOShakeScale_m455017001 ();
+extern "C" void ShortcutExtensions_DOShakeScale_m2106531945 ();
+extern "C" void ShortcutExtensions_DOJump_m2116021968 ();
+extern "C" void ShortcutExtensions_DOLocalJump_m760861907 ();
+extern "C" void ShortcutExtensions_DOPath_m1769930933 ();
+extern "C" void ShortcutExtensions_DOLocalPath_m2887627546 ();
+extern "C" void ShortcutExtensions_DOPath_m251740173 ();
+extern "C" void ShortcutExtensions_DOLocalPath_m712666778 ();
+extern "C" void ShortcutExtensions_DOTimeScale_m1499496695 ();
+extern "C" void ShortcutExtensions_DOBlendableColor_m3039781373 ();
+extern "C" void ShortcutExtensions_DOBlendableColor_m1724098674 ();
+extern "C" void ShortcutExtensions_DOBlendableColor_m3858347954 ();
+extern "C" void ShortcutExtensions_DOBlendableMoveBy_m1618137896 ();
+extern "C" void ShortcutExtensions_DOBlendableLocalMoveBy_m114767453 ();
+extern "C" void ShortcutExtensions_DOBlendableRotateBy_m275321471 ();
+extern "C" void ShortcutExtensions_DOBlendableLocalRotateBy_m3944746952 ();
+extern "C" void ShortcutExtensions_DOBlendableScaleBy_m2885123094 ();
+extern "C" void ShortcutExtensions_DOComplete_m3066576958 ();
+extern "C" void ShortcutExtensions_DOComplete_m3775394666 ();
+extern "C" void ShortcutExtensions_DOKill_m3004510585 ();
+extern "C" void ShortcutExtensions_DOKill_m3644515429 ();
+extern "C" void ShortcutExtensions_DOFlip_m2530449119 ();
+extern "C" void ShortcutExtensions_DOFlip_m1386606503 ();
+extern "C" void ShortcutExtensions_DOGoto_m3802481569 ();
+extern "C" void ShortcutExtensions_DOGoto_m3839282017 ();
+extern "C" void ShortcutExtensions_DOPause_m65675062 ();
+extern "C" void ShortcutExtensions_DOPause_m656699488 ();
+extern "C" void ShortcutExtensions_DOPlay_m4099564608 ();
+extern "C" void ShortcutExtensions_DOPlay_m2113281574 ();
+extern "C" void ShortcutExtensions_DOPlayBackwards_m3986309180 ();
+extern "C" void ShortcutExtensions_DOPlayBackwards_m2758635154 ();
+extern "C" void ShortcutExtensions_DOPlayForward_m3311652443 ();
+extern "C" void ShortcutExtensions_DOPlayForward_m281647083 ();
+extern "C" void ShortcutExtensions_DORestart_m3156056520 ();
+extern "C" void ShortcutExtensions_DORestart_m2596861284 ();
+extern "C" void ShortcutExtensions_DORewind_m1526207962 ();
+extern "C" void ShortcutExtensions_DORewind_m4071549454 ();
+extern "C" void ShortcutExtensions_DOSmoothRewind_m1762400369 ();
+extern "C" void ShortcutExtensions_DOSmoothRewind_m2099111741 ();
+extern "C" void ShortcutExtensions_DOTogglePause_m968655382 ();
+extern "C" void ShortcutExtensions_DOTogglePause_m2815070248 ();
+extern "C" void U3CU3Ec__DisplayClass0_0__ctor_m2486159704 ();
+extern "C" void U3CU3Ec__DisplayClass0_0_U3CDOFadeU3Eb__0_m4106317219 ();
+extern "C" void U3CU3Ec__DisplayClass0_0_U3CDOFadeU3Eb__1_m2008279057 ();
+extern "C" void U3CU3Ec__DisplayClass1_0__ctor_m2601117945 ();
+extern "C" void U3CU3Ec__DisplayClass1_0_U3CDOPitchU3Eb__0_m1582656838 ();
+extern "C" void U3CU3Ec__DisplayClass1_0_U3CDOPitchU3Eb__1_m3148065408 ();
+extern "C" void U3CU3Ec__DisplayClass10_0__ctor_m3455628885 ();
+extern "C" void U3CU3Ec__DisplayClass10_0_U3CDOShakePositionU3Eb__0_m578926749 ();
+extern "C" void U3CU3Ec__DisplayClass10_0_U3CDOShakePositionU3Eb__1_m575366107 ();
+extern "C" void U3CU3Ec__DisplayClass11_0__ctor_m351689690 ();
+extern "C" void U3CU3Ec__DisplayClass11_0_U3CDOShakePositionU3Eb__0_m1058466392 ();
+extern "C" void U3CU3Ec__DisplayClass11_0_U3CDOShakePositionU3Eb__1_m3172318102 ();
+extern "C" void U3CU3Ec__DisplayClass12_0__ctor_m1029248587 ();
+extern "C" void U3CU3Ec__DisplayClass12_0_U3CDOShakeRotationU3Eb__0_m4012688060 ();
+extern "C" void U3CU3Ec__DisplayClass12_0_U3CDOShakeRotationU3Eb__1_m3630155782 ();
+extern "C" void U3CU3Ec__DisplayClass13_0__ctor_m2220276688 ();
+extern "C" void U3CU3Ec__DisplayClass13_0_U3CDOShakeRotationU3Eb__0_m1636800887 ();
+extern "C" void U3CU3Ec__DisplayClass13_0_U3CDOShakeRotationU3Eb__1_m1178986945 ();
+extern "C" void U3CU3Ec__DisplayClass14_0__ctor_m2638654569 ();
+extern "C" void U3CU3Ec__DisplayClass14_0_U3CDOColorU3Eb__0_m2461988598 ();
+extern "C" void U3CU3Ec__DisplayClass14_0_U3CDOColorU3Eb__1_m1757801840 ();
+extern "C" void U3CU3Ec__DisplayClass15_0__ctor_m3829682670 ();
+extern "C" void U3CU3Ec__DisplayClass15_0_U3CDOIntensityU3Eb__0_m324426264 ();
+extern "C" void U3CU3Ec__DisplayClass15_0_U3CDOIntensityU3Eb__1_m4037850610 ();
+extern "C" void U3CU3Ec__DisplayClass16_0__ctor_m212274271 ();
+extern "C" void U3CU3Ec__DisplayClass16_0_U3CDOShadowStrengthU3Eb__0_m95294285 ();
+extern "C" void U3CU3Ec__DisplayClass16_0_U3CDOShadowStrengthU3Eb__1_m1758195355 ();
+extern "C" void U3CU3Ec__DisplayClass17_0__ctor_m1403302372 ();
+extern "C" void U3CU3Ec__DisplayClass17_0_U3CDOColorU3Eb__0_m877794578 ();
+extern "C" void U3CU3Ec__DisplayClass17_0_U3CDOColorU3Eb__1_m2778864942 ();
+extern "C" void U3CU3Ec__DisplayClass18_0__ctor_m3130146861 ();
+extern "C" void U3CU3Ec__DisplayClass18_0_U3CDOColorU3Eb__0_m3729741674 ();
+extern "C" void U3CU3Ec__DisplayClass18_0_U3CDOColorU3Eb__1_m2934347140 ();
+extern "C" void U3CU3Ec__DisplayClass19_0__ctor_m26207666 ();
+extern "C" void U3CU3Ec__DisplayClass19_0_U3CDOColorU3Eb__0_m1347147275 ();
+extern "C" void U3CU3Ec__DisplayClass19_0_U3CDOColorU3Eb__1_m3323694665 ();
+extern "C" void U3CU3Ec__DisplayClass2_0__ctor_m2407889050 ();
+extern "C" void U3CU3Ec__DisplayClass2_0_U3CDOAspectU3Eb__0_m4201173127 ();
+extern "C" void U3CU3Ec__DisplayClass2_0_U3CDOAspectU3Eb__1_m2576574665 ();
+extern "C" void U3CU3Ec__DisplayClass20_0__ctor_m4108706642 ();
+extern "C" void U3CU3Ec__DisplayClass20_0_U3CDOFadeU3Eb__0_m3919779298 ();
+extern "C" void U3CU3Ec__DisplayClass20_0_U3CDOFadeU3Eb__1_m454050554 ();
+extern "C" void U3CU3Ec__DisplayClass21_0__ctor_m1004767447 ();
+extern "C" void U3CU3Ec__DisplayClass21_0_U3CDOFadeU3Eb__0_m1771916739 ();
+extern "C" void U3CU3Ec__DisplayClass21_0_U3CDOFadeU3Eb__1_m3012877045 ();
+extern "C" void U3CU3Ec__DisplayClass22_0__ctor_m1682326344 ();
+extern "C" void U3CU3Ec__DisplayClass22_0_U3CDOFloatU3Eb__0_m2002597517 ();
+extern "C" void U3CU3Ec__DisplayClass22_0_U3CDOFloatU3Eb__1_m788489511 ();
+extern "C" void U3CU3Ec__DisplayClass23_0__ctor_m2873354445 ();
+extern "C" void U3CU3Ec__DisplayClass23_0_U3CDOOffsetU3Eb__0_m706362964 ();
+extern "C" void U3CU3Ec__DisplayClass23_0_U3CDOOffsetU3Eb__1_m2926090360 ();
+extern "C" void U3CU3Ec__DisplayClass24_0__ctor_m3291732326 ();
+extern "C" void U3CU3Ec__DisplayClass24_0_U3CDOOffsetU3Eb__0_m4206824859 ();
+extern "C" void U3CU3Ec__DisplayClass24_0_U3CDOOffsetU3Eb__1_m1909799273 ();
+extern "C" void U3CU3Ec__DisplayClass25_0__ctor_m187793131 ();
+extern "C" void U3CU3Ec__DisplayClass25_0_U3CDOTilingU3Eb__0_m3591461766 ();
+extern "C" void U3CU3Ec__DisplayClass25_0_U3CDOTilingU3Eb__1_m1393409190 ();
+extern "C" void U3CU3Ec__DisplayClass26_0__ctor_m865352028 ();
+extern "C" void U3CU3Ec__DisplayClass26_0_U3CDOTilingU3Eb__0_m1431514441 ();
+extern "C" void U3CU3Ec__DisplayClass26_0_U3CDOTilingU3Eb__1_m262232107 ();
+extern "C" void U3CU3Ec__DisplayClass27_0__ctor_m2056380129 ();
+extern "C" void U3CU3Ec__DisplayClass27_0_U3CDOVectorU3Eb__0_m2143359122 ();
+extern "C" void U3CU3Ec__DisplayClass27_0_U3CDOVectorU3Eb__1_m247014354 ();
+extern "C" void U3CU3Ec__DisplayClass28_0__ctor_m3783224618 ();
+extern "C" void U3CU3Ec__DisplayClass28_0_U3CDOMoveU3Eb__0_m850685448 ();
+extern "C" void U3CU3Ec__DisplayClass28_0_U3CDOMoveU3Eb__1_m3931734188 ();
+extern "C" void U3CU3Ec__DisplayClass29_0__ctor_m679285423 ();
+extern "C" void U3CU3Ec__DisplayClass29_0_U3CDOMoveXU3Eb__0_m526051155 ();
+extern "C" void U3CU3Ec__DisplayClass29_0_U3CDOMoveXU3Eb__1_m91090693 ();
+extern "C" void U3CU3Ec__DisplayClass3_0__ctor_m2523126075 ();
+extern "C" void U3CU3Ec__DisplayClass3_0_U3CDOColorU3Eb__0_m1136027420 ();
+extern "C" void U3CU3Ec__DisplayClass3_0_U3CDOColorU3Eb__1_m2447764652 ();
+extern "C" void U3CU3Ec__DisplayClass30_0__ctor_m310275667 ();
+extern "C" void U3CU3Ec__DisplayClass30_0_U3CDOMoveYU3Eb__0_m2671999024 ();
+extern "C" void U3CU3Ec__DisplayClass30_0_U3CDOMoveYU3Eb__1_m1780496268 ();
+extern "C" void U3CU3Ec__DisplayClass31_0__ctor_m1501303768 ();
+extern "C" void U3CU3Ec__DisplayClass31_0_U3CDOMoveZU3Eb__0_m1621622194 ();
+extern "C" void U3CU3Ec__DisplayClass31_0_U3CDOMoveZU3Eb__1_m3805426966 ();
+extern "C" void U3CU3Ec__DisplayClass32_0__ctor_m2178862665 ();
+extern "C" void U3CU3Ec__DisplayClass32_0_U3CDORotateU3Eb__0_m2865850427 ();
+extern "C" void U3CU3Ec__DisplayClass32_0_U3CDORotateU3Eb__1_m3547216725 ();
+extern "C" void U3CU3Ec__DisplayClass33_0__ctor_m3369890766 ();
+extern "C" void U3CU3Ec__DisplayClass33_0_U3CDOLookAtU3Eb__0_m3165169221 ();
+extern "C" void U3CU3Ec__DisplayClass33_0_U3CDOLookAtU3Eb__1_m1289586275 ();
+extern "C" void U3CU3Ec__DisplayClass34_0__ctor_m3788268647 ();
+extern "C" void U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__0_m1347413234 ();
+extern "C" void U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__1_m595926546 ();
+extern "C" void U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__2_m2942199874 ();
+extern "C" void U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__3_m1347413267 ();
+extern "C" void U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__4_m1876710795 ();
+extern "C" void U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__5_m1347413069 ();
+extern "C" void U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__6_m2628198229 ();
+extern "C" void U3CU3Ec__DisplayClass35_0__ctor_m684329452 ();
+extern "C" void U3CU3Ec__DisplayClass35_0_U3CDOPathU3Eb__0_m3939971668 ();
+extern "C" void U3CU3Ec__DisplayClass36_0__ctor_m1361888349 ();
+extern "C" void U3CU3Ec__DisplayClass36_0_U3CDOLocalPathU3Eb__0_m4263538050 ();
+extern "C" void U3CU3Ec__DisplayClass36_0_U3CDOLocalPathU3Eb__1_m631091052 ();
+extern "C" void U3CU3Ec__DisplayClass37_0__ctor_m2552916450 ();
+extern "C" void U3CU3Ec__DisplayClass37_0_U3CDOPathU3Eb__0_m2086767946 ();
+extern "C" void U3CU3Ec__DisplayClass38_0__ctor_m4279760939 ();
+extern "C" void U3CU3Ec__DisplayClass38_0_U3CDOLocalPathU3Eb__0_m532172044 ();
+extern "C" void U3CU3Ec__DisplayClass38_0_U3CDOLocalPathU3Eb__1_m3921559090 ();
+extern "C" void U3CU3Ec__DisplayClass39_0__ctor_m1175821744 ();
+extern "C" void U3CU3Ec__DisplayClass39_0_U3CDOResizeU3Eb__0_m2421186814 ();
+extern "C" void U3CU3Ec__DisplayClass39_0_U3CDOResizeU3Eb__1_m2725560110 ();
+extern "C" void U3CU3Ec__DisplayClass4_0__ctor_m2329618396 ();
+extern "C" void U3CU3Ec__DisplayClass4_0_U3CDOFarClipPlaneU3Eb__0_m837436732 ();
+extern "C" void U3CU3Ec__DisplayClass4_0_U3CDOFarClipPlaneU3Eb__1_m639886534 ();
+extern "C" void U3CU3Ec__DisplayClass40_0__ctor_m972274776 ();
+extern "C" void U3CU3Ec__DisplayClass40_0_U3CDOTimeU3Eb__0_m3296034822 ();
+extern "C" void U3CU3Ec__DisplayClass40_0_U3CDOTimeU3Eb__1_m760111044 ();
+extern "C" void U3CU3Ec__DisplayClass41_0__ctor_m2163302877 ();
+extern "C" void U3CU3Ec__DisplayClass41_0_U3CDOMoveU3Eb__0_m1806409601 ();
+extern "C" void U3CU3Ec__DisplayClass41_0_U3CDOMoveU3Eb__1_m1069196151 ();
+extern "C" void U3CU3Ec__DisplayClass42_0__ctor_m2840861774 ();
+extern "C" void U3CU3Ec__DisplayClass42_0_U3CDOMoveXU3Eb__0_m4203746742 ();
+extern "C" void U3CU3Ec__DisplayClass42_0_U3CDOMoveXU3Eb__1_m2549260578 ();
+extern "C" void U3CU3Ec__DisplayClass43_0__ctor_m4031889875 ();
+extern "C" void U3CU3Ec__DisplayClass43_0_U3CDOMoveYU3Eb__0_m3249844598 ();
+extern "C" void U3CU3Ec__DisplayClass43_0_U3CDOMoveYU3Eb__1_m2151641698 ();
+extern "C" void U3CU3Ec__DisplayClass44_0__ctor_m155300460 ();
+extern "C" void U3CU3Ec__DisplayClass44_0_U3CDOMoveZU3Eb__0_m3919167034 ();
+extern "C" void U3CU3Ec__DisplayClass44_0_U3CDOMoveZU3Eb__1_m3743549070 ();
+extern "C" void U3CU3Ec__DisplayClass45_0__ctor_m1346328561 ();
+extern "C" void U3CU3Ec__DisplayClass45_0_U3CDOLocalMoveU3Eb__0_m971035126 ();
+extern "C" void U3CU3Ec__DisplayClass45_0_U3CDOLocalMoveU3Eb__1_m3148020178 ();
+extern "C" void U3CU3Ec__DisplayClass46_0__ctor_m2023887458 ();
+extern "C" void U3CU3Ec__DisplayClass46_0_U3CDOLocalMoveXU3Eb__0_m2522593639 ();
+extern "C" void U3CU3Ec__DisplayClass46_0_U3CDOLocalMoveXU3Eb__1_m1448874201 ();
+extern "C" void U3CU3Ec__DisplayClass47_0__ctor_m3214915559 ();
+extern "C" void U3CU3Ec__DisplayClass47_0_U3CDOLocalMoveYU3Eb__0_m1016860779 ();
+extern "C" void U3CU3Ec__DisplayClass47_0_U3CDOLocalMoveYU3Eb__1_m2242632157 ();
+extern "C" void U3CU3Ec__DisplayClass48_0__ctor_m646792752 ();
+extern "C" void U3CU3Ec__DisplayClass48_0_U3CDOLocalMoveZU3Eb__0_m1519144427 ();
+extern "C" void U3CU3Ec__DisplayClass48_0_U3CDOLocalMoveZU3Eb__1_m1240550313 ();
+extern "C" void U3CU3Ec__DisplayClass49_0__ctor_m1837820853 ();
+extern "C" void U3CU3Ec__DisplayClass49_0_U3CDORotateU3Eb__0_m52679299 ();
+extern "C" void U3CU3Ec__DisplayClass49_0_U3CDORotateU3Eb__1_m3916117393 ();
+extern "C" void U3CU3Ec__DisplayClass5_0__ctor_m2444576637 ();
+extern "C" void U3CU3Ec__DisplayClass5_0_U3CDOFieldOfViewU3Eb__0_m1848561416 ();
+extern "C" void U3CU3Ec__DisplayClass5_0_U3CDOFieldOfViewU3Eb__1_m2096582742 ();
+extern "C" void U3CU3Ec__DisplayClass50_0__ctor_m2897528665 ();
+extern "C" void U3CU3Ec__DisplayClass50_0_U3CDORotateQuaternionU3Eb__0_m300052843 ();
+extern "C" void U3CU3Ec__DisplayClass50_0_U3CDORotateQuaternionU3Eb__1_m3490315601 ();
+extern "C" void U3CU3Ec__DisplayClass51_0__ctor_m4088556766 ();
+extern "C" void U3CU3Ec__DisplayClass51_0_U3CDOLocalRotateU3Eb__0_m1911602875 ();
+extern "C" void U3CU3Ec__DisplayClass51_0_U3CDOLocalRotateU3Eb__1_m2566335897 ();
+extern "C" void U3CU3Ec__DisplayClass52_0__ctor_m471148367 ();
+extern "C" void U3CU3Ec__DisplayClass52_0_U3CDOLocalRotateQuaternionU3Eb__0_m2450251552 ();
+extern "C" void U3CU3Ec__DisplayClass52_0_U3CDOLocalRotateQuaternionU3Eb__1_m703125688 ();
+extern "C" void U3CU3Ec__DisplayClass53_0__ctor_m1662176468 ();
+extern "C" void U3CU3Ec__DisplayClass53_0_U3CDOScaleU3Eb__0_m253468343 ();
+extern "C" void U3CU3Ec__DisplayClass53_0_U3CDOScaleU3Eb__1_m56636437 ();
+extern "C" void U3CU3Ec__DisplayClass54_0__ctor_m2080554349 ();
+extern "C" void U3CU3Ec__DisplayClass54_0_U3CDOScaleU3Eb__0_m156812304 ();
+extern "C" void U3CU3Ec__DisplayClass54_0_U3CDOScaleU3Eb__1_m3268105988 ();
+extern "C" void U3CU3Ec__DisplayClass55_0__ctor_m3271582450 ();
+extern "C" void U3CU3Ec__DisplayClass55_0_U3CDOScaleXU3Eb__0_m4241935653 ();
+extern "C" void U3CU3Ec__DisplayClass55_0_U3CDOScaleXU3Eb__1_m1167690971 ();
+extern "C" void U3CU3Ec__DisplayClass56_0__ctor_m3949141347 ();
+extern "C" void U3CU3Ec__DisplayClass56_0_U3CDOScaleYU3Eb__0_m1600675427 ();
+extern "C" void U3CU3Ec__DisplayClass56_0_U3CDOScaleYU3Eb__1_m329907233 ();
+extern "C" void U3CU3Ec__DisplayClass57_0__ctor_m845202152 ();
+extern "C" void U3CU3Ec__DisplayClass57_0_U3CDOScaleZU3Eb__0_m4282837937 ();
+extern "C" void U3CU3Ec__DisplayClass57_0_U3CDOScaleZU3Eb__1_m4155026659 ();
+extern "C" void U3CU3Ec__DisplayClass58_0__ctor_m2572046641 ();
+extern "C" void U3CU3Ec__DisplayClass58_0_U3CDOLookAtU3Eb__0_m533597832 ();
+extern "C" void U3CU3Ec__DisplayClass58_0_U3CDOLookAtU3Eb__1_m1617992690 ();
+extern "C" void U3CU3Ec__DisplayClass59_0__ctor_m3763074742 ();
+extern "C" void U3CU3Ec__DisplayClass59_0_U3CDOPunchPositionU3Eb__0_m725983270 ();
+extern "C" void U3CU3Ec__DisplayClass59_0_U3CDOPunchPositionU3Eb__1_m4002101508 ();
+extern "C" void U3CU3Ec__DisplayClass6_0__ctor_m2251347742 ();
+extern "C" void U3CU3Ec__DisplayClass6_0_U3CDONearClipPlaneU3Eb__0_m835463291 ();
+extern "C" void U3CU3Ec__DisplayClass6_0_U3CDONearClipPlaneU3Eb__1_m2171634649 ();
+extern "C" void U3CU3Ec__DisplayClass60_0__ctor_m3550606422 ();
+extern "C" void U3CU3Ec__DisplayClass60_0_U3CDOPunchScaleU3Eb__0_m3267480279 ();
+extern "C" void U3CU3Ec__DisplayClass60_0_U3CDOPunchScaleU3Eb__1_m1510745201 ();
+extern "C" void U3CU3Ec__DisplayClass61_0__ctor_m446667227 ();
+extern "C" void U3CU3Ec__DisplayClass61_0_U3CDOPunchRotationU3Eb__0_m177885156 ();
+extern "C" void U3CU3Ec__DisplayClass61_0_U3CDOPunchRotationU3Eb__1_m203030274 ();
+extern "C" void U3CU3Ec__DisplayClass62_0__ctor_m1124226124 ();
+extern "C" void U3CU3Ec__DisplayClass62_0_U3CDOShakePositionU3Eb__0_m2772458086 ();
+extern "C" void U3CU3Ec__DisplayClass62_0_U3CDOShakePositionU3Eb__1_m4010845424 ();
+extern "C" void U3CU3Ec__DisplayClass63_0__ctor_m2315254225 ();
+extern "C" void U3CU3Ec__DisplayClass63_0_U3CDOShakePositionU3Eb__0_m396570913 ();
+extern "C" void U3CU3Ec__DisplayClass63_0_U3CDOShakePositionU3Eb__1_m1559676587 ();
+extern "C" void U3CU3Ec__DisplayClass64_0__ctor_m2733632106 ();
+extern "C" void U3CU3Ec__DisplayClass64_0_U3CDOShakeRotationU3Eb__0_m3789213667 ();
+extern "C" void U3CU3Ec__DisplayClass64_0_U3CDOShakeRotationU3Eb__1_m4179202185 ();
+extern "C" void U3CU3Ec__DisplayClass65_0__ctor_m3924660207 ();
+extern "C" void U3CU3Ec__DisplayClass65_0_U3CDOShakeRotationU3Eb__0_m4268753310 ();
+extern "C" void U3CU3Ec__DisplayClass65_0_U3CDOShakeRotationU3Eb__1_m2481186884 ();
+extern "C" void U3CU3Ec__DisplayClass66_0__ctor_m307251808 ();
+extern "C" void U3CU3Ec__DisplayClass66_0_U3CDOShakeScaleU3Eb__0_m623183585 ();
+extern "C" void U3CU3Ec__DisplayClass66_0_U3CDOShakeScaleU3Eb__1_m1136808023 ();
+extern "C" void U3CU3Ec__DisplayClass67_0__ctor_m1498279909 ();
+extern "C" void U3CU3Ec__DisplayClass67_0_U3CDOShakeScaleU3Eb__0_m2785084294 ();
+extern "C" void U3CU3Ec__DisplayClass67_0_U3CDOShakeScaleU3Eb__1_m1238737692 ();
+extern "C" void U3CU3Ec__DisplayClass68_0__ctor_m3225124398 ();
+extern "C" void U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__0_m3542776949 ();
+extern "C" void U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__1_m1104996947 ();
+extern "C" void U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__2_m678417633 ();
+extern "C" void U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__3_m3542776982 ();
+extern "C" void U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__4_m2968943268 ();
+extern "C" void U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__5_m3542777048 ();
+extern "C" void U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__6_m3720430702 ();
+extern "C" void U3CU3Ec__DisplayClass69_0__ctor_m121185203 ();
+extern "C" void U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__0_m2803131045 ();
+extern "C" void U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__1_m1597179835 ();
+extern "C" void U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__2_m1683534709 ();
+extern "C" void U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__3_m2944293546 ();
+extern "C" void U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__4_m2840364600 ();
+extern "C" void U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__5_m2097318540 ();
+extern "C" void U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__6_m4212436022 ();
+extern "C" void U3CU3Ec__DisplayClass7_0__ctor_m2366584767 ();
+extern "C" void U3CU3Ec__DisplayClass7_0_U3CDOOrthoSizeU3Eb__0_m556568037 ();
+extern "C" void U3CU3Ec__DisplayClass7_0_U3CDOOrthoSizeU3Eb__1_m1225798911 ();
+extern "C" void U3CU3Ec__DisplayClass70_0__ctor_m4047142743 ();
+extern "C" void U3CU3Ec__DisplayClass70_0_U3CDOPathU3Eb__0_m4257199359 ();
+extern "C" void U3CU3Ec__DisplayClass70_0_U3CDOPathU3Eb__1_m1947950665 ();
+extern "C" void U3CU3Ec__DisplayClass71_0__ctor_m943203548 ();
+extern "C" void U3CU3Ec__DisplayClass71_0_U3CDOLocalPathU3Eb__0_m3326655963 ();
+extern "C" void U3CU3Ec__DisplayClass71_0_U3CDOLocalPathU3Eb__1_m4124907905 ();
+extern "C" void U3CU3Ec__DisplayClass72_0__ctor_m1620762445 ();
+extern "C" void U3CU3Ec__DisplayClass72_0_U3CDOPathU3Eb__0_m2156325621 ();
+extern "C" void U3CU3Ec__DisplayClass72_0_U3CDOPathU3Eb__1_m2396859923 ();
+extern "C" void U3CU3Ec__DisplayClass73_0__ctor_m2811790546 ();
+extern "C" void U3CU3Ec__DisplayClass73_0_U3CDOLocalPathU3Eb__0_m3921507173 ();
+extern "C" void U3CU3Ec__DisplayClass73_0_U3CDOLocalPathU3Eb__1_m82419959 ();
+extern "C" void U3CU3Ec__DisplayClass74_0__ctor_m3230168427 ();
+extern "C" void U3CU3Ec__DisplayClass74_0_U3CDOTimeScaleU3Eb__0_m2125125395 ();
+extern "C" void U3CU3Ec__DisplayClass74_0_U3CDOTimeScaleU3Eb__1_m450010117 ();
+extern "C" void U3CU3Ec__DisplayClass75_0__ctor_m126229232 ();
+extern "C" void U3CU3Ec__DisplayClass75_0_U3CDOBlendableColorU3Eb__0_m2606804112 ();
+extern "C" void U3CU3Ec__DisplayClass75_0_U3CDOBlendableColorU3Eb__1_m454902896 ();
+extern "C" void U3CU3Ec__DisplayClass76_0__ctor_m803788129 ();
+extern "C" void U3CU3Ec__DisplayClass76_0_U3CDOBlendableColorU3Eb__0_m2304727117 ();
+extern "C" void U3CU3Ec__DisplayClass76_0_U3CDOBlendableColorU3Eb__1_m365069963 ();
+extern "C" void U3CU3Ec__DisplayClass77_0__ctor_m1994816230 ();
+extern "C" void U3CU3Ec__DisplayClass77_0_U3CDOBlendableColorU3Eb__0_m3697493646 ();
+extern "C" void U3CU3Ec__DisplayClass77_0_U3CDOBlendableColorU3Eb__1_m1720815142 ();
+extern "C" void U3CU3Ec__DisplayClass78_0__ctor_m3721660719 ();
+extern "C" void U3CU3Ec__DisplayClass78_0_U3CDOBlendableMoveByU3Eb__0_m3698235395 ();
+extern "C" void U3CU3Ec__DisplayClass78_0_U3CDOBlendableMoveByU3Eb__1_m2581422557 ();
+extern "C" void U3CU3Ec__DisplayClass79_0__ctor_m617721524 ();
+extern "C" void U3CU3Ec__DisplayClass79_0_U3CDOBlendableLocalMoveByU3Eb__0_m795914735 ();
+extern "C" void U3CU3Ec__DisplayClass79_0_U3CDOBlendableLocalMoveByU3Eb__1_m3775047465 ();
+extern "C" void U3CU3Ec__DisplayClass8_0__ctor_m2798668368 ();
+extern "C" void U3CU3Ec__DisplayClass8_0_U3CDOPixelRectU3Eb__0_m214223775 ();
+extern "C" void U3CU3Ec__DisplayClass8_0_U3CDOPixelRectU3Eb__1_m3022382809 ();
+extern "C" void U3CU3Ec__DisplayClass80_0__ctor_m2664417628 ();
+extern "C" void U3CU3Ec__DisplayClass80_0_U3CDOBlendableRotateByU3Eb__0_m1568823600 ();
+extern "C" void U3CU3Ec__DisplayClass80_0_U3CDOBlendableRotateByU3Eb__1_m3457857394 ();
+extern "C" void U3CU3Ec__DisplayClass81_0__ctor_m3855445729 ();
+extern "C" void U3CU3Ec__DisplayClass81_0_U3CDOBlendableLocalRotateByU3Eb__0_m1428453660 ();
+extern "C" void U3CU3Ec__DisplayClass81_0_U3CDOBlendableLocalRotateByU3Eb__1_m3222986506 ();
+extern "C" void U3CU3Ec__DisplayClass82_0__ctor_m238037330 ();
+extern "C" void U3CU3Ec__DisplayClass82_0_U3CDOBlendableScaleByU3Eb__0_m3660000907 ();
+extern "C" void U3CU3Ec__DisplayClass82_0_U3CDOBlendableScaleByU3Eb__1_m3103190053 ();
+extern "C" void U3CU3Ec__DisplayClass9_0__ctor_m2913626609 ();
+extern "C" void U3CU3Ec__DisplayClass9_0_U3CDORectU3Eb__0_m2562574134 ();
+extern "C" void U3CU3Ec__DisplayClass9_0_U3CDORectU3Eb__1_m3203347018 ();
+extern "C" void Tween_get_fullPosition_m1858972655 ();
+extern "C" void Tween_set_fullPosition_m3571808594 ();
+extern "C" void Tween_Reset_m2158413979 ();
+extern "C" void Tween_UpdateDelay_m1702331541 ();
+extern "C" void Tween_DoGoto_m3340670294 ();
+extern "C" void Tween_OnTweenCallback_m1044536921 ();
+extern "C" void Tween__ctor_m3822097368 ();
+extern "C" void TweenCallback__ctor_m3479200459 ();
+extern "C" void TweenCallback_Invoke_m102388039 ();
+extern "C" void TweenCallback_BeginInvoke_m2458978000 ();
+extern "C" void TweenCallback_EndInvoke_m3014345193 ();
+extern "C" void Tweener__ctor_m102043033 ();
+extern "C" void TweenExtensions_Complete_m274286092 ();
+extern "C" void TweenExtensions_Complete_m1419431965 ();
+extern "C" void TweenExtensions_Flip_m2922754576 ();
+extern "C" void TweenExtensions_ForceInit_m447977536 ();
+extern "C" void TweenExtensions_Goto_m4027866082 ();
+extern "C" void TweenExtensions_Kill_m3845739180 ();
+extern "C" void TweenExtensions_PlayBackwards_m613887607 ();
+extern "C" void TweenExtensions_PlayForward_m3704378858 ();
+extern "C" void TweenExtensions_Restart_m2056936246 ();
+extern "C" void TweenExtensions_Rewind_m3286148139 ();
+extern "C" void TweenExtensions_SmoothRewind_m2971573214 ();
+extern "C" void TweenExtensions_TogglePause_m1054448567 ();
+extern "C" void TweenExtensions_GotoWaypoint_m120126169 ();
+extern "C" void TweenExtensions_WaitForCompletion_m3746720476 ();
+extern "C" void TweenExtensions_WaitForRewind_m1446242633 ();
+extern "C" void TweenExtensions_WaitForKill_m2434480674 ();
+extern "C" void TweenExtensions_WaitForElapsedLoops_m1788575402 ();
+extern "C" void TweenExtensions_WaitForPosition_m4173788156 ();
+extern "C" void TweenExtensions_WaitForStart_m1828940021 ();
+extern "C" void TweenExtensions_CompletedLoops_m811455055 ();
+extern "C" void TweenExtensions_Delay_m1719013068 ();
+extern "C" void TweenExtensions_Duration_m4269627274 ();
+extern "C" void TweenExtensions_Elapsed_m4148870276 ();
+extern "C" void TweenExtensions_ElapsedPercentage_m1036631332 ();
+extern "C" void TweenExtensions_ElapsedDirectionalPercentage_m968488947 ();
+extern "C" void TweenExtensions_IsActive_m918693289 ();
+extern "C" void TweenExtensions_IsBackwards_m130236841 ();
+extern "C" void TweenExtensions_IsComplete_m3095330022 ();
+extern "C" void TweenExtensions_IsInitialized_m1900413101 ();
+extern "C" void TweenExtensions_IsPlaying_m3897946637 ();
+extern "C" void TweenExtensions_Loops_m700996556 ();
+extern "C" void TweenExtensions_PathGetPoint_m191575487 ();
+extern "C" void TweenExtensions_PathGetDrawPoints_m1280144712 ();
+extern "C" void TweenExtensions_PathLength_m410910326 ();
+extern "C" void TweenParams__ctor_m1421329190 ();
+extern "C" void TweenParams_Clear_m2352941651 ();
+extern "C" void TweenParams_SetAutoKill_m3324818264 ();
+extern "C" void TweenParams_SetId_m3936217499 ();
+extern "C" void TweenParams_SetTarget_m587577735 ();
+extern "C" void TweenParams_SetLoops_m833753209 ();
+extern "C" void TweenParams_SetEase_m249761156 ();
+extern "C" void TweenParams_SetEase_m2156832318 ();
+extern "C" void TweenParams_SetEase_m50101784 ();
+extern "C" void TweenParams_SetRecyclable_m4113181667 ();
+extern "C" void TweenParams_SetUpdate_m4207667294 ();
+extern "C" void TweenParams_SetUpdate_m161821801 ();
+extern "C" void TweenParams_OnStart_m3718574137 ();
+extern "C" void TweenParams_OnPlay_m1710613197 ();
+extern "C" void TweenParams_OnRewind_m2137198170 ();
+extern "C" void TweenParams_OnUpdate_m57491400 ();
+extern "C" void TweenParams_OnStepComplete_m418530464 ();
+extern "C" void TweenParams_OnComplete_m4145462530 ();
+extern "C" void TweenParams_OnKill_m1111014851 ();
+extern "C" void TweenParams_OnWaypointChange_m224661718 ();
+extern "C" void TweenParams_SetDelay_m443284532 ();
+extern "C" void TweenParams_SetRelative_m2325101835 ();
+extern "C" void TweenParams_SetSpeedBased_m2851973033 ();
+extern "C" void TweenParams__cctor_m1144029957 ();
+extern "C" void TweenSettingsExtensions_Append_m388120539 ();
+extern "C" void TweenSettingsExtensions_Prepend_m2832870725 ();
+extern "C" void TweenSettingsExtensions_Join_m3909252375 ();
+extern "C" void TweenSettingsExtensions_Insert_m3944817171 ();
+extern "C" void TweenSettingsExtensions_AppendInterval_m2840030048 ();
+extern "C" void TweenSettingsExtensions_PrependInterval_m3957684016 ();
+extern "C" void TweenSettingsExtensions_AppendCallback_m230459415 ();
+extern "C" void TweenSettingsExtensions_PrependCallback_m13875009 ();
+extern "C" void TweenSettingsExtensions_InsertCallback_m832410615 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m937094726 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m2788260957 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m1865926333 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m3181747809 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m1111089121 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m3654685945 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m1690115161 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m2066835278 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m3996351285 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m2755395124 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m1112657767 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m3161000053 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m4207975669 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m4038334168 ();
+extern "C" void TweenSettingsExtensions_SetOptions_m3069323763 ();
+extern "C" void TweenSettingsExtensions_SetLookAt_m1482035211 ();
+extern "C" void TweenSettingsExtensions_SetLookAt_m2149060425 ();
+extern "C" void TweenSettingsExtensions_SetLookAt_m4115581975 ();
+extern "C" void TweenSettingsExtensions_SetPathForwardDirection_m364378825 ();
 extern "C" void AbstractEventData__ctor_m3586111519 ();
 extern "C" void AbstractEventData_Reset_m15186946 ();
 extern "C" void AbstractEventData_Use_m1797212290 ();
@@ -10938,13 +12136,25 @@ extern "C" void FlickController_Update_m3090610249 ();
 extern "C" void gameOver__ctor_m2948236363 ();
 extern "C" void gameOver_Start_m2596220231 ();
 extern "C" void gameOver_Update_m3787536330 ();
+extern "C" void itemGet__ctor_m3271015316 ();
+extern "C" void itemGet_Start_m1473858716 ();
+extern "C" void itemGet_Update_m1750601601 ();
+extern "C" void itemGet_OnCollisionEnter2D_m2248259662 ();
 extern "C" void MainSceneButtonController__ctor_m2887304150 ();
 extern "C" void MainSceneButtonController_Restart_m3661489295 ();
 extern "C" void MainSceneButtonController_BackHome_m104322040 ();
 extern "C" void MainSceneButtonController_gameStart_m2311023768 ();
+extern "C" void MainStart__ctor_m4273206546 ();
+extern "C" void MainStart_Start_m1166430642 ();
+extern "C" void MainStart_Update_m3545523221 ();
+extern "C" void MoveCamera__ctor_m3742198839 ();
+extern "C" void MoveCamera_Start_m2614974443 ();
+extern "C" void MoveCamera_Update_m2357030312 ();
+extern "C" void MoveCamera_OnRightArrow_m3989916971 ();
+extern "C" void MoveCamera_OnLeftArrow_m2476212928 ();
 extern "C" void MovePanel__ctor_m1414208644 ();
-extern "C" void MovePanel_Start_m2112567348 ();
 extern "C" void MovePanel_Update_m71417553 ();
+extern "C" void MovePanel_OnWillRenderObject_m3890863828 ();
 extern "C" void moveStage__ctor_m2094883096 ();
 extern "C" void moveStage_Start_m2832591684 ();
 extern "C" void moveStage_Update_m3646796779 ();
@@ -10953,6 +12163,9 @@ extern "C" void player__ctor_m4144406576 ();
 extern "C" void player_Start_m1004576464 ();
 extern "C" void player_Update_m2878195153 ();
 extern "C" void player_OnCollisionEnter2D_m3701593854 ();
+extern "C" void SliderController__ctor_m3702861044 ();
+extern "C" void SliderController_Start_m1936277888 ();
+extern "C" void SliderController_Update_m3697823395 ();
 extern "C" void stage_create__ctor_m1793309730 ();
 extern "C" void stage_create_Start_m3851390866 ();
 extern "C" void stage_create_Update_m799586761 ();
@@ -10960,10 +12173,11 @@ extern "C" void StartSceneButtonController__ctor_m3817771263 ();
 extern "C" void StartSceneButtonController_Start_m647388595 ();
 extern "C" void StartSceneButtonController_Update_m4040313750 ();
 extern "C" void StartSceneButtonController_OnClick_m38327000 ();
+extern "C" void StartSceneButtonController_TapStart_m3103234968 ();
 extern "C" void UfoControllerScript__ctor_m3733302702 ();
 extern "C" void UfoControllerScript_Start_m3478285518 ();
 extern "C" void UfoControllerScript_Update_m3761321201 ();
-extern const Il2CppMethodPointer g_MethodPointers[10949] = 
+extern const Il2CppMethodPointer g_MethodPointers[12163] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -12542,6 +13756,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Decimal_decimalMult_m3318413437,
 	Decimal_decimalDiv_m900036616,
 	Decimal_decimalCompare_m26009298,
+	Decimal_op_Addition_m3630245203,
 	Decimal_op_Increment_m2012286538,
 	Decimal_op_Subtraction_m4281620403,
 	Decimal_op_Multiply_m363076371,
@@ -13491,8 +14706,11 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Math_Min_m4290821911,
 	Math_Round_m565516458,
 	Math_Round_m2632426160,
+	Math_Truncate_m2511675028,
 	Math_Sin_m2320256962,
 	Math_Cos_m43596019,
+	Math_Acos_m2218287828,
+	Math_Asin_m347297897,
 	Math_Log_m3371716878,
 	Math_Pow_m3099781906,
 	Math_Sqrt_m932242488,
@@ -14439,6 +15657,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	RuntimeResourceSet_GetObject_m802265983,
 	RuntimeResourceSet_CloneDisposableObjectIfPossible_m344935759,
 	SatelliteContractVersionAttribute__ctor_m2605651717,
+	CompilationRelaxationsAttribute__ctor_m3925978058,
 	CompilationRelaxationsAttribute__ctor_m2800984288,
 	CompilerGeneratedAttribute__ctor_m3017743394,
 	DecimalConstantAttribute__ctor_m71487003,
@@ -14763,6 +15982,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	MethodDictionary_SetMethodProperty_m1502558295,
 	MethodDictionary_get_Values_m3868590366,
 	MethodDictionary_Add_m1424332128,
+	MethodDictionary_Contains_m3698411800,
 	MethodDictionary_Remove_m3965014965,
 	MethodDictionary_get_Count_m3214848709,
 	MethodDictionary_get_IsSynchronized_m800297790,
@@ -17428,6 +18648,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	HybridDictionary_set_Item_m4049906479,
 	HybridDictionary_get_SyncRoot_m1170821686,
 	HybridDictionary_Add_m1037587952,
+	HybridDictionary_Contains_m1057090920,
 	HybridDictionary_CopyTo_m2422525990,
 	HybridDictionary_GetEnumerator_m3570171579,
 	HybridDictionary_Remove_m2059808027,
@@ -17446,6 +18667,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	ListDictionary_set_Item_m972551921,
 	ListDictionary_Add_m4276262662,
 	ListDictionary_Clear_m3646179034,
+	ListDictionary_Contains_m2267260730,
 	ListDictionary_GetEnumerator_m1511032609,
 	ListDictionary_Remove_m2294694061,
 	DictionaryNode__ctor_m2839151850,
@@ -17864,7 +19086,14 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	X509SubjectKeyIdentifierExtension_Encode_m4237278042,
 	X509SubjectKeyIdentifierExtension_ToString_m4073475390,
 	BaseMachine__ctor_m2327544039,
+	BaseMachine_Replace_m2446015132,
 	BaseMachine_Scan_m122450399,
+	BaseMachine_LTRReplace_m1094774497,
+	BaseMachine_RTLReplace_m25431723,
+	MatchAppendEvaluator__ctor_m3486625178,
+	MatchAppendEvaluator_Invoke_m3703737128,
+	MatchAppendEvaluator_BeginInvoke_m3482977851,
+	MatchAppendEvaluator_EndInvoke_m269118460,
 	Capture__ctor_m885749277,
 	Capture__ctor_m2965900721,
 	Capture_get_Index_m819425556,
@@ -18008,6 +19237,10 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Enumerator_System_Collections_IEnumerator_Reset_m1745379511,
 	Enumerator_System_Collections_IEnumerator_get_Current_m1429268283,
 	Enumerator_System_Collections_IEnumerator_MoveNext_m3313126804,
+	MatchEvaluator__ctor_m3633185959,
+	MatchEvaluator_Invoke_m3037466252,
+	MatchEvaluator_BeginInvoke_m503772792,
+	MatchEvaluator_EndInvoke_m3902136768,
 	MRUList__ctor_m2726533367,
 	MRUList_Use_m1589089668,
 	MRUList_Evict_m2430323183,
@@ -18072,24 +19305,42 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Regex__ctor_m392221833,
 	Regex__cctor_m3397544801,
 	Regex_System_Runtime_Serialization_ISerializable_GetObjectData_m4035555909,
+	Regex_Match_m92265676,
+	Regex_Match_m1680452684,
+	Regex_Replace_m4096557757,
+	Regex_Replace_m566725221,
 	Regex_validate_options_m3563464259,
 	Regex_Init_m1873144192,
 	Regex_InitNewRegex_m692548389,
 	Regex_CreateMachineFactory_m3035817687,
 	Regex_get_Options_m2450064630,
 	Regex_get_RightToLeft_m529734879,
+	Regex_GroupNumberFromName_m3228736983,
 	Regex_GetGroupIndex_m1686599756,
 	Regex_default_startat_m2116037983,
 	Regex_IsMatch_m2159202025,
 	Regex_IsMatch_m1286520424,
+	Regex_Match_m3287354872,
 	Regex_Match_m4277133443,
 	Regex_Matches_m3834294444,
 	Regex_Matches_m1377235443,
+	Regex_Replace_m2510734387,
+	Regex_Replace_m2887768543,
 	Regex_ToString_m3687329849,
+	Regex_get_GroupCount_m1188068377,
 	Regex_get_Gap_m2028850051,
 	Regex_CreateMachine_m1003508921,
 	Regex_GetGroupNamesArray_m2600772921,
 	Regex_get_GroupNumbers_m2242327956,
+	ReplacementEvaluator__ctor_m3746900384,
+	ReplacementEvaluator_Evaluate_m197194936,
+	ReplacementEvaluator_EvaluateAppend_m4165611689,
+	ReplacementEvaluator_get_NeedsGroupsOrCaptures_m3532058782,
+	ReplacementEvaluator_Ensure_m2025598273,
+	ReplacementEvaluator_AddFromReplacement_m3891576415,
+	ReplacementEvaluator_AddInt_m2149831105,
+	ReplacementEvaluator_Compile_m1875719451,
+	ReplacementEvaluator_CompileTerm_m1895109616,
 	Alternation__ctor_m3881095545,
 	Alternation_get_Alternatives_m1445219249,
 	Alternation_AddAlternative_m623421443,
@@ -18396,6 +19647,11 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	AnimationCurve__ctor_m3707994114,
 	AnimationCurve_Cleanup_m2190142678,
 	AnimationCurve_Finalize_m3393741894,
+	AnimationCurve_Evaluate_m3698879322,
+	AnimationCurve_get_Item_m3780274863,
+	AnimationCurve_get_length_m1757155287,
+	AnimationCurve_GetKey_Internal_m4198730374,
+	AnimationCurve_INTERNAL_CALL_GetKey_Internal_m4032409550,
 	AnimationCurve_Init_m1486386337,
 	AnimationEvent__ctor_m3458990599,
 	AnimationEvent_get_data_m1944226119,
@@ -18499,6 +19755,13 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	AudioConfigurationChangeHandler_Invoke_m635374412,
 	AudioConfigurationChangeHandler_BeginInvoke_m2418670597,
 	AudioConfigurationChangeHandler_EndInvoke_m2237100787,
+	AudioSource_get_volume_m66289169,
+	AudioSource_set_volume_m2777308722,
+	AudioSource_get_pitch_m4220572439,
+	AudioSource_set_pitch_m3064416458,
+	AudioSource_get_clip_m2127996365,
+	AudioSource_PlayOneShot_m4118899740,
+	AudioSource_PlayOneShot_m286472761,
 	Behaviour__ctor_m2699265412,
 	Behaviour_get_enabled_m4079055610,
 	Behaviour_set_enabled_m1796096907,
@@ -18546,13 +19809,31 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Bounds_SetMinMax_m1523110422_AdjustorThunk,
 	Bounds_Encapsulate_m3688171368_AdjustorThunk,
 	Bounds_ToString_m1966597703_AdjustorThunk,
+	Camera_get_fieldOfView_m3384007405,
+	Camera_set_fieldOfView_m3974156396,
 	Camera_get_nearClipPlane_m3536967407,
+	Camera_set_nearClipPlane_m3510849382,
 	Camera_get_farClipPlane_m3137713566,
+	Camera_set_farClipPlane_m1845065941,
+	Camera_get_orthographicSize_m1801974358,
+	Camera_set_orthographicSize_m2708824189,
 	Camera_get_depth_m1329692468,
+	Camera_get_aspect_m935361871,
+	Camera_set_aspect_m792328692,
 	Camera_get_cullingMask_m73686965,
 	Camera_get_eventMask_m4241372419,
+	Camera_get_backgroundColor_m2767968515,
+	Camera_set_backgroundColor_m2927893592,
+	Camera_INTERNAL_get_backgroundColor_m2704073336,
+	Camera_INTERNAL_set_backgroundColor_m3660646068,
+	Camera_get_rect_m2873096661,
+	Camera_set_rect_m1838810502,
+	Camera_INTERNAL_get_rect_m3971999434,
+	Camera_INTERNAL_set_rect_m610424166,
 	Camera_get_pixelRect_m2084185953,
+	Camera_set_pixelRect_m1366013782,
 	Camera_INTERNAL_get_pixelRect_m1785951490,
+	Camera_INTERNAL_set_pixelRect_m3301406310,
 	Camera_get_targetTexture_m705925974,
 	Camera_get_clearFlags_m1743144302,
 	Camera_get_targetDisplay_m835278314,
@@ -18561,6 +19842,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Camera_ScreenPointToRay_m614889538,
 	Camera_INTERNAL_CALL_ScreenPointToRay_m2752248646,
 	Camera_get_main_m475173995,
+	Camera_get_current_m2639890517,
 	Camera_get_allCamerasCount_m989474043,
 	Camera_GetAllCameras_m2922515227,
 	Camera_FireOnPreCull_m1679634170,
@@ -18642,6 +19924,19 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	ReadOnlyAttribute__ctor_m1597711262,
 	ReadWriteAttribute__ctor_m2566248501,
 	WriteOnlyAttribute__ctor_m3761552155,
+	Collider_get_attachedRigidbody_m3279305420,
+	Collision__ctor_m635081107,
+	Collision_get_relativeVelocity_m2302609283,
+	Collision_get_rigidbody_m3671561778,
+	Collision_get_collider_m3340328360,
+	Collision_get_transform_m4132935520,
+	Collision_get_gameObject_m1370363400,
+	Collision_get_contacts_m266635379,
+	Collision_GetEnumerator_m4009889947,
+	Collision_get_impulse_m1836134987,
+	Collision_get_impactForceSum_m521972354,
+	Collision_get_frictionForceSum_m3438602686,
+	Collision_get_other_m4238363497,
 	Collision2D__ctor_m2559810705,
 	Collision2D_get_collider_m3330356936,
 	Collision2D_get_otherCollider_m4079883492,
@@ -18657,6 +19952,8 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Color_ToString_m4028093047_AdjustorThunk,
 	Color_GetHashCode_m3182525367_AdjustorThunk,
 	Color_Equals_m661618137_AdjustorThunk,
+	Color_op_Addition_m1759335993,
+	Color_op_Subtraction_m3931992385,
 	Color_op_Multiply_m325555950,
 	Color_op_Equality_m3156451394,
 	Color_Lerp_m3323752807,
@@ -18664,6 +19961,10 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Color_get_white_m3987539815,
 	Color_get_black_m2650940523,
 	Color_get_clear_m1469108305,
+	Color_get_grayscale_m2989668074_AdjustorThunk,
+	Color_get_linear_m3851532985_AdjustorThunk,
+	Color_get_gamma_m1982353575_AdjustorThunk,
+	Color_get_maxColorComponent_m1239472485_AdjustorThunk,
 	Color_op_Implicit_m1067945802,
 	Color32__ctor_m1932627809_AdjustorThunk,
 	Color32_op_Implicit_m624191464,
@@ -18706,6 +20007,18 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	ContextMenu__ctor_m666643627,
 	ContextMenu__ctor_m1669818156,
 	ContextMenu__ctor_m3931483141,
+	ControllerColliderHit__ctor_m2990717326,
+	ControllerColliderHit_get_controller_m531319176,
+	ControllerColliderHit_get_collider_m3897495767,
+	ControllerColliderHit_get_rigidbody_m4025380167,
+	ControllerColliderHit_get_gameObject_m3793104279,
+	ControllerColliderHit_get_transform_m3183428555,
+	ControllerColliderHit_get_point_m3573703281,
+	ControllerColliderHit_get_normal_m1098215280,
+	ControllerColliderHit_get_moveDirection_m3053186297,
+	ControllerColliderHit_get_moveLength_m94453726,
+	ControllerColliderHit_get_push_m2528314697,
+	ControllerColliderHit_set_push_m3582188484,
 	Coroutine__ctor_m1253937571,
 	Coroutine_ReleaseCoroutine_m833118514,
 	Coroutine_Finalize_m3953619693,
@@ -19081,13 +20394,19 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	GameObject_get_activeInHierarchy_m4242915935,
 	GameObject_get_tag_m1425941094,
 	GameObject_set_tag_m717375123,
-	GameObject_FindGameObjectWithTag_m829057129,
-	GameObject_FindWithTag_m1929006324,
 	GameObject_SendMessage_m71956653,
 	GameObject_Internal_AddComponentWithType_m214735204,
 	GameObject_AddComponent_m3757565614,
 	GameObject_Internal_CreateGameObject_m3428198595,
 	GameObject_get_gameObject_m3662236595,
+	Gizmos_DrawLine_m1315654064,
+	Gizmos_INTERNAL_CALL_DrawLine_m1667943171,
+	Gizmos_DrawWireSphere_m3395547818,
+	Gizmos_INTERNAL_CALL_DrawWireSphere_m2482278875,
+	Gizmos_DrawSphere_m695677545,
+	Gizmos_INTERNAL_CALL_DrawSphere_m3000536410,
+	Gizmos_set_color_m494992840,
+	Gizmos_INTERNAL_set_color_m3356916140,
 	Gradient__ctor_m954570311,
 	Gradient_Init_m4156899649,
 	Gradient_Cleanup_m3573871739,
@@ -19486,6 +20805,19 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Keyframe_set_tangentMode_m1073266123_AdjustorThunk,
 	LayerMask_op_Implicit_m2135076047,
 	LayerMask_op_Implicit_m3804506591,
+	Light_get_color_m2617173338,
+	Light_set_color_m3975955621,
+	Light_INTERNAL_get_color_m2896497767,
+	Light_INTERNAL_set_color_m2851094611,
+	Light_get_intensity_m392824783,
+	Light_set_intensity_m1790590300,
+	Light_get_shadowStrength_m1628863523,
+	Light_set_shadowStrength_m677056102,
+	LineRenderer_set_startColor_m794347594,
+	LineRenderer_INTERNAL_set_startColor_m1760197194,
+	LineRenderer_set_endColor_m764753847,
+	LineRenderer_INTERNAL_set_endColor_m2406927749,
+	LineRenderer_SetColors_m3539990388,
 	Logger__ctor_m3834134587,
 	Logger_get_logHandler_m4190583509,
 	Logger_set_logHandler_m2851576632,
@@ -19500,20 +20832,65 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Logger_LogFormat_m193464629,
 	Logger_LogException_m206035446,
 	Material__ctor_m1440882780,
+	Material_get_color_m668215843,
+	Material_set_color_m577844242,
 	Material_get_mainTexture_m432794412,
+	Material_get_mainTextureOffset_m786294629,
+	Material_set_mainTextureOffset_m3533368774,
+	Material_get_mainTextureScale_m2123078452,
+	Material_set_mainTextureScale_m723074403,
+	Material_SetFloatImpl_m2784769558,
 	Material_SetIntImpl_m4157631275,
+	Material_SetColorImpl_m3789287710,
+	Material_INTERNAL_CALL_SetColorImpl_m1235596565,
+	Material_SetVectorImpl_m4150689490,
+	Material_INTERNAL_CALL_SetVectorImpl_m2827882321,
+	Material_GetFloatImpl_m419099295,
+	Material_GetColorImpl_m3117633001,
+	Material_INTERNAL_CALL_GetColorImpl_m747148073,
+	Material_GetVectorImpl_m16712461,
+	Material_INTERNAL_CALL_GetVectorImpl_m4248368229,
 	Material_GetTextureImpl_m623159197,
+	Material_GetTextureScaleAndOffsetImpl_m3382929137,
+	Material_INTERNAL_CALL_GetTextureScaleAndOffsetImpl_m4257699065,
+	Material_SetTextureOffsetImpl_m265610963,
+	Material_INTERNAL_CALL_SetTextureOffsetImpl_m2764639336,
+	Material_SetTextureScaleImpl_m239768112,
+	Material_INTERNAL_CALL_SetTextureScaleImpl_m3213275093,
 	Material_HasProperty_m3511389613,
 	Material_HasProperty_m3175512802,
 	Material_Internal_CreateWithMaterial_m2907597451,
 	Material_EnableKeyword_m3724752646,
 	Material_DisableKeyword_m1204728089,
+	Material_SetFloat_m1926275467,
+	Material_SetFloat_m953675160,
 	Material_SetInt_m522302436,
 	Material_SetInt_m977568583,
+	Material_SetColor_m650857509,
+	Material_SetColor_m1191533068,
+	Material_SetVector_m3298399397,
+	Material_SetVector_m1395004512,
+	Material_SetTextureOffset_m3084369360,
+	Material_SetTextureOffset_m1086333799,
+	Material_SetTextureScale_m1622979841,
+	Material_SetTextureScale_m2121704514,
+	Material_GetFloat_m562289878,
+	Material_GetFloat_m4250722315,
+	Material_GetColor_m2326771174,
+	Material_GetColor_m2968960621,
+	Material_GetVector_m4150288440,
+	Material_GetVector_m3102037793,
 	Material_GetTexture_m1257877102,
 	Material_GetTexture_m648312929,
+	Material_GetTextureOffset_m4148619067,
+	Material_GetTextureOffset_m4252250174,
+	Material_GetTextureScale_m1359469258,
+	Material_GetTextureScale_m3139376717,
+	Mathf_GammaToLinearSpace_m3697142437,
+	Mathf_LinearToGammaSpace_m1586839609,
 	Mathf_Sin_m831310046,
 	Mathf_Cos_m238853451,
+	Mathf_Acos_m3800958570,
 	Mathf_Sqrt_m2213915910,
 	Mathf_Abs_m1942863256,
 	Mathf_Min_m1648492575,
@@ -19710,6 +21087,35 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Object_op_Equality_m3764089466,
 	Object_op_Inequality_m2402264703,
 	Object__cctor_m2991092887,
+	Physics_Raycast_m2874007225,
+	Physics_Raycast_m89212106,
+	Physics_Raycast_m2667915561,
+	Physics_Raycast_m3475924638,
+	Physics_Raycast_m1929115794,
+	Physics_Raycast_m2994111303,
+	Physics_Raycast_m4027183840,
+	Physics_Raycast_m2036777053,
+	Physics_Raycast_m2691929452,
+	Physics_Raycast_m780162053,
+	Physics_Raycast_m2686676054,
+	Physics_Raycast_m1844392139,
+	Physics_Raycast_m2009151399,
+	Physics_Raycast_m2308457076,
+	Physics_Raycast_m2736931691,
+	Physics_Raycast_m233619224,
+	Physics_RaycastAll_m233036521,
+	Physics_RaycastAll_m3928448900,
+	Physics_RaycastAll_m1246652201,
+	Physics_RaycastAll_m410413656,
+	Physics_RaycastAll_m3908263591,
+	Physics_RaycastAll_m3256436970,
+	Physics_RaycastAll_m3484190429,
+	Physics_RaycastAll_m3650851272,
+	Physics_INTERNAL_CALL_RaycastAll_m2126789092,
+	Physics_Internal_Raycast_m1160243045,
+	Physics_INTERNAL_CALL_Internal_Raycast_m93849932,
+	Physics_Internal_RaycastTest_m3442924926,
+	Physics_INTERNAL_CALL_Internal_RaycastTest_m3440840981,
 	Physics2D_get_queriesHitTriggers_m361275035,
 	Physics2D_Raycast_m1220041042,
 	Physics2D_Raycast_m122312471,
@@ -19741,19 +21147,32 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	PreferBinarySerialization__ctor_m2043201510,
 	PropertyAttribute__ctor_m3663555848,
 	Quaternion__ctor_m3196903881_AdjustorThunk,
+	Quaternion_AngleAxis_m2806222563,
+	Quaternion_INTERNAL_CALL_AngleAxis_m3310327005,
+	Quaternion_LookRotation_m700700634,
+	Quaternion_INTERNAL_CALL_LookRotation_m3606560944,
 	Quaternion_Inverse_m3931399088,
 	Quaternion_INTERNAL_CALL_Inverse_m1043108654,
+	Quaternion_get_eulerAngles_m3302573991_AdjustorThunk,
 	Quaternion_Euler_m2887458175,
+	Quaternion_Euler_m3586339259,
+	Quaternion_Internal_ToEulerRad_m2807508879,
+	Quaternion_INTERNAL_CALL_Internal_ToEulerRad_m1077217777,
 	Quaternion_Internal_FromEulerRad_m1121344272,
 	Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m1113788132,
+	Quaternion_get_identity_m1561886418,
 	Quaternion_op_Multiply_m2426727589,
 	Quaternion_op_Multiply_m1483423721,
 	Quaternion_op_Equality_m2308156925,
 	Quaternion_op_Inequality_m3629786166,
 	Quaternion_Dot_m952616600,
+	Quaternion_Internal_MakePositive_m2921671247,
 	Quaternion_GetHashCode_m2270520528_AdjustorThunk,
 	Quaternion_Equals_m3730391696_AdjustorThunk,
 	Quaternion_ToString_m2638853272_AdjustorThunk,
+	Random_Range_m2884721203,
+	Random_Range_m694320887,
+	Random_RandomRangeInt_m374035151,
 	RangeAttribute__ctor_m1657271662,
 	RangeInt_get_end_m913869897_AdjustorThunk,
 	Ray__ctor_m3379034047_AdjustorThunk,
@@ -19803,6 +21222,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Rect_ToString_m2728794442_AdjustorThunk,
 	RectOffset__ctor_m2227510254,
 	RectOffset__ctor_m1265077918,
+	RectOffset__ctor_m4133355596,
 	RectOffset_Init_m4361650,
 	RectOffset_Cleanup_m3198970074,
 	RectOffset_get_left_m439065308,
@@ -19880,14 +21300,29 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	RequireComponent__ctor_m3475141952,
 	ResourceRequest__ctor_m3340010930,
 	ResourceRequest_get_asset_m3527928488,
+	Resources_Load_m2041782325,
 	Resources_Load_m243305716,
 	Resources_GetBuiltinResource_m582410469,
+	Rigidbody_get_position_m3465583110,
+	Rigidbody_INTERNAL_get_position_m2227872991,
+	Rigidbody_get_rotation_m4203325509,
+	Rigidbody_set_rotation_m2752020144,
+	Rigidbody_INTERNAL_get_rotation_m109669412,
+	Rigidbody_INTERNAL_set_rotation_m1385731864,
+	Rigidbody_MovePosition_m1810529681,
+	Rigidbody_INTERNAL_CALL_MovePosition_m2709492198,
+	Rigidbody_MoveRotation_m3412525692,
+	Rigidbody_INTERNAL_CALL_MoveRotation_m2205051919,
 	Rigidbody2D_AddForce_m3200488178,
 	Rigidbody2D_INTERNAL_CALL_AddForce_m1958598324,
 	RPC__ctor_m1432086380,
 	Scene_get_handle_m1555912301_AdjustorThunk,
+	Scene_get_name_m745914591_AdjustorThunk,
 	Scene_GetHashCode_m3223653899_AdjustorThunk,
 	Scene_Equals_m3588907349_AdjustorThunk,
+	Scene_GetNameInternal_m3140297940,
+	SceneManager_GetActiveScene_m2964039490,
+	SceneManager_INTERNAL_CALL_GetActiveScene_m1595803318,
 	SceneManager_LoadScene_m1386820036,
 	SceneManager_LoadScene_m87258056,
 	SceneManager_LoadScene_m592643733,
@@ -20162,6 +21597,8 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Time_get_deltaTime_m2233168104,
 	Time_get_unscaledTime_m862335845,
 	Time_get_unscaledDeltaTime_m4281640537,
+	Time_get_smoothDeltaTime_m1294084638,
+	Time_get_timeScale_m3151482970,
 	Time_get_realtimeSinceStartup_m357614587,
 	TooltipAttribute__ctor_m2640804852,
 	Touch_get_fingerId_m4109475843_AdjustorThunk,
@@ -20189,6 +21626,12 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	TrackedReference_op_Equality_m3491334086,
 	TrackedReference_Equals_m3153703389,
 	TrackedReference_GetHashCode_m811248179,
+	TrailRenderer_get_time_m3449437864,
+	TrailRenderer_set_time_m2582670875,
+	TrailRenderer_get_startWidth_m1625094787,
+	TrailRenderer_set_startWidth_m2858856800,
+	TrailRenderer_get_endWidth_m3952779290,
+	TrailRenderer_set_endWidth_m3133306587,
 	Transform_get_position_m1104419803,
 	Transform_set_position_m2469242620,
 	Transform_INTERNAL_get_position_m1881704498,
@@ -20197,6 +21640,9 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Transform_set_localPosition_m1026930133,
 	Transform_INTERNAL_get_localPosition_m94028171,
 	Transform_INTERNAL_set_localPosition_m432504087,
+	Transform_get_eulerAngles_m4066505159,
+	Transform_get_localEulerAngles_m4231787854,
+	Transform_get_up_m1603627763,
 	Transform_get_forward_m1833488937,
 	Transform_get_rotation_m1033555130,
 	Transform_set_rotation_m3411284563,
@@ -20225,8 +21671,6 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Transform_Rotate_m2612876682,
 	Transform_Rotate_m4255273365,
 	Transform_Rotate_m2449860094,
-	Transform_LookAt_m3314153180,
-	Transform_INTERNAL_CALL_LookAt_m1443061981,
 	Transform_TransformDirection_m1639585047,
 	Transform_INTERNAL_CALL_TransformDirection_m2899991790,
 	Transform_TransformPoint_m3272254198,
@@ -20256,11 +21700,15 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Vector2_get_Item_m2792130561_AdjustorThunk,
 	Vector2_set_Item_m3881967114_AdjustorThunk,
 	Vector2_Scale_m3228063809,
+	Vector2_Normalize_m2465777963_AdjustorThunk,
+	Vector2_get_normalized_m2985402409_AdjustorThunk,
 	Vector2_ToString_m775491729_AdjustorThunk,
 	Vector2_GetHashCode_m2353429373_AdjustorThunk,
 	Vector2_Equals_m1405920279_AdjustorThunk,
 	Vector2_Dot_m778921987,
+	Vector2_get_magnitude_m33802565_AdjustorThunk,
 	Vector2_get_sqrMagnitude_m1226294581_AdjustorThunk,
+	Vector2_Angle_m1064580737,
 	Vector2_op_Addition_m1389598521,
 	Vector2_op_Subtraction_m1984215297,
 	Vector2_op_Multiply_m4236139442,
@@ -20278,12 +21726,15 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Vector3_Lerp_m2935648359,
 	Vector3_get_Item_m3616014016_AdjustorThunk,
 	Vector3_set_Item_m499708011_AdjustorThunk,
+	Vector3_Cross_m4149044051,
 	Vector3_GetHashCode_m1754570744_AdjustorThunk,
 	Vector3_Equals_m2692262876_AdjustorThunk,
 	Vector3_Normalize_m2140428981,
+	Vector3_Normalize_m3679112426_AdjustorThunk,
 	Vector3_get_normalized_m936072361_AdjustorThunk,
 	Vector3_Dot_m3161182818,
 	Vector3_Distance_m1859670022,
+	Vector3_ClampMagnitude_m2652735362,
 	Vector3_Magnitude_m1349200714,
 	Vector3_get_magnitude_m860342598_AdjustorThunk,
 	Vector3_SqrMagnitude_m3759098164,
@@ -20300,7 +21751,9 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Vector3_get_right_m1884123822,
 	Vector3_op_Addition_m3146764857,
 	Vector3_op_Subtraction_m2407545601,
+	Vector3_op_UnaryNegation_m3383802608,
 	Vector3_op_Multiply_m1351554733,
+	Vector3_op_Multiply_m3872631309,
 	Vector3_op_Division_m3315615850,
 	Vector3_op_Equality_m305888255,
 	Vector3_op_Inequality_m799191452,
@@ -20311,9 +21764,12 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	Vector4_GetHashCode_m1576457715_AdjustorThunk,
 	Vector4_Equals_m3783731577_AdjustorThunk,
 	Vector4_Dot_m2285943745,
+	Vector4_get_magnitude_m4049434951_AdjustorThunk,
 	Vector4_get_sqrMagnitude_m2115578799_AdjustorThunk,
 	Vector4_get_zero_m3810945132,
+	Vector4_op_Addition_m3367537977,
 	Vector4_op_Subtraction_m2837269249,
+	Vector4_op_Multiply_m3204903356,
 	Vector4_op_Division_m130892763,
 	Vector4_op_Equality_m1825453464,
 	Vector4_ToString_m2340321043_AdjustorThunk,
@@ -20335,6 +21791,962 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	TypeInferenceRuleAttribute_ToString_m3941510216,
 	WebRequestUtils_RedirectTo_m3803295888,
 	WebRequestUtils__cctor_m893658947,
+	Color2__ctor_m2417174790_AdjustorThunk,
+	Color2_op_Addition_m1918240656,
+	Color2_op_Subtraction_m3002763776,
+	Color2_op_Multiply_m3636588472,
+	ABSSequentiable__ctor_m1457763740,
+	Debugger_Log_m2834227361,
+	Debugger_LogWarning_m1294243619,
+	Debugger_LogError_m949546549,
+	Debugger_LogReport_m963317535,
+	Debugger_LogInvalidTween_m3454295394,
+	Debugger_LogNestedTween_m3109520726,
+	Debugger_LogNullTween_m832479276,
+	Debugger_LogNonPathTween_m951639391,
+	Debugger_LogMissingMaterialProperty_m3310745525,
+	Debugger_LogRemoveActiveTweenError_m2297126192,
+	Debugger_SetLogPriority_m1610107306,
+	DOTweenComponent_Awake_m307634654,
+	DOTweenComponent_Start_m2273654179,
+	DOTweenComponent_Update_m2952167292,
+	DOTweenComponent_LateUpdate_m3720781760,
+	DOTweenComponent_FixedUpdate_m1532856798,
+	DOTweenComponent_OnDrawGizmos_m711619515,
+	DOTweenComponent_OnDestroy_m768162796,
+	DOTweenComponent_OnApplicationQuit_m3566070717,
+	DOTweenComponent_SetCapacity_m4268164513,
+	DOTweenComponent_WaitForCompletion_m1897980136,
+	DOTweenComponent_WaitForRewind_m2522663097,
+	DOTweenComponent_WaitForKill_m1046269594,
+	DOTweenComponent_WaitForElapsedLoops_m2314686214,
+	DOTweenComponent_WaitForPosition_m3964012032,
+	DOTweenComponent_WaitForStart_m3782525310,
+	DOTweenComponent_Create_m1411710227,
+	DOTweenComponent_DestroyInstance_m1740700608,
+	DOTweenComponent__ctor_m1855129471,
+	U3CWaitForCompletionU3Ed__13__ctor_m1500940881,
+	U3CWaitForCompletionU3Ed__13_System_IDisposable_Dispose_m4042820963,
+	U3CWaitForCompletionU3Ed__13_MoveNext_m2642612068,
+	U3CWaitForCompletionU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3575789325,
+	U3CWaitForCompletionU3Ed__13_System_Collections_IEnumerator_Reset_m1970706518,
+	U3CWaitForCompletionU3Ed__13_System_Collections_IEnumerator_get_Current_m1875371376,
+	U3CWaitForElapsedLoopsU3Ed__16__ctor_m721687953,
+	U3CWaitForElapsedLoopsU3Ed__16_System_IDisposable_Dispose_m3624934307,
+	U3CWaitForElapsedLoopsU3Ed__16_MoveNext_m3447844618,
+	U3CWaitForElapsedLoopsU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2123559821,
+	U3CWaitForElapsedLoopsU3Ed__16_System_Collections_IEnumerator_Reset_m2109009536,
+	U3CWaitForElapsedLoopsU3Ed__16_System_Collections_IEnumerator_get_Current_m2697209294,
+	U3CWaitForKillU3Ed__15__ctor_m383464461,
+	U3CWaitForKillU3Ed__15_System_IDisposable_Dispose_m1633665715,
+	U3CWaitForKillU3Ed__15_MoveNext_m1537769148,
+	U3CWaitForKillU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m918810409,
+	U3CWaitForKillU3Ed__15_System_Collections_IEnumerator_Reset_m1981393790,
+	U3CWaitForKillU3Ed__15_System_Collections_IEnumerator_get_Current_m1860616400,
+	U3CWaitForPositionU3Ed__17__ctor_m2032821274,
+	U3CWaitForPositionU3Ed__17_System_IDisposable_Dispose_m731458714,
+	U3CWaitForPositionU3Ed__17_MoveNext_m3794080375,
+	U3CWaitForPositionU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4242636580,
+	U3CWaitForPositionU3Ed__17_System_Collections_IEnumerator_Reset_m1580275791,
+	U3CWaitForPositionU3Ed__17_System_Collections_IEnumerator_get_Current_m2895331511,
+	U3CWaitForRewindU3Ed__14__ctor_m2599254525,
+	U3CWaitForRewindU3Ed__14_System_IDisposable_Dispose_m2673538587,
+	U3CWaitForRewindU3Ed__14_MoveNext_m1776446236,
+	U3CWaitForRewindU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m821810625,
+	U3CWaitForRewindU3Ed__14_System_Collections_IEnumerator_Reset_m3291569966,
+	U3CWaitForRewindU3Ed__14_System_Collections_IEnumerator_get_Current_m1161433784,
+	U3CWaitForStartU3Ed__18__ctor_m3014617818,
+	U3CWaitForStartU3Ed__18_System_IDisposable_Dispose_m1119218126,
+	U3CWaitForStartU3Ed__18_MoveNext_m1398096001,
+	U3CWaitForStartU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3691048774,
+	U3CWaitForStartU3Ed__18_System_Collections_IEnumerator_Reset_m3457456717,
+	U3CWaitForStartU3Ed__18_System_Collections_IEnumerator_get_Current_m1804430085,
+	DOTweenSettings__ctor_m887379349,
+	Bounce_EaseIn_m3887019168,
+	Bounce_EaseOut_m4239383085,
+	Bounce_EaseInOut_m2246762374,
+	EaseCurve__ctor_m442291200,
+	EaseCurve_Evaluate_m4151423631,
+	EaseManager_Evaluate_m1048646038,
+	EaseManager_Evaluate_m74870165,
+	EaseManager_ToEaseFunction_m1173633506,
+	EaseManager_IsFlashEase_m2818956000,
+	U3CU3Ec__cctor_m933983471,
+	U3CU3Ec__ctor_m1068847482,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_0_m2721836512,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_1_m1426024031,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_2_m3849412322,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_3_m4002960225,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_4_m963089380,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_5_m3962244195,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_6_m2090665190,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_7_m2244213093,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_8_m3074343400,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_9_m1778530919,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_10_m2753388371,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_11_m2533843000,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_12_m1924838281,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_13_m4292818030,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_14_m3345003455,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_15_m3125458084,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_16_m2516453365,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_17_m589465818,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_18_m102719531,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_19_m4178141456,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_20_m3541146612,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_21_m3321601241,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_22_m2712596522,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_23_m785608975,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_24_m4132761696,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_25_m3913216325,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_26_m3304211606,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_27_m1377224059,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_28_m890477772,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_29_m670932401,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_30_m3757667477,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_31_m3538122106,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_32_m2929117387,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_33_m1002129840,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_34_m54315265,
+	U3CU3Ec_U3CToEaseFunctionU3Eb__4_35_m4129737190,
+	Flash_Ease_m4276233543,
+	Flash_EaseIn_m1600134034,
+	Flash_EaseOut_m3479091121,
+	Flash_EaseInOut_m3738681292,
+	Flash_WeightedEase_m4109024196,
+	SequenceCallback__ctor_m106728995,
+	ColorWrapper__ctor_m1281075933_AdjustorThunk,
+	ColorWrapper_op_Implicit_m1605786519,
+	ColorWrapper_op_Implicit_m3508648404,
+	ColorWrapper_op_Implicit_m2452350099,
+	ColorWrapper_op_Implicit_m1742881980,
+	QuaternionWrapper__ctor_m2063213917_AdjustorThunk,
+	QuaternionWrapper_op_Implicit_m2049866530,
+	QuaternionWrapper_op_Implicit_m2977407408,
+	Vector2Wrapper__ctor_m364751229_AdjustorThunk,
+	Vector2Wrapper__ctor_m1937055205_AdjustorThunk,
+	Vector2Wrapper_op_Implicit_m2749274437,
+	Vector2Wrapper_op_Implicit_m2218031533,
+	Vector3Wrapper__ctor_m3577102173_AdjustorThunk,
+	Vector3Wrapper_op_Implicit_m3215807942,
+	Vector3Wrapper_op_Implicit_m285019116,
+	Vector4Wrapper__ctor_m1437280573_AdjustorThunk,
+	Vector4Wrapper_op_Implicit_m3648553539,
+	Vector4Wrapper_op_Implicit_m3095412647,
+	TweenManager_GetSequence_m1013349775,
+	TweenManager_SetUpdateType_m3684972442,
+	TweenManager_AddActiveTweenToSequence_m3601486235,
+	TweenManager_DespawnAll_m879780213,
+	TweenManager_Despawn_m1933822120,
+	TweenManager_PurgeAll_m2608239790,
+	TweenManager_PurgePools_m1427576330,
+	TweenManager_ResetCapacities_m882991915,
+	TweenManager_SetCapacities_m2919421098,
+	TweenManager_Validate_m3353907304,
+	TweenManager_Update_m378595860,
+	TweenManager_FilteredOperation_m1159879057,
+	TweenManager_Complete_m1525644904,
+	TweenManager_Flip_m3276392302,
+	TweenManager_ForceInit_m163553463,
+	TweenManager_Goto_m3404683021,
+	TweenManager_Pause_m1492466245,
+	TweenManager_Play_m1289143583,
+	TweenManager_PlayBackwards_m156468731,
+	TweenManager_PlayForward_m1226939652,
+	TweenManager_Restart_m197886568,
+	TweenManager_Rewind_m2873713783,
+	TweenManager_SmoothRewind_m1990583008,
+	TweenManager_TogglePause_m3731650299,
+	TweenManager_TotalPooledTweens_m1221755943,
+	TweenManager_TotalPlayingTweens_m3937211462,
+	TweenManager_GetActiveTweens_m586218945,
+	TweenManager_GetTweensById_m2700268389,
+	TweenManager_GetTweensByTarget_m1060452997,
+	TweenManager_MarkForKilling_m1319382931,
+	TweenManager_AddActiveTween_m1611214199,
+	TweenManager_ReorganizeActiveTweens_m3706676790,
+	TweenManager_DespawnActiveTweens_m3761818125,
+	TweenManager_RemoveActiveTween_m3416564700,
+	TweenManager_ClearTweenArray_m1588603360,
+	TweenManager_IncreaseCapacities_m2843870263,
+	TweenManager__cctor_m3795227095,
+	Utils_Vector3FromAngle_m3600790458,
+	Utils_Angle2D_m2378361568,
+	PureQuaternionPlugin_Plug_m3044542140,
+	PureQuaternionPlugin_Reset_m1622149370,
+	PureQuaternionPlugin_SetFrom_m4265139358,
+	PureQuaternionPlugin_ConvertToStartValue_m707750533,
+	PureQuaternionPlugin_SetRelativeEndValue_m487649591,
+	PureQuaternionPlugin_SetChangeValue_m1416200996,
+	PureQuaternionPlugin_GetSpeedBasedDuration_m2190623658,
+	PureQuaternionPlugin_EvaluateAndApply_m1454595347,
+	PureQuaternionPlugin__ctor_m2869270851,
+	DOTween_get_logBehaviour_m2168492577,
+	DOTween_set_logBehaviour_m2124595076,
+	DOTween__cctor_m3994335352,
+	DOTween_Init_m4079336309,
+	DOTween_AutoInit_m4125144064,
+	DOTween_Init_m3935563765,
+	DOTween_SetTweensCapacity_m299576005,
+	DOTween_Clear_m1972800791,
+	DOTween_ClearCachedTweens_m3592210690,
+	DOTween_Validate_m2145836181,
+	DOTween_To_m914278462,
+	DOTween_To_m3247828180,
+	DOTween_To_m3136369265,
+	DOTween_To_m983137922,
+	DOTween_To_m1576341974,
+	DOTween_To_m1946796431,
+	DOTween_To_m2764928386,
+	DOTween_To_m3776518642,
+	DOTween_To_m3775355191,
+	DOTween_To_m2148570216,
+	DOTween_To_m3818371046,
+	DOTween_To_m1616870542,
+	DOTween_To_m732165036,
+	DOTween_To_m1374276420,
+	DOTween_ToAxis_m1546794660,
+	DOTween_ToAlpha_m1017298269,
+	DOTween_To_m1374977403,
+	DOTween_Punch_m2093241430,
+	DOTween_Shake_m2491128678,
+	DOTween_Shake_m683174647,
+	DOTween_Shake_m1527020091,
+	DOTween_ToArray_m2997520276,
+	DOTween_To_m1462453879,
+	DOTween_Sequence_m3562267366,
+	DOTween_CompleteAll_m4221744420,
+	DOTween_Complete_m2005563247,
+	DOTween_CompleteAndReturnKilledTot_m1303820179,
+	DOTween_CompleteAndReturnKilledTot_m3308320837,
+	DOTween_CompleteAndReturnKilledTotExceptFor_m2244397851,
+	DOTween_FlipAll_m3075944589,
+	DOTween_Flip_m3578827124,
+	DOTween_GotoAll_m2362950379,
+	DOTween_Goto_m3890627630,
+	DOTween_KillAll_m1102144471,
+	DOTween_KillAll_m3780178527,
+	DOTween_Kill_m211473084,
+	DOTween_PauseAll_m4101906706,
+	DOTween_Pause_m4110474415,
+	DOTween_PlayAll_m1299085894,
+	DOTween_Play_m164738169,
+	DOTween_Play_m32308619,
+	DOTween_PlayBackwardsAll_m700876428,
+	DOTween_PlayBackwards_m2839273377,
+	DOTween_PlayBackwards_m544554603,
+	DOTween_PlayForwardAll_m1846124281,
+	DOTween_PlayForward_m3077912960,
+	DOTween_PlayForward_m1591690666,
+	DOTween_RestartAll_m1603653256,
+	DOTween_Restart_m570313680,
+	DOTween_Restart_m590221510,
+	DOTween_RewindAll_m1008678220,
+	DOTween_Rewind_m660085617,
+	DOTween_SmoothRewindAll_m4292133471,
+	DOTween_SmoothRewind_m1245411966,
+	DOTween_TogglePauseAll_m336422306,
+	DOTween_TogglePause_m1571016433,
+	DOTween_IsTweening_m2800478603,
+	DOTween_TotalPlayingTweens_m3668081427,
+	DOTween_PlayingTweens_m3712978333,
+	DOTween_PausedTweens_m1007284995,
+	DOTween_TweensById_m2371039200,
+	DOTween_TweensByTarget_m2730695796,
+	DOTween_InitCheck_m691380157,
+	DOTween__ctor_m3410313657,
+	U3CU3Ec__DisplayClass53_0__ctor_m876624288,
+	U3CU3Ec__DisplayClass53_0_U3CToU3Eb__0_m2724231979,
+	U3CU3Ec__DisplayClass53_0_U3CToU3Eb__1_m4247796025,
+	DOVirtual_Float_m1627525319,
+	DOVirtual_EasedValue_m1602872611,
+	DOVirtual_EasedValue_m3612873406,
+	DOVirtual_EasedValue_m3005505411,
+	DOVirtual_EasedValue_m2153709637,
+	DOVirtual_DelayedCall_m1093540967,
+	U3CU3Ec__DisplayClass0_0__ctor_m573884160,
+	U3CU3Ec__DisplayClass0_0_U3CFloatU3Eb__0_m4185883154,
+	U3CU3Ec__DisplayClass0_0_U3CFloatU3Eb__1_m3483606204,
+	U3CU3Ec__DisplayClass0_0_U3CFloatU3Eb__2_m64240142,
+	EaseFactory_StopMotion_m2300428264,
+	EaseFactory_StopMotion_m3743262361,
+	EaseFactory_StopMotion_m810640373,
+	EaseFactory__ctor_m2540174781,
+	U3CU3Ec__DisplayClass2_0__ctor_m98975214,
+	U3CU3Ec__DisplayClass2_0_U3CStopMotionU3Eb__0_m1536854436,
+	EaseFunction__ctor_m70174455,
+	EaseFunction_Invoke_m4001665929,
+	EaseFunction_BeginInvoke_m1915830106,
+	EaseFunction_EndInvoke_m1686794003,
+	Color2Plugin_Reset_m1040404076,
+	Color2Plugin_SetFrom_m1687712394,
+	Color2Plugin_ConvertToStartValue_m1627227983,
+	Color2Plugin_SetRelativeEndValue_m2002112229,
+	Color2Plugin_SetChangeValue_m1983329186,
+	Color2Plugin_GetSpeedBasedDuration_m1878874090,
+	Color2Plugin_EvaluateAndApply_m1350282949,
+	Color2Plugin__ctor_m2361216917,
+	ColorWrapperPlugin_Reset_m2913956871,
+	ColorWrapperPlugin_SetFrom_m67200453,
+	ColorWrapperPlugin_ConvertToStartValue_m3890305038,
+	ColorWrapperPlugin_SetRelativeEndValue_m1407840736,
+	ColorWrapperPlugin_SetChangeValue_m2846381341,
+	ColorWrapperPlugin_GetSpeedBasedDuration_m3678181558,
+	ColorWrapperPlugin_EvaluateAndApply_m880055882,
+	ColorWrapperPlugin__ctor_m3972909968,
+	ABSPathDecoder__ctor_m986200161,
+	CatmullRomDecoder_FinalizePath_m2016177675,
+	CatmullRomDecoder_GetPoint_m889044054,
+	CatmullRomDecoder_SetTimeToLengthTables_m786122248,
+	CatmullRomDecoder_SetWaypointsLengths_m132628524,
+	CatmullRomDecoder__ctor_m31802828,
+	ControlPoint__ctor_m2181047301_AdjustorThunk,
+	ControlPoint_op_Addition_m2476705731,
+	LinearDecoder_FinalizePath_m493312366,
+	LinearDecoder_GetPoint_m2014065135,
+	LinearDecoder_SetTimeToLengthTables_m2287316015,
+	LinearDecoder_SetWaypointsLengths_m3654082159,
+	LinearDecoder__ctor_m1815788553,
+	Path__ctor_m4253660657,
+	Path__ctor_m109627495,
+	Path_FinalizePath_m2340227616,
+	Path_GetPoint_m685987541,
+	Path_ConvertToConstantPathPerc_m4225215567,
+	Path_GetWaypointIndexFromPerc_m1857218744,
+	Path_GetDrawPoints_m2671420849,
+	Path_RefreshNonLinearDrawWps_m692037076,
+	Path_Destroy_m2187283033,
+	Path_CloneIncremental_m3267316450,
+	Path_AssignWaypoints_m1568093980,
+	Path_AssignDecoder_m3072882543,
+	Path_Draw_m755263667,
+	Path_Draw_m3671593897,
+	PluginsManager_PurgeAll_m2309351391,
+	SpecialPluginsUtils_SetLookAt_m3611307139,
+	SpecialPluginsUtils_SetPunch_m2968676958,
+	SpecialPluginsUtils_SetShake_m1141163400,
+	SpecialPluginsUtils_SetCameraShakePosition_m757028890,
+	DoublePlugin_Reset_m4097767476,
+	DoublePlugin_SetFrom_m287034312,
+	DoublePlugin_ConvertToStartValue_m2828371137,
+	DoublePlugin_SetRelativeEndValue_m743829071,
+	DoublePlugin_SetChangeValue_m2620647386,
+	DoublePlugin_GetSpeedBasedDuration_m3485989573,
+	DoublePlugin_EvaluateAndApply_m986922907,
+	DoublePlugin__ctor_m472028567,
+	FloatPlugin_Reset_m1409276442,
+	FloatPlugin_SetFrom_m3628140100,
+	FloatPlugin_ConvertToStartValue_m1262983801,
+	FloatPlugin_SetRelativeEndValue_m3966531475,
+	FloatPlugin_SetChangeValue_m134531078,
+	FloatPlugin_GetSpeedBasedDuration_m1649918496,
+	FloatPlugin_EvaluateAndApply_m3138927159,
+	FloatPlugin__ctor_m585502968,
+	IntPlugin_Reset_m473564686,
+	IntPlugin_SetFrom_m2590773846,
+	IntPlugin_ConvertToStartValue_m2826582483,
+	IntPlugin_SetRelativeEndValue_m3715330301,
+	IntPlugin_SetChangeValue_m2318505996,
+	IntPlugin_GetSpeedBasedDuration_m2752808202,
+	IntPlugin_EvaluateAndApply_m576724549,
+	IntPlugin__ctor_m291784073,
+	LongPlugin_Reset_m4261321919,
+	LongPlugin_SetFrom_m2682161757,
+	LongPlugin_ConvertToStartValue_m603421758,
+	LongPlugin_SetRelativeEndValue_m4267326736,
+	LongPlugin_SetChangeValue_m3050133269,
+	LongPlugin_GetSpeedBasedDuration_m2541162194,
+	LongPlugin_EvaluateAndApply_m2985682968,
+	LongPlugin__ctor_m2586876812,
+	ColorOptions_Reset_m2624799597_AdjustorThunk,
+	FloatOptions_Reset_m1378398748_AdjustorThunk,
+	NoOptions_Reset_m532649001_AdjustorThunk,
+	PathOptions_Reset_m4016313393_AdjustorThunk,
+	QuaternionOptions_Reset_m4116534850_AdjustorThunk,
+	RectOptions_Reset_m297368492_AdjustorThunk,
+	StringOptions_Reset_m530675817_AdjustorThunk,
+	UintOptions_Reset_m3831863362_AdjustorThunk,
+	Vector3ArrayOptions_Reset_m277565119_AdjustorThunk,
+	VectorOptions_Reset_m245768289_AdjustorThunk,
+	PathPlugin_Reset_m3087254235,
+	PathPlugin_SetFrom_m4091676017,
+	PathPlugin_Get_m3476918268,
+	PathPlugin_ConvertToStartValue_m460648741,
+	PathPlugin_SetRelativeEndValue_m970240972,
+	PathPlugin_SetChangeValue_m2144720161,
+	PathPlugin_GetSpeedBasedDuration_m3202608197,
+	PathPlugin_EvaluateAndApply_m2953483135,
+	PathPlugin_SetOrientation_m3023070977,
+	PathPlugin__ctor_m4017481171,
+	QuaternionWrapperPlugin_Reset_m3123969673,
+	QuaternionWrapperPlugin_SetFrom_m3425181839,
+	QuaternionWrapperPlugin_ConvertToStartValue_m1835135070,
+	QuaternionWrapperPlugin_SetRelativeEndValue_m1161287112,
+	QuaternionWrapperPlugin_SetChangeValue_m1016963411,
+	QuaternionWrapperPlugin_GetSpeedBasedDuration_m1945985053,
+	QuaternionWrapperPlugin_EvaluateAndApply_m3283481956,
+	QuaternionWrapperPlugin__ctor_m4196786501,
+	RectOffsetPlugin_Reset_m4095272056,
+	RectOffsetPlugin_SetFrom_m140944448,
+	RectOffsetPlugin_ConvertToStartValue_m3269101313,
+	RectOffsetPlugin_SetRelativeEndValue_m3222695535,
+	RectOffsetPlugin_SetChangeValue_m4017675218,
+	RectOffsetPlugin_GetSpeedBasedDuration_m3064219017,
+	RectOffsetPlugin_EvaluateAndApply_m2322178099,
+	RectOffsetPlugin__ctor_m3970399647,
+	RectOffsetPlugin__cctor_m4059289360,
+	RectPlugin_Reset_m36067126,
+	RectPlugin_SetFrom_m3503117286,
+	RectPlugin_ConvertToStartValue_m4260783945,
+	RectPlugin_SetRelativeEndValue_m1255493911,
+	RectPlugin_SetChangeValue_m2964213558,
+	RectPlugin_GetSpeedBasedDuration_m4207891958,
+	RectPlugin_EvaluateAndApply_m120801595,
+	RectPlugin__ctor_m403056936,
+	StringPlugin_SetFrom_m1109720958,
+	StringPlugin_Reset_m77394362,
+	StringPlugin_ConvertToStartValue_m202643461,
+	StringPlugin_SetRelativeEndValue_m3015982295,
+	StringPlugin_SetChangeValue_m2758686388,
+	StringPlugin_GetSpeedBasedDuration_m3607809797,
+	StringPlugin_EvaluateAndApply_m3214475539,
+	StringPlugin_Append_m915403987,
+	StringPlugin_ScrambledCharsToUse_m3337172010,
+	StringPlugin__ctor_m4132855087,
+	StringPlugin__cctor_m4075694604,
+	StringPluginExtensions__cctor_m216118382,
+	StringPluginExtensions_ScrambleChars_m2357882848,
+	StringPluginExtensions_AppendScrambledChars_m2999297406,
+	UintPlugin_Reset_m3049541632,
+	UintPlugin_SetFrom_m3149814748,
+	UintPlugin_ConvertToStartValue_m765651541,
+	UintPlugin_SetRelativeEndValue_m2418783195,
+	UintPlugin_SetChangeValue_m3466217300,
+	UintPlugin_GetSpeedBasedDuration_m1986785747,
+	UintPlugin_EvaluateAndApply_m3628556239,
+	UintPlugin__ctor_m1851929470,
+	UlongPlugin_Reset_m465097296,
+	UlongPlugin_SetFrom_m175352084,
+	UlongPlugin_ConvertToStartValue_m77481419,
+	UlongPlugin_SetRelativeEndValue_m3409537757,
+	UlongPlugin_SetChangeValue_m4268888190,
+	UlongPlugin_GetSpeedBasedDuration_m721011258,
+	UlongPlugin_EvaluateAndApply_m248710881,
+	UlongPlugin__ctor_m2560758085,
+	Vector2WrapperPlugin_Reset_m3042757129,
+	Vector2WrapperPlugin_SetFrom_m984374511,
+	Vector2WrapperPlugin_ConvertToStartValue_m3514524042,
+	Vector2WrapperPlugin_SetRelativeEndValue_m791739472,
+	Vector2WrapperPlugin_SetChangeValue_m3448329875,
+	Vector2WrapperPlugin_GetSpeedBasedDuration_m1880710800,
+	Vector2WrapperPlugin_EvaluateAndApply_m4006909412,
+	Vector2WrapperPlugin__ctor_m2362136928,
+	Vector3ArrayPlugin_Reset_m2592336274,
+	Vector3ArrayPlugin_SetFrom_m2442655110,
+	Vector3ArrayPlugin_ConvertToStartValue_m1953175333,
+	Vector3ArrayPlugin_SetRelativeEndValue_m1899894737,
+	Vector3ArrayPlugin_SetChangeValue_m1701422420,
+	Vector3ArrayPlugin_GetSpeedBasedDuration_m2617333706,
+	Vector3ArrayPlugin_EvaluateAndApply_m2521440271,
+	Vector3ArrayPlugin__ctor_m1114023449,
+	Vector3WrapperPlugin_Reset_m806348708,
+	Vector3WrapperPlugin_SetFrom_m2245036820,
+	Vector3WrapperPlugin_ConvertToStartValue_m2069321893,
+	Vector3WrapperPlugin_SetRelativeEndValue_m3299014347,
+	Vector3WrapperPlugin_SetChangeValue_m2206227022,
+	Vector3WrapperPlugin_GetSpeedBasedDuration_m2319773456,
+	Vector3WrapperPlugin_EvaluateAndApply_m1275957311,
+	Vector3WrapperPlugin__ctor_m2408724031,
+	Vector4WrapperPlugin_Reset_m251397479,
+	Vector4WrapperPlugin_SetFrom_m3643710609,
+	Vector4WrapperPlugin_ConvertToStartValue_m4146983784,
+	Vector4WrapperPlugin_SetRelativeEndValue_m1976125126,
+	Vector4WrapperPlugin_SetChangeValue_m1101493041,
+	Vector4WrapperPlugin_GetSpeedBasedDuration_m2477711888,
+	Vector4WrapperPlugin_EvaluateAndApply_m4224129966,
+	Vector4WrapperPlugin__ctor_m1319505434,
+	Sequence__ctor_m3160015202,
+	Sequence_DoPrepend_m3692126219,
+	Sequence_DoInsert_m2233051341,
+	Sequence_DoAppendInterval_m4156058788,
+	Sequence_DoPrependInterval_m33614792,
+	Sequence_DoInsertCallback_m2417658513,
+	Sequence_Reset_m1194713657,
+	Sequence_Validate_m2655851536,
+	Sequence_Startup_m2282350177,
+	Sequence_ApplyTween_m4207260438,
+	Sequence_Setup_m1914808042,
+	Sequence_DoStartup_m1514469211,
+	Sequence_DoApplyTween_m2567737122,
+	Sequence_ApplyInternalCycle_m4170225852,
+	Sequence_SortSequencedObjs_m3886496447,
+	ShortcutExtensions_DOFade_m3908825903,
+	ShortcutExtensions_DOPitch_m1466203827,
+	ShortcutExtensions_DOAspect_m4263503343,
+	ShortcutExtensions_DOColor_m4070360217,
+	ShortcutExtensions_DOFarClipPlane_m1788230568,
+	ShortcutExtensions_DOFieldOfView_m2729074193,
+	ShortcutExtensions_DONearClipPlane_m3946677591,
+	ShortcutExtensions_DOOrthoSize_m3058874688,
+	ShortcutExtensions_DOPixelRect_m1451235077,
+	ShortcutExtensions_DORect_m1672543897,
+	ShortcutExtensions_DOShakePosition_m3912240257,
+	ShortcutExtensions_DOShakePosition_m1939458561,
+	ShortcutExtensions_DOShakeRotation_m1826964640,
+	ShortcutExtensions_DOShakeRotation_m3224386616,
+	ShortcutExtensions_DOColor_m2540950828,
+	ShortcutExtensions_DOIntensity_m2263101207,
+	ShortcutExtensions_DOShadowStrength_m1596018935,
+	ShortcutExtensions_DOColor_m3644171909,
+	ShortcutExtensions_DOColor_m1029787631,
+	ShortcutExtensions_DOColor_m331992445,
+	ShortcutExtensions_DOFade_m2221070795,
+	ShortcutExtensions_DOFade_m4201395497,
+	ShortcutExtensions_DOFloat_m2495122819,
+	ShortcutExtensions_DOOffset_m2137547141,
+	ShortcutExtensions_DOOffset_m1515150151,
+	ShortcutExtensions_DOTiling_m2024748893,
+	ShortcutExtensions_DOTiling_m2236894419,
+	ShortcutExtensions_DOVector_m2339305057,
+	ShortcutExtensions_DOMove_m1933953753,
+	ShortcutExtensions_DOMoveX_m3420231689,
+	ShortcutExtensions_DOMoveY_m2397857768,
+	ShortcutExtensions_DOMoveZ_m1621316935,
+	ShortcutExtensions_DORotate_m458975576,
+	ShortcutExtensions_DOLookAt_m3791687253,
+	ShortcutExtensions_DOJump_m841256827,
+	ShortcutExtensions_DOPath_m1262144308,
+	ShortcutExtensions_DOLocalPath_m3950589509,
+	ShortcutExtensions_DOPath_m1344615108,
+	ShortcutExtensions_DOLocalPath_m3055576589,
+	ShortcutExtensions_DOResize_m1464567070,
+	ShortcutExtensions_DOTime_m4195941374,
+	ShortcutExtensions_DOMove_m813241662,
+	ShortcutExtensions_DOMoveX_m369816864,
+	ShortcutExtensions_DOMoveY_m3000263681,
+	ShortcutExtensions_DOMoveZ_m977316578,
+	ShortcutExtensions_DOLocalMove_m1432977613,
+	ShortcutExtensions_DOLocalMoveX_m1551758153,
+	ShortcutExtensions_DOLocalMoveY_m2789795598,
+	ShortcutExtensions_DOLocalMoveZ_m2334840511,
+	ShortcutExtensions_DORotate_m3434569207,
+	ShortcutExtensions_DORotateQuaternion_m4202237645,
+	ShortcutExtensions_DOLocalRotate_m2660994480,
+	ShortcutExtensions_DOLocalRotateQuaternion_m176125184,
+	ShortcutExtensions_DOScale_m2754995414,
+	ShortcutExtensions_DOScale_m562799890,
+	ShortcutExtensions_DOScaleX_m4195392706,
+	ShortcutExtensions_DOScaleY_m3589951495,
+	ShortcutExtensions_DOScaleZ_m1484201804,
+	ShortcutExtensions_DOLookAt_m1204733618,
+	ShortcutExtensions_DOPunchPosition_m4022188990,
+	ShortcutExtensions_DOPunchScale_m3609052310,
+	ShortcutExtensions_DOPunchRotation_m1103244634,
+	ShortcutExtensions_DOShakePosition_m2336714075,
+	ShortcutExtensions_DOShakePosition_m2989795727,
+	ShortcutExtensions_DOShakeRotation_m4273867949,
+	ShortcutExtensions_DOShakeRotation_m3190170693,
+	ShortcutExtensions_DOShakeScale_m455017001,
+	ShortcutExtensions_DOShakeScale_m2106531945,
+	ShortcutExtensions_DOJump_m2116021968,
+	ShortcutExtensions_DOLocalJump_m760861907,
+	ShortcutExtensions_DOPath_m1769930933,
+	ShortcutExtensions_DOLocalPath_m2887627546,
+	ShortcutExtensions_DOPath_m251740173,
+	ShortcutExtensions_DOLocalPath_m712666778,
+	ShortcutExtensions_DOTimeScale_m1499496695,
+	ShortcutExtensions_DOBlendableColor_m3039781373,
+	ShortcutExtensions_DOBlendableColor_m1724098674,
+	ShortcutExtensions_DOBlendableColor_m3858347954,
+	ShortcutExtensions_DOBlendableMoveBy_m1618137896,
+	ShortcutExtensions_DOBlendableLocalMoveBy_m114767453,
+	ShortcutExtensions_DOBlendableRotateBy_m275321471,
+	ShortcutExtensions_DOBlendableLocalRotateBy_m3944746952,
+	ShortcutExtensions_DOBlendableScaleBy_m2885123094,
+	ShortcutExtensions_DOComplete_m3066576958,
+	ShortcutExtensions_DOComplete_m3775394666,
+	ShortcutExtensions_DOKill_m3004510585,
+	ShortcutExtensions_DOKill_m3644515429,
+	ShortcutExtensions_DOFlip_m2530449119,
+	ShortcutExtensions_DOFlip_m1386606503,
+	ShortcutExtensions_DOGoto_m3802481569,
+	ShortcutExtensions_DOGoto_m3839282017,
+	ShortcutExtensions_DOPause_m65675062,
+	ShortcutExtensions_DOPause_m656699488,
+	ShortcutExtensions_DOPlay_m4099564608,
+	ShortcutExtensions_DOPlay_m2113281574,
+	ShortcutExtensions_DOPlayBackwards_m3986309180,
+	ShortcutExtensions_DOPlayBackwards_m2758635154,
+	ShortcutExtensions_DOPlayForward_m3311652443,
+	ShortcutExtensions_DOPlayForward_m281647083,
+	ShortcutExtensions_DORestart_m3156056520,
+	ShortcutExtensions_DORestart_m2596861284,
+	ShortcutExtensions_DORewind_m1526207962,
+	ShortcutExtensions_DORewind_m4071549454,
+	ShortcutExtensions_DOSmoothRewind_m1762400369,
+	ShortcutExtensions_DOSmoothRewind_m2099111741,
+	ShortcutExtensions_DOTogglePause_m968655382,
+	ShortcutExtensions_DOTogglePause_m2815070248,
+	U3CU3Ec__DisplayClass0_0__ctor_m2486159704,
+	U3CU3Ec__DisplayClass0_0_U3CDOFadeU3Eb__0_m4106317219,
+	U3CU3Ec__DisplayClass0_0_U3CDOFadeU3Eb__1_m2008279057,
+	U3CU3Ec__DisplayClass1_0__ctor_m2601117945,
+	U3CU3Ec__DisplayClass1_0_U3CDOPitchU3Eb__0_m1582656838,
+	U3CU3Ec__DisplayClass1_0_U3CDOPitchU3Eb__1_m3148065408,
+	U3CU3Ec__DisplayClass10_0__ctor_m3455628885,
+	U3CU3Ec__DisplayClass10_0_U3CDOShakePositionU3Eb__0_m578926749,
+	U3CU3Ec__DisplayClass10_0_U3CDOShakePositionU3Eb__1_m575366107,
+	U3CU3Ec__DisplayClass11_0__ctor_m351689690,
+	U3CU3Ec__DisplayClass11_0_U3CDOShakePositionU3Eb__0_m1058466392,
+	U3CU3Ec__DisplayClass11_0_U3CDOShakePositionU3Eb__1_m3172318102,
+	U3CU3Ec__DisplayClass12_0__ctor_m1029248587,
+	U3CU3Ec__DisplayClass12_0_U3CDOShakeRotationU3Eb__0_m4012688060,
+	U3CU3Ec__DisplayClass12_0_U3CDOShakeRotationU3Eb__1_m3630155782,
+	U3CU3Ec__DisplayClass13_0__ctor_m2220276688,
+	U3CU3Ec__DisplayClass13_0_U3CDOShakeRotationU3Eb__0_m1636800887,
+	U3CU3Ec__DisplayClass13_0_U3CDOShakeRotationU3Eb__1_m1178986945,
+	U3CU3Ec__DisplayClass14_0__ctor_m2638654569,
+	U3CU3Ec__DisplayClass14_0_U3CDOColorU3Eb__0_m2461988598,
+	U3CU3Ec__DisplayClass14_0_U3CDOColorU3Eb__1_m1757801840,
+	U3CU3Ec__DisplayClass15_0__ctor_m3829682670,
+	U3CU3Ec__DisplayClass15_0_U3CDOIntensityU3Eb__0_m324426264,
+	U3CU3Ec__DisplayClass15_0_U3CDOIntensityU3Eb__1_m4037850610,
+	U3CU3Ec__DisplayClass16_0__ctor_m212274271,
+	U3CU3Ec__DisplayClass16_0_U3CDOShadowStrengthU3Eb__0_m95294285,
+	U3CU3Ec__DisplayClass16_0_U3CDOShadowStrengthU3Eb__1_m1758195355,
+	U3CU3Ec__DisplayClass17_0__ctor_m1403302372,
+	U3CU3Ec__DisplayClass17_0_U3CDOColorU3Eb__0_m877794578,
+	U3CU3Ec__DisplayClass17_0_U3CDOColorU3Eb__1_m2778864942,
+	U3CU3Ec__DisplayClass18_0__ctor_m3130146861,
+	U3CU3Ec__DisplayClass18_0_U3CDOColorU3Eb__0_m3729741674,
+	U3CU3Ec__DisplayClass18_0_U3CDOColorU3Eb__1_m2934347140,
+	U3CU3Ec__DisplayClass19_0__ctor_m26207666,
+	U3CU3Ec__DisplayClass19_0_U3CDOColorU3Eb__0_m1347147275,
+	U3CU3Ec__DisplayClass19_0_U3CDOColorU3Eb__1_m3323694665,
+	U3CU3Ec__DisplayClass2_0__ctor_m2407889050,
+	U3CU3Ec__DisplayClass2_0_U3CDOAspectU3Eb__0_m4201173127,
+	U3CU3Ec__DisplayClass2_0_U3CDOAspectU3Eb__1_m2576574665,
+	U3CU3Ec__DisplayClass20_0__ctor_m4108706642,
+	U3CU3Ec__DisplayClass20_0_U3CDOFadeU3Eb__0_m3919779298,
+	U3CU3Ec__DisplayClass20_0_U3CDOFadeU3Eb__1_m454050554,
+	U3CU3Ec__DisplayClass21_0__ctor_m1004767447,
+	U3CU3Ec__DisplayClass21_0_U3CDOFadeU3Eb__0_m1771916739,
+	U3CU3Ec__DisplayClass21_0_U3CDOFadeU3Eb__1_m3012877045,
+	U3CU3Ec__DisplayClass22_0__ctor_m1682326344,
+	U3CU3Ec__DisplayClass22_0_U3CDOFloatU3Eb__0_m2002597517,
+	U3CU3Ec__DisplayClass22_0_U3CDOFloatU3Eb__1_m788489511,
+	U3CU3Ec__DisplayClass23_0__ctor_m2873354445,
+	U3CU3Ec__DisplayClass23_0_U3CDOOffsetU3Eb__0_m706362964,
+	U3CU3Ec__DisplayClass23_0_U3CDOOffsetU3Eb__1_m2926090360,
+	U3CU3Ec__DisplayClass24_0__ctor_m3291732326,
+	U3CU3Ec__DisplayClass24_0_U3CDOOffsetU3Eb__0_m4206824859,
+	U3CU3Ec__DisplayClass24_0_U3CDOOffsetU3Eb__1_m1909799273,
+	U3CU3Ec__DisplayClass25_0__ctor_m187793131,
+	U3CU3Ec__DisplayClass25_0_U3CDOTilingU3Eb__0_m3591461766,
+	U3CU3Ec__DisplayClass25_0_U3CDOTilingU3Eb__1_m1393409190,
+	U3CU3Ec__DisplayClass26_0__ctor_m865352028,
+	U3CU3Ec__DisplayClass26_0_U3CDOTilingU3Eb__0_m1431514441,
+	U3CU3Ec__DisplayClass26_0_U3CDOTilingU3Eb__1_m262232107,
+	U3CU3Ec__DisplayClass27_0__ctor_m2056380129,
+	U3CU3Ec__DisplayClass27_0_U3CDOVectorU3Eb__0_m2143359122,
+	U3CU3Ec__DisplayClass27_0_U3CDOVectorU3Eb__1_m247014354,
+	U3CU3Ec__DisplayClass28_0__ctor_m3783224618,
+	U3CU3Ec__DisplayClass28_0_U3CDOMoveU3Eb__0_m850685448,
+	U3CU3Ec__DisplayClass28_0_U3CDOMoveU3Eb__1_m3931734188,
+	U3CU3Ec__DisplayClass29_0__ctor_m679285423,
+	U3CU3Ec__DisplayClass29_0_U3CDOMoveXU3Eb__0_m526051155,
+	U3CU3Ec__DisplayClass29_0_U3CDOMoveXU3Eb__1_m91090693,
+	U3CU3Ec__DisplayClass3_0__ctor_m2523126075,
+	U3CU3Ec__DisplayClass3_0_U3CDOColorU3Eb__0_m1136027420,
+	U3CU3Ec__DisplayClass3_0_U3CDOColorU3Eb__1_m2447764652,
+	U3CU3Ec__DisplayClass30_0__ctor_m310275667,
+	U3CU3Ec__DisplayClass30_0_U3CDOMoveYU3Eb__0_m2671999024,
+	U3CU3Ec__DisplayClass30_0_U3CDOMoveYU3Eb__1_m1780496268,
+	U3CU3Ec__DisplayClass31_0__ctor_m1501303768,
+	U3CU3Ec__DisplayClass31_0_U3CDOMoveZU3Eb__0_m1621622194,
+	U3CU3Ec__DisplayClass31_0_U3CDOMoveZU3Eb__1_m3805426966,
+	U3CU3Ec__DisplayClass32_0__ctor_m2178862665,
+	U3CU3Ec__DisplayClass32_0_U3CDORotateU3Eb__0_m2865850427,
+	U3CU3Ec__DisplayClass32_0_U3CDORotateU3Eb__1_m3547216725,
+	U3CU3Ec__DisplayClass33_0__ctor_m3369890766,
+	U3CU3Ec__DisplayClass33_0_U3CDOLookAtU3Eb__0_m3165169221,
+	U3CU3Ec__DisplayClass33_0_U3CDOLookAtU3Eb__1_m1289586275,
+	U3CU3Ec__DisplayClass34_0__ctor_m3788268647,
+	U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__0_m1347413234,
+	U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__1_m595926546,
+	U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__2_m2942199874,
+	U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__3_m1347413267,
+	U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__4_m1876710795,
+	U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__5_m1347413069,
+	U3CU3Ec__DisplayClass34_0_U3CDOJumpU3Eb__6_m2628198229,
+	U3CU3Ec__DisplayClass35_0__ctor_m684329452,
+	U3CU3Ec__DisplayClass35_0_U3CDOPathU3Eb__0_m3939971668,
+	U3CU3Ec__DisplayClass36_0__ctor_m1361888349,
+	U3CU3Ec__DisplayClass36_0_U3CDOLocalPathU3Eb__0_m4263538050,
+	U3CU3Ec__DisplayClass36_0_U3CDOLocalPathU3Eb__1_m631091052,
+	U3CU3Ec__DisplayClass37_0__ctor_m2552916450,
+	U3CU3Ec__DisplayClass37_0_U3CDOPathU3Eb__0_m2086767946,
+	U3CU3Ec__DisplayClass38_0__ctor_m4279760939,
+	U3CU3Ec__DisplayClass38_0_U3CDOLocalPathU3Eb__0_m532172044,
+	U3CU3Ec__DisplayClass38_0_U3CDOLocalPathU3Eb__1_m3921559090,
+	U3CU3Ec__DisplayClass39_0__ctor_m1175821744,
+	U3CU3Ec__DisplayClass39_0_U3CDOResizeU3Eb__0_m2421186814,
+	U3CU3Ec__DisplayClass39_0_U3CDOResizeU3Eb__1_m2725560110,
+	U3CU3Ec__DisplayClass4_0__ctor_m2329618396,
+	U3CU3Ec__DisplayClass4_0_U3CDOFarClipPlaneU3Eb__0_m837436732,
+	U3CU3Ec__DisplayClass4_0_U3CDOFarClipPlaneU3Eb__1_m639886534,
+	U3CU3Ec__DisplayClass40_0__ctor_m972274776,
+	U3CU3Ec__DisplayClass40_0_U3CDOTimeU3Eb__0_m3296034822,
+	U3CU3Ec__DisplayClass40_0_U3CDOTimeU3Eb__1_m760111044,
+	U3CU3Ec__DisplayClass41_0__ctor_m2163302877,
+	U3CU3Ec__DisplayClass41_0_U3CDOMoveU3Eb__0_m1806409601,
+	U3CU3Ec__DisplayClass41_0_U3CDOMoveU3Eb__1_m1069196151,
+	U3CU3Ec__DisplayClass42_0__ctor_m2840861774,
+	U3CU3Ec__DisplayClass42_0_U3CDOMoveXU3Eb__0_m4203746742,
+	U3CU3Ec__DisplayClass42_0_U3CDOMoveXU3Eb__1_m2549260578,
+	U3CU3Ec__DisplayClass43_0__ctor_m4031889875,
+	U3CU3Ec__DisplayClass43_0_U3CDOMoveYU3Eb__0_m3249844598,
+	U3CU3Ec__DisplayClass43_0_U3CDOMoveYU3Eb__1_m2151641698,
+	U3CU3Ec__DisplayClass44_0__ctor_m155300460,
+	U3CU3Ec__DisplayClass44_0_U3CDOMoveZU3Eb__0_m3919167034,
+	U3CU3Ec__DisplayClass44_0_U3CDOMoveZU3Eb__1_m3743549070,
+	U3CU3Ec__DisplayClass45_0__ctor_m1346328561,
+	U3CU3Ec__DisplayClass45_0_U3CDOLocalMoveU3Eb__0_m971035126,
+	U3CU3Ec__DisplayClass45_0_U3CDOLocalMoveU3Eb__1_m3148020178,
+	U3CU3Ec__DisplayClass46_0__ctor_m2023887458,
+	U3CU3Ec__DisplayClass46_0_U3CDOLocalMoveXU3Eb__0_m2522593639,
+	U3CU3Ec__DisplayClass46_0_U3CDOLocalMoveXU3Eb__1_m1448874201,
+	U3CU3Ec__DisplayClass47_0__ctor_m3214915559,
+	U3CU3Ec__DisplayClass47_0_U3CDOLocalMoveYU3Eb__0_m1016860779,
+	U3CU3Ec__DisplayClass47_0_U3CDOLocalMoveYU3Eb__1_m2242632157,
+	U3CU3Ec__DisplayClass48_0__ctor_m646792752,
+	U3CU3Ec__DisplayClass48_0_U3CDOLocalMoveZU3Eb__0_m1519144427,
+	U3CU3Ec__DisplayClass48_0_U3CDOLocalMoveZU3Eb__1_m1240550313,
+	U3CU3Ec__DisplayClass49_0__ctor_m1837820853,
+	U3CU3Ec__DisplayClass49_0_U3CDORotateU3Eb__0_m52679299,
+	U3CU3Ec__DisplayClass49_0_U3CDORotateU3Eb__1_m3916117393,
+	U3CU3Ec__DisplayClass5_0__ctor_m2444576637,
+	U3CU3Ec__DisplayClass5_0_U3CDOFieldOfViewU3Eb__0_m1848561416,
+	U3CU3Ec__DisplayClass5_0_U3CDOFieldOfViewU3Eb__1_m2096582742,
+	U3CU3Ec__DisplayClass50_0__ctor_m2897528665,
+	U3CU3Ec__DisplayClass50_0_U3CDORotateQuaternionU3Eb__0_m300052843,
+	U3CU3Ec__DisplayClass50_0_U3CDORotateQuaternionU3Eb__1_m3490315601,
+	U3CU3Ec__DisplayClass51_0__ctor_m4088556766,
+	U3CU3Ec__DisplayClass51_0_U3CDOLocalRotateU3Eb__0_m1911602875,
+	U3CU3Ec__DisplayClass51_0_U3CDOLocalRotateU3Eb__1_m2566335897,
+	U3CU3Ec__DisplayClass52_0__ctor_m471148367,
+	U3CU3Ec__DisplayClass52_0_U3CDOLocalRotateQuaternionU3Eb__0_m2450251552,
+	U3CU3Ec__DisplayClass52_0_U3CDOLocalRotateQuaternionU3Eb__1_m703125688,
+	U3CU3Ec__DisplayClass53_0__ctor_m1662176468,
+	U3CU3Ec__DisplayClass53_0_U3CDOScaleU3Eb__0_m253468343,
+	U3CU3Ec__DisplayClass53_0_U3CDOScaleU3Eb__1_m56636437,
+	U3CU3Ec__DisplayClass54_0__ctor_m2080554349,
+	U3CU3Ec__DisplayClass54_0_U3CDOScaleU3Eb__0_m156812304,
+	U3CU3Ec__DisplayClass54_0_U3CDOScaleU3Eb__1_m3268105988,
+	U3CU3Ec__DisplayClass55_0__ctor_m3271582450,
+	U3CU3Ec__DisplayClass55_0_U3CDOScaleXU3Eb__0_m4241935653,
+	U3CU3Ec__DisplayClass55_0_U3CDOScaleXU3Eb__1_m1167690971,
+	U3CU3Ec__DisplayClass56_0__ctor_m3949141347,
+	U3CU3Ec__DisplayClass56_0_U3CDOScaleYU3Eb__0_m1600675427,
+	U3CU3Ec__DisplayClass56_0_U3CDOScaleYU3Eb__1_m329907233,
+	U3CU3Ec__DisplayClass57_0__ctor_m845202152,
+	U3CU3Ec__DisplayClass57_0_U3CDOScaleZU3Eb__0_m4282837937,
+	U3CU3Ec__DisplayClass57_0_U3CDOScaleZU3Eb__1_m4155026659,
+	U3CU3Ec__DisplayClass58_0__ctor_m2572046641,
+	U3CU3Ec__DisplayClass58_0_U3CDOLookAtU3Eb__0_m533597832,
+	U3CU3Ec__DisplayClass58_0_U3CDOLookAtU3Eb__1_m1617992690,
+	U3CU3Ec__DisplayClass59_0__ctor_m3763074742,
+	U3CU3Ec__DisplayClass59_0_U3CDOPunchPositionU3Eb__0_m725983270,
+	U3CU3Ec__DisplayClass59_0_U3CDOPunchPositionU3Eb__1_m4002101508,
+	U3CU3Ec__DisplayClass6_0__ctor_m2251347742,
+	U3CU3Ec__DisplayClass6_0_U3CDONearClipPlaneU3Eb__0_m835463291,
+	U3CU3Ec__DisplayClass6_0_U3CDONearClipPlaneU3Eb__1_m2171634649,
+	U3CU3Ec__DisplayClass60_0__ctor_m3550606422,
+	U3CU3Ec__DisplayClass60_0_U3CDOPunchScaleU3Eb__0_m3267480279,
+	U3CU3Ec__DisplayClass60_0_U3CDOPunchScaleU3Eb__1_m1510745201,
+	U3CU3Ec__DisplayClass61_0__ctor_m446667227,
+	U3CU3Ec__DisplayClass61_0_U3CDOPunchRotationU3Eb__0_m177885156,
+	U3CU3Ec__DisplayClass61_0_U3CDOPunchRotationU3Eb__1_m203030274,
+	U3CU3Ec__DisplayClass62_0__ctor_m1124226124,
+	U3CU3Ec__DisplayClass62_0_U3CDOShakePositionU3Eb__0_m2772458086,
+	U3CU3Ec__DisplayClass62_0_U3CDOShakePositionU3Eb__1_m4010845424,
+	U3CU3Ec__DisplayClass63_0__ctor_m2315254225,
+	U3CU3Ec__DisplayClass63_0_U3CDOShakePositionU3Eb__0_m396570913,
+	U3CU3Ec__DisplayClass63_0_U3CDOShakePositionU3Eb__1_m1559676587,
+	U3CU3Ec__DisplayClass64_0__ctor_m2733632106,
+	U3CU3Ec__DisplayClass64_0_U3CDOShakeRotationU3Eb__0_m3789213667,
+	U3CU3Ec__DisplayClass64_0_U3CDOShakeRotationU3Eb__1_m4179202185,
+	U3CU3Ec__DisplayClass65_0__ctor_m3924660207,
+	U3CU3Ec__DisplayClass65_0_U3CDOShakeRotationU3Eb__0_m4268753310,
+	U3CU3Ec__DisplayClass65_0_U3CDOShakeRotationU3Eb__1_m2481186884,
+	U3CU3Ec__DisplayClass66_0__ctor_m307251808,
+	U3CU3Ec__DisplayClass66_0_U3CDOShakeScaleU3Eb__0_m623183585,
+	U3CU3Ec__DisplayClass66_0_U3CDOShakeScaleU3Eb__1_m1136808023,
+	U3CU3Ec__DisplayClass67_0__ctor_m1498279909,
+	U3CU3Ec__DisplayClass67_0_U3CDOShakeScaleU3Eb__0_m2785084294,
+	U3CU3Ec__DisplayClass67_0_U3CDOShakeScaleU3Eb__1_m1238737692,
+	U3CU3Ec__DisplayClass68_0__ctor_m3225124398,
+	U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__0_m3542776949,
+	U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__1_m1104996947,
+	U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__2_m678417633,
+	U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__3_m3542776982,
+	U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__4_m2968943268,
+	U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__5_m3542777048,
+	U3CU3Ec__DisplayClass68_0_U3CDOJumpU3Eb__6_m3720430702,
+	U3CU3Ec__DisplayClass69_0__ctor_m121185203,
+	U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__0_m2803131045,
+	U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__1_m1597179835,
+	U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__2_m1683534709,
+	U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__3_m2944293546,
+	U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__4_m2840364600,
+	U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__5_m2097318540,
+	U3CU3Ec__DisplayClass69_0_U3CDOLocalJumpU3Eb__6_m4212436022,
+	U3CU3Ec__DisplayClass7_0__ctor_m2366584767,
+	U3CU3Ec__DisplayClass7_0_U3CDOOrthoSizeU3Eb__0_m556568037,
+	U3CU3Ec__DisplayClass7_0_U3CDOOrthoSizeU3Eb__1_m1225798911,
+	U3CU3Ec__DisplayClass70_0__ctor_m4047142743,
+	U3CU3Ec__DisplayClass70_0_U3CDOPathU3Eb__0_m4257199359,
+	U3CU3Ec__DisplayClass70_0_U3CDOPathU3Eb__1_m1947950665,
+	U3CU3Ec__DisplayClass71_0__ctor_m943203548,
+	U3CU3Ec__DisplayClass71_0_U3CDOLocalPathU3Eb__0_m3326655963,
+	U3CU3Ec__DisplayClass71_0_U3CDOLocalPathU3Eb__1_m4124907905,
+	U3CU3Ec__DisplayClass72_0__ctor_m1620762445,
+	U3CU3Ec__DisplayClass72_0_U3CDOPathU3Eb__0_m2156325621,
+	U3CU3Ec__DisplayClass72_0_U3CDOPathU3Eb__1_m2396859923,
+	U3CU3Ec__DisplayClass73_0__ctor_m2811790546,
+	U3CU3Ec__DisplayClass73_0_U3CDOLocalPathU3Eb__0_m3921507173,
+	U3CU3Ec__DisplayClass73_0_U3CDOLocalPathU3Eb__1_m82419959,
+	U3CU3Ec__DisplayClass74_0__ctor_m3230168427,
+	U3CU3Ec__DisplayClass74_0_U3CDOTimeScaleU3Eb__0_m2125125395,
+	U3CU3Ec__DisplayClass74_0_U3CDOTimeScaleU3Eb__1_m450010117,
+	U3CU3Ec__DisplayClass75_0__ctor_m126229232,
+	U3CU3Ec__DisplayClass75_0_U3CDOBlendableColorU3Eb__0_m2606804112,
+	U3CU3Ec__DisplayClass75_0_U3CDOBlendableColorU3Eb__1_m454902896,
+	U3CU3Ec__DisplayClass76_0__ctor_m803788129,
+	U3CU3Ec__DisplayClass76_0_U3CDOBlendableColorU3Eb__0_m2304727117,
+	U3CU3Ec__DisplayClass76_0_U3CDOBlendableColorU3Eb__1_m365069963,
+	U3CU3Ec__DisplayClass77_0__ctor_m1994816230,
+	U3CU3Ec__DisplayClass77_0_U3CDOBlendableColorU3Eb__0_m3697493646,
+	U3CU3Ec__DisplayClass77_0_U3CDOBlendableColorU3Eb__1_m1720815142,
+	U3CU3Ec__DisplayClass78_0__ctor_m3721660719,
+	U3CU3Ec__DisplayClass78_0_U3CDOBlendableMoveByU3Eb__0_m3698235395,
+	U3CU3Ec__DisplayClass78_0_U3CDOBlendableMoveByU3Eb__1_m2581422557,
+	U3CU3Ec__DisplayClass79_0__ctor_m617721524,
+	U3CU3Ec__DisplayClass79_0_U3CDOBlendableLocalMoveByU3Eb__0_m795914735,
+	U3CU3Ec__DisplayClass79_0_U3CDOBlendableLocalMoveByU3Eb__1_m3775047465,
+	U3CU3Ec__DisplayClass8_0__ctor_m2798668368,
+	U3CU3Ec__DisplayClass8_0_U3CDOPixelRectU3Eb__0_m214223775,
+	U3CU3Ec__DisplayClass8_0_U3CDOPixelRectU3Eb__1_m3022382809,
+	U3CU3Ec__DisplayClass80_0__ctor_m2664417628,
+	U3CU3Ec__DisplayClass80_0_U3CDOBlendableRotateByU3Eb__0_m1568823600,
+	U3CU3Ec__DisplayClass80_0_U3CDOBlendableRotateByU3Eb__1_m3457857394,
+	U3CU3Ec__DisplayClass81_0__ctor_m3855445729,
+	U3CU3Ec__DisplayClass81_0_U3CDOBlendableLocalRotateByU3Eb__0_m1428453660,
+	U3CU3Ec__DisplayClass81_0_U3CDOBlendableLocalRotateByU3Eb__1_m3222986506,
+	U3CU3Ec__DisplayClass82_0__ctor_m238037330,
+	U3CU3Ec__DisplayClass82_0_U3CDOBlendableScaleByU3Eb__0_m3660000907,
+	U3CU3Ec__DisplayClass82_0_U3CDOBlendableScaleByU3Eb__1_m3103190053,
+	U3CU3Ec__DisplayClass9_0__ctor_m2913626609,
+	U3CU3Ec__DisplayClass9_0_U3CDORectU3Eb__0_m2562574134,
+	U3CU3Ec__DisplayClass9_0_U3CDORectU3Eb__1_m3203347018,
+	Tween_get_fullPosition_m1858972655,
+	Tween_set_fullPosition_m3571808594,
+	Tween_Reset_m2158413979,
+	Tween_UpdateDelay_m1702331541,
+	Tween_DoGoto_m3340670294,
+	Tween_OnTweenCallback_m1044536921,
+	Tween__ctor_m3822097368,
+	TweenCallback__ctor_m3479200459,
+	TweenCallback_Invoke_m102388039,
+	TweenCallback_BeginInvoke_m2458978000,
+	TweenCallback_EndInvoke_m3014345193,
+	Tweener__ctor_m102043033,
+	TweenExtensions_Complete_m274286092,
+	TweenExtensions_Complete_m1419431965,
+	TweenExtensions_Flip_m2922754576,
+	TweenExtensions_ForceInit_m447977536,
+	TweenExtensions_Goto_m4027866082,
+	TweenExtensions_Kill_m3845739180,
+	TweenExtensions_PlayBackwards_m613887607,
+	TweenExtensions_PlayForward_m3704378858,
+	TweenExtensions_Restart_m2056936246,
+	TweenExtensions_Rewind_m3286148139,
+	TweenExtensions_SmoothRewind_m2971573214,
+	TweenExtensions_TogglePause_m1054448567,
+	TweenExtensions_GotoWaypoint_m120126169,
+	TweenExtensions_WaitForCompletion_m3746720476,
+	TweenExtensions_WaitForRewind_m1446242633,
+	TweenExtensions_WaitForKill_m2434480674,
+	TweenExtensions_WaitForElapsedLoops_m1788575402,
+	TweenExtensions_WaitForPosition_m4173788156,
+	TweenExtensions_WaitForStart_m1828940021,
+	TweenExtensions_CompletedLoops_m811455055,
+	TweenExtensions_Delay_m1719013068,
+	TweenExtensions_Duration_m4269627274,
+	TweenExtensions_Elapsed_m4148870276,
+	TweenExtensions_ElapsedPercentage_m1036631332,
+	TweenExtensions_ElapsedDirectionalPercentage_m968488947,
+	TweenExtensions_IsActive_m918693289,
+	TweenExtensions_IsBackwards_m130236841,
+	TweenExtensions_IsComplete_m3095330022,
+	TweenExtensions_IsInitialized_m1900413101,
+	TweenExtensions_IsPlaying_m3897946637,
+	TweenExtensions_Loops_m700996556,
+	TweenExtensions_PathGetPoint_m191575487,
+	TweenExtensions_PathGetDrawPoints_m1280144712,
+	TweenExtensions_PathLength_m410910326,
+	TweenParams__ctor_m1421329190,
+	TweenParams_Clear_m2352941651,
+	TweenParams_SetAutoKill_m3324818264,
+	TweenParams_SetId_m3936217499,
+	TweenParams_SetTarget_m587577735,
+	TweenParams_SetLoops_m833753209,
+	TweenParams_SetEase_m249761156,
+	TweenParams_SetEase_m2156832318,
+	TweenParams_SetEase_m50101784,
+	TweenParams_SetRecyclable_m4113181667,
+	TweenParams_SetUpdate_m4207667294,
+	TweenParams_SetUpdate_m161821801,
+	TweenParams_OnStart_m3718574137,
+	TweenParams_OnPlay_m1710613197,
+	TweenParams_OnRewind_m2137198170,
+	TweenParams_OnUpdate_m57491400,
+	TweenParams_OnStepComplete_m418530464,
+	TweenParams_OnComplete_m4145462530,
+	TweenParams_OnKill_m1111014851,
+	TweenParams_OnWaypointChange_m224661718,
+	TweenParams_SetDelay_m443284532,
+	TweenParams_SetRelative_m2325101835,
+	TweenParams_SetSpeedBased_m2851973033,
+	TweenParams__cctor_m1144029957,
+	TweenSettingsExtensions_Append_m388120539,
+	TweenSettingsExtensions_Prepend_m2832870725,
+	TweenSettingsExtensions_Join_m3909252375,
+	TweenSettingsExtensions_Insert_m3944817171,
+	TweenSettingsExtensions_AppendInterval_m2840030048,
+	TweenSettingsExtensions_PrependInterval_m3957684016,
+	TweenSettingsExtensions_AppendCallback_m230459415,
+	TweenSettingsExtensions_PrependCallback_m13875009,
+	TweenSettingsExtensions_InsertCallback_m832410615,
+	TweenSettingsExtensions_SetOptions_m937094726,
+	TweenSettingsExtensions_SetOptions_m2788260957,
+	TweenSettingsExtensions_SetOptions_m1865926333,
+	TweenSettingsExtensions_SetOptions_m3181747809,
+	TweenSettingsExtensions_SetOptions_m1111089121,
+	TweenSettingsExtensions_SetOptions_m3654685945,
+	TweenSettingsExtensions_SetOptions_m1690115161,
+	TweenSettingsExtensions_SetOptions_m2066835278,
+	TweenSettingsExtensions_SetOptions_m3996351285,
+	TweenSettingsExtensions_SetOptions_m2755395124,
+	TweenSettingsExtensions_SetOptions_m1112657767,
+	TweenSettingsExtensions_SetOptions_m3161000053,
+	TweenSettingsExtensions_SetOptions_m4207975669,
+	TweenSettingsExtensions_SetOptions_m4038334168,
+	TweenSettingsExtensions_SetOptions_m3069323763,
+	TweenSettingsExtensions_SetLookAt_m1482035211,
+	TweenSettingsExtensions_SetLookAt_m2149060425,
+	TweenSettingsExtensions_SetLookAt_m4115581975,
+	TweenSettingsExtensions_SetPathForwardDirection_m364378825,
 	AbstractEventData__ctor_m3586111519,
 	AbstractEventData_Reset_m15186946,
 	AbstractEventData_Use_m1797212290,
@@ -21889,13 +24301,25 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	gameOver__ctor_m2948236363,
 	gameOver_Start_m2596220231,
 	gameOver_Update_m3787536330,
+	itemGet__ctor_m3271015316,
+	itemGet_Start_m1473858716,
+	itemGet_Update_m1750601601,
+	itemGet_OnCollisionEnter2D_m2248259662,
 	MainSceneButtonController__ctor_m2887304150,
 	MainSceneButtonController_Restart_m3661489295,
 	MainSceneButtonController_BackHome_m104322040,
 	MainSceneButtonController_gameStart_m2311023768,
+	MainStart__ctor_m4273206546,
+	MainStart_Start_m1166430642,
+	MainStart_Update_m3545523221,
+	MoveCamera__ctor_m3742198839,
+	MoveCamera_Start_m2614974443,
+	MoveCamera_Update_m2357030312,
+	MoveCamera_OnRightArrow_m3989916971,
+	MoveCamera_OnLeftArrow_m2476212928,
 	MovePanel__ctor_m1414208644,
-	MovePanel_Start_m2112567348,
 	MovePanel_Update_m71417553,
+	MovePanel_OnWillRenderObject_m3890863828,
 	moveStage__ctor_m2094883096,
 	moveStage_Start_m2832591684,
 	moveStage_Update_m3646796779,
@@ -21904,6 +24328,9 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	player_Start_m1004576464,
 	player_Update_m2878195153,
 	player_OnCollisionEnter2D_m3701593854,
+	SliderController__ctor_m3702861044,
+	SliderController_Start_m1936277888,
+	SliderController_Update_m3697823395,
 	stage_create__ctor_m1793309730,
 	stage_create_Start_m3851390866,
 	stage_create_Update_m799586761,
@@ -21911,6 +24338,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10949] =
 	StartSceneButtonController_Start_m647388595,
 	StartSceneButtonController_Update_m4040313750,
 	StartSceneButtonController_OnClick_m38327000,
+	StartSceneButtonController_TapStart_m3103234968,
 	UfoControllerScript__ctor_m3733302702,
 	UfoControllerScript_Start_m3478285518,
 	UfoControllerScript_Update_m3761321201,

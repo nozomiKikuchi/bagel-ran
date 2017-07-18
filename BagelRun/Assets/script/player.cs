@@ -28,7 +28,7 @@ public class player : MonoBehaviour {
 		}
 
 		if (SceneManager.GetActiveScene ().name == "SelectScene") {
-			this.transform.Rotate (0, -1, 0);
+			this.transform.Rotate (0, 0, -0.1f);
 		}
 	}
 	void OnCollisionEnter2D(Collision2D col){

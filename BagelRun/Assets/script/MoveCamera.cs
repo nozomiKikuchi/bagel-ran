@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class MoveCamera : MonoBehaviour {
 
-	public GameObject redPanel, greenPanel, bluePanel;
+	public GameObject nomalBagel, greenBagel, purpleBagel;
 	public GameObject look;
 	public GameObject rightArrow, leftArrow;
+	public Slider weight, speed, luck;
 
 	// Use this for initialization
 	void Start () {
@@ -22,15 +23,21 @@ public class MoveCamera : MonoBehaviour {
 
 	public void OnRightArrow() {
 		if (PlayerPrefs.GetInt ("panelColor") == 2) {
-			redPanel.gameObject.transform.DOLocalMove (new Vector3(-1600f, 0f, 0f), 1f);
-			greenPanel.gameObject.transform.DOLocalMove (new Vector3(-800f, 0f, 0f), 1f);
-			bluePanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
+			weight.value = 4;
+			speed.value = 9;
+			luck.value = 10;
+			nomalBagel.gameObject.transform.DOLocalMove (new Vector3(-21.2f, 0.6f, 0f), 1f);
+			greenBagel.gameObject.transform.DOLocalMove (new Vector3(-3.2f, 0.6f, 0f), 1f);
+			purpleBagel.gameObject.transform.DOLocalMove (new Vector3(-39.4f, 0.6f, 0f), 1f);
 			rightArrow.SetActive (false);
 			PlayerPrefs.SetInt ("panelColor", 3);
 		} else if (PlayerPrefs.GetInt ("panelColor") == 1){
-			redPanel.gameObject.transform.DOLocalMove (new Vector3(-800f, 0f, 0f), 1f);
-			greenPanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
-			bluePanel.gameObject.transform.DOLocalMove (new Vector3(800f, 0f, 0f), 1f);
+			weight.value = 5;
+			speed.value = 5;
+			luck.value = 6;
+			nomalBagel.gameObject.transform.DOLocalMove (new Vector3(-3.2f, 0.6f, 0f), 1f);
+			greenBagel.gameObject.transform.DOLocalMove (new Vector3(15f, 0.6f, 0f), 1f);
+			purpleBagel.gameObject.transform.DOLocalMove (new Vector3(-21.2f, 0.6f, 0f), 1f);
 			leftArrow.SetActive (true);
 			PlayerPrefs.SetInt ("panelColor", 2);
 		}
@@ -38,17 +45,22 @@ public class MoveCamera : MonoBehaviour {
 
 	public void OnLeftArrow() {
 		if (PlayerPrefs.GetInt ("panelColor") == 2) {
-			redPanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
-			greenPanel.gameObject.transform.DOLocalMove (new Vector3(800f, 0f, 0f), 1f);
-			bluePanel.gameObject.transform.DOLocalMove (new Vector3(1600f, 0f, 0f), 1f);
+			weight.value = 10;
+			speed.value = 2;
+			luck.value = 6;
+			nomalBagel.gameObject.transform.DOLocalMove (new Vector3(15f, 0.6f, 0f), 1f);
+			greenBagel.gameObject.transform.DOLocalMove (new Vector3(33.2f, 0.6f, 0f), 1f);
+			purpleBagel.gameObject.transform.DOLocalMove (new Vector3(-3.2f, 0.6f, 0f), 1f);
 			leftArrow.SetActive (false);
 			PlayerPrefs.SetInt ("panelColor", 1);
 		} else if (PlayerPrefs.GetInt ("panelColor") == 3) {
-			redPanel.gameObject.transform.DOLocalMove (new Vector3(-800f, 0f, 0f), 1f);
-			greenPanel.gameObject.transform.DOLocalMove (new Vector3(0f, 0f, 0f), 1f);
-			bluePanel.gameObject.transform.DOLocalMove (new Vector3(800f, 0f, 0f), 1f);
+			weight.value = 5;
+			speed.value = 5;
+			luck.value = 6;
+			nomalBagel.gameObject.transform.DOLocalMove (new Vector3(-3.2f, 0.6f, 0f), 1f);
+			greenBagel.gameObject.transform.DOLocalMove (new Vector3(15f, 0.6f, 0f), 1f);
+			purpleBagel.gameObject.transform.DOLocalMove (new Vector3(-21.2f, 0.6f, 0f), 1f);
 			rightArrow.SetActive (true);
-
 			PlayerPrefs.SetInt ("panelColor", 2);
 		}
 	}
