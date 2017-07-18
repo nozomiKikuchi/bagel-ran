@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/resultScene.unity
+=======
+- path: Assets/Scenes/mainScene.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
