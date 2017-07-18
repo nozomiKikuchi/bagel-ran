@@ -102,13 +102,13 @@
 #include "System_System_Security_Cryptography_OidCollection3790243618.h"
 #include "System_System_Security_Cryptography_OidEnumerator3674631724.h"
 #include "System_System_Text_RegularExpressions_BaseMachine4008011478.h"
+#include "System_System_Text_RegularExpressions_BaseMachine_1618777330.h"
 #include "System_System_Text_RegularExpressions_Capture4157900610.h"
 #include "System_System_Text_RegularExpressions_CaptureColle1671345504.h"
 #include "System_System_Text_RegularExpressions_Group3761430853.h"
 #include "System_System_Text_RegularExpressions_GroupCollecti939014605.h"
 #include "System_System_Text_RegularExpressions_Match3164245899.h"
 #include "System_System_Text_RegularExpressions_MatchCollect3718216671.h"
-#include "System_System_Text_RegularExpressions_MatchCollecti501456973.h"
 
 
 
@@ -837,33 +837,34 @@ extern const int32_t g_FieldOffsetTable1092[1] =
 {
 	BaseMachine_t4008011478::get_offset_of_needs_groups_or_captures_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1093 = { sizeof (Capture_t4157900610), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1093[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1093 = { sizeof (MatchAppendEvaluator_t1618777330), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1094 = { sizeof (Capture_t4157900610), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1094[3] = 
 {
 	Capture_t4157900610::get_offset_of_index_0(),
 	Capture_t4157900610::get_offset_of_length_1(),
 	Capture_t4157900610::get_offset_of_text_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1094 = { sizeof (CaptureCollection_t1671345504), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1094[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1095 = { sizeof (CaptureCollection_t1671345504), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1095[1] = 
 {
 	CaptureCollection_t1671345504::get_offset_of_list_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1095 = { sizeof (Group_t3761430853), -1, sizeof(Group_t3761430853_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1095[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1096 = { sizeof (Group_t3761430853), -1, sizeof(Group_t3761430853_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1096[3] = 
 {
 	Group_t3761430853_StaticFields::get_offset_of_Fail_3(),
 	Group_t3761430853::get_offset_of_success_4(),
 	Group_t3761430853::get_offset_of_captures_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1096 = { sizeof (GroupCollection_t939014605), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1096[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1097 = { sizeof (GroupCollection_t939014605), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1097[2] = 
 {
 	GroupCollection_t939014605::get_offset_of_list_0(),
 	GroupCollection_t939014605::get_offset_of_gap_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1097 = { sizeof (Match_t3164245899), -1, sizeof(Match_t3164245899_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1097[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1098 = { sizeof (Match_t3164245899), -1, sizeof(Match_t3164245899_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1098[5] = 
 {
 	Match_t3164245899::get_offset_of_regex_6(),
 	Match_t3164245899::get_offset_of_machine_7(),
@@ -871,17 +872,11 @@ extern const int32_t g_FieldOffsetTable1097[5] =
 	Match_t3164245899::get_offset_of_groups_9(),
 	Match_t3164245899_StaticFields::get_offset_of_empty_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1098 = { sizeof (MatchCollection_t3718216671), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1098[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1099 = { sizeof (MatchCollection_t3718216671), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1099[2] = 
 {
 	MatchCollection_t3718216671::get_offset_of_current_0(),
 	MatchCollection_t3718216671::get_offset_of_list_1(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1099 = { sizeof (Enumerator_t501456973), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1099[2] = 
-{
-	Enumerator_t501456973::get_offset_of_index_0(),
-	Enumerator_t501456973::get_offset_of_coll_1(),
 };
 #ifdef __clang__
 #pragma clang diagnostic pop

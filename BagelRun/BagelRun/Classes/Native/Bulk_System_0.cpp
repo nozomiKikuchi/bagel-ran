@@ -181,8 +181,14 @@
 #include "mscorlib_System_Security_Cryptography_SHA13336793149.h"
 #include "mscorlib_System_Security_Cryptography_HashAlgorith2624936259.h"
 #include "System_System_Text_RegularExpressions_BaseMachine4008011478.h"
+#include "System_System_Text_RegularExpressions_MatchEvaluato710107290.h"
+#include "System_System_Text_RegularExpressions_BaseMachine_1618777330.h"
+#include "System_System_Text_RegularExpressions_ReplacementE1001703513.h"
 #include "System_System_Text_RegularExpressions_Match3164245899.h"
+#include "System_System_Text_RegularExpressions_Group3761430853.h"
 #include "System_System_Text_RegularExpressions_Capture4157900610.h"
+#include "mscorlib_System_SystemException3877406272.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen1398341365.h"
 #include "System_System_Text_RegularExpressions_CaptureColle1671345504.h"
 #include "System_System_Text_RegularExpressions_Category1984577050.h"
 #include "System_System_Text_RegularExpressions_CategoryUtil3840220623.h"
@@ -190,7 +196,6 @@
 #include "System_System_Text_RegularExpressions_FactoryCache2051534610.h"
 #include "System_System_Text_RegularExpressions_MRUList33178162.h"
 #include "System_System_Text_RegularExpressions_FactoryCache_655155419.h"
-#include "System_System_Text_RegularExpressions_Group3761430853.h"
 #include "System_System_Text_RegularExpressions_GroupCollecti939014605.h"
 #include "System_System_Text_RegularExpressions_Interpreter3731288230.h"
 #include "System_System_Text_RegularExpressions_Interpreter_I273560425.h"
@@ -201,13 +206,11 @@
 #include "System_System_Text_RegularExpressions_Mark2724874473.h"
 #include "System_System_Text_RegularExpressions_OpCode586571952.h"
 #include "System_System_Text_RegularExpressions_OpFlags378191910.h"
-#include "mscorlib_System_SystemException3877406272.h"
 #include "System_System_Text_RegularExpressions_InterpreterFa556462562.h"
 #include "System_System_Text_RegularExpressions_Interval2354235237.h"
 #include "System_System_Text_RegularExpressions_IntervalColl4130821325.h"
 #include "System_System_Text_RegularExpressions_IntervalColl1824458113.h"
 #include "System_System_Text_RegularExpressions_IntervalColl1928086041.h"
-#include "System_System_Text_RegularExpressions_LinkRef2090853131.h"
 
 // System.String
 struct String_t;
@@ -475,10 +478,24 @@ struct SHA1_t3336793149;
 struct HashAlgorithm_t2624936259;
 // System.Text.RegularExpressions.BaseMachine
 struct BaseMachine_t4008011478;
+// System.Text.RegularExpressions.ReplacementEvaluator
+struct ReplacementEvaluator_t1001703513;
+// System.Text.RegularExpressions.MatchEvaluator
+struct MatchEvaluator_t710107290;
+// System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator
+struct MatchAppendEvaluator_t1618777330;
 // System.Text.RegularExpressions.Match
 struct Match_t3164245899;
+// System.Text.RegularExpressions.Group
+struct Group_t3761430853;
 // System.Text.RegularExpressions.Capture
 struct Capture_t4157900610;
+// System.SystemException
+struct SystemException_t3877406272;
+// System.Collections.Generic.List`1<System.String>
+struct List_1_t1398341365;
+// System.Collections.Generic.List`1<System.Object>
+struct List_1_t2058570427;
 // System.Text.RegularExpressions.CaptureCollection
 struct CaptureCollection_t1671345504;
 // System.Text.RegularExpressions.FactoryCache
@@ -489,8 +506,6 @@ struct MRUList_t33178162;
 struct IMachineFactory_t633643314;
 // System.Text.RegularExpressions.FactoryCache/Key
 struct Key_t655155419;
-// System.Text.RegularExpressions.Group
-struct Group_t3761430853;
 // System.Text.RegularExpressions.GroupCollection
 struct GroupCollection_t939014605;
 // System.Text.RegularExpressions.Interpreter
@@ -501,8 +516,6 @@ struct QuickSearch_t1036078825;
 struct RepeatContext_t1827616978;
 // System.Text.RegularExpressions.IMachine
 struct IMachine_t3406191350;
-// System.SystemException
-struct SystemException_t3877406272;
 // System.Text.RegularExpressions.InterpreterFactory
 struct InterpreterFactory_t556462562;
 // System.Text.RegularExpressions.IntervalCollection
@@ -515,8 +528,6 @@ struct Enumerator_t1928086041;
 struct IList_t3321498491;
 // System.Text.RegularExpressions.Interval
 struct Interval_t2354235237;
-// System.Text.RegularExpressions.LinkRef
-struct LinkRef_t2090853131;
 extern Il2CppClass* String_t_il2cpp_TypeInfo_var;
 extern const uint32_t Locale_GetText_m1445803604_MetadataUsageId;
 extern Il2CppClass* CaseInsensitiveComparer_t157661140_il2cpp_TypeInfo_var;
@@ -530,6 +541,7 @@ extern Il2CppClass* IDictionary_t596158605_il2cpp_TypeInfo_var;
 extern const uint32_t HybridDictionary_get_Item_m1077394870_MetadataUsageId;
 extern const uint32_t HybridDictionary_set_Item_m4049906479_MetadataUsageId;
 extern const uint32_t HybridDictionary_Add_m1037587952_MetadataUsageId;
+extern const uint32_t HybridDictionary_Contains_m1057090920_MetadataUsageId;
 extern const uint32_t HybridDictionary_CopyTo_m2422525990_MetadataUsageId;
 extern const uint32_t HybridDictionary_GetEnumerator_m3570171579_MetadataUsageId;
 extern const uint32_t HybridDictionary_Remove_m2059808027_MetadataUsageId;
@@ -1221,8 +1233,24 @@ extern const uint32_t X509SubjectKeyIdentifierExtension_FromHex_m3272045013_Meta
 extern const uint32_t X509SubjectKeyIdentifierExtension_Decode_m4102819207_MetadataUsageId;
 extern const uint32_t X509SubjectKeyIdentifierExtension_Encode_m4237278042_MetadataUsageId;
 extern const uint32_t X509SubjectKeyIdentifierExtension_ToString_m4073475390_MetadataUsageId;
+extern Il2CppClass* ReplacementEvaluator_t1001703513_il2cpp_TypeInfo_var;
+extern Il2CppClass* MatchEvaluator_t710107290_il2cpp_TypeInfo_var;
+extern Il2CppClass* MatchAppendEvaluator_t1618777330_il2cpp_TypeInfo_var;
+extern const MethodInfo* ReplacementEvaluator_Evaluate_m197194936_MethodInfo_var;
+extern const MethodInfo* ReplacementEvaluator_EvaluateAppend_m4165611689_MethodInfo_var;
+extern const uint32_t BaseMachine_Replace_m2446015132_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral2999892720;
 extern const uint32_t BaseMachine_Scan_m122450399_MetadataUsageId;
+extern Il2CppClass* SystemException_t3877406272_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1502598604;
+extern const uint32_t BaseMachine_LTRReplace_m1094774497_MetadataUsageId;
+extern Il2CppClass* List_1_t1398341365_il2cpp_TypeInfo_var;
+extern const MethodInfo* List_1__ctor_m3854603248_MethodInfo_var;
+extern const MethodInfo* List_1_Add_m4061286785_MethodInfo_var;
+extern const MethodInfo* List_1_get_Count_m780127360_MethodInfo_var;
+extern const MethodInfo* List_1_get_Item_m4077476129_MethodInfo_var;
+extern const MethodInfo* List_1_Clear_m2768672975_MethodInfo_var;
+extern const uint32_t BaseMachine_RTLReplace_m25431723_MetadataUsageId;
 extern const uint32_t Capture_get_Value_m1059492002_MetadataUsageId;
 extern Il2CppClass* CaptureU5BU5D_t3470489975_il2cpp_TypeInfo_var;
 extern const uint32_t CaptureCollection__ctor_m629636494_MetadataUsageId;
@@ -1273,7 +1301,6 @@ extern const uint32_t Interpreter_GenerateMatch_m4061336978_MetadataUsageId;
 extern const uint32_t IntStack_t273560425_pinvoke_FromNativeMethodDefinition_MetadataUsageId;
 extern const uint32_t IntStack_t273560425_com_FromNativeMethodDefinition_MetadataUsageId;
 extern const uint32_t IntStack_Push_m1259764820_MetadataUsageId;
-extern Il2CppClass* SystemException_t3877406272_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral337649789;
 extern const uint32_t IntStack_set_Count_m2324758988_MetadataUsageId;
 extern Il2CppClass* Interpreter_t3731288230_il2cpp_TypeInfo_var;
@@ -1742,6 +1769,16 @@ extern "C"  void Dictionary_2__ctor_m3043033341_gshared (Dictionary_2_t166393757
 extern "C"  void Dictionary_2_Add_m790520409_gshared (Dictionary_2_t1663937576 * __this, Il2CppObject * p0, int32_t p1, const MethodInfo* method);
 // System.Boolean System.Collections.Generic.Dictionary`2<System.Object,System.Int32>::TryGetValue(!0,!1&)
 extern "C"  bool Dictionary_2_TryGetValue_m2330758874_gshared (Dictionary_2_t1663937576 * __this, Il2CppObject * p0, int32_t* p1, const MethodInfo* method);
+// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
+extern "C"  void List_1__ctor_m310736118_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
+// System.Void System.Collections.Generic.List`1<System.Object>::Add(!0)
+extern "C"  void List_1_Add_m4157722533_gshared (List_1_t2058570427 * __this, Il2CppObject * p0, const MethodInfo* method);
+// System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
+extern "C"  int32_t List_1_get_Count_m2375293942_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
+// !0 System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
+extern "C"  Il2CppObject * List_1_get_Item_m2062981835_gshared (List_1_t2058570427 * __this, int32_t p0, const MethodInfo* method);
+// System.Void System.Collections.Generic.List`1<System.Object>::Clear()
+extern "C"  void List_1_Clear_m4254626809_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
 
 // System.String System.String::Format(System.String,System.Object[])
 extern "C"  String_t* String_Format_m1263743648 (Il2CppObject * __this /* static, unused */, String_t* p0, ObjectU5BU5D_t3614634134* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
@@ -2739,6 +2776,48 @@ extern "C"  Oid_t3221867120 * PublicKey_get_Oid_m4224222642 (PublicKey_t870392 *
 extern "C"  uint8_t X509SubjectKeyIdentifierExtension_FromHexChar_m4225129392 (Il2CppObject * __this /* static, unused */, Il2CppChar ___c0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Byte System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension::FromHexChars(System.Char,System.Char)
 extern "C"  uint8_t X509SubjectKeyIdentifierExtension_FromHexChars_m2515150420 (Il2CppObject * __this /* static, unused */, Il2CppChar ___c10, Il2CppChar ___c21, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.RegularExpressions.ReplacementEvaluator::.ctor(System.Text.RegularExpressions.Regex,System.String)
+extern "C"  void ReplacementEvaluator__ctor_m3746900384 (ReplacementEvaluator_t1001703513 * __this, Regex_t1803876613 * ___regex0, String_t* ___replacement1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.Text.RegularExpressions.Regex::get_RightToLeft()
+extern "C"  bool Regex_get_RightToLeft_m529734879 (Regex_t1803876613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.RegularExpressions.MatchEvaluator::.ctor(System.Object,System.IntPtr)
+extern "C"  void MatchEvaluator__ctor_m3633185959 (MatchEvaluator_t710107290 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.Text.RegularExpressions.BaseMachine::RTLReplace(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Int32,System.Int32)
+extern "C"  String_t* BaseMachine_RTLReplace_m25431723 (BaseMachine_t4008011478 * __this, Regex_t1803876613 * ___regex0, String_t* ___input1, MatchEvaluator_t710107290 * ___evaluator2, int32_t ___count3, int32_t ___startat4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator::.ctor(System.Object,System.IntPtr)
+extern "C"  void MatchAppendEvaluator__ctor_m3486625178 (MatchAppendEvaluator_t1618777330 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.Text.RegularExpressions.ReplacementEvaluator::get_NeedsGroupsOrCaptures()
+extern "C"  bool ReplacementEvaluator_get_NeedsGroupsOrCaptures_m3532058782 (ReplacementEvaluator_t1001703513 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.Text.RegularExpressions.BaseMachine::LTRReplace(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator,System.Int32,System.Int32,System.Boolean)
+extern "C"  String_t* BaseMachine_LTRReplace_m1094774497 (BaseMachine_t4008011478 * __this, Regex_t1803876613 * ___regex0, String_t* ___input1, MatchAppendEvaluator_t1618777330 * ___evaluator2, int32_t ___count3, int32_t ___startat4, bool ___needs_groups_or_captures5, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.Text.RegularExpressions.Group::get_Success()
+extern "C"  bool Group_get_Success_m2001463544 (Group_t3761430853 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.StringBuilder::.ctor(System.Int32)
+extern "C"  void StringBuilder__ctor_m536337337 (StringBuilder_t1221177846 * __this, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Text.StringBuilder System.Text.StringBuilder::Append(System.String,System.Int32,System.Int32)
+extern "C"  StringBuilder_t1221177846 * StringBuilder_Append_m1462406979 (StringBuilder_t1221177846 * __this, String_t* p0, int32_t p1, int32_t p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 System.Text.RegularExpressions.Capture::get_Index()
+extern "C"  int32_t Capture_get_Index_m819425556 (Capture_t4157900610 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.SystemException::.ctor(System.String)
+extern "C"  void SystemException__ctor_m4001391027 (SystemException_t3877406272 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator::Invoke(System.Text.RegularExpressions.Match,System.Text.StringBuilder)
+extern "C"  void MatchAppendEvaluator_Invoke_m3703737128 (MatchAppendEvaluator_t1618777330 * __this, Match_t3164245899 * ___match0, StringBuilder_t1221177846 * ___sb1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 System.Text.RegularExpressions.Capture::get_Length()
+extern "C"  int32_t Capture_get_Length_m1952322390 (Capture_t4157900610 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Text.RegularExpressions.Match System.Text.RegularExpressions.Match::NextMatch()
+extern "C"  Match_t3164245899 * Match_NextMatch_m1088868049 (Match_t3164245899 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Collections.Generic.List`1<System.String>::.ctor()
+#define List_1__ctor_m3854603248(__this, method) ((  void (*) (List_1_t1398341365 *, const MethodInfo*))List_1__ctor_m310736118_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1<System.String>::Add(!0)
+#define List_1_Add_m4061286785(__this, p0, method) ((  void (*) (List_1_t1398341365 *, String_t*, const MethodInfo*))List_1_Add_m4157722533_gshared)(__this, p0, method)
+// System.String System.Text.RegularExpressions.MatchEvaluator::Invoke(System.Text.RegularExpressions.Match)
+extern "C"  String_t* MatchEvaluator_Invoke_m3037466252 (MatchEvaluator_t710107290 * __this, Match_t3164245899 * ___match0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 System.Collections.Generic.List`1<System.String>::get_Count()
+#define List_1_get_Count_m780127360(__this, method) ((  int32_t (*) (List_1_t1398341365 *, const MethodInfo*))List_1_get_Count_m2375293942_gshared)(__this, method)
+// !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32)
+#define List_1_get_Item_m4077476129(__this, p0, method) ((  String_t* (*) (List_1_t1398341365 *, int32_t, const MethodInfo*))List_1_get_Item_m2062981835_gshared)(__this, p0, method)
+// System.Void System.Collections.Generic.List`1<System.String>::Clear()
+#define List_1_Clear_m2768672975(__this, method) ((  void (*) (List_1_t1398341365 *, const MethodInfo*))List_1_Clear_m4254626809_gshared)(__this, method)
 // System.Void System.Text.RegularExpressions.Capture::.ctor(System.String,System.Int32,System.Int32)
 extern "C"  void Capture__ctor_m2965900721 (Capture_t4157900610 * __this, String_t* ___text0, int32_t ___index1, int32_t ___length2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.RegularExpressions.Capture::get_Value()
@@ -2887,8 +2966,6 @@ extern "C"  void Interpreter_PopulateGroup_m4098755954 (Interpreter_t3731288230 
 extern "C"  void Group__ctor_m1187945851 (Group_t3761430853 * __this, String_t* ___text0, int32_t ___index1, int32_t ___length2, int32_t ___n_caps3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.RegularExpressions.GroupCollection::SetValue(System.Text.RegularExpressions.Group,System.Int32)
 extern "C"  void GroupCollection_SetValue_m3560779396 (GroupCollection_t939014605 * __this, Group_t3761430853 * ___g0, int32_t ___i1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.SystemException::.ctor(System.String)
-extern "C"  void SystemException__ctor_m4001391027 (SystemException_t3877406272 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.RegularExpressions.Interpreter::.ctor(System.UInt16[])
 extern "C"  void Interpreter__ctor_m1139507339 (Interpreter_t3731288230 * __this, UInt16U5BU5D_t2527266722* ___program0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.RegularExpressions.Interval::.ctor(System.Int32,System.Int32)
@@ -3219,6 +3296,23 @@ IL_002b:
 		return;
 	}
 }
+// System.Boolean System.Collections.Specialized.HybridDictionary::Contains(System.Object)
+extern "C"  bool HybridDictionary_Contains_m1057090920 (HybridDictionary_t290043810 * __this, Il2CppObject * ___key0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (HybridDictionary_Contains_m1057090920_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Il2CppObject * L_0 = HybridDictionary_get_inner_m3223590742(__this, /*hidden argument*/NULL);
+		Il2CppObject * L_1 = ___key0;
+		NullCheck(L_0);
+		bool L_2 = InterfaceFuncInvoker1< bool, Il2CppObject * >::Invoke(3 /* System.Boolean System.Collections.IDictionary::Contains(System.Object) */, IDictionary_t596158605_il2cpp_TypeInfo_var, L_0, L_1);
+		return L_2;
+	}
+}
 // System.Void System.Collections.Specialized.HybridDictionary::CopyTo(System.Array,System.Int32)
 extern "C"  void HybridDictionary_CopyTo_m2422525990 (HybridDictionary_t290043810 * __this, Il2CppArray * ___array0, int32_t ___index1, const MethodInfo* method)
 {
@@ -3249,7 +3343,7 @@ extern "C"  Il2CppObject * HybridDictionary_GetEnumerator_m3570171579 (HybridDic
 	{
 		Il2CppObject * L_0 = HybridDictionary_get_inner_m3223590742(__this, /*hidden argument*/NULL);
 		NullCheck(L_0);
-		Il2CppObject * L_1 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(3 /* System.Collections.IDictionaryEnumerator System.Collections.IDictionary::GetEnumerator() */, IDictionary_t596158605_il2cpp_TypeInfo_var, L_0);
+		Il2CppObject * L_1 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(4 /* System.Collections.IDictionaryEnumerator System.Collections.IDictionary::GetEnumerator() */, IDictionary_t596158605_il2cpp_TypeInfo_var, L_0);
 		return L_1;
 	}
 }
@@ -3266,7 +3360,7 @@ extern "C"  void HybridDictionary_Remove_m2059808027 (HybridDictionary_t29004381
 		Il2CppObject * L_0 = HybridDictionary_get_inner_m3223590742(__this, /*hidden argument*/NULL);
 		Il2CppObject * L_1 = ___key0;
 		NullCheck(L_0);
-		InterfaceActionInvoker1< Il2CppObject * >::Invoke(4 /* System.Void System.Collections.IDictionary::Remove(System.Object) */, IDictionary_t596158605_il2cpp_TypeInfo_var, L_0, L_1);
+		InterfaceActionInvoker1< Il2CppObject * >::Invoke(5 /* System.Void System.Collections.IDictionary::Remove(System.Object) */, IDictionary_t596158605_il2cpp_TypeInfo_var, L_0, L_1);
 		return;
 	}
 }
@@ -3985,6 +4079,15 @@ extern "C"  void ListDictionary_Clear_m3646179034 (ListDictionary_t3458713452 * 
 		int32_t L_0 = __this->get_version_1();
 		__this->set_version_1(((int32_t)((int32_t)L_0+(int32_t)1)));
 		return;
+	}
+}
+// System.Boolean System.Collections.Specialized.ListDictionary::Contains(System.Object)
+extern "C"  bool ListDictionary_Contains_m2267260730 (ListDictionary_t3458713452 * __this, Il2CppObject * ___key0, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = ___key0;
+		DictionaryNode_t2725637098 * L_1 = ListDictionary_FindEntry_m1690278153(__this, L_0, /*hidden argument*/NULL);
+		return (bool)((((int32_t)((((Il2CppObject*)(DictionaryNode_t2725637098 *)L_1) == ((Il2CppObject*)(Il2CppObject *)NULL))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 	}
 }
 // System.Collections.IDictionaryEnumerator System.Collections.Specialized.ListDictionary::GetEnumerator()
@@ -4864,7 +4967,7 @@ IL_003b:
 		Hashtable_t909839986 * L_8 = __this->get_m_ItemsContainer_0();
 		String_t* L_9 = ___name0;
 		NullCheck(L_8);
-		Il2CppObject * L_10 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_8, L_9);
+		Il2CppObject * L_10 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_8, L_9);
 		if (L_10)
 		{
 			goto IL_0059;
@@ -4875,7 +4978,7 @@ IL_003b:
 		String_t* L_12 = ___name0;
 		_Item_t3244489099 * L_13 = V_0;
 		NullCheck(L_11);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_11, L_12, L_13);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_11, L_12, L_13);
 	}
 
 IL_0059:
@@ -4971,7 +5074,7 @@ extern "C"  _Item_t3244489099 * NameObjectCollectionBase_FindFirstMatchedItem_m2
 		Hashtable_t909839986 * L_1 = __this->get_m_ItemsContainer_0();
 		String_t* L_2 = ___name0;
 		NullCheck(L_1);
-		Il2CppObject * L_3 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_1, L_2);
+		Il2CppObject * L_3 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_1, L_2);
 		return ((_Item_t3244489099 *)CastclassClass(L_3, _Item_t3244489099_il2cpp_TypeInfo_var));
 	}
 
@@ -10563,7 +10666,7 @@ IL_0100:
 			DateTime_t693205669  L_42 = L_41;
 			Il2CppObject * L_43 = Box(DateTime_t693205669_il2cpp_TypeInfo_var, &L_42);
 			NullCheck(L_39);
-			bool L_44 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(32 /* System.Boolean System.Collections.SortedList::ContainsKey(System.Object) */, L_39, L_43);
+			bool L_44 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(33 /* System.Boolean System.Collections.SortedList::ContainsKey(System.Object) */, L_39, L_43);
 			if (L_44)
 			{
 				goto IL_00e0;
@@ -10582,7 +10685,7 @@ IL_0118:
 			NullCheck(L_50);
 			Uri_t19570940 * L_51 = ServicePoint_get_Address_m578153126(L_50, /*hidden argument*/NULL);
 			NullCheck(L_45);
-			VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(24 /* System.Void System.Collections.SortedList::Add(System.Object,System.Object) */, L_45, L_49, L_51);
+			VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.SortedList::Add(System.Object,System.Object) */, L_45, L_49, L_51);
 		}
 
 IL_0132:
@@ -10609,7 +10712,7 @@ IL_0145:
 			SortedList_t3004938869 * L_55 = V_5;
 			int32_t L_56 = V_7;
 			NullCheck(L_55);
-			Il2CppObject * L_57 = VirtFuncInvoker1< Il2CppObject *, int32_t >::Invoke(33 /* System.Object System.Collections.SortedList::GetByIndex(System.Int32) */, L_55, L_56);
+			Il2CppObject * L_57 = VirtFuncInvoker1< Il2CppObject *, int32_t >::Invoke(34 /* System.Object System.Collections.SortedList::GetByIndex(System.Int32) */, L_55, L_56);
 			NullCheck(L_54);
 			HybridDictionary_Remove_m2059808027(L_54, L_57, /*hidden argument*/NULL);
 			int32_t L_58 = V_7;
@@ -10621,7 +10724,7 @@ IL_015e:
 			int32_t L_59 = V_7;
 			SortedList_t3004938869 * L_60 = V_5;
 			NullCheck(L_60);
-			int32_t L_61 = VirtFuncInvoker0< int32_t >::Invoke(15 /* System.Int32 System.Collections.SortedList::get_Count() */, L_60);
+			int32_t L_61 = VirtFuncInvoker0< int32_t >::Invoke(16 /* System.Int32 System.Collections.SortedList::get_Count() */, L_60);
 			if ((((int32_t)L_59) >= ((int32_t)L_61)))
 			{
 				goto IL_0180;
@@ -10945,67 +11048,67 @@ extern "C"  void WebHeaderCollection__cctor_m3314500904 (Il2CppObject * __this /
 		bool L_5 = ((bool)1);
 		Il2CppObject * L_6 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_5);
 		NullCheck(L_4);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_4, _stringLiteral3819355434, L_6);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_4, _stringLiteral3819355434, L_6);
 		Hashtable_t909839986 * L_7 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_8 = ((bool)1);
 		Il2CppObject * L_9 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_8);
 		NullCheck(L_7);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_7, _stringLiteral172550198, L_9);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_7, _stringLiteral172550198, L_9);
 		Hashtable_t909839986 * L_10 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_11 = ((bool)1);
 		Il2CppObject * L_12 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_11);
 		NullCheck(L_10);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_10, _stringLiteral435779042, L_12);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_10, _stringLiteral435779042, L_12);
 		Hashtable_t909839986 * L_13 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_14 = ((bool)1);
 		Il2CppObject * L_15 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_14);
 		NullCheck(L_13);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_13, _stringLiteral4165124290, L_15);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_13, _stringLiteral4165124290, L_15);
 		Hashtable_t909839986 * L_16 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_17 = ((bool)1);
 		Il2CppObject * L_18 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_17);
 		NullCheck(L_16);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_16, _stringLiteral2328218522, L_18);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_16, _stringLiteral2328218522, L_18);
 		Hashtable_t909839986 * L_19 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_20 = ((bool)1);
 		Il2CppObject * L_21 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_20);
 		NullCheck(L_19);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_19, _stringLiteral1991988847, L_21);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_19, _stringLiteral1991988847, L_21);
 		Hashtable_t909839986 * L_22 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_23 = ((bool)1);
 		Il2CppObject * L_24 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_23);
 		NullCheck(L_22);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_22, _stringLiteral3430667732, L_24);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_22, _stringLiteral3430667732, L_24);
 		Hashtable_t909839986 * L_25 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_26 = ((bool)1);
 		Il2CppObject * L_27 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_26);
 		NullCheck(L_25);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_25, _stringLiteral3377642072, L_27);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_25, _stringLiteral3377642072, L_27);
 		Hashtable_t909839986 * L_28 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_29 = ((bool)1);
 		Il2CppObject * L_30 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_29);
 		NullCheck(L_28);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_28, _stringLiteral1352990827, L_30);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_28, _stringLiteral1352990827, L_30);
 		Hashtable_t909839986 * L_31 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_32 = ((bool)1);
 		Il2CppObject * L_33 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_32);
 		NullCheck(L_31);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_31, _stringLiteral3276845361, L_33);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_31, _stringLiteral3276845361, L_33);
 		Hashtable_t909839986 * L_34 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_35 = ((bool)1);
 		Il2CppObject * L_36 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_35);
 		NullCheck(L_34);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_34, _stringLiteral2170876777, L_36);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_34, _stringLiteral2170876777, L_36);
 		Hashtable_t909839986 * L_37 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_38 = ((bool)1);
 		Il2CppObject * L_39 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_38);
 		NullCheck(L_37);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_37, _stringLiteral1094988949, L_39);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_37, _stringLiteral1094988949, L_39);
 		Hashtable_t909839986 * L_40 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		bool L_41 = ((bool)1);
 		Il2CppObject * L_42 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_41);
 		NullCheck(L_40);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_40, _stringLiteral3266014003, L_42);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_40, _stringLiteral3266014003, L_42);
 		IL2CPP_RUNTIME_CLASS_INIT(StringComparer_t1574862926_il2cpp_TypeInfo_var);
 		StringComparer_t1574862926 * L_43 = StringComparer_get_InvariantCultureIgnoreCase_m1052445386(NULL /*static, unused*/, /*hidden argument*/NULL);
 		Dictionary_2_t1445386684 * L_44 = (Dictionary_2_t1445386684 *)il2cpp_codegen_object_new(Dictionary_2_t1445386684_il2cpp_TypeInfo_var);
@@ -11029,127 +11132,127 @@ extern "C"  void WebHeaderCollection__cctor_m3314500904 (Il2CppObject * __this /
 		bool L_52 = ((bool)1);
 		Il2CppObject * L_53 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_52);
 		NullCheck(L_51);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_51, _stringLiteral3819355434, L_53);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_51, _stringLiteral3819355434, L_53);
 		Hashtable_t909839986 * L_54 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_55 = ((bool)1);
 		Il2CppObject * L_56 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_55);
 		NullCheck(L_54);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_54, _stringLiteral925218559, L_56);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_54, _stringLiteral925218559, L_56);
 		Hashtable_t909839986 * L_57 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_58 = ((bool)1);
 		Il2CppObject * L_59 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_58);
 		NullCheck(L_57);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_57, _stringLiteral2082586684, L_59);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_57, _stringLiteral2082586684, L_59);
 		Hashtable_t909839986 * L_60 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_61 = ((bool)1);
 		Il2CppObject * L_62 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_61);
 		NullCheck(L_60);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_60, _stringLiteral1814119739, L_62);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_60, _stringLiteral1814119739, L_62);
 		Hashtable_t909839986 * L_63 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_64 = ((bool)1);
 		Il2CppObject * L_65 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_64);
 		NullCheck(L_63);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_63, _stringLiteral2656285525, L_65);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_63, _stringLiteral2656285525, L_65);
 		Hashtable_t909839986 * L_66 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_67 = ((bool)1);
 		Il2CppObject * L_68 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_67);
 		NullCheck(L_66);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_66, _stringLiteral1776455741, L_68);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_66, _stringLiteral1776455741, L_68);
 		Hashtable_t909839986 * L_69 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_70 = ((bool)1);
 		Il2CppObject * L_71 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_70);
 		NullCheck(L_69);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_69, _stringLiteral2072771911, L_71);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_69, _stringLiteral2072771911, L_71);
 		Hashtable_t909839986 * L_72 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_73 = ((bool)1);
 		Il2CppObject * L_74 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_73);
 		NullCheck(L_72);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_72, _stringLiteral124473052, L_74);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_72, _stringLiteral124473052, L_74);
 		Hashtable_t909839986 * L_75 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_76 = ((bool)1);
 		Il2CppObject * L_77 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_76);
 		NullCheck(L_75);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_75, _stringLiteral172550198, L_77);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_75, _stringLiteral172550198, L_77);
 		Hashtable_t909839986 * L_78 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_79 = ((bool)1);
 		Il2CppObject * L_80 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_79);
 		NullCheck(L_78);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_78, _stringLiteral486338575, L_80);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_78, _stringLiteral486338575, L_80);
 		Hashtable_t909839986 * L_81 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_82 = ((bool)1);
 		Il2CppObject * L_83 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_82);
 		NullCheck(L_81);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_81, _stringLiteral965719748, L_83);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_81, _stringLiteral965719748, L_83);
 		Hashtable_t909839986 * L_84 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_85 = ((bool)1);
 		Il2CppObject * L_86 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_85);
 		NullCheck(L_84);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_84, _stringLiteral1991988847, L_86);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_84, _stringLiteral1991988847, L_86);
 		Hashtable_t909839986 * L_87 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_88 = ((bool)1);
 		Il2CppObject * L_89 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_88);
 		NullCheck(L_87);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_87, _stringLiteral1864643421, L_89);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_87, _stringLiteral1864643421, L_89);
 		Hashtable_t909839986 * L_90 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_91 = ((bool)1);
 		Il2CppObject * L_92 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_91);
 		NullCheck(L_90);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_90, _stringLiteral1382755766, L_92);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_90, _stringLiteral1382755766, L_92);
 		Hashtable_t909839986 * L_93 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_94 = ((bool)1);
 		Il2CppObject * L_95 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_94);
 		NullCheck(L_93);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_93, _stringLiteral99487132, L_95);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_93, _stringLiteral99487132, L_95);
 		Hashtable_t909839986 * L_96 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_97 = ((bool)1);
 		Il2CppObject * L_98 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_97);
 		NullCheck(L_96);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_96, _stringLiteral683397145, L_98);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_96, _stringLiteral683397145, L_98);
 		Hashtable_t909839986 * L_99 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_100 = ((bool)1);
 		Il2CppObject * L_101 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_100);
 		NullCheck(L_99);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_99, _stringLiteral1352990827, L_101);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_99, _stringLiteral1352990827, L_101);
 		Hashtable_t909839986 * L_102 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_103 = ((bool)1);
 		Il2CppObject * L_104 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_103);
 		NullCheck(L_102);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_102, _stringLiteral2170876777, L_104);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_102, _stringLiteral2170876777, L_104);
 		Hashtable_t909839986 * L_105 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_106 = ((bool)1);
 		Il2CppObject * L_107 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_106);
 		NullCheck(L_105);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_105, _stringLiteral3607284354, L_107);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_105, _stringLiteral3607284354, L_107);
 		Hashtable_t909839986 * L_108 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_109 = ((bool)1);
 		Il2CppObject * L_110 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_109);
 		NullCheck(L_108);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_108, _stringLiteral3228896594, L_110);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_108, _stringLiteral3228896594, L_110);
 		Hashtable_t909839986 * L_111 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_112 = ((bool)1);
 		Il2CppObject * L_113 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_112);
 		NullCheck(L_111);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_111, _stringLiteral339799502, L_113);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_111, _stringLiteral339799502, L_113);
 		Hashtable_t909839986 * L_114 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_115 = ((bool)1);
 		Il2CppObject * L_116 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_115);
 		NullCheck(L_114);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_114, _stringLiteral1860258274, L_116);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_114, _stringLiteral1860258274, L_116);
 		Hashtable_t909839986 * L_117 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_118 = ((bool)1);
 		Il2CppObject * L_119 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_118);
 		NullCheck(L_117);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_117, _stringLiteral4291256923, L_119);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_117, _stringLiteral4291256923, L_119);
 		Hashtable_t909839986 * L_120 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_121 = ((bool)1);
 		Il2CppObject * L_122 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_121);
 		NullCheck(L_120);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_120, _stringLiteral562836579, L_122);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_120, _stringLiteral562836579, L_122);
 		Hashtable_t909839986 * L_123 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_multiValue_13();
 		bool L_124 = ((bool)1);
 		Il2CppObject * L_125 = Box(Boolean_t3825574718_il2cpp_TypeInfo_var, &L_124);
 		NullCheck(L_123);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_123, _stringLiteral2508654961, L_125);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(26 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_123, _stringLiteral2508654961, L_125);
 		return;
 	}
 }
@@ -11354,7 +11457,7 @@ IL_0047:
 		Hashtable_t909839986 * L_9 = ((WebHeaderCollection_t3028142837_StaticFields*)WebHeaderCollection_t3028142837_il2cpp_TypeInfo_var->static_fields)->get_restricted_12();
 		String_t* L_10 = ___headerName0;
 		NullCheck(L_9);
-		bool L_11 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(30 /* System.Boolean System.Collections.Hashtable::ContainsKey(System.Object) */, L_9, L_10);
+		bool L_11 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(31 /* System.Boolean System.Collections.Hashtable::ContainsKey(System.Object) */, L_9, L_10);
 		return L_11;
 	}
 }
@@ -27393,6 +27496,62 @@ extern "C"  void BaseMachine__ctor_m2327544039 (BaseMachine_t4008011478 * __this
 		return;
 	}
 }
+// System.String System.Text.RegularExpressions.BaseMachine::Replace(System.Text.RegularExpressions.Regex,System.String,System.String,System.Int32,System.Int32)
+extern "C"  String_t* BaseMachine_Replace_m2446015132 (BaseMachine_t4008011478 * __this, Regex_t1803876613 * ___regex0, String_t* ___input1, String_t* ___replacement2, int32_t ___count3, int32_t ___startat4, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (BaseMachine_Replace_m2446015132_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	ReplacementEvaluator_t1001703513 * V_0 = NULL;
+	{
+		Regex_t1803876613 * L_0 = ___regex0;
+		String_t* L_1 = ___replacement2;
+		ReplacementEvaluator_t1001703513 * L_2 = (ReplacementEvaluator_t1001703513 *)il2cpp_codegen_object_new(ReplacementEvaluator_t1001703513_il2cpp_TypeInfo_var);
+		ReplacementEvaluator__ctor_m3746900384(L_2, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		Regex_t1803876613 * L_3 = ___regex0;
+		NullCheck(L_3);
+		bool L_4 = Regex_get_RightToLeft_m529734879(L_3, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		Regex_t1803876613 * L_5 = ___regex0;
+		String_t* L_6 = ___input1;
+		ReplacementEvaluator_t1001703513 * L_7 = V_0;
+		IntPtr_t L_8;
+		L_8.set_m_value_0((void*)(void*)ReplacementEvaluator_Evaluate_m197194936_MethodInfo_var);
+		MatchEvaluator_t710107290 * L_9 = (MatchEvaluator_t710107290 *)il2cpp_codegen_object_new(MatchEvaluator_t710107290_il2cpp_TypeInfo_var);
+		MatchEvaluator__ctor_m3633185959(L_9, L_7, L_8, /*hidden argument*/NULL);
+		int32_t L_10 = ___count3;
+		int32_t L_11 = ___startat4;
+		String_t* L_12 = BaseMachine_RTLReplace_m25431723(__this, L_5, L_6, L_9, L_10, L_11, /*hidden argument*/NULL);
+		return L_12;
+	}
+
+IL_002c:
+	{
+		Regex_t1803876613 * L_13 = ___regex0;
+		String_t* L_14 = ___input1;
+		ReplacementEvaluator_t1001703513 * L_15 = V_0;
+		IntPtr_t L_16;
+		L_16.set_m_value_0((void*)(void*)ReplacementEvaluator_EvaluateAppend_m4165611689_MethodInfo_var);
+		MatchAppendEvaluator_t1618777330 * L_17 = (MatchAppendEvaluator_t1618777330 *)il2cpp_codegen_object_new(MatchAppendEvaluator_t1618777330_il2cpp_TypeInfo_var);
+		MatchAppendEvaluator__ctor_m3486625178(L_17, L_15, L_16, /*hidden argument*/NULL);
+		int32_t L_18 = ___count3;
+		int32_t L_19 = ___startat4;
+		ReplacementEvaluator_t1001703513 * L_20 = V_0;
+		NullCheck(L_20);
+		bool L_21 = ReplacementEvaluator_get_NeedsGroupsOrCaptures_m3532058782(L_20, /*hidden argument*/NULL);
+		String_t* L_22 = BaseMachine_LTRReplace_m1094774497(__this, L_13, L_14, L_17, L_18, L_19, L_21, /*hidden argument*/NULL);
+		return L_22;
+	}
+}
 // System.Text.RegularExpressions.Match System.Text.RegularExpressions.BaseMachine::Scan(System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32)
 extern "C"  Match_t3164245899 * BaseMachine_Scan_m122450399 (BaseMachine_t4008011478 * __this, Regex_t1803876613 * ___regex0, String_t* ___text1, int32_t ___start2, int32_t ___end3, const MethodInfo* method)
 {
@@ -27407,6 +27566,387 @@ extern "C"  Match_t3164245899 * BaseMachine_Scan_m122450399 (BaseMachine_t400801
 		NotImplementedException__ctor_m1795163961(L_0, _stringLiteral2999892720, /*hidden argument*/NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
 	}
+}
+// System.String System.Text.RegularExpressions.BaseMachine::LTRReplace(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator,System.Int32,System.Int32,System.Boolean)
+extern "C"  String_t* BaseMachine_LTRReplace_m1094774497 (BaseMachine_t4008011478 * __this, Regex_t1803876613 * ___regex0, String_t* ___input1, MatchAppendEvaluator_t1618777330 * ___evaluator2, int32_t ___count3, int32_t ___startat4, bool ___needs_groups_or_captures5, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (BaseMachine_LTRReplace_m1094774497_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Match_t3164245899 * V_0 = NULL;
+	StringBuilder_t1221177846 * V_1 = NULL;
+	int32_t V_2 = 0;
+	int32_t V_3 = 0;
+	{
+		bool L_0 = ___needs_groups_or_captures5;
+		__this->set_needs_groups_or_captures_0(L_0);
+		Regex_t1803876613 * L_1 = ___regex0;
+		String_t* L_2 = ___input1;
+		int32_t L_3 = ___startat4;
+		String_t* L_4 = ___input1;
+		NullCheck(L_4);
+		int32_t L_5 = String_get_Length_m1606060069(L_4, /*hidden argument*/NULL);
+		Match_t3164245899 * L_6 = VirtFuncInvoker4< Match_t3164245899 *, Regex_t1803876613 *, String_t*, int32_t, int32_t >::Invoke(7 /* System.Text.RegularExpressions.Match System.Text.RegularExpressions.BaseMachine::Scan(System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32) */, __this, L_1, L_2, L_3, L_5);
+		V_0 = L_6;
+		Match_t3164245899 * L_7 = V_0;
+		NullCheck(L_7);
+		bool L_8 = Group_get_Success_m2001463544(L_7, /*hidden argument*/NULL);
+		if (L_8)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		String_t* L_9 = ___input1;
+		return L_9;
+	}
+
+IL_0026:
+	{
+		String_t* L_10 = ___input1;
+		NullCheck(L_10);
+		int32_t L_11 = String_get_Length_m1606060069(L_10, /*hidden argument*/NULL);
+		StringBuilder_t1221177846 * L_12 = (StringBuilder_t1221177846 *)il2cpp_codegen_object_new(StringBuilder_t1221177846_il2cpp_TypeInfo_var);
+		StringBuilder__ctor_m536337337(L_12, L_11, /*hidden argument*/NULL);
+		V_1 = L_12;
+		int32_t L_13 = ___startat4;
+		V_2 = L_13;
+		int32_t L_14 = ___count3;
+		V_3 = L_14;
+		StringBuilder_t1221177846 * L_15 = V_1;
+		String_t* L_16 = ___input1;
+		int32_t L_17 = V_2;
+		NullCheck(L_15);
+		StringBuilder_Append_m1462406979(L_15, L_16, 0, L_17, /*hidden argument*/NULL);
+	}
+
+IL_0042:
+	{
+		int32_t L_18 = ___count3;
+		if ((((int32_t)L_18) == ((int32_t)(-1))))
+		{
+			goto IL_005a;
+		}
+	}
+	{
+		int32_t L_19 = V_3;
+		int32_t L_20 = L_19;
+		V_3 = ((int32_t)((int32_t)L_20-(int32_t)1));
+		if ((((int32_t)L_20) > ((int32_t)0)))
+		{
+			goto IL_005a;
+		}
+	}
+	{
+		goto IL_00aa;
+	}
+
+IL_005a:
+	{
+		Match_t3164245899 * L_21 = V_0;
+		NullCheck(L_21);
+		int32_t L_22 = Capture_get_Index_m819425556(L_21, /*hidden argument*/NULL);
+		int32_t L_23 = V_2;
+		if ((((int32_t)L_22) >= ((int32_t)L_23)))
+		{
+			goto IL_0071;
+		}
+	}
+	{
+		SystemException_t3877406272 * L_24 = (SystemException_t3877406272 *)il2cpp_codegen_object_new(SystemException_t3877406272_il2cpp_TypeInfo_var);
+		SystemException__ctor_m4001391027(L_24, _stringLiteral1502598604, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_24);
+	}
+
+IL_0071:
+	{
+		StringBuilder_t1221177846 * L_25 = V_1;
+		String_t* L_26 = ___input1;
+		int32_t L_27 = V_2;
+		Match_t3164245899 * L_28 = V_0;
+		NullCheck(L_28);
+		int32_t L_29 = Capture_get_Index_m819425556(L_28, /*hidden argument*/NULL);
+		int32_t L_30 = V_2;
+		NullCheck(L_25);
+		StringBuilder_Append_m1462406979(L_25, L_26, L_27, ((int32_t)((int32_t)L_29-(int32_t)L_30)), /*hidden argument*/NULL);
+		MatchAppendEvaluator_t1618777330 * L_31 = ___evaluator2;
+		Match_t3164245899 * L_32 = V_0;
+		StringBuilder_t1221177846 * L_33 = V_1;
+		NullCheck(L_31);
+		MatchAppendEvaluator_Invoke_m3703737128(L_31, L_32, L_33, /*hidden argument*/NULL);
+		Match_t3164245899 * L_34 = V_0;
+		NullCheck(L_34);
+		int32_t L_35 = Capture_get_Index_m819425556(L_34, /*hidden argument*/NULL);
+		Match_t3164245899 * L_36 = V_0;
+		NullCheck(L_36);
+		int32_t L_37 = Capture_get_Length_m1952322390(L_36, /*hidden argument*/NULL);
+		V_2 = ((int32_t)((int32_t)L_35+(int32_t)L_37));
+		Match_t3164245899 * L_38 = V_0;
+		NullCheck(L_38);
+		Match_t3164245899 * L_39 = Match_NextMatch_m1088868049(L_38, /*hidden argument*/NULL);
+		V_0 = L_39;
+		Match_t3164245899 * L_40 = V_0;
+		NullCheck(L_40);
+		bool L_41 = Group_get_Success_m2001463544(L_40, /*hidden argument*/NULL);
+		if (L_41)
+		{
+			goto IL_0042;
+		}
+	}
+
+IL_00aa:
+	{
+		StringBuilder_t1221177846 * L_42 = V_1;
+		String_t* L_43 = ___input1;
+		int32_t L_44 = V_2;
+		String_t* L_45 = ___input1;
+		NullCheck(L_45);
+		int32_t L_46 = String_get_Length_m1606060069(L_45, /*hidden argument*/NULL);
+		int32_t L_47 = V_2;
+		NullCheck(L_42);
+		StringBuilder_Append_m1462406979(L_42, L_43, L_44, ((int32_t)((int32_t)L_46-(int32_t)L_47)), /*hidden argument*/NULL);
+		StringBuilder_t1221177846 * L_48 = V_1;
+		NullCheck(L_48);
+		String_t* L_49 = StringBuilder_ToString_m1507807375(L_48, /*hidden argument*/NULL);
+		return L_49;
+	}
+}
+// System.String System.Text.RegularExpressions.BaseMachine::RTLReplace(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Int32,System.Int32)
+extern "C"  String_t* BaseMachine_RTLReplace_m25431723 (BaseMachine_t4008011478 * __this, Regex_t1803876613 * ___regex0, String_t* ___input1, MatchEvaluator_t710107290 * ___evaluator2, int32_t ___count3, int32_t ___startat4, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (BaseMachine_RTLReplace_m25431723_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Match_t3164245899 * V_0 = NULL;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	List_1_t1398341365 * V_3 = NULL;
+	StringBuilder_t1221177846 * V_4 = NULL;
+	int32_t V_5 = 0;
+	{
+		Regex_t1803876613 * L_0 = ___regex0;
+		String_t* L_1 = ___input1;
+		int32_t L_2 = ___startat4;
+		String_t* L_3 = ___input1;
+		NullCheck(L_3);
+		int32_t L_4 = String_get_Length_m1606060069(L_3, /*hidden argument*/NULL);
+		Match_t3164245899 * L_5 = VirtFuncInvoker4< Match_t3164245899 *, Regex_t1803876613 *, String_t*, int32_t, int32_t >::Invoke(7 /* System.Text.RegularExpressions.Match System.Text.RegularExpressions.BaseMachine::Scan(System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32) */, __this, L_0, L_1, L_2, L_4);
+		V_0 = L_5;
+		Match_t3164245899 * L_6 = V_0;
+		NullCheck(L_6);
+		bool L_7 = Group_get_Success_m2001463544(L_6, /*hidden argument*/NULL);
+		if (L_7)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		String_t* L_8 = ___input1;
+		return L_8;
+	}
+
+IL_001e:
+	{
+		int32_t L_9 = ___startat4;
+		V_1 = L_9;
+		int32_t L_10 = ___count3;
+		V_2 = L_10;
+		List_1_t1398341365 * L_11 = (List_1_t1398341365 *)il2cpp_codegen_object_new(List_1_t1398341365_il2cpp_TypeInfo_var);
+		List_1__ctor_m3854603248(L_11, /*hidden argument*/List_1__ctor_m3854603248_MethodInfo_var);
+		V_3 = L_11;
+		List_1_t1398341365 * L_12 = V_3;
+		String_t* L_13 = ___input1;
+		int32_t L_14 = V_1;
+		NullCheck(L_13);
+		String_t* L_15 = String_Substring_m2032624251(L_13, L_14, /*hidden argument*/NULL);
+		NullCheck(L_12);
+		List_1_Add_m4061286785(L_12, L_15, /*hidden argument*/List_1_Add_m4061286785_MethodInfo_var);
+	}
+
+IL_0037:
+	{
+		int32_t L_16 = ___count3;
+		if ((((int32_t)L_16) == ((int32_t)(-1))))
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		int32_t L_17 = V_2;
+		int32_t L_18 = L_17;
+		V_2 = ((int32_t)((int32_t)L_18-(int32_t)1));
+		if ((((int32_t)L_18) > ((int32_t)0)))
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		goto IL_00bb;
+	}
+
+IL_004f:
+	{
+		Match_t3164245899 * L_19 = V_0;
+		NullCheck(L_19);
+		int32_t L_20 = Capture_get_Index_m819425556(L_19, /*hidden argument*/NULL);
+		Match_t3164245899 * L_21 = V_0;
+		NullCheck(L_21);
+		int32_t L_22 = Capture_get_Length_m1952322390(L_21, /*hidden argument*/NULL);
+		int32_t L_23 = V_1;
+		if ((((int32_t)((int32_t)((int32_t)L_20+(int32_t)L_22))) <= ((int32_t)L_23)))
+		{
+			goto IL_006d;
+		}
+	}
+	{
+		SystemException_t3877406272 * L_24 = (SystemException_t3877406272 *)il2cpp_codegen_object_new(SystemException_t3877406272_il2cpp_TypeInfo_var);
+		SystemException__ctor_m4001391027(L_24, _stringLiteral1502598604, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_24);
+	}
+
+IL_006d:
+	{
+		List_1_t1398341365 * L_25 = V_3;
+		String_t* L_26 = ___input1;
+		Match_t3164245899 * L_27 = V_0;
+		NullCheck(L_27);
+		int32_t L_28 = Capture_get_Index_m819425556(L_27, /*hidden argument*/NULL);
+		Match_t3164245899 * L_29 = V_0;
+		NullCheck(L_29);
+		int32_t L_30 = Capture_get_Length_m1952322390(L_29, /*hidden argument*/NULL);
+		int32_t L_31 = V_1;
+		Match_t3164245899 * L_32 = V_0;
+		NullCheck(L_32);
+		int32_t L_33 = Capture_get_Index_m819425556(L_32, /*hidden argument*/NULL);
+		Match_t3164245899 * L_34 = V_0;
+		NullCheck(L_34);
+		int32_t L_35 = Capture_get_Length_m1952322390(L_34, /*hidden argument*/NULL);
+		NullCheck(L_26);
+		String_t* L_36 = String_Substring_m12482732(L_26, ((int32_t)((int32_t)L_28+(int32_t)L_30)), ((int32_t)((int32_t)((int32_t)((int32_t)L_31-(int32_t)L_33))-(int32_t)L_35)), /*hidden argument*/NULL);
+		NullCheck(L_25);
+		List_1_Add_m4061286785(L_25, L_36, /*hidden argument*/List_1_Add_m4061286785_MethodInfo_var);
+		List_1_t1398341365 * L_37 = V_3;
+		MatchEvaluator_t710107290 * L_38 = ___evaluator2;
+		Match_t3164245899 * L_39 = V_0;
+		NullCheck(L_38);
+		String_t* L_40 = MatchEvaluator_Invoke_m3037466252(L_38, L_39, /*hidden argument*/NULL);
+		NullCheck(L_37);
+		List_1_Add_m4061286785(L_37, L_40, /*hidden argument*/List_1_Add_m4061286785_MethodInfo_var);
+		Match_t3164245899 * L_41 = V_0;
+		NullCheck(L_41);
+		int32_t L_42 = Capture_get_Index_m819425556(L_41, /*hidden argument*/NULL);
+		V_1 = L_42;
+		Match_t3164245899 * L_43 = V_0;
+		NullCheck(L_43);
+		Match_t3164245899 * L_44 = Match_NextMatch_m1088868049(L_43, /*hidden argument*/NULL);
+		V_0 = L_44;
+		Match_t3164245899 * L_45 = V_0;
+		NullCheck(L_45);
+		bool L_46 = Group_get_Success_m2001463544(L_45, /*hidden argument*/NULL);
+		if (L_46)
+		{
+			goto IL_0037;
+		}
+	}
+
+IL_00bb:
+	{
+		StringBuilder_t1221177846 * L_47 = (StringBuilder_t1221177846 *)il2cpp_codegen_object_new(StringBuilder_t1221177846_il2cpp_TypeInfo_var);
+		StringBuilder__ctor_m3946851802(L_47, /*hidden argument*/NULL);
+		V_4 = L_47;
+		StringBuilder_t1221177846 * L_48 = V_4;
+		String_t* L_49 = ___input1;
+		int32_t L_50 = V_1;
+		NullCheck(L_48);
+		StringBuilder_Append_m1462406979(L_48, L_49, 0, L_50, /*hidden argument*/NULL);
+		List_1_t1398341365 * L_51 = V_3;
+		NullCheck(L_51);
+		int32_t L_52 = List_1_get_Count_m780127360(L_51, /*hidden argument*/List_1_get_Count_m780127360_MethodInfo_var);
+		V_5 = L_52;
+		goto IL_00ef;
+	}
+
+IL_00da:
+	{
+		StringBuilder_t1221177846 * L_53 = V_4;
+		List_1_t1398341365 * L_54 = V_3;
+		int32_t L_55 = V_5;
+		int32_t L_56 = ((int32_t)((int32_t)L_55-(int32_t)1));
+		V_5 = L_56;
+		NullCheck(L_54);
+		String_t* L_57 = List_1_get_Item_m4077476129(L_54, L_56, /*hidden argument*/List_1_get_Item_m4077476129_MethodInfo_var);
+		NullCheck(L_53);
+		StringBuilder_Append_m3636508479(L_53, L_57, /*hidden argument*/NULL);
+	}
+
+IL_00ef:
+	{
+		int32_t L_58 = V_5;
+		if ((((int32_t)L_58) > ((int32_t)0)))
+		{
+			goto IL_00da;
+		}
+	}
+	{
+		List_1_t1398341365 * L_59 = V_3;
+		NullCheck(L_59);
+		List_1_Clear_m2768672975(L_59, /*hidden argument*/List_1_Clear_m2768672975_MethodInfo_var);
+		StringBuilder_t1221177846 * L_60 = V_4;
+		NullCheck(L_60);
+		String_t* L_61 = StringBuilder_ToString_m1507807375(L_60, /*hidden argument*/NULL);
+		return L_61;
+	}
+}
+// System.Void System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator::.ctor(System.Object,System.IntPtr)
+extern "C"  void MatchAppendEvaluator__ctor_m3486625178 (MatchAppendEvaluator_t1618777330 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
+{
+	__this->set_method_ptr_0((Il2CppMethodPointer)((MethodInfo*)___method1.get_m_value_0())->methodPointer);
+	__this->set_method_3(___method1);
+	__this->set_m_target_2(___object0);
+}
+// System.Void System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator::Invoke(System.Text.RegularExpressions.Match,System.Text.StringBuilder)
+extern "C"  void MatchAppendEvaluator_Invoke_m3703737128 (MatchAppendEvaluator_t1618777330 * __this, Match_t3164245899 * ___match0, StringBuilder_t1221177846 * ___sb1, const MethodInfo* method)
+{
+	if(__this->get_prev_9() != NULL)
+	{
+		MatchAppendEvaluator_Invoke_m3703737128((MatchAppendEvaluator_t1618777330 *)__this->get_prev_9(),___match0, ___sb1, method);
+	}
+	il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	if (__this->get_m_target_2() != NULL && ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (Il2CppObject *, void* __this, Match_t3164245899 * ___match0, StringBuilder_t1221177846 * ___sb1, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(NULL,__this->get_m_target_2(),___match0, ___sb1,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else if (__this->get_m_target_2() != NULL || ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (void* __this, Match_t3164245899 * ___match0, StringBuilder_t1221177846 * ___sb1, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(__this->get_m_target_2(),___match0, ___sb1,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else
+	{
+		typedef void (*FunctionPointerType) (void* __this, StringBuilder_t1221177846 * ___sb1, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(___match0, ___sb1,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+}
+// System.IAsyncResult System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator::BeginInvoke(System.Text.RegularExpressions.Match,System.Text.StringBuilder,System.AsyncCallback,System.Object)
+extern "C"  Il2CppObject * MatchAppendEvaluator_BeginInvoke_m3482977851 (MatchAppendEvaluator_t1618777330 * __this, Match_t3164245899 * ___match0, StringBuilder_t1221177846 * ___sb1, AsyncCallback_t163412349 * ___callback2, Il2CppObject * ___object3, const MethodInfo* method)
+{
+	void *__d_args[3] = {0};
+	__d_args[0] = ___match0;
+	__d_args[1] = ___sb1;
+	return (Il2CppObject *)il2cpp_codegen_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)___callback2, (Il2CppObject*)___object3);
+}
+// System.Void System.Text.RegularExpressions.BaseMachine/MatchAppendEvaluator::EndInvoke(System.IAsyncResult)
+extern "C"  void MatchAppendEvaluator_EndInvoke_m269118460 (MatchAppendEvaluator_t1618777330 * __this, Il2CppObject * ___result0, const MethodInfo* method)
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
 }
 // System.Void System.Text.RegularExpressions.Capture::.ctor(System.String)
 extern "C"  void Capture__ctor_m885749277 (Capture_t4157900610 * __this, String_t* ___text0, const MethodInfo* method)
@@ -31297,7 +31837,7 @@ IL_0008:
 		Key_t655155419 * L_5 = V_1;
 		Il2CppObject * L_6 = ___factory2;
 		NullCheck(L_4);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_4, L_5, L_6);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(24 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_4, L_5, L_6);
 		MRUList_t33178162 * L_7 = __this->get_mru_list_2();
 		Key_t655155419 * L_8 = V_1;
 		NullCheck(L_7);
@@ -31357,14 +31897,14 @@ IL_0005:
 		Hashtable_t909839986 * L_3 = __this->get_factories_1();
 		Il2CppObject * L_4 = V_0;
 		NullCheck(L_3);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(29 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_3, ((Key_t655155419 *)CastclassClass(L_4, Key_t655155419_il2cpp_TypeInfo_var)));
+		VirtActionInvoker1< Il2CppObject * >::Invoke(30 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_3, ((Key_t655155419 *)CastclassClass(L_4, Key_t655155419_il2cpp_TypeInfo_var)));
 	}
 
 IL_0028:
 	{
 		Hashtable_t909839986 * L_5 = __this->get_factories_1();
 		NullCheck(L_5);
-		int32_t L_6 = VirtFuncInvoker0< int32_t >::Invoke(17 /* System.Int32 System.Collections.Hashtable::get_Count() */, L_5);
+		int32_t L_6 = VirtFuncInvoker0< int32_t >::Invoke(18 /* System.Int32 System.Collections.Hashtable::get_Count() */, L_5);
 		int32_t L_7 = __this->get_capacity_0();
 		if ((((int32_t)L_6) < ((int32_t)L_7)))
 		{
@@ -31420,7 +31960,7 @@ IL_0008:
 			Hashtable_t909839986 * L_4 = __this->get_factories_1();
 			Key_t655155419 * L_5 = V_1;
 			NullCheck(L_4);
-			bool L_6 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(27 /* System.Boolean System.Collections.Hashtable::Contains(System.Object) */, L_4, L_5);
+			bool L_6 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(28 /* System.Boolean System.Collections.Hashtable::Contains(System.Object) */, L_4, L_5);
 			if (!L_6)
 			{
 				goto IL_0044;
@@ -31436,7 +31976,7 @@ IL_0021:
 			Hashtable_t909839986 * L_9 = __this->get_factories_1();
 			Key_t655155419 * L_10 = V_1;
 			NullCheck(L_9);
-			Il2CppObject * L_11 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_9, L_10);
+			Il2CppObject * L_11 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_9, L_10);
 			V_2 = ((Il2CppObject *)Castclass(L_11, IMachineFactory_t633643314_il2cpp_TypeInfo_var));
 			IL2CPP_LEAVE(0x52, FINALLY_0049);
 		}
@@ -37939,14 +38479,6 @@ extern "C"  void Enumerator_Reset_m107955550 (Enumerator_t1928086041 * __this, c
 {
 	{
 		__this->set_ptr_1((-1));
-		return;
-	}
-}
-// System.Void System.Text.RegularExpressions.LinkRef::.ctor()
-extern "C"  void LinkRef__ctor_m1225442262 (LinkRef_t2090853131 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
