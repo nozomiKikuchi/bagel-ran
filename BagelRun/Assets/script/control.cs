@@ -3,22 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class control : MonoBehaviour {
-	public GameObject bagel;
+
+
 
 	// Use this for initialization
 	void Start () {
 		PlayerPrefs.SetInt ("jumpping", 0);
+
+		PlayerPrefs.SetInt ("selectBagel",1);
+		PlayerPrefs.SetInt ("jump",0);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
+		
 		
 	}
 
 	void OnMouseDown(){
 		if (PlayerPrefs.GetInt ("jumpping", -1) == 1) {
 			PlayerPrefs.SetInt ("jumpping", 0);
-			bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
+			PlayerPrefs.SetInt ("jump",1);
+			//bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
 
 		}
 
