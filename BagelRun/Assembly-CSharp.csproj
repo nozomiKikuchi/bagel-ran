@@ -59,6 +59,8 @@
      <Compile Include="Assets\script\control.cs" />
      <Compile Include="Assets\script\gameOver.cs" />
      <Compile Include="Assets\script\itemGet.cs" />
+     <Compile Include="Assets\script\itemManager.cs" />
+     <Compile Include="Assets\script\itemNumber.cs" />
      <Compile Include="Assets\script\moveStage.cs" />
      <Compile Include="Assets\script\player.cs" />
      <Compile Include="Assets\script\stage_create.cs" />
