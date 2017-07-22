@@ -4,26 +4,32 @@ using UnityEngine;
 using DG.Tweening;
 
 public class MainStart : MonoBehaviour {
-	public GameObject bagel;
 	public GameObject ufo;
 	public GameObject uforight;
-	int start;
+	public GameObject goal_ufo;
+	private EdgeCollider2D ufo_c;
+	int start=0;
 	int stop=0;
+	int right=1;
 	// Use this for initialization
 	void Start () {
-		bagel.gameObject.SetActive (false);
 		uforight.SetActive (false);
 		ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
+		PlayerPrefs.SetInt ("isGameStart", 0);
+		ufo_c=this.GetComponent<EdgeCollider2D> (); 
+		PlayerPrefs.SetInt ("bagelNumber",2);
 	}
 
 	// Update is called once per frame
 	void Update () {
 		
-		if (ufo.transform.position.y <= bagel.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
+		if (start == 0 && ufo.transform.position.y < goal_ufo.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
 			stop = 1;
 			uforight.SetActive (true);
 			ufo.transform.position += new Vector3 (0f, 0f, 0f);
-			bagel.gameObject.SetActive (true);
+			ufo_c.isTrigger = true;
+			PlayerPrefs.SetInt ("isGameStart", 1);
+
 
 		} else if(stop!=1){
 			ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
@@ -34,10 +40,13 @@ public class MainStart : MonoBehaviour {
 			start = 1;
 		}
 		if (start == 1) {
-			uforight.SetActive (false);
+			if (right == 1) {
+				Destroy (uforight);
+				right = 0;
+			}
 			ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
 			if (ufo.transform.position.x <= -12) {
-				ufo.SetActive (false);
+				Destroy(ufo);
 			}
 		}
 
