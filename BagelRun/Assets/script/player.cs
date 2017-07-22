@@ -48,14 +48,11 @@ public class player : MonoBehaviour {
 
 
 		}else if (this.gameObject.transform.position.x > -10) {
-			this.gameObject.transform.Rotate (0, 0, -5);
+			bagel.gameObject.transform.Rotate (0, 0, -5);
 
 
 		}
 
-		if (SceneManager.GetActiveScene ().name == "SelectScene") {
-			this.transform.Rotate (0, 0, -0.1f);
-		}
 		if (PlayerPrefs.GetInt ("jump") == 1) {
 			PlayerPrefs.SetInt ("jump",0);
 			bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
