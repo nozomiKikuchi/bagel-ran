@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class itemGet : MonoBehaviour {
-	public GameObject player;
+	
+	int item_n;
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,9 +21,15 @@ public class itemGet : MonoBehaviour {
 		//}
 	}
 	void OnCollisionEnter2D(Collision2D col){
-		if (col.gameObject == player) {
+		if (col.gameObject.tag == "player") {
+			
+			item_n = PlayerPrefs.GetInt (this.gameObject.tag) + 1;
+			PlayerPrefs.SetInt (this.gameObject.tag, item_n);
+
+
+
 			this.gameObject.SetActive (false);
-			print ("get");
+
 		}
 	}
 }
