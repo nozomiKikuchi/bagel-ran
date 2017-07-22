@@ -12,7 +12,7 @@ public class MainSceneButtonController : MonoBehaviour {
 	public void Restart(){
 
 
-		SceneManager.LoadScene (2);
+		Application.LoadLevel ("mainScene");
 
 	}
 	public void BackHome(){
