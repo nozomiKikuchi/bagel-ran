@@ -45,7 +45,7 @@ public class FlickController : MonoBehaviour {
 					SignValueX = Mathf.Sign (endPos.x - startPos.x);
 					if (SignValueX > 0) {
 						//右方向にスワイプしたとき
-						if (PlayerPrefs.GetInt ("panelColor") == 2) {
+						if (PlayerPrefs.GetInt ("selectBagel") == 2) {
 							weight.value = 10;
 							speed.value = 2;
 							luck.value = 6;
@@ -53,8 +53,8 @@ public class FlickController : MonoBehaviour {
 							greenBagel.gameObject.transform.DOLocalMove (new Vector3(33.2f, 0.6f, 0f), 1f);
 							purpleBagel.gameObject.transform.DOLocalMove (new Vector3(-3.2f, 0.6f, 0f), 1f);
 							leftArrow.SetActive (false);
-							PlayerPrefs.SetInt ("panelColor", 1);
-						} else if (PlayerPrefs.GetInt ("panelColor") == 3) {
+							PlayerPrefs.SetInt ("selectBagel", 1);
+						} else if (PlayerPrefs.GetInt ("selectBagel") == 3) {
 							weight.value = 5;
 							speed.value = 5;
 							luck.value = 6;
@@ -62,13 +62,13 @@ public class FlickController : MonoBehaviour {
 							greenBagel.gameObject.transform.DOLocalMove (new Vector3(15f, 0.6f, 0f), 1f);
 							purpleBagel.gameObject.transform.DOLocalMove (new Vector3(-21.2f, 0.6f, 0f), 1f);
 							rightArrow.SetActive (true);
-							PlayerPrefs.SetInt ("panelColor", 2);
+							PlayerPrefs.SetInt ("selectBagel", 2);
 						}
 //						look.transform.LookAt (rightPanel.transform.position);
 						print("Swipe Right");
 					} else if (SignValueX < 0) {
 						//左方向にスワイプしたとき
-						if (PlayerPrefs.GetInt ("panelColor") == 2) {
+						if (PlayerPrefs.GetInt ("selectBagel") == 2) {
 							weight.value = 4;
 							speed.value = 9;
 							luck.value = 10;
@@ -76,8 +76,8 @@ public class FlickController : MonoBehaviour {
 							greenBagel.gameObject.transform.DOLocalMove (new Vector3(-3.2f, 0.6f, 0f), 1f);
 							purpleBagel.gameObject.transform.DOLocalMove (new Vector3(-39.4f, 0.6f, 0f), 1f);
 							rightArrow.SetActive (false);
-							PlayerPrefs.SetInt ("panelColor", 3);
-						} else if (PlayerPrefs.GetInt ("panelColor") == 1) {
+							PlayerPrefs.SetInt ("selectBagel", 3);
+						} else if (PlayerPrefs.GetInt ("selectBagel") == 1) {
 							weight.value = 5;
 							speed.value = 5;
 							luck.value = 6;
@@ -85,7 +85,7 @@ public class FlickController : MonoBehaviour {
 							greenBagel.gameObject.transform.DOLocalMove (new Vector3(15f, 0.6f, 0f), 1f);
 							purpleBagel.gameObject.transform.DOLocalMove (new Vector3(-21.2f, 0.6f, 0f), 1f);
 							leftArrow.SetActive (true);
-							PlayerPrefs.SetInt ("panelColor", 2);
+							PlayerPrefs.SetInt ("selectBagel", 2);
 						}
 //						look.transform.LookAt (leftPanel.transform.position);
 						print("Swipe Left");
