@@ -49,6 +49,7 @@
      <Compile Include="Assets\script\CharController.cs" />
      <Compile Include="Assets\script\FadeManager.cs" />
      <Compile Include="Assets\script\FlickController.cs" />
+     <Compile Include="Assets\script\FoodSelect.cs" />
      <Compile Include="Assets\script\GameClear.cs" />
      <Compile Include="Assets\script\MainSceneButtonController.cs" />
      <Compile Include="Assets\script\MainStart.cs" />

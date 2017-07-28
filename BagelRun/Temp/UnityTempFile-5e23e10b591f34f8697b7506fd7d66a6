@@ -99,8 +99,10 @@
 -define:ENABLE_IOS_ON_DEMAND_RESOURCES
 -define:ENABLE_IOS_APP_SLICING
 -define:UNITY_HAS_GOOGLEVR
+'Assets/script/CharController.cs'
 'Assets/script/FadeManager.cs'
 'Assets/script/FlickController.cs'
+'Assets/script/FoodSelect.cs'
 'Assets/script/GameClear.cs'
 'Assets/script/MainSceneButtonController.cs'
 'Assets/script/MainStart.cs'
@@ -112,6 +114,8 @@
 'Assets/script/control.cs'
 'Assets/script/gameOver.cs'
 'Assets/script/itemGet.cs'
+'Assets/script/itemManager.cs'
+'Assets/script/itemNumber.cs'
 'Assets/script/moveStage.cs'
 'Assets/script/player.cs'
 'Assets/script/stage_create.cs'
