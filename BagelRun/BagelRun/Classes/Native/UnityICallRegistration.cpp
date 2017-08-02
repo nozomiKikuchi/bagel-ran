@@ -612,6 +612,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Collider
 
+	//Start Registrations for type : UnityEngine.Collider2D
+
+		//System.Void UnityEngine.Collider2D::set_isTrigger(System.Boolean)
+		void Register_UnityEngine_Collider2D_set_isTrigger();
+		Register_UnityEngine_Collider2D_set_isTrigger();
+
+	//End Registrations for type : UnityEngine.Collider2D
+
 	//Start Registrations for type : UnityEngine.Component
 
 		//System.Boolean UnityEngine.Component::CompareTag(System.String)
@@ -2298,21 +2306,13 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rigidbody2D_INTERNAL_CALL_AddForce();
 		Register_UnityEngine_Rigidbody2D_INTERNAL_CALL_AddForce();
 
+		//System.Void UnityEngine.Rigidbody2D::set_gravityScale(System.Single)
+		void Register_UnityEngine_Rigidbody2D_set_gravityScale();
+		Register_UnityEngine_Rigidbody2D_set_gravityScale();
+
 	//End Registrations for type : UnityEngine.Rigidbody2D
 
-	//Start Registrations for type : UnityEngine.SceneManagement.Scene
-
-		//System.String UnityEngine.SceneManagement.Scene::GetNameInternal(System.Int32)
-		void Register_UnityEngine_SceneManagement_Scene_GetNameInternal();
-		Register_UnityEngine_SceneManagement_Scene_GetNameInternal();
-
-	//End Registrations for type : UnityEngine.SceneManagement.Scene
-
 	//Start Registrations for type : UnityEngine.SceneManagement.SceneManager
-
-		//System.Void UnityEngine.SceneManagement.SceneManager::INTERNAL_CALL_GetActiveScene(UnityEngine.SceneManagement.Scene&)
-		void Register_UnityEngine_SceneManagement_SceneManager_INTERNAL_CALL_GetActiveScene();
-		Register_UnityEngine_SceneManagement_SceneManager_INTERNAL_CALL_GetActiveScene();
 
 		//UnityEngine.AsyncOperation UnityEngine.SceneManagement.SceneManager::LoadSceneAsyncNameIndexInternal(System.String,System.Int32,System.Boolean,System.Boolean)
 		void Register_UnityEngine_SceneManagement_SceneManager_LoadSceneAsyncNameIndexInternal();
