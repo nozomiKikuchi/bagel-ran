@@ -17,41 +17,49 @@
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
 #include "AssemblyU2DCSharp_U3CModuleU3E3783534214.h"
-#include "AssemblyU2DCSharp_control2399976437.h"
+#include "AssemblyU2DCSharp_CharController127724996.h"
 #include "mscorlib_System_Void1841601450.h"
 #include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
+#include "UnityEngine_UnityEngine_GameObject1756533147.h"
+#include "UnityEngine_UnityEngine_Component3819376471.h"
+#include "UnityEngine_UnityEngine_Transform3275118058.h"
+#include "mscorlib_System_Single2076509932.h"
+#include "AssemblyU2DCSharp_control2399976437.h"
 #include "mscorlib_System_String2029220233.h"
 #include "mscorlib_System_Int322071877448.h"
-#include "UnityEngine_UnityEngine_Vector22243707579.h"
-#include "UnityEngine_UnityEngine_GameObject1756533147.h"
-#include "UnityEngine_UnityEngine_Rigidbody2D502193897.h"
-#include "mscorlib_System_Single2076509932.h"
 #include "AssemblyU2DCSharp_FadeManager2205509615.h"
 #include "UnityEngine_UnityEngine_Color2020392075.h"
 #include "UnityEngine_UI_UnityEngine_UI_Image2042527209.h"
-#include "UnityEngine_UnityEngine_Component3819376471.h"
 #include "UnityEngine_UI_UnityEngine_UI_Graphic2426225576.h"
 #include "AssemblyU2DCSharp_FlickController77099233.h"
 #include "UnityEngine_UnityEngine_Touch407273883.h"
 #include "UnityEngine_UnityEngine_TouchPhase2458120420.h"
+#include "UnityEngine_UnityEngine_Vector22243707579.h"
 #include "UnityEngine_UnityEngine_Vector32243707580.h"
 #include "mscorlib_System_Object2689449295.h"
-#include "UnityEngine_UnityEngine_Transform3275118058.h"
 #include "UnityEngine_UI_UnityEngine_UI_Slider297367283.h"
 #include "DOTween_DG_Tweening_Tweener760404022.h"
 #include "mscorlib_System_Boolean3825574718.h"
+#include "AssemblyU2DCSharp_FoodSelect1503630940.h"
+#include "AssemblyU2DCSharp_GameClear122518785.h"
 #include "AssemblyU2DCSharp_gameOver1155260296.h"
 #include "AssemblyU2DCSharp_itemGet2266050241.h"
 #include "UnityEngine_UnityEngine_Collision2D1539500754.h"
-#include "UnityEngine_UnityEngine_Object1021602117.h"
+#include "AssemblyU2DCSharp_itemManager1553366086.h"
+#include "AssemblyU2DCSharp_itemNumber4162239606.h"
+#include "UnityEngine_UI_UnityEngine_UI_Text356221433.h"
 #include "AssemblyU2DCSharp_MainSceneButtonController3316297225.h"
 #include "AssemblyU2DCSharp_MainStart3226110189.h"
+#include "UnityEngine_UnityEngine_EdgeCollider2D216857133.h"
+#include "UnityEngine_UnityEngine_Object1021602117.h"
+#include "UnityEngine_UnityEngine_Collider2D646061738.h"
 #include "AssemblyU2DCSharp_MoveCamera3193441886.h"
 #include "AssemblyU2DCSharp_MovePanel3417660653.h"
 #include "UnityEngine_UnityEngine_Camera189460977.h"
 #include "AssemblyU2DCSharp_moveStage2931930111.h"
 #include "AssemblyU2DCSharp_player1147742565.h"
-#include "UnityEngine_UnityEngine_SceneManagement_Scene1684909666.h"
+#include "UnityEngine_UnityEngine_Rigidbody2D502193897.h"
+#include "AssemblyU2DCSharp_ResultManager2847043228.h"
 #include "AssemblyU2DCSharp_SliderController2812089311.h"
 #include "AssemblyU2DCSharp_stage_create365957765.h"
 #include "AssemblyU2DCSharp_StartSceneButtonController2644416436.h"
@@ -59,44 +67,58 @@
 #include "UnityEngine_UnityEngine_AudioClip1932558630.h"
 #include "AssemblyU2DCSharp_UfoControllerScript1959917385.h"
 
-// control
-struct control_t2399976437;
+// CharController
+struct CharController_t127724996;
 // UnityEngine.MonoBehaviour
 struct MonoBehaviour_t1158329972;
-// System.String
-struct String_t;
-// UnityEngine.GameObject
-struct GameObject_t1756533147;
-// UnityEngine.Rigidbody2D
-struct Rigidbody2D_t502193897;
-// System.Object
-struct Il2CppObject;
-// FadeManager
-struct FadeManager_t2205509615;
 // UnityEngine.Component
 struct Component_t3819376471;
+// UnityEngine.GameObject
+struct GameObject_t1756533147;
+// UnityEngine.Transform
+struct Transform_t3275118058;
+// control
+struct control_t2399976437;
+// System.String
+struct String_t;
+// FadeManager
+struct FadeManager_t2205509615;
 // UnityEngine.UI.Image
 struct Image_t2042527209;
+// System.Object
+struct Il2CppObject;
 // FlickController
 struct FlickController_t77099233;
 // UnityEngine.Touch[]
 struct TouchU5BU5D_t3887265178;
-// UnityEngine.Transform
-struct Transform_t3275118058;
 // DG.Tweening.Tweener
 struct Tweener_t760404022;
+// FoodSelect
+struct FoodSelect_t1503630940;
+// GameClear
+struct GameClear_t122518785;
 // gameOver
 struct gameOver_t1155260296;
 // itemGet
 struct itemGet_t2266050241;
 // UnityEngine.Collision2D
 struct Collision2D_t1539500754;
-// UnityEngine.Object
-struct Object_t1021602117;
+// itemManager
+struct itemManager_t1553366086;
+// itemNumber
+struct itemNumber_t4162239606;
+// UnityEngine.UI.Text
+struct Text_t356221433;
 // MainSceneButtonController
 struct MainSceneButtonController_t3316297225;
 // MainStart
 struct MainStart_t3226110189;
+// UnityEngine.EdgeCollider2D
+struct EdgeCollider2D_t216857133;
+// UnityEngine.Collider2D
+struct Collider2D_t646061738;
+// UnityEngine.Object
+struct Object_t1021602117;
 // MoveCamera
 struct MoveCamera_t3193441886;
 // MovePanel
@@ -107,6 +129,10 @@ struct Camera_t189460977;
 struct moveStage_t2931930111;
 // player
 struct player_t1147742565;
+// UnityEngine.Rigidbody2D
+struct Rigidbody2D_t502193897;
+// ResultManager
+struct ResultManager_t2847043228;
 // SliderController
 struct SliderController_t2812089311;
 // stage_create
@@ -120,8 +146,9 @@ struct AudioClip_t1932558630;
 // UfoControllerScript
 struct UfoControllerScript_t1959917385;
 extern Il2CppCodeGenString* _stringLiteral3854275810;
+extern Il2CppCodeGenString* _stringLiteral3050377369;
+extern Il2CppCodeGenString* _stringLiteral842947042;
 extern const uint32_t control_Start_m3516908368_MetadataUsageId;
-extern const MethodInfo* GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143_MethodInfo_var;
 extern const uint32_t control_OnMouseDown_m2686697076_MetadataUsageId;
 extern const MethodInfo* Component_GetComponent_TisImage_t2042527209_m2189462422_MethodInfo_var;
 extern const uint32_t FadeManager_Start_m4209179252_MetadataUsageId;
@@ -133,22 +160,38 @@ extern Il2CppClass* Debug_t1368543263_il2cpp_TypeInfo_var;
 extern Il2CppClass* Mathf_t2336485820_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral372029430;
 extern Il2CppCodeGenString* _stringLiteral372029429;
-extern Il2CppCodeGenString* _stringLiteral3731991939;
 extern Il2CppCodeGenString* _stringLiteral720514442;
 extern Il2CppCodeGenString* _stringLiteral2587790671;
 extern Il2CppCodeGenString* _stringLiteral696030901;
 extern const uint32_t FlickController_Update_m3090610249_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral4125971469;
+extern Il2CppCodeGenString* _stringLiteral2116324470;
+extern const uint32_t GameClear_Start_m852472518_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3767310807;
+extern const uint32_t GameClear_Update_m4176740233_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral2800021594;
 extern const uint32_t gameOver_Start_m2596220231_MetadataUsageId;
 extern const uint32_t gameOver_Update_m3787536330_MetadataUsageId;
-extern Il2CppClass* Object_t1021602117_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral3021628214;
+extern Il2CppCodeGenString* _stringLiteral1875821083;
 extern const uint32_t itemGet_OnCollisionEnter2D_m2248259662_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2208037916;
+extern Il2CppCodeGenString* _stringLiteral996742945;
+extern Il2CppCodeGenString* _stringLiteral2187599488;
+extern const uint32_t itemManager_Start_m3537561377_MetadataUsageId;
+extern const MethodInfo* Component_GetComponent_TisText_t356221433_m1342661039_MethodInfo_var;
+extern const uint32_t itemNumber_Update_m2835248660_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1686649077;
+extern const uint32_t MainSceneButtonController_Restart_m3661489295_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral1031738974;
 extern const uint32_t MainSceneButtonController_BackHome_m104322040_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral1686649077;
 extern const uint32_t MainSceneButtonController_gameStart_m2311023768_MetadataUsageId;
+extern const MethodInfo* Component_GetComponent_TisEdgeCollider2D_t216857133_m3146615163_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3917311012;
+extern Il2CppCodeGenString* _stringLiteral1726810092;
+extern const uint32_t MainStart_Start_m1166430642_MetadataUsageId;
+extern Il2CppClass* Object_t1021602117_il2cpp_TypeInfo_var;
 extern const uint32_t MainStart_Update_m3545523221_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3731991939;
 extern const uint32_t MoveCamera_Start_m2614974443_MetadataUsageId;
 extern const uint32_t MoveCamera_OnRightArrow_m3989916971_MetadataUsageId;
 extern const uint32_t MoveCamera_OnLeftArrow_m2476212928_MetadataUsageId;
@@ -159,10 +202,12 @@ extern const uint32_t MovePanel_OnWillRenderObject_m3890863828_MetadataUsageId;
 extern const uint32_t moveStage_Update_m3646796779_MetadataUsageId;
 extern const MethodInfo* Component_GetComponent_TisRigidbody2D_t502193897_m3702757851_MethodInfo_var;
 extern const uint32_t player_Start_m1004576464_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral861793334;
+extern const MethodInfo* GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143_MethodInfo_var;
 extern const uint32_t player_Update_m2878195153_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral2549549024;
 extern const uint32_t player_OnCollisionEnter2D_m3701593854_MetadataUsageId;
+extern Il2CppClass* Int32_t2071877448_il2cpp_TypeInfo_var;
+extern const uint32_t ResultManager_Start_m2243666657_MetadataUsageId;
 extern const uint32_t SliderController_Update_m3697823395_MetadataUsageId;
 extern const MethodInfo* Component_GetComponent_TisAudioSource_t1135106623_m3920278003_MethodInfo_var;
 extern const uint32_t StartSceneButtonController_Start_m647388595_MetadataUsageId;
@@ -172,6 +217,7 @@ extern const uint32_t StartSceneButtonController_OnClick_m38327000_MetadataUsage
 extern const uint32_t StartSceneButtonController_TapStart_m3103234968_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral1819101318;
 extern const uint32_t UfoControllerScript_Start_m3478285518_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral861793334;
 extern const uint32_t UfoControllerScript_Update_m3761321201_MetadataUsageId;
 
 // UnityEngine.Touch[]
@@ -209,27 +255,62 @@ public:
 		m_Items[index] = value;
 	}
 };
+// UnityEngine.GameObject[]
+struct GameObjectU5BU5D_t3057952154  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) GameObject_t1756533147 * m_Items[1];
+
+public:
+	inline GameObject_t1756533147 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline GameObject_t1756533147 ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, GameObject_t1756533147 * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline GameObject_t1756533147 * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline GameObject_t1756533147 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, GameObject_t1756533147 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
 
 
-// !!0 UnityEngine.GameObject::GetComponent<System.Object>()
-extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared (GameObject_t1756533147 * __this, const MethodInfo* method);
 // !!0 UnityEngine.Component::GetComponent<System.Object>()
 extern "C"  Il2CppObject * Component_GetComponent_TisIl2CppObject_m4109961936_gshared (Component_t3819376471 * __this, const MethodInfo* method);
+// !!0 UnityEngine.GameObject::GetComponent<System.Object>()
+extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared (GameObject_t1756533147 * __this, const MethodInfo* method);
 
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 extern "C"  void MonoBehaviour__ctor_m2464341955 (MonoBehaviour_t1158329972 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+extern "C"  GameObject_t1756533147 * Component_get_gameObject_m3105766835 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Transform UnityEngine.GameObject::get_transform()
+extern "C"  Transform_t3275118058 * GameObject_get_transform_m909382139 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Transform::Rotate(System.Single,System.Single,System.Single)
+extern "C"  void Transform_Rotate_m4255273365 (Transform_t3275118058 * __this, float p0, float p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.PlayerPrefs::SetInt(System.String,System.Int32)
 extern "C"  void PlayerPrefs_SetInt_m3351928596 (Il2CppObject * __this /* static, unused */, String_t* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.PlayerPrefs::GetInt(System.String,System.Int32)
 extern "C"  int32_t PlayerPrefs_GetInt_m136681260 (Il2CppObject * __this /* static, unused */, String_t* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Rigidbody2D>()
-#define GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143(__this, method) ((  Rigidbody2D_t502193897 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared)(__this, method)
-// UnityEngine.Vector2 UnityEngine.Vector2::get_up()
-extern "C"  Vector2_t2243707579  Vector2_get_up_m977201173 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.Vector2::op_Multiply(UnityEngine.Vector2,System.Single)
-extern "C"  Vector2_t2243707579  Vector2_op_Multiply_m4236139442 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579  p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Rigidbody2D::AddForce(UnityEngine.Vector2)
-extern "C"  void Rigidbody2D_AddForce_m3200488178 (Rigidbody2D_t502193897 * __this, Vector2_t2243707579  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.Image>()
 #define Component_GetComponent_TisImage_t2042527209_m2189462422(__this, method) ((  Image_t2042527209 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
 // System.Int32 UnityEngine.PlayerPrefs::GetInt(System.String)
@@ -264,36 +345,40 @@ extern "C"  void Debug_Log_m920475918 (Il2CppObject * __this /* static, unused *
 extern "C"  float Mathf_Sign_m2039143327 (Il2CppObject * __this /* static, unused */, float p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.GameObject UnityEngine.GameObject::get_gameObject()
 extern "C"  GameObject_t1756533147 * GameObject_get_gameObject_m3662236595 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Transform UnityEngine.GameObject::get_transform()
-extern "C"  Transform_t3275118058 * GameObject_get_transform_m909382139 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // DG.Tweening.Tweener DG.Tweening.ShortcutExtensions::DOLocalMove(UnityEngine.Transform,UnityEngine.Vector3,System.Single,System.Boolean)
 extern "C"  Tweener_t760404022 * ShortcutExtensions_DOLocalMove_m1432977613 (Il2CppObject * __this /* static, unused */, Transform_t3275118058 * p0, Vector3_t2243707580  p1, float p2, bool p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GameObject::SetActive(System.Boolean)
 extern "C"  void GameObject_SetActive_m2887581199 (GameObject_t1756533147 * __this, bool p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.MonoBehaviour::print(System.Object)
 extern "C"  void MonoBehaviour_print_m3437620292 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.GameObject UnityEngine.Collision2D::get_gameObject()
-extern "C"  GameObject_t1756533147 * Collision2D_get_gameObject_m4234358314 (Collision2D_t1539500754 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
-extern "C"  bool Object_op_Equality_m3764089466 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * p0, Object_t1021602117 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
-extern "C"  GameObject_t1756533147 * Component_get_gameObject_m3105766835 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.Int32)
-extern "C"  void SceneManager_LoadScene_m87258056 (Il2CppObject * __this /* static, unused */, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Application::LoadLevel(System.String)
-extern "C"  void Application_LoadLevel_m393995325 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Transform::get_position()
 extern "C"  Vector3_t2243707580  Transform_get_position_m1104419803 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
 extern "C"  Vector3_t2243707580  Vector3_op_Addition_m3146764857 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Vector3_t2243707580  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
 extern "C"  void Transform_set_position_m2469242620 (Transform_t3275118058 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Application::LoadLevel(System.String)
+extern "C"  void Application_LoadLevel_m393995325 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.GameObject UnityEngine.Collision2D::get_gameObject()
+extern "C"  GameObject_t1756533147 * Collision2D_get_gameObject_m4234358314 (Collision2D_t1539500754 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.GameObject::get_tag()
+extern "C"  String_t* GameObject_get_tag_m1425941094 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.String::op_Equality(System.String,System.String)
+extern "C"  bool String_op_Equality_m1790663636 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.Text>()
+#define Component_GetComponent_TisText_t356221433_m1342661039(__this, method) ((  Text_t356221433 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
+// System.String System.Int32::ToString()
+extern "C"  String_t* Int32_ToString_m2960866144 (int32_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.Component::GetComponent<UnityEngine.EdgeCollider2D>()
+#define Component_GetComponent_TisEdgeCollider2D_t216857133_m3146615163(__this, method) ((  EdgeCollider2D_t216857133 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
+// System.Void UnityEngine.Collider2D::set_isTrigger(System.Boolean)
+extern "C"  void Collider2D_set_isTrigger_m1243156937 (Collider2D_t646061738 * __this, bool p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
+extern "C"  void Object_Destroy_m4145850038 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Camera UnityEngine.Camera::get_current()
 extern "C"  Camera_t189460977 * Camera_get_current_m2639890517 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.Component::get_tag()
 extern "C"  String_t* Component_get_tag_m357168014 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean System.String::op_Equality(System.String,System.String)
-extern "C"  bool String_op_Equality_m1790663636 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Transform UnityEngine.Component::get_transform()
 extern "C"  Transform_t3275118058 * Component_get_transform_m2697483695 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Time::get_deltaTime()
@@ -304,14 +389,16 @@ extern "C"  void Transform_Translate_m3577349508 (Transform_t3275118058 * __this
 extern "C"  void moveStage_ScrollEnd_m295650058 (moveStage_t2931930111 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Rigidbody2D>()
 #define Component_GetComponent_TisRigidbody2D_t502193897_m3702757851(__this, method) ((  Rigidbody2D_t502193897 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
-// System.Void UnityEngine.Transform::Rotate(System.Single,System.Single,System.Single)
-extern "C"  void Transform_Rotate_m4255273365 (Transform_t3275118058 * __this, float p0, float p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.SceneManagement.Scene UnityEngine.SceneManagement.SceneManager::GetActiveScene()
-extern "C"  Scene_t1684909666  SceneManager_GetActiveScene_m2964039490 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.SceneManagement.Scene::get_name()
-extern "C"  String_t* Scene_get_name_m745914591 (Scene_t1684909666 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.String UnityEngine.GameObject::get_tag()
-extern "C"  String_t* GameObject_get_tag_m1425941094 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Rigidbody2D::set_gravityScale(System.Single)
+extern "C"  void Rigidbody2D_set_gravityScale_m1426625078 (Rigidbody2D_t502193897 * __this, float p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Rigidbody2D>()
+#define GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143(__this, method) ((  Rigidbody2D_t502193897 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared)(__this, method)
+// UnityEngine.Vector2 UnityEngine.Vector2::get_up()
+extern "C"  Vector2_t2243707579  Vector2_get_up_m977201173 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector2 UnityEngine.Vector2::op_Multiply(UnityEngine.Vector2,System.Single)
+extern "C"  Vector2_t2243707579  Vector2_op_Multiply_m4236139442 (Il2CppObject * __this /* static, unused */, Vector2_t2243707579  p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Rigidbody2D::AddForce(UnityEngine.Vector2)
+extern "C"  void Rigidbody2D_AddForce_m3200488178 (Rigidbody2D_t502193897 * __this, Vector2_t2243707579  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.AudioSource>()
 #define Component_GetComponent_TisAudioSource_t1135106623_m3920278003(__this, method) ((  AudioSource_t1135106623 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
 // UnityEngine.AudioClip UnityEngine.AudioSource::get_clip()
@@ -325,6 +412,39 @@ extern "C"  float Time_get_time_m2216684562 (Il2CppObject * __this /* static, un
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void CharController::.ctor()
+extern "C"  void CharController__ctor_m1761968207 (CharController_t127724996 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void CharController::Start()
+extern "C"  void CharController_Start_m4287721027 (CharController_t127724996 * __this, const MethodInfo* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void CharController::Update()
+extern "C"  void CharController_Update_m1600413798 (CharController_t127724996 * __this, const MethodInfo* method)
+{
+	{
+		// this.gameObject.transform.Rotate (0, 0, -5);
+		// this.gameObject.transform.Rotate (0, 0, -5);
+		GameObject_t1756533147 * L_0 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// this.gameObject.transform.Rotate (0, 0, -5);
+		NullCheck(L_0);
+		Transform_t3275118058 * L_1 = GameObject_get_transform_m909382139(L_0, /*hidden argument*/NULL);
+		// this.gameObject.transform.Rotate (0, 0, -5);
+		NullCheck(L_1);
+		Transform_Rotate_m4255273365(L_1, (0.0f), (0.0f), (-5.0f), /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
 // System.Void control::.ctor()
 extern "C"  void control__ctor_m2144534888 (control_t2399976437 * __this, const MethodInfo* method)
 {
@@ -346,6 +466,12 @@ extern "C"  void control_Start_m3516908368 (control_t2399976437 * __this, const 
 		// PlayerPrefs.SetInt ("jumpping", 0);
 		// PlayerPrefs.SetInt ("jumpping", 0);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3854275810, 0, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("selectBagel",1);
+		// PlayerPrefs.SetInt ("selectBagel",1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3050377369, 1, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("jump",0);
+		// PlayerPrefs.SetInt ("jump",0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral842947042, 0, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -373,28 +499,19 @@ extern "C"  void control_OnMouseDown_m2686697076 (control_t2399976437 * __this, 
 		int32_t L_0 = PlayerPrefs_GetInt_m136681260(NULL /*static, unused*/, _stringLiteral3854275810, (-1), /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
-			goto IL_003e;
+			goto IL_002a;
 		}
 	}
 	{
 		// PlayerPrefs.SetInt ("jumpping", 0);
 		// PlayerPrefs.SetInt ("jumpping", 0);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3854275810, 0, /*hidden argument*/NULL);
-		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
-		GameObject_t1756533147 * L_1 = __this->get_bagel_2();
-		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
-		NullCheck(L_1);
-		Rigidbody2D_t502193897 * L_2 = GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143(L_1, /*hidden argument*/GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143_MethodInfo_var);
-		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
-		Vector2_t2243707579  L_3 = Vector2_get_up_m977201173(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
-		Vector2_t2243707579  L_4 = Vector2_op_Multiply_m4236139442(NULL /*static, unused*/, L_3, (300.0f), /*hidden argument*/NULL);
-		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
-		NullCheck(L_2);
-		Rigidbody2D_AddForce_m3200488178(L_2, L_4, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("jump",1);
+		// PlayerPrefs.SetInt ("jump",1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral842947042, 1, /*hidden argument*/NULL);
 	}
 
-IL_003e:
+IL_002a:
 	{
 		// }
 		return;
@@ -697,9 +814,9 @@ IL_004f:
 		}
 	}
 	{
-		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
-		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
-		int32_t L_45 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		// if (PlayerPrefs.GetInt ("selectBagel") == 2) {
+		// if (PlayerPrefs.GetInt ("selectBagel") == 2) {
+		int32_t L_45 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3050377369, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_45) == ((uint32_t)2))))
 		{
 			goto IL_0291;
@@ -768,17 +885,17 @@ IL_004f:
 		// leftArrow.SetActive (false);
 		NullCheck(L_61);
 		GameObject_SetActive_m2887581199(L_61, (bool)0, /*hidden argument*/NULL);
-		// PlayerPrefs.SetInt ("panelColor", 1);
-		// PlayerPrefs.SetInt ("panelColor", 1);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 1, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("selectBagel", 1);
+		// PlayerPrefs.SetInt ("selectBagel", 1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3050377369, 1, /*hidden argument*/NULL);
 		goto IL_037a;
 	}
 
 IL_0291:
 	{
-		// } else if (PlayerPrefs.GetInt ("panelColor") == 3) {
-		// } else if (PlayerPrefs.GetInt ("panelColor") == 3) {
-		int32_t L_62 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		// } else if (PlayerPrefs.GetInt ("selectBagel") == 3) {
+		// } else if (PlayerPrefs.GetInt ("selectBagel") == 3) {
+		int32_t L_62 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3050377369, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_62) == ((uint32_t)3))))
 		{
 			goto IL_037a;
@@ -847,9 +964,9 @@ IL_0291:
 		// rightArrow.SetActive (true);
 		NullCheck(L_78);
 		GameObject_SetActive_m2887581199(L_78, (bool)1, /*hidden argument*/NULL);
-		// PlayerPrefs.SetInt ("panelColor", 2);
-		// PlayerPrefs.SetInt ("panelColor", 2);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 2, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("selectBagel", 2);
+		// PlayerPrefs.SetInt ("selectBagel", 2);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3050377369, 2, /*hidden argument*/NULL);
 	}
 
 IL_037a:
@@ -870,9 +987,9 @@ IL_038a:
 		}
 	}
 	{
-		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
-		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
-		int32_t L_80 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		// if (PlayerPrefs.GetInt ("selectBagel") == 2) {
+		// if (PlayerPrefs.GetInt ("selectBagel") == 2) {
+		int32_t L_80 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3050377369, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_80) == ((uint32_t)2))))
 		{
 			goto IL_0489;
@@ -941,17 +1058,17 @@ IL_038a:
 		// rightArrow.SetActive (false);
 		NullCheck(L_96);
 		GameObject_SetActive_m2887581199(L_96, (bool)0, /*hidden argument*/NULL);
-		// PlayerPrefs.SetInt ("panelColor", 3);
-		// PlayerPrefs.SetInt ("panelColor", 3);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 3, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("selectBagel", 3);
+		// PlayerPrefs.SetInt ("selectBagel", 3);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3050377369, 3, /*hidden argument*/NULL);
 		goto IL_0572;
 	}
 
 IL_0489:
 	{
-		// } else if (PlayerPrefs.GetInt ("panelColor") == 1) {
-		// } else if (PlayerPrefs.GetInt ("panelColor") == 1) {
-		int32_t L_97 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		// } else if (PlayerPrefs.GetInt ("selectBagel") == 1) {
+		// } else if (PlayerPrefs.GetInt ("selectBagel") == 1) {
+		int32_t L_97 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3050377369, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_97) == ((uint32_t)1))))
 		{
 			goto IL_0572;
@@ -1020,9 +1137,9 @@ IL_0489:
 		// leftArrow.SetActive (true);
 		NullCheck(L_113);
 		GameObject_SetActive_m2887581199(L_113, (bool)1, /*hidden argument*/NULL);
-		// PlayerPrefs.SetInt ("panelColor", 2);
-		// PlayerPrefs.SetInt ("panelColor", 2);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 2, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("selectBagel", 2);
+		// PlayerPrefs.SetInt ("selectBagel", 2);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3050377369, 2, /*hidden argument*/NULL);
 	}
 
 IL_0572:
@@ -1076,6 +1193,148 @@ IL_05b2:
 		return;
 	}
 }
+// System.Void FoodSelect::.ctor()
+extern "C"  void FoodSelect__ctor_m3492246265 (FoodSelect_t1503630940 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void FoodSelect::Start()
+extern "C"  void FoodSelect_Start_m2442283561 (FoodSelect_t1503630940 * __this, const MethodInfo* method)
+{
+	{
+		// this.gameObject.SetActive (false);
+		// this.gameObject.SetActive (false);
+		GameObject_t1756533147 * L_0 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// this.gameObject.SetActive (false);
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void FoodSelect::Update()
+extern "C"  void FoodSelect_Update_m2377251210 (FoodSelect_t1503630940 * __this, const MethodInfo* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void GameClear::.ctor()
+extern "C"  void GameClear__ctor_m3959291158 (GameClear_t122518785 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void GameClear::Start()
+extern "C"  void GameClear_Start_m852472518 (GameClear_t122518785 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (GameClear_Start_m852472518_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// PlayerPrefs.SetInt ("isGameClear", 0);
+		// PlayerPrefs.SetInt ("isGameClear", 0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral4125971469, 0, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("ufoMoveRight", 0);
+		// PlayerPrefs.SetInt ("ufoMoveRight", 0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral553656497, 0, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("ufo_catch", 0);
+		// PlayerPrefs.SetInt ("ufo_catch", 0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2116324470, 0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void GameClear::Update()
+extern "C"  void GameClear_Update_m4176740233 (GameClear_t122518785 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (GameClear_Update_m4176740233_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		// if(PlayerPrefs.GetInt ("ufo_catch")==1){
+		// if(PlayerPrefs.GetInt ("ufo_catch")==1){
+		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2116324470, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
+		{
+			goto IL_008c;
+		}
+	}
+	{
+		// goal_right.gameObject.SetActive (false);
+		GameObject_t1756533147 * L_1 = __this->get_goal_right_3();
+		// goal_right.gameObject.SetActive (false);
+		NullCheck(L_1);
+		GameObject_t1756533147 * L_2 = GameObject_get_gameObject_m3662236595(L_1, /*hidden argument*/NULL);
+		// goal_right.gameObject.SetActive (false);
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		// goal_ufo.transform.position += new Vector3 (0.1f, 0.05f, 0f);
+		GameObject_t1756533147 * L_3 = __this->get_goal_ufo_2();
+		// goal_ufo.transform.position += new Vector3 (0.1f, 0.05f, 0f);
+		NullCheck(L_3);
+		Transform_t3275118058 * L_4 = GameObject_get_transform_m909382139(L_3, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_5 = L_4;
+		// goal_ufo.transform.position += new Vector3 (0.1f, 0.05f, 0f);
+		NullCheck(L_5);
+		Vector3_t2243707580  L_6 = Transform_get_position_m1104419803(L_5, /*hidden argument*/NULL);
+		// goal_ufo.transform.position += new Vector3 (0.1f, 0.05f, 0f);
+		Vector3_t2243707580  L_7;
+		memset(&L_7, 0, sizeof(L_7));
+		Vector3__ctor_m2638739322(&L_7, (0.1f), (0.05f), (0.0f), /*hidden argument*/NULL);
+		// goal_ufo.transform.position += new Vector3 (0.1f, 0.05f, 0f);
+		Vector3_t2243707580  L_8 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_6, L_7, /*hidden argument*/NULL);
+		// goal_ufo.transform.position += new Vector3 (0.1f, 0.05f, 0f);
+		NullCheck(L_5);
+		Transform_set_position_m2469242620(L_5, L_8, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("ufoMoveRight", 1);
+		// PlayerPrefs.SetInt ("ufoMoveRight", 1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral553656497, 1, /*hidden argument*/NULL);
+		// if (goal_ufo.transform.position.x >= 5) {
+		GameObject_t1756533147 * L_9 = __this->get_goal_ufo_2();
+		// if (goal_ufo.transform.position.x >= 5) {
+		NullCheck(L_9);
+		Transform_t3275118058 * L_10 = GameObject_get_transform_m909382139(L_9, /*hidden argument*/NULL);
+		// if (goal_ufo.transform.position.x >= 5) {
+		NullCheck(L_10);
+		Vector3_t2243707580  L_11 = Transform_get_position_m1104419803(L_10, /*hidden argument*/NULL);
+		V_0 = L_11;
+		float L_12 = (&V_0)->get_x_1();
+		if ((!(((float)L_12) >= ((float)(5.0f)))))
+		{
+			goto IL_008b;
+		}
+	}
+	{
+		// Application.LoadLevel ("resultScene");
+		// Application.LoadLevel ("resultScene");
+		Application_LoadLevel_m393995325(NULL /*static, unused*/, _stringLiteral3767310807, /*hidden argument*/NULL);
+	}
+
+IL_008b:
+	{
+	}
+
+IL_008c:
+	{
+		// }
+		return;
+	}
+}
 // System.Void gameOver::.ctor()
 extern "C"  void gameOver__ctor_m2948236363 (gameOver_t1155260296 * __this, const MethodInfo* method)
 {
@@ -1097,30 +1356,6 @@ extern "C"  void gameOver_Start_m2596220231 (gameOver_t1155260296 * __this, cons
 		// PlayerPrefs.SetInt ("isGameOver", 0);
 		// PlayerPrefs.SetInt ("isGameOver", 0);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2800021594, 0, /*hidden argument*/NULL);
-		// text.gameObject.SetActive (false);
-		GameObject_t1756533147 * L_0 = __this->get_text_2();
-		// text.gameObject.SetActive (false);
-		NullCheck(L_0);
-		GameObject_t1756533147 * L_1 = GameObject_get_gameObject_m3662236595(L_0, /*hidden argument*/NULL);
-		// text.gameObject.SetActive (false);
-		NullCheck(L_1);
-		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
-		// reset.gameObject.SetActive (false);
-		GameObject_t1756533147 * L_2 = __this->get_reset_3();
-		// reset.gameObject.SetActive (false);
-		NullCheck(L_2);
-		GameObject_t1756533147 * L_3 = GameObject_get_gameObject_m3662236595(L_2, /*hidden argument*/NULL);
-		// reset.gameObject.SetActive (false);
-		NullCheck(L_3);
-		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
-		// home.gameObject.SetActive (false);
-		GameObject_t1756533147 * L_4 = __this->get_home_4();
-		// home.gameObject.SetActive (false);
-		NullCheck(L_4);
-		GameObject_t1756533147 * L_5 = GameObject_get_gameObject_m3662236595(L_4, /*hidden argument*/NULL);
-		// home.gameObject.SetActive (false);
-		NullCheck(L_5);
-		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -1134,43 +1369,59 @@ extern "C"  void gameOver_Update_m3787536330 (gameOver_t1155260296 * __this, con
 		il2cpp_codegen_initialize_method (gameOver_Update_m3787536330_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
 	{
 		// if (PlayerPrefs.GetInt ("isGameOver") == 1) {
 		// if (PlayerPrefs.GetInt ("isGameOver") == 1) {
 		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2800021594, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
-			goto IL_0046;
+			goto IL_0066;
 		}
 	}
 	{
-		// reset.gameObject.SetActive (true);
-		GameObject_t1756533147 * L_1 = __this->get_reset_3();
-		// reset.gameObject.SetActive (true);
+		// if (shutter.transform.position.y > 225) {
+		GameObject_t1756533147 * L_1 = __this->get_shutter_5();
+		// if (shutter.transform.position.y > 225) {
 		NullCheck(L_1);
-		GameObject_t1756533147 * L_2 = GameObject_get_gameObject_m3662236595(L_1, /*hidden argument*/NULL);
-		// reset.gameObject.SetActive (true);
+		Transform_t3275118058 * L_2 = GameObject_get_transform_m909382139(L_1, /*hidden argument*/NULL);
+		// if (shutter.transform.position.y > 225) {
 		NullCheck(L_2);
-		GameObject_SetActive_m2887581199(L_2, (bool)1, /*hidden argument*/NULL);
-		// text.gameObject.SetActive (true);
-		GameObject_t1756533147 * L_3 = __this->get_text_2();
-		// text.gameObject.SetActive (true);
-		NullCheck(L_3);
-		GameObject_t1756533147 * L_4 = GameObject_get_gameObject_m3662236595(L_3, /*hidden argument*/NULL);
-		// text.gameObject.SetActive (true);
-		NullCheck(L_4);
-		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
-		// home.gameObject.SetActive (true);
-		GameObject_t1756533147 * L_5 = __this->get_home_4();
-		// home.gameObject.SetActive (true);
+		Vector3_t2243707580  L_3 = Transform_get_position_m1104419803(L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		float L_4 = (&V_0)->get_y_2();
+		if ((!(((float)L_4) > ((float)(225.0f)))))
+		{
+			goto IL_0065;
+		}
+	}
+	{
+		// shutter.transform.position += new Vector3 (0f, -20f, 0f);
+		GameObject_t1756533147 * L_5 = __this->get_shutter_5();
+		// shutter.transform.position += new Vector3 (0f, -20f, 0f);
 		NullCheck(L_5);
-		GameObject_t1756533147 * L_6 = GameObject_get_gameObject_m3662236595(L_5, /*hidden argument*/NULL);
-		// home.gameObject.SetActive (true);
-		NullCheck(L_6);
-		GameObject_SetActive_m2887581199(L_6, (bool)1, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_6 = GameObject_get_transform_m909382139(L_5, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_7 = L_6;
+		// shutter.transform.position += new Vector3 (0f, -20f, 0f);
+		NullCheck(L_7);
+		Vector3_t2243707580  L_8 = Transform_get_position_m1104419803(L_7, /*hidden argument*/NULL);
+		// shutter.transform.position += new Vector3 (0f, -20f, 0f);
+		Vector3_t2243707580  L_9;
+		memset(&L_9, 0, sizeof(L_9));
+		Vector3__ctor_m2638739322(&L_9, (0.0f), (-20.0f), (0.0f), /*hidden argument*/NULL);
+		// shutter.transform.position += new Vector3 (0f, -20f, 0f);
+		Vector3_t2243707580  L_10 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_8, L_9, /*hidden argument*/NULL);
+		// shutter.transform.position += new Vector3 (0f, -20f, 0f);
+		NullCheck(L_7);
+		Transform_set_position_m2469242620(L_7, L_10, /*hidden argument*/NULL);
 	}
 
-IL_0046:
+IL_0065:
+	{
+	}
+
+IL_0066:
 	{
 		// }
 		return;
@@ -1210,34 +1461,137 @@ extern "C"  void itemGet_OnCollisionEnter2D_m2248259662 (itemGet_t2266050241 * _
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (col.gameObject == player) {
+		// if (col.gameObject.tag == "player") {
 		Collision2D_t1539500754 * L_0 = ___col0;
-		// if (col.gameObject == player) {
+		// if (col.gameObject.tag == "player") {
 		NullCheck(L_0);
 		GameObject_t1756533147 * L_1 = Collision2D_get_gameObject_m4234358314(L_0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_2 = __this->get_player_2();
-		// if (col.gameObject == player) {
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_3 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_1, L_2, /*hidden argument*/NULL);
+		// if (col.gameObject.tag == "player") {
+		NullCheck(L_1);
+		String_t* L_2 = GameObject_get_tag_m1425941094(L_1, /*hidden argument*/NULL);
+		// if (col.gameObject.tag == "player") {
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_3 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_2, _stringLiteral1875821083, /*hidden argument*/NULL);
 		if (!L_3)
 		{
-			goto IL_002f;
+			goto IL_0057;
 		}
 	}
 	{
-		// this.gameObject.SetActive (false);
-		// this.gameObject.SetActive (false);
+		// item_n = PlayerPrefs.GetInt (this.gameObject.tag) + 1;
+		// item_n = PlayerPrefs.GetInt (this.gameObject.tag) + 1;
 		GameObject_t1756533147 * L_4 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
-		// this.gameObject.SetActive (false);
+		// item_n = PlayerPrefs.GetInt (this.gameObject.tag) + 1;
 		NullCheck(L_4);
-		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
-		// print ("get");
-		// print ("get");
-		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, _stringLiteral3021628214, /*hidden argument*/NULL);
+		String_t* L_5 = GameObject_get_tag_m1425941094(L_4, /*hidden argument*/NULL);
+		// item_n = PlayerPrefs.GetInt (this.gameObject.tag) + 1;
+		int32_t L_6 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
+		__this->set_item_n_2(((int32_t)((int32_t)L_6+(int32_t)1)));
+		// PlayerPrefs.SetInt (this.gameObject.tag, item_n);
+		// PlayerPrefs.SetInt (this.gameObject.tag, item_n);
+		GameObject_t1756533147 * L_7 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt (this.gameObject.tag, item_n);
+		NullCheck(L_7);
+		String_t* L_8 = GameObject_get_tag_m1425941094(L_7, /*hidden argument*/NULL);
+		int32_t L_9 = __this->get_item_n_2();
+		// PlayerPrefs.SetInt (this.gameObject.tag, item_n);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, L_8, L_9, /*hidden argument*/NULL);
+		// this.gameObject.SetActive (false);
+		// this.gameObject.SetActive (false);
+		GameObject_t1756533147 * L_10 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// this.gameObject.SetActive (false);
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
 	}
 
-IL_002f:
+IL_0057:
 	{
+		// }
+		return;
+	}
+}
+// System.Void itemManager::.ctor()
+extern "C"  void itemManager__ctor_m4185178905 (itemManager_t1553366086 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void itemManager::Start()
+extern "C"  void itemManager_Start_m3537561377 (itemManager_t1553366086 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (itemManager_Start_m3537561377_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// PlayerPrefs.SetInt ("tomato",0);
+		// PlayerPrefs.SetInt ("tomato",0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2208037916, 0, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("bacon",0);
+		// PlayerPrefs.SetInt ("bacon",0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral996742945, 0, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("lettuce",0);
+		// PlayerPrefs.SetInt ("lettuce",0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2187599488, 0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void itemManager::Update()
+extern "C"  void itemManager_Update_m2364551652 (itemManager_t1553366086 * __this, const MethodInfo* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void itemNumber::.ctor()
+extern "C"  void itemNumber__ctor_m3392102357 (itemNumber_t4162239606 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void itemNumber::Start()
+extern "C"  void itemNumber_Start_m3346982453 (itemNumber_t4162239606 * __this, const MethodInfo* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void itemNumber::Update()
+extern "C"  void itemNumber_Update_m2835248660 (itemNumber_t4162239606 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (itemNumber_Update_m2835248660_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		// this.GetComponent<Text>().text = PlayerPrefs.GetInt (this.gameObject.tag).ToString();
+		// this.GetComponent<Text>().text = PlayerPrefs.GetInt (this.gameObject.tag).ToString();
+		Text_t356221433 * L_0 = Component_GetComponent_TisText_t356221433_m1342661039(__this, /*hidden argument*/Component_GetComponent_TisText_t356221433_m1342661039_MethodInfo_var);
+		// this.GetComponent<Text>().text = PlayerPrefs.GetInt (this.gameObject.tag).ToString();
+		GameObject_t1756533147 * L_1 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// this.GetComponent<Text>().text = PlayerPrefs.GetInt (this.gameObject.tag).ToString();
+		NullCheck(L_1);
+		String_t* L_2 = GameObject_get_tag_m1425941094(L_1, /*hidden argument*/NULL);
+		// this.GetComponent<Text>().text = PlayerPrefs.GetInt (this.gameObject.tag).ToString();
+		int32_t L_3 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		// this.GetComponent<Text>().text = PlayerPrefs.GetInt (this.gameObject.tag).ToString();
+		String_t* L_4 = Int32_ToString_m2960866144((&V_0), /*hidden argument*/NULL);
+		// this.GetComponent<Text>().text = PlayerPrefs.GetInt (this.gameObject.tag).ToString();
+		NullCheck(L_0);
+		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_0, L_4);
 		// }
 		return;
 	}
@@ -1253,10 +1607,16 @@ extern "C"  void MainSceneButtonController__ctor_m2887304150 (MainSceneButtonCon
 // System.Void MainSceneButtonController::Restart()
 extern "C"  void MainSceneButtonController_Restart_m3661489295 (MainSceneButtonController_t3316297225 * __this, const MethodInfo* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		// SceneManager.LoadScene (2);
-		// SceneManager.LoadScene (2);
-		SceneManager_LoadScene_m87258056(NULL /*static, unused*/, 2, /*hidden argument*/NULL);
+		il2cpp_codegen_initialize_method (MainSceneButtonController_Restart_m3661489295_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Application.LoadLevel ("mainScene");
+		// Application.LoadLevel ("mainScene");
+		Application_LoadLevel_m393995325(NULL /*static, unused*/, _stringLiteral1686649077, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -1299,6 +1659,12 @@ extern "C"  void MainSceneButtonController_gameStart_m2311023768 (MainSceneButto
 extern "C"  void MainStart__ctor_m4273206546 (MainStart_t3226110189 * __this, const MethodInfo* method)
 {
 	{
+		// int start=0;
+		__this->set_start_6(0);
+		// int stop=0;
+		__this->set_stop_7(0);
+		// int right=1;
+		__this->set_right_8(1);
 		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -1306,38 +1672,46 @@ extern "C"  void MainStart__ctor_m4273206546 (MainStart_t3226110189 * __this, co
 // System.Void MainStart::Start()
 extern "C"  void MainStart_Start_m1166430642 (MainStart_t3226110189 * __this, const MethodInfo* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		// bagel.gameObject.SetActive (false);
-		GameObject_t1756533147 * L_0 = __this->get_bagel_2();
-		// bagel.gameObject.SetActive (false);
+		il2cpp_codegen_initialize_method (MainStart_Start_m1166430642_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// uforight.SetActive (false);
+		GameObject_t1756533147 * L_0 = __this->get_uforight_3();
+		// uforight.SetActive (false);
 		NullCheck(L_0);
-		GameObject_t1756533147 * L_1 = GameObject_get_gameObject_m3662236595(L_0, /*hidden argument*/NULL);
-		// bagel.gameObject.SetActive (false);
-		NullCheck(L_1);
-		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
-		// uforight.SetActive (false);
-		GameObject_t1756533147 * L_2 = __this->get_uforight_4();
-		// uforight.SetActive (false);
-		NullCheck(L_2);
-		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
 		// ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
-		GameObject_t1756533147 * L_3 = __this->get_ufo_3();
+		GameObject_t1756533147 * L_1 = __this->get_ufo_2();
+		// ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
+		NullCheck(L_1);
+		Transform_t3275118058 * L_2 = GameObject_get_transform_m909382139(L_1, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_3 = L_2;
 		// ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
 		NullCheck(L_3);
-		Transform_t3275118058 * L_4 = GameObject_get_transform_m909382139(L_3, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_5 = L_4;
+		Vector3_t2243707580  L_4 = Transform_get_position_m1104419803(L_3, /*hidden argument*/NULL);
 		// ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
-		NullCheck(L_5);
-		Vector3_t2243707580  L_6 = Transform_get_position_m1104419803(L_5, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_5;
+		memset(&L_5, 0, sizeof(L_5));
+		Vector3__ctor_m2638739322(&L_5, (0.0f), (-0.02f), (0.0f), /*hidden argument*/NULL);
 		// ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
-		Vector3_t2243707580  L_7;
-		memset(&L_7, 0, sizeof(L_7));
-		Vector3__ctor_m2638739322(&L_7, (0.0f), (-0.02f), (0.0f), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_6 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_4, L_5, /*hidden argument*/NULL);
 		// ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
-		Vector3_t2243707580  L_8 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_6, L_7, /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
-		NullCheck(L_5);
-		Transform_set_position_m2469242620(L_5, L_8, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		Transform_set_position_m2469242620(L_3, L_6, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("isGameStart", 0);
+		// PlayerPrefs.SetInt ("isGameStart", 0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3917311012, 0, /*hidden argument*/NULL);
+		// ufo_c=this.GetComponent<EdgeCollider2D> ();
+		// ufo_c=this.GetComponent<EdgeCollider2D> ();
+		EdgeCollider2D_t216857133 * L_7 = Component_GetComponent_TisEdgeCollider2D_t216857133_m3146615163(__this, /*hidden argument*/Component_GetComponent_TisEdgeCollider2D_t216857133_m3146615163_MethodInfo_var);
+		__this->set_ufo_c_5(L_7);
+		// PlayerPrefs.SetInt ("bagelNumber",2);
+		// PlayerPrefs.SetInt ("bagelNumber",2);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 2, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -1355,155 +1729,205 @@ extern "C"  void MainStart_Update_m3545523221 (MainStart_t3226110189 * __this, c
 	memset(&V_0, 0, sizeof(V_0));
 	Vector3_t2243707580  V_1;
 	memset(&V_1, 0, sizeof(V_1));
+	Vector3_t2243707580  V_2;
+	memset(&V_2, 0, sizeof(V_2));
 	{
-		// if (ufo.transform.position.y <= 2.7) {
-		GameObject_t1756533147 * L_0 = __this->get_ufo_3();
-		// if (ufo.transform.position.y <= 2.7) {
-		NullCheck(L_0);
-		Transform_t3275118058 * L_1 = GameObject_get_transform_m909382139(L_0, /*hidden argument*/NULL);
-		// if (ufo.transform.position.y <= 2.7) {
-		NullCheck(L_1);
-		Vector3_t2243707580  L_2 = Transform_get_position_m1104419803(L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		float L_3 = (&V_0)->get_y_2();
-		if ((!(((double)(((double)((double)L_3)))) <= ((double)(2.7)))))
+		// if (start == 0 && ufo.transform.position.y < goal_ufo.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
+		int32_t L_0 = __this->get_start_6();
+		if (L_0)
 		{
-			goto IL_007b;
+			goto IL_00b1;
 		}
 	}
 	{
-		// uforight.SetActive (true);
-		GameObject_t1756533147 * L_4 = __this->get_uforight_4();
-		// uforight.SetActive (true);
-		NullCheck(L_4);
-		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
-		GameObject_t1756533147 * L_5 = __this->get_ufo_3();
-		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
+		GameObject_t1756533147 * L_1 = __this->get_ufo_2();
+		// if (start == 0 && ufo.transform.position.y < goal_ufo.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
+		NullCheck(L_1);
+		Transform_t3275118058 * L_2 = GameObject_get_transform_m909382139(L_1, /*hidden argument*/NULL);
+		// if (start == 0 && ufo.transform.position.y < goal_ufo.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
+		NullCheck(L_2);
+		Vector3_t2243707580  L_3 = Transform_get_position_m1104419803(L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		float L_4 = (&V_0)->get_y_2();
+		GameObject_t1756533147 * L_5 = __this->get_goal_ufo_4();
+		// if (start == 0 && ufo.transform.position.y < goal_ufo.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
 		NullCheck(L_5);
 		Transform_t3275118058 * L_6 = GameObject_get_transform_m909382139(L_5, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_7 = L_6;
-		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
-		NullCheck(L_7);
-		Vector3_t2243707580  L_8 = Transform_get_position_m1104419803(L_7, /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
-		Vector3_t2243707580  L_9;
-		memset(&L_9, 0, sizeof(L_9));
-		Vector3__ctor_m2638739322(&L_9, (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
-		Vector3_t2243707580  L_10 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_8, L_9, /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
-		NullCheck(L_7);
-		Transform_set_position_m2469242620(L_7, L_10, /*hidden argument*/NULL);
-		// bagel.gameObject.SetActive (true);
-		GameObject_t1756533147 * L_11 = __this->get_bagel_2();
-		// bagel.gameObject.SetActive (true);
-		NullCheck(L_11);
-		GameObject_t1756533147 * L_12 = GameObject_get_gameObject_m3662236595(L_11, /*hidden argument*/NULL);
-		// bagel.gameObject.SetActive (true);
-		NullCheck(L_12);
-		GameObject_SetActive_m2887581199(L_12, (bool)1, /*hidden argument*/NULL);
-		goto IL_00ac;
-	}
-
-IL_007b:
-	{
-		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
-		GameObject_t1756533147 * L_13 = __this->get_ufo_3();
-		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
-		NullCheck(L_13);
-		Transform_t3275118058 * L_14 = GameObject_get_transform_m909382139(L_13, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_15 = L_14;
-		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
-		NullCheck(L_15);
-		Vector3_t2243707580  L_16 = Transform_get_position_m1104419803(L_15, /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
-		Vector3_t2243707580  L_17;
-		memset(&L_17, 0, sizeof(L_17));
-		Vector3__ctor_m2638739322(&L_17, (0.0f), (-0.05f), (0.0f), /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
-		Vector3_t2243707580  L_18 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
-		NullCheck(L_15);
-		Transform_set_position_m2469242620(L_15, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00ac:
-	{
-		// if (PlayerPrefs.GetInt ("jumpping", -1) == 1) {
-		// if (PlayerPrefs.GetInt ("jumpping", -1) == 1) {
-		int32_t L_19 = PlayerPrefs_GetInt_m136681260(NULL /*static, unused*/, _stringLiteral3854275810, (-1), /*hidden argument*/NULL);
-		if ((!(((uint32_t)L_19) == ((uint32_t)1))))
+		// if (start == 0 && ufo.transform.position.y < goal_ufo.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
+		NullCheck(L_6);
+		Vector3_t2243707580  L_7 = Transform_get_position_m1104419803(L_6, /*hidden argument*/NULL);
+		V_1 = L_7;
+		float L_8 = (&V_1)->get_y_2();
+		if ((!(((float)L_4) < ((float)L_8))))
 		{
-			goto IL_00c6;
+			goto IL_00b1;
+		}
+	}
+	{
+		// if (start == 0 && ufo.transform.position.y < goal_ufo.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
+		int32_t L_9 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral4125971469, /*hidden argument*/NULL);
+		if ((((int32_t)L_9) == ((int32_t)1)))
+		{
+			goto IL_00b1;
+		}
+	}
+	{
+		// stop = 1;
+		__this->set_stop_7(1);
+		// uforight.SetActive (true);
+		GameObject_t1756533147 * L_10 = __this->get_uforight_3();
+		// uforight.SetActive (true);
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)1, /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
+		GameObject_t1756533147 * L_11 = __this->get_ufo_2();
+		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
+		NullCheck(L_11);
+		Transform_t3275118058 * L_12 = GameObject_get_transform_m909382139(L_11, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_13 = L_12;
+		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
+		NullCheck(L_13);
+		Vector3_t2243707580  L_14 = Transform_get_position_m1104419803(L_13, /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
+		Vector3_t2243707580  L_15;
+		memset(&L_15, 0, sizeof(L_15));
+		Vector3__ctor_m2638739322(&L_15, (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
+		Vector3_t2243707580  L_16 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_14, L_15, /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (0f, 0f, 0f);
+		NullCheck(L_13);
+		Transform_set_position_m2469242620(L_13, L_16, /*hidden argument*/NULL);
+		// ufo_c.isTrigger = true;
+		EdgeCollider2D_t216857133 * L_17 = __this->get_ufo_c_5();
+		// ufo_c.isTrigger = true;
+		NullCheck(L_17);
+		Collider2D_set_isTrigger_m1243156937(L_17, (bool)1, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("isGameStart", 1);
+		// PlayerPrefs.SetInt ("isGameStart", 1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3917311012, 1, /*hidden argument*/NULL);
+		goto IL_00ee;
+	}
+
+IL_00b1:
+	{
+		// } else if(stop!=1){
+		int32_t L_18 = __this->get_stop_7();
+		if ((((int32_t)L_18) == ((int32_t)1)))
+		{
+			goto IL_00ee;
+		}
+	}
+	{
+		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
+		GameObject_t1756533147 * L_19 = __this->get_ufo_2();
+		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
+		NullCheck(L_19);
+		Transform_t3275118058 * L_20 = GameObject_get_transform_m909382139(L_19, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_21 = L_20;
+		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
+		NullCheck(L_21);
+		Vector3_t2243707580  L_22 = Transform_get_position_m1104419803(L_21, /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
+		Vector3_t2243707580  L_23;
+		memset(&L_23, 0, sizeof(L_23));
+		Vector3__ctor_m2638739322(&L_23, (0.0f), (-0.05f), (0.0f), /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
+		Vector3_t2243707580  L_24 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_22, L_23, /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
+		NullCheck(L_21);
+		Transform_set_position_m2469242620(L_21, L_24, /*hidden argument*/NULL);
+	}
+
+IL_00ee:
+	{
+		// if (PlayerPrefs.GetInt ("jumpping") == 1) {
+		// if (PlayerPrefs.GetInt ("jumpping") == 1) {
+		int32_t L_25 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3854275810, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_25) == ((uint32_t)1))))
+		{
+			goto IL_0107;
 		}
 	}
 	{
 		// start = 1;
-		__this->set_start_5(1);
+		__this->set_start_6(1);
 	}
 
-IL_00c6:
+IL_0107:
 	{
 		// if (start == 1) {
-		int32_t L_20 = __this->get_start_5();
-		if ((!(((uint32_t)L_20) == ((uint32_t)1))))
+		int32_t L_26 = __this->get_start_6();
+		if ((!(((uint32_t)L_26) == ((uint32_t)1))))
 		{
-			goto IL_013f;
+			goto IL_0193;
 		}
 	}
 	{
-		// uforight.SetActive (false);
-		GameObject_t1756533147 * L_21 = __this->get_uforight_4();
-		// uforight.SetActive (false);
-		NullCheck(L_21);
-		GameObject_SetActive_m2887581199(L_21, (bool)0, /*hidden argument*/NULL);
+		// if (right == 1) {
+		int32_t L_27 = __this->get_right_8();
+		if ((!(((uint32_t)L_27) == ((uint32_t)1))))
+		{
+			goto IL_0134;
+		}
+	}
+	{
+		// Destroy (uforight);
+		GameObject_t1756533147 * L_28 = __this->get_uforight_3();
+		// Destroy (uforight);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_28, /*hidden argument*/NULL);
+		// right = 0;
+		__this->set_right_8(0);
+	}
+
+IL_0134:
+	{
 		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
-		GameObject_t1756533147 * L_22 = __this->get_ufo_3();
+		GameObject_t1756533147 * L_29 = __this->get_ufo_2();
 		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
-		NullCheck(L_22);
-		Transform_t3275118058 * L_23 = GameObject_get_transform_m909382139(L_22, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_24 = L_23;
-		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
-		NullCheck(L_24);
-		Vector3_t2243707580  L_25 = Transform_get_position_m1104419803(L_24, /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
-		Vector3_t2243707580  L_26;
-		memset(&L_26, 0, sizeof(L_26));
-		Vector3__ctor_m2638739322(&L_26, (-0.05f), (0.0f), (0.0f), /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
-		Vector3_t2243707580  L_27 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_25, L_26, /*hidden argument*/NULL);
-		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
-		NullCheck(L_24);
-		Transform_set_position_m2469242620(L_24, L_27, /*hidden argument*/NULL);
-		// if (ufo.transform.position.x <= -12) {
-		GameObject_t1756533147 * L_28 = __this->get_ufo_3();
-		// if (ufo.transform.position.x <= -12) {
-		NullCheck(L_28);
-		Transform_t3275118058 * L_29 = GameObject_get_transform_m909382139(L_28, /*hidden argument*/NULL);
-		// if (ufo.transform.position.x <= -12) {
 		NullCheck(L_29);
-		Vector3_t2243707580  L_30 = Transform_get_position_m1104419803(L_29, /*hidden argument*/NULL);
-		V_1 = L_30;
-		float L_31 = (&V_1)->get_x_1();
-		if ((!(((float)L_31) <= ((float)(-12.0f)))))
+		Transform_t3275118058 * L_30 = GameObject_get_transform_m909382139(L_29, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_31 = L_30;
+		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
+		NullCheck(L_31);
+		Vector3_t2243707580  L_32 = Transform_get_position_m1104419803(L_31, /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
+		Vector3_t2243707580  L_33;
+		memset(&L_33, 0, sizeof(L_33));
+		Vector3__ctor_m2638739322(&L_33, (-0.05f), (0.0f), (0.0f), /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
+		Vector3_t2243707580  L_34 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_32, L_33, /*hidden argument*/NULL);
+		// ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
+		NullCheck(L_31);
+		Transform_set_position_m2469242620(L_31, L_34, /*hidden argument*/NULL);
+		// if (ufo.transform.position.x <= -12) {
+		GameObject_t1756533147 * L_35 = __this->get_ufo_2();
+		// if (ufo.transform.position.x <= -12) {
+		NullCheck(L_35);
+		Transform_t3275118058 * L_36 = GameObject_get_transform_m909382139(L_35, /*hidden argument*/NULL);
+		// if (ufo.transform.position.x <= -12) {
+		NullCheck(L_36);
+		Vector3_t2243707580  L_37 = Transform_get_position_m1104419803(L_36, /*hidden argument*/NULL);
+		V_2 = L_37;
+		float L_38 = (&V_2)->get_x_1();
+		if ((!(((float)L_38) <= ((float)(-12.0f)))))
 		{
-			goto IL_013e;
+			goto IL_0192;
 		}
 	}
 	{
-		// ufo.SetActive (false);
-		GameObject_t1756533147 * L_32 = __this->get_ufo_3();
-		// ufo.SetActive (false);
-		NullCheck(L_32);
-		GameObject_SetActive_m2887581199(L_32, (bool)0, /*hidden argument*/NULL);
+		// Destroy(ufo);
+		GameObject_t1756533147 * L_39 = __this->get_ufo_2();
+		// Destroy(ufo);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_39, /*hidden argument*/NULL);
 	}
 
-IL_013e:
+IL_0192:
 	{
 	}
 
-IL_013f:
+IL_0193:
 	{
 		// }
 		return;
@@ -1552,9 +1976,9 @@ extern "C"  void MoveCamera_OnRightArrow_m3989916971 (MoveCamera_t3193441886 * _
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
-		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
-		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		// if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
+		// if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
+		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)2))))
 		{
 			goto IL_00ef;
@@ -1623,17 +2047,17 @@ extern "C"  void MoveCamera_OnRightArrow_m3989916971 (MoveCamera_t3193441886 * _
 		// rightArrow.SetActive (false);
 		NullCheck(L_16);
 		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
-		// PlayerPrefs.SetInt ("panelColor", 3);
-		// PlayerPrefs.SetInt ("panelColor", 3);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 3, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("bagelNumber", 3);
+		// PlayerPrefs.SetInt ("bagelNumber", 3);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 3, /*hidden argument*/NULL);
 		goto IL_01d8;
 	}
 
 IL_00ef:
 	{
-		// } else if (PlayerPrefs.GetInt ("panelColor") == 1){
-		// } else if (PlayerPrefs.GetInt ("panelColor") == 1){
-		int32_t L_17 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		// } else if (PlayerPrefs.GetInt ("bagelNumber") == 1){
+		// } else if (PlayerPrefs.GetInt ("bagelNumber") == 1){
+		int32_t L_17 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_17) == ((uint32_t)1))))
 		{
 			goto IL_01d8;
@@ -1702,9 +2126,9 @@ IL_00ef:
 		// leftArrow.SetActive (true);
 		NullCheck(L_33);
 		GameObject_SetActive_m2887581199(L_33, (bool)1, /*hidden argument*/NULL);
-		// PlayerPrefs.SetInt ("panelColor", 2);
-		// PlayerPrefs.SetInt ("panelColor", 2);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 2, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("bagelNumber", 2);
+		// PlayerPrefs.SetInt ("bagelNumber", 2);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 2, /*hidden argument*/NULL);
 	}
 
 IL_01d8:
@@ -1723,9 +2147,9 @@ extern "C"  void MoveCamera_OnLeftArrow_m2476212928 (MoveCamera_t3193441886 * __
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
-		// if (PlayerPrefs.GetInt ("panelColor") == 2) {
-		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		// if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
+		// if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
+		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)2))))
 		{
 			goto IL_00ef;
@@ -1794,17 +2218,17 @@ extern "C"  void MoveCamera_OnLeftArrow_m2476212928 (MoveCamera_t3193441886 * __
 		// leftArrow.SetActive (false);
 		NullCheck(L_16);
 		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
-		// PlayerPrefs.SetInt ("panelColor", 1);
-		// PlayerPrefs.SetInt ("panelColor", 1);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 1, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("bagelNumber", 1);
+		// PlayerPrefs.SetInt ("bagelNumber", 1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 1, /*hidden argument*/NULL);
 		goto IL_01d8;
 	}
 
 IL_00ef:
 	{
-		// } else if (PlayerPrefs.GetInt ("panelColor") == 3) {
-		// } else if (PlayerPrefs.GetInt ("panelColor") == 3) {
-		int32_t L_17 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3731991939, /*hidden argument*/NULL);
+		// } else if (PlayerPrefs.GetInt ("bagelNumber") == 3) {
+		// } else if (PlayerPrefs.GetInt ("bagelNumber") == 3) {
+		int32_t L_17 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_17) == ((uint32_t)3))))
 		{
 			goto IL_01d8;
@@ -1873,9 +2297,9 @@ IL_00ef:
 		// rightArrow.SetActive (true);
 		NullCheck(L_33);
 		GameObject_SetActive_m2887581199(L_33, (bool)1, /*hidden argument*/NULL);
-		// PlayerPrefs.SetInt ("panelColor", 2);
-		// PlayerPrefs.SetInt ("panelColor", 2);
-		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral3731991939, 2, /*hidden argument*/NULL);
+		// PlayerPrefs.SetInt ("bagelNumber", 2);
+		// PlayerPrefs.SetInt ("bagelNumber", 2);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 2, /*hidden argument*/NULL);
 	}
 
 IL_01d8:
@@ -2050,20 +2474,30 @@ IL_004f:
 
 IL_0075:
 	{
-		// if (PlayerPrefs.GetInt ("isGameOver") == 1) {
-		// if (PlayerPrefs.GetInt ("isGameOver") == 1) {
+		// if (PlayerPrefs.GetInt ("isGameOver") == 1 || PlayerPrefs.GetInt ("isGameClear") == 1) {
+		// if (PlayerPrefs.GetInt ("isGameOver") == 1 || PlayerPrefs.GetInt ("isGameClear") == 1) {
 		int32_t L_9 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2800021594, /*hidden argument*/NULL);
-		if ((!(((uint32_t)L_9) == ((uint32_t)1))))
+		if ((((int32_t)L_9) == ((int32_t)1)))
 		{
-			goto IL_0092;
+			goto IL_0095;
 		}
 	}
+	{
+		// if (PlayerPrefs.GetInt ("isGameOver") == 1 || PlayerPrefs.GetInt ("isGameClear") == 1) {
+		int32_t L_10 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral4125971469, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_10) == ((uint32_t)1))))
+		{
+			goto IL_00a2;
+		}
+	}
+
+IL_0095:
 	{
 		// speed = 0;
 		__this->set_speed_2((0.0f));
 	}
 
-IL_0092:
+IL_00a2:
 	{
 		// }
 		return;
@@ -2089,6 +2523,8 @@ extern "C"  void moveStage_ScrollEnd_m295650058 (moveStage_t2931930111 * __this,
 extern "C"  void player__ctor_m4144406576 (player_t1147742565 * __this, const MethodInfo* method)
 {
 	{
+		// int S=0;
+		__this->set_S_6(0);
 		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -2107,6 +2543,25 @@ extern "C"  void player_Start_m1004576464 (player_t1147742565 * __this, const Me
 		// _rigid = this.GetComponent<Rigidbody2D> ();
 		Rigidbody2D_t502193897 * L_0 = Component_GetComponent_TisRigidbody2D_t502193897_m3702757851(__this, /*hidden argument*/Component_GetComponent_TisRigidbody2D_t502193897_m3702757851_MethodInfo_var);
 		__this->set__rigid_2(L_0);
+		// if (PlayerPrefs.GetInt ("bagelNumber") != number) {
+		// if (PlayerPrefs.GetInt ("bagelNumber") != number) {
+		int32_t L_1 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
+		int32_t L_2 = __this->get_number_5();
+		if ((((int32_t)L_1) == ((int32_t)L_2)))
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		// Destroy (bagel);
+		GameObject_t1756533147 * L_3 = __this->get_bagel_4();
+		// Destroy (bagel);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+	}
+
+IL_002f:
+	{
 		// }
 		return;
 	}
@@ -2124,104 +2579,225 @@ extern "C"  void player_Update_m2878195153 (player_t1147742565 * __this, const M
 	memset(&V_0, 0, sizeof(V_0));
 	Vector3_t2243707580  V_1;
 	memset(&V_1, 0, sizeof(V_1));
-	Scene_t1684909666  V_2;
+	Vector3_t2243707580  V_2;
 	memset(&V_2, 0, sizeof(V_2));
+	Vector3_t2243707580  V_3;
+	memset(&V_3, 0, sizeof(V_3));
+	Vector3_t2243707580  V_4;
+	memset(&V_4, 0, sizeof(V_4));
+	Vector3_t2243707580  V_5;
+	memset(&V_5, 0, sizeof(V_5));
+	{
+		// if(PlayerPrefs.GetInt ("isGameStart")==1&&S==0){
+		// if(PlayerPrefs.GetInt ("isGameStart")==1&&S==0){
+		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral3917311012, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		int32_t L_1 = __this->get_S_6();
+		if (L_1)
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		// S = 1;
+		__this->set_S_6(1);
+	}
+
+IL_0025:
 	{
 		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0) {
 		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0) {
-		GameObject_t1756533147 * L_0 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
 		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0) {
-		NullCheck(L_0);
-		Transform_t3275118058 * L_1 = GameObject_get_transform_m909382139(L_0, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		Transform_t3275118058 * L_3 = GameObject_get_transform_m909382139(L_2, /*hidden argument*/NULL);
 		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0) {
-		NullCheck(L_1);
-		Vector3_t2243707580  L_2 = Transform_get_position_m1104419803(L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		float L_3 = (&V_0)->get_x_1();
-		if ((!(((float)L_3) < ((float)(-10.0f)))))
+		NullCheck(L_3);
+		Vector3_t2243707580  L_4 = Transform_get_position_m1104419803(L_3, /*hidden argument*/NULL);
+		V_0 = L_4;
+		float L_5 = (&V_0)->get_x_1();
+		if ((!(((float)L_5) < ((float)(-10.0f)))))
 		{
-			goto IL_0063;
+			goto IL_0087;
 		}
 	}
 	{
 		// if (this.gameObject.transform.position.x < -10 && PlayerPrefs.GetInt ("isGameOver") == 0) {
-		int32_t L_4 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2800021594, /*hidden argument*/NULL);
-		if (L_4)
+		int32_t L_6 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2800021594, /*hidden argument*/NULL);
+		if (L_6)
 		{
-			goto IL_0063;
+			goto IL_0087;
 		}
 	}
 	{
 		// this.gameObject.transform.Rotate (0, 0, 0);
 		// this.gameObject.transform.Rotate (0, 0, 0);
-		GameObject_t1756533147 * L_5 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
 		// this.gameObject.transform.Rotate (0, 0, 0);
-		NullCheck(L_5);
-		Transform_t3275118058 * L_6 = GameObject_get_transform_m909382139(L_5, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		Transform_t3275118058 * L_8 = GameObject_get_transform_m909382139(L_7, /*hidden argument*/NULL);
 		// this.gameObject.transform.Rotate (0, 0, 0);
-		NullCheck(L_6);
-		Transform_Rotate_m4255273365(L_6, (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
+		NullCheck(L_8);
+		Transform_Rotate_m4255273365(L_8, (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
 		// PlayerPrefs.SetInt ("isGameOver", 1);
 		// PlayerPrefs.SetInt ("isGameOver", 1);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2800021594, 1, /*hidden argument*/NULL);
-		goto IL_00a6;
+		goto IL_0195;
 	}
 
-IL_0063:
+IL_0087:
 	{
-		// } else if (this.gameObject.transform.position.x > -10) {
-		// } else if (this.gameObject.transform.position.x > -10) {
-		GameObject_t1756533147 * L_7 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
-		// } else if (this.gameObject.transform.position.x > -10) {
-		NullCheck(L_7);
-		Transform_t3275118058 * L_8 = GameObject_get_transform_m909382139(L_7, /*hidden argument*/NULL);
-		// } else if (this.gameObject.transform.position.x > -10) {
-		NullCheck(L_8);
-		Vector3_t2243707580  L_9 = Transform_get_position_m1104419803(L_8, /*hidden argument*/NULL);
-		V_1 = L_9;
-		float L_10 = (&V_1)->get_x_1();
-		if ((!(((float)L_10) > ((float)(-10.0f)))))
+		// } else if (goal_ufo.transform.position.x < this.transform.position.x) {
+		GameObject_t1756533147 * L_9 = __this->get_goal_ufo_3();
+		// } else if (goal_ufo.transform.position.x < this.transform.position.x) {
+		NullCheck(L_9);
+		Transform_t3275118058 * L_10 = GameObject_get_transform_m909382139(L_9, /*hidden argument*/NULL);
+		// } else if (goal_ufo.transform.position.x < this.transform.position.x) {
+		NullCheck(L_10);
+		Vector3_t2243707580  L_11 = Transform_get_position_m1104419803(L_10, /*hidden argument*/NULL);
+		V_1 = L_11;
+		float L_12 = (&V_1)->get_x_1();
+		// } else if (goal_ufo.transform.position.x < this.transform.position.x) {
+		Transform_t3275118058 * L_13 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		// } else if (goal_ufo.transform.position.x < this.transform.position.x) {
+		NullCheck(L_13);
+		Vector3_t2243707580  L_14 = Transform_get_position_m1104419803(L_13, /*hidden argument*/NULL);
+		V_2 = L_14;
+		float L_15 = (&V_2)->get_x_1();
+		if ((!(((float)L_12) < ((float)L_15))))
 		{
-			goto IL_00a6;
+			goto IL_014c;
 		}
 	}
 	{
-		// this.gameObject.transform.Rotate (0, 0, -5);
-		// this.gameObject.transform.Rotate (0, 0, -5);
-		GameObject_t1756533147 * L_11 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
-		// this.gameObject.transform.Rotate (0, 0, -5);
-		NullCheck(L_11);
-		Transform_t3275118058 * L_12 = GameObject_get_transform_m909382139(L_11, /*hidden argument*/NULL);
-		// this.gameObject.transform.Rotate (0, 0, -5);
-		NullCheck(L_12);
-		Transform_Rotate_m4255273365(L_12, (0.0f), (0.0f), (-5.0f), /*hidden argument*/NULL);
-	}
-
-IL_00a6:
-	{
-		// if (SceneManager.GetActiveScene ().name == "SelectScene") {
-		Scene_t1684909666  L_13 = SceneManager_GetActiveScene_m2964039490(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_2 = L_13;
-		// if (SceneManager.GetActiveScene ().name == "SelectScene") {
-		String_t* L_14 = Scene_get_name_m745914591((&V_2), /*hidden argument*/NULL);
-		// if (SceneManager.GetActiveScene ().name == "SelectScene") {
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_15 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_14, _stringLiteral861793334, /*hidden argument*/NULL);
-		if (!L_15)
-		{
-			goto IL_00de;
-		}
-	}
-	{
-		// this.transform.Rotate (0, 0, -0.1f);
-		// this.transform.Rotate (0, 0, -0.1f);
-		Transform_t3275118058 * L_16 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		// this.transform.Rotate (0, 0, -0.1f);
+		// PlayerPrefs.SetInt ("isGameClear", 1);
+		// PlayerPrefs.SetInt ("isGameClear", 1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral4125971469, 1, /*hidden argument*/NULL);
+		// _rigid.gravityScale = 0;
+		Rigidbody2D_t502193897 * L_16 = __this->get__rigid_2();
+		// _rigid.gravityScale = 0;
 		NullCheck(L_16);
-		Transform_Rotate_m4255273365(L_16, (0.0f), (0.0f), (-0.1f), /*hidden argument*/NULL);
+		Rigidbody2D_set_gravityScale_m1426625078(L_16, (0.0f), /*hidden argument*/NULL);
+		// this.transform.position += new Vector3 (0f, 0.1f, 0f);
+		// this.transform.position += new Vector3 (0f, 0.1f, 0f);
+		Transform_t3275118058 * L_17 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_18 = L_17;
+		// this.transform.position += new Vector3 (0f, 0.1f, 0f);
+		NullCheck(L_18);
+		Vector3_t2243707580  L_19 = Transform_get_position_m1104419803(L_18, /*hidden argument*/NULL);
+		// this.transform.position += new Vector3 (0f, 0.1f, 0f);
+		Vector3_t2243707580  L_20;
+		memset(&L_20, 0, sizeof(L_20));
+		Vector3__ctor_m2638739322(&L_20, (0.0f), (0.1f), (0.0f), /*hidden argument*/NULL);
+		// this.transform.position += new Vector3 (0f, 0.1f, 0f);
+		Vector3_t2243707580  L_21 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_19, L_20, /*hidden argument*/NULL);
+		// this.transform.position += new Vector3 (0f, 0.1f, 0f);
+		NullCheck(L_18);
+		Transform_set_position_m2469242620(L_18, L_21, /*hidden argument*/NULL);
+		// if (this.transform.position.y > goal_ufo.transform.position.y) {
+		// if (this.transform.position.y > goal_ufo.transform.position.y) {
+		Transform_t3275118058 * L_22 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		// if (this.transform.position.y > goal_ufo.transform.position.y) {
+		NullCheck(L_22);
+		Vector3_t2243707580  L_23 = Transform_get_position_m1104419803(L_22, /*hidden argument*/NULL);
+		V_3 = L_23;
+		float L_24 = (&V_3)->get_y_2();
+		GameObject_t1756533147 * L_25 = __this->get_goal_ufo_3();
+		// if (this.transform.position.y > goal_ufo.transform.position.y) {
+		NullCheck(L_25);
+		Transform_t3275118058 * L_26 = GameObject_get_transform_m909382139(L_25, /*hidden argument*/NULL);
+		// if (this.transform.position.y > goal_ufo.transform.position.y) {
+		NullCheck(L_26);
+		Vector3_t2243707580  L_27 = Transform_get_position_m1104419803(L_26, /*hidden argument*/NULL);
+		V_4 = L_27;
+		float L_28 = (&V_4)->get_y_2();
+		if ((!(((float)L_24) > ((float)L_28))))
+		{
+			goto IL_0146;
+		}
+	}
+	{
+		// PlayerPrefs.SetInt ("ufo_catch", 1);
+		// PlayerPrefs.SetInt ("ufo_catch", 1);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral2116324470, 1, /*hidden argument*/NULL);
+		// Destroy (bagel);
+		GameObject_t1756533147 * L_29 = __this->get_bagel_4();
+		// Destroy (bagel);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_29, /*hidden argument*/NULL);
 	}
 
-IL_00de:
+IL_0146:
+	{
+		goto IL_0195;
+	}
+
+IL_014c:
+	{
+		// }else if (this.gameObject.transform.position.x > -10) {
+		// }else if (this.gameObject.transform.position.x > -10) {
+		GameObject_t1756533147 * L_30 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		// }else if (this.gameObject.transform.position.x > -10) {
+		NullCheck(L_30);
+		Transform_t3275118058 * L_31 = GameObject_get_transform_m909382139(L_30, /*hidden argument*/NULL);
+		// }else if (this.gameObject.transform.position.x > -10) {
+		NullCheck(L_31);
+		Vector3_t2243707580  L_32 = Transform_get_position_m1104419803(L_31, /*hidden argument*/NULL);
+		V_5 = L_32;
+		float L_33 = (&V_5)->get_x_1();
+		if ((!(((float)L_33) > ((float)(-10.0f)))))
+		{
+			goto IL_0195;
+		}
+	}
+	{
+		// bagel.gameObject.transform.Rotate (0, 0, -5);
+		GameObject_t1756533147 * L_34 = __this->get_bagel_4();
+		// bagel.gameObject.transform.Rotate (0, 0, -5);
+		NullCheck(L_34);
+		GameObject_t1756533147 * L_35 = GameObject_get_gameObject_m3662236595(L_34, /*hidden argument*/NULL);
+		// bagel.gameObject.transform.Rotate (0, 0, -5);
+		NullCheck(L_35);
+		Transform_t3275118058 * L_36 = GameObject_get_transform_m909382139(L_35, /*hidden argument*/NULL);
+		// bagel.gameObject.transform.Rotate (0, 0, -5);
+		NullCheck(L_36);
+		Transform_Rotate_m4255273365(L_36, (0.0f), (0.0f), (-5.0f), /*hidden argument*/NULL);
+	}
+
+IL_0195:
+	{
+		// if (PlayerPrefs.GetInt ("jump") == 1) {
+		// if (PlayerPrefs.GetInt ("jump") == 1) {
+		int32_t L_37 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral842947042, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_37) == ((uint32_t)1))))
+		{
+			goto IL_01d1;
+		}
+	}
+	{
+		// PlayerPrefs.SetInt ("jump",0);
+		// PlayerPrefs.SetInt ("jump",0);
+		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral842947042, 0, /*hidden argument*/NULL);
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
+		GameObject_t1756533147 * L_38 = __this->get_bagel_4();
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
+		NullCheck(L_38);
+		Rigidbody2D_t502193897 * L_39 = GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143(L_38, /*hidden argument*/GameObject_GetComponent_TisRigidbody2D_t502193897_m812242143_MethodInfo_var);
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
+		Vector2_t2243707579  L_40 = Vector2_get_up_m977201173(NULL /*static, unused*/, /*hidden argument*/NULL);
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
+		Vector2_t2243707579  L_41 = Vector2_op_Multiply_m4236139442(NULL /*static, unused*/, L_40, (300.0f), /*hidden argument*/NULL);
+		// bagel.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 300);
+		NullCheck(L_39);
+		Rigidbody2D_AddForce_m3200488178(L_39, L_41, /*hidden argument*/NULL);
+	}
+
+IL_01d1:
 	{
 		// }
 		return;
@@ -2260,6 +2836,227 @@ extern "C"  void player_OnCollisionEnter2D_m3701593854 (player_t1147742565 * __t
 	}
 
 IL_0028:
+	{
+		// }
+		return;
+	}
+}
+// System.Void ResultManager::.ctor()
+extern "C"  void ResultManager__ctor_m2498715521 (ResultManager_t2847043228 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void ResultManager::Start()
+extern "C"  void ResultManager_Start_m2243666657 (ResultManager_t2847043228 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (ResultManager_Start_m2243666657_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	{
+		// tomatoNum = PlayerPrefs.GetInt ("tomato");
+		// tomatoNum = PlayerPrefs.GetInt ("tomato");
+		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2208037916, /*hidden argument*/NULL);
+		__this->set_tomatoNum_2(L_0);
+		// lettuceNum = PlayerPrefs.GetInt ("lettuce");
+		// lettuceNum = PlayerPrefs.GetInt ("lettuce");
+		int32_t L_1 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral2187599488, /*hidden argument*/NULL);
+		__this->set_lettuceNum_3(L_1);
+		// baconNum = PlayerPrefs.GetInt ("bacon");
+		// baconNum = PlayerPrefs.GetInt ("bacon");
+		int32_t L_2 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral996742945, /*hidden argument*/NULL);
+		__this->set_baconNum_4(L_2);
+		// print (tomatoNum);
+		int32_t L_3 = __this->get_tomatoNum_2();
+		int32_t L_4 = L_3;
+		Il2CppObject * L_5 = Box(Int32_t2071877448_il2cpp_TypeInfo_var, &L_4);
+		// print (tomatoNum);
+		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
+		// print (lettuceNum);
+		int32_t L_6 = __this->get_lettuceNum_3();
+		int32_t L_7 = L_6;
+		Il2CppObject * L_8 = Box(Int32_t2071877448_il2cpp_TypeInfo_var, &L_7);
+		// print (lettuceNum);
+		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
+		// print (baconNum);
+		int32_t L_9 = __this->get_baconNum_4();
+		int32_t L_10 = L_9;
+		Il2CppObject * L_11 = Box(Int32_t2071877448_il2cpp_TypeInfo_var, &L_10);
+		// print (baconNum);
+		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, L_11, /*hidden argument*/NULL);
+		// if (tomatoNum > 0) {
+		int32_t L_12 = __this->get_tomatoNum_2();
+		if ((((int32_t)L_12) <= ((int32_t)0)))
+		{
+			goto IL_0091;
+		}
+	}
+	{
+		// for (int i = 0; i < 3; i++) {
+		V_0 = 0;
+		goto IL_0089;
+	}
+
+IL_0075:
+	{
+		// tomatos [i].SetActive (true);
+		GameObjectU5BU5D_t3057952154* L_13 = __this->get_tomatos_5();
+		int32_t L_14 = V_0;
+		NullCheck(L_13);
+		int32_t L_15 = L_14;
+		GameObject_t1756533147 * L_16 = (L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
+		// tomatos [i].SetActive (true);
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)1, /*hidden argument*/NULL);
+		// for (int i = 0; i < 3; i++) {
+		int32_t L_17 = V_0;
+		V_0 = ((int32_t)((int32_t)L_17+(int32_t)1));
+	}
+
+IL_0089:
+	{
+		// for (int i = 0; i < 3; i++) {
+		int32_t L_18 = V_0;
+		if ((((int32_t)L_18) < ((int32_t)3)))
+		{
+			goto IL_0075;
+		}
+	}
+	{
+	}
+
+IL_0091:
+	{
+		// if (lettuceNum > 0) {
+		int32_t L_19 = __this->get_lettuceNum_3();
+		if ((((int32_t)L_19) <= ((int32_t)0)))
+		{
+			goto IL_00c1;
+		}
+	}
+	{
+		// for (int i = 0; i < 2; i++) {
+		V_1 = 0;
+		goto IL_00b9;
+	}
+
+IL_00a5:
+	{
+		// lettuces [i].SetActive (true);
+		GameObjectU5BU5D_t3057952154* L_20 = __this->get_lettuces_6();
+		int32_t L_21 = V_1;
+		NullCheck(L_20);
+		int32_t L_22 = L_21;
+		GameObject_t1756533147 * L_23 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
+		// lettuces [i].SetActive (true);
+		NullCheck(L_23);
+		GameObject_SetActive_m2887581199(L_23, (bool)1, /*hidden argument*/NULL);
+		// for (int i = 0; i < 2; i++) {
+		int32_t L_24 = V_1;
+		V_1 = ((int32_t)((int32_t)L_24+(int32_t)1));
+	}
+
+IL_00b9:
+	{
+		// for (int i = 0; i < 2; i++) {
+		int32_t L_25 = V_1;
+		if ((((int32_t)L_25) < ((int32_t)2)))
+		{
+			goto IL_00a5;
+		}
+	}
+	{
+	}
+
+IL_00c1:
+	{
+		// if (baconNum > 0) {
+		int32_t L_26 = __this->get_baconNum_4();
+		if ((((int32_t)L_26) <= ((int32_t)0)))
+		{
+			goto IL_00f1;
+		}
+	}
+	{
+		// for (int i = 0; i < 2; i++) {
+		V_2 = 0;
+		goto IL_00e9;
+	}
+
+IL_00d5:
+	{
+		// bacons [i].SetActive (true);
+		GameObjectU5BU5D_t3057952154* L_27 = __this->get_bacons_7();
+		int32_t L_28 = V_2;
+		NullCheck(L_27);
+		int32_t L_29 = L_28;
+		GameObject_t1756533147 * L_30 = (L_27)->GetAt(static_cast<il2cpp_array_size_t>(L_29));
+		// bacons [i].SetActive (true);
+		NullCheck(L_30);
+		GameObject_SetActive_m2887581199(L_30, (bool)1, /*hidden argument*/NULL);
+		// for (int i = 0; i < 2; i++) {
+		int32_t L_31 = V_2;
+		V_2 = ((int32_t)((int32_t)L_31+(int32_t)1));
+	}
+
+IL_00e9:
+	{
+		// for (int i = 0; i < 2; i++) {
+		int32_t L_32 = V_2;
+		if ((((int32_t)L_32) < ((int32_t)2)))
+		{
+			goto IL_00d5;
+		}
+	}
+	{
+	}
+
+IL_00f1:
+	{
+		// if (tomatoNum + lettuceNum + baconNum < 2) {
+		int32_t L_33 = __this->get_tomatoNum_2();
+		int32_t L_34 = __this->get_lettuceNum_3();
+		int32_t L_35 = __this->get_baconNum_4();
+		if ((((int32_t)((int32_t)((int32_t)((int32_t)((int32_t)L_33+(int32_t)L_34))+(int32_t)L_35))) >= ((int32_t)2)))
+		{
+			goto IL_011e;
+		}
+	}
+	{
+		// alien_sad.SetActive (true);
+		GameObject_t1756533147 * L_36 = __this->get_alien_sad_9();
+		// alien_sad.SetActive (true);
+		NullCheck(L_36);
+		GameObject_SetActive_m2887581199(L_36, (bool)1, /*hidden argument*/NULL);
+		goto IL_012c;
+	}
+
+IL_011e:
+	{
+		// alien.SetActive (true);
+		GameObject_t1756533147 * L_37 = __this->get_alien_8();
+		// alien.SetActive (true);
+		NullCheck(L_37);
+		GameObject_SetActive_m2887581199(L_37, (bool)1, /*hidden argument*/NULL);
+	}
+
+IL_012c:
+	{
+		// }
+		return;
+	}
+}
+// System.Void ResultManager::Update()
+extern "C"  void ResultManager_Update_m387734342 (ResultManager_t2847043228 * __this, const MethodInfo* method)
+{
 	{
 		// }
 		return;

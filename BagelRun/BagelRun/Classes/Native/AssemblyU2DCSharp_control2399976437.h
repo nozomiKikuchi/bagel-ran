@@ -12,8 +12,6 @@
 
 #include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
 
-// UnityEngine.GameObject
-struct GameObject_t1756533147;
 
 
 
@@ -28,18 +26,8 @@ struct GameObject_t1756533147;
 struct  control_t2399976437  : public MonoBehaviour_t1158329972
 {
 public:
-	// UnityEngine.GameObject control::bagel
-	GameObject_t1756533147 * ___bagel_2;
 
 public:
-	inline static int32_t get_offset_of_bagel_2() { return static_cast<int32_t>(offsetof(control_t2399976437, ___bagel_2)); }
-	inline GameObject_t1756533147 * get_bagel_2() const { return ___bagel_2; }
-	inline GameObject_t1756533147 ** get_address_of_bagel_2() { return &___bagel_2; }
-	inline void set_bagel_2(GameObject_t1756533147 * value)
-	{
-		___bagel_2 = value;
-		Il2CppCodeGenWriteBarrier(&___bagel_2, value);
-	}
 };
 
 #ifdef __clang__
