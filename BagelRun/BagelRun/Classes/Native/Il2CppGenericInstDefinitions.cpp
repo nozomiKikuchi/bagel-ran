@@ -1761,6 +1761,9 @@ extern const Il2CppGenericInst GenInst_AnimationTriggers_t3244928895_0_0_0 = { 1
 extern const Il2CppType Animator_t69676727_0_0_0;
 static const Il2CppType* GenInst_Animator_t69676727_0_0_0_Types[] = { &Animator_t69676727_0_0_0 };
 extern const Il2CppGenericInst GenInst_Animator_t69676727_0_0_0 = { 1, GenInst_Animator_t69676727_0_0_0_Types };
+extern const Il2CppType EdgeCollider2D_t216857133_0_0_0;
+static const Il2CppType* GenInst_EdgeCollider2D_t216857133_0_0_0_Types[] = { &EdgeCollider2D_t216857133_0_0_0 };
+extern const Il2CppGenericInst GenInst_EdgeCollider2D_t216857133_0_0_0 = { 1, GenInst_EdgeCollider2D_t216857133_0_0_0_Types };
 extern const Il2CppType AudioSource_t1135106623_0_0_0;
 static const Il2CppType* GenInst_AudioSource_t1135106623_0_0_0_Types[] = { &AudioSource_t1135106623_0_0_0 };
 extern const Il2CppGenericInst GenInst_AudioSource_t1135106623_0_0_0 = { 1, GenInst_AudioSource_t1135106623_0_0_0_Types };
@@ -1810,7 +1813,7 @@ static const Il2CppType* GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t38854645_0_0_0 = { 2, GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t38854645_0_0_0_Types };
 static const Il2CppType* GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0_Types[] = { &KeyValuePair_2_t38854645_0_0_0, &Il2CppObject_0_0_0 };
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[621] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[622] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_Int32_t2071877448_0_0_0,
@@ -2409,6 +2412,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[621] =
 	&GenInst_TextAnchor_t112990806_0_0_0,
 	&GenInst_AnimationTriggers_t3244928895_0_0_0,
 	&GenInst_Animator_t69676727_0_0_0,
+	&GenInst_EdgeCollider2D_t216857133_0_0_0,
 	&GenInst_AudioSource_t1135106623_0_0_0,
 	&GenInst_Il2CppObject_0_0_0_Vector3_t2243707580_0_0_0_Il2CppObject_0_0_0_PathOptions_t2659884781_0_0_0,
 	&GenInst_Char_t3454481338_0_0_0_Char_t3454481338_0_0_0,

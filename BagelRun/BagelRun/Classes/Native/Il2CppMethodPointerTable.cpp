@@ -7760,6 +7760,7 @@ extern "C" void ReadOnlyAttribute__ctor_m1597711262 ();
 extern "C" void ReadWriteAttribute__ctor_m2566248501 ();
 extern "C" void WriteOnlyAttribute__ctor_m3761552155 ();
 extern "C" void Collider_get_attachedRigidbody_m3279305420 ();
+extern "C" void Collider2D_set_isTrigger_m1243156937 ();
 extern "C" void Collision__ctor_m635081107 ();
 extern "C" void Collision_get_relativeVelocity_m2302609283 ();
 extern "C" void Collision_get_rigidbody_m3671561778 ();
@@ -9148,19 +9149,14 @@ extern "C" void Rigidbody_MovePosition_m1810529681 ();
 extern "C" void Rigidbody_INTERNAL_CALL_MovePosition_m2709492198 ();
 extern "C" void Rigidbody_MoveRotation_m3412525692 ();
 extern "C" void Rigidbody_INTERNAL_CALL_MoveRotation_m2205051919 ();
+extern "C" void Rigidbody2D_set_gravityScale_m1426625078 ();
 extern "C" void Rigidbody2D_AddForce_m3200488178 ();
 extern "C" void Rigidbody2D_INTERNAL_CALL_AddForce_m1958598324 ();
 extern "C" void RPC__ctor_m1432086380 ();
 extern "C" void Scene_get_handle_m1555912301_AdjustorThunk ();
-extern "C" void Scene_get_name_m745914591_AdjustorThunk ();
 extern "C" void Scene_GetHashCode_m3223653899_AdjustorThunk ();
 extern "C" void Scene_Equals_m3588907349_AdjustorThunk ();
-extern "C" void Scene_GetNameInternal_m3140297940 ();
-extern "C" void SceneManager_GetActiveScene_m2964039490 ();
-extern "C" void SceneManager_INTERNAL_CALL_GetActiveScene_m1595803318 ();
 extern "C" void SceneManager_LoadScene_m1386820036 ();
-extern "C" void SceneManager_LoadScene_m87258056 ();
-extern "C" void SceneManager_LoadScene_m592643733 ();
 extern "C" void SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043 ();
 extern "C" void SceneManager_Internal_SceneLoaded_m4005732915 ();
 extern "C" void SceneManager_Internal_SceneUnloaded_m4108957131 ();
@@ -12123,6 +12119,9 @@ extern "C" void FieldWithTarget_set_doStatic_m3820651670 ();
 extern "C" void FieldWithTarget_get_staticString_m3599225804 ();
 extern "C" void FieldWithTarget_set_staticString_m2234360111 ();
 extern "C" void FieldWithTarget_GetValue_m3773769385 ();
+extern "C" void CharController__ctor_m1761968207 ();
+extern "C" void CharController_Start_m4287721027 ();
+extern "C" void CharController_Update_m1600413798 ();
 extern "C" void control__ctor_m2144534888 ();
 extern "C" void control_Start_m3516908368 ();
 extern "C" void control_Update_m3897501109 ();
@@ -12133,6 +12132,12 @@ extern "C" void FadeManager_Update_m705433723 ();
 extern "C" void FlickController__ctor_m496695670 ();
 extern "C" void FlickController_Start_m1763023718 ();
 extern "C" void FlickController_Update_m3090610249 ();
+extern "C" void FoodSelect__ctor_m3492246265 ();
+extern "C" void FoodSelect_Start_m2442283561 ();
+extern "C" void FoodSelect_Update_m2377251210 ();
+extern "C" void GameClear__ctor_m3959291158 ();
+extern "C" void GameClear_Start_m852472518 ();
+extern "C" void GameClear_Update_m4176740233 ();
 extern "C" void gameOver__ctor_m2948236363 ();
 extern "C" void gameOver_Start_m2596220231 ();
 extern "C" void gameOver_Update_m3787536330 ();
@@ -12140,6 +12145,12 @@ extern "C" void itemGet__ctor_m3271015316 ();
 extern "C" void itemGet_Start_m1473858716 ();
 extern "C" void itemGet_Update_m1750601601 ();
 extern "C" void itemGet_OnCollisionEnter2D_m2248259662 ();
+extern "C" void itemManager__ctor_m4185178905 ();
+extern "C" void itemManager_Start_m3537561377 ();
+extern "C" void itemManager_Update_m2364551652 ();
+extern "C" void itemNumber__ctor_m3392102357 ();
+extern "C" void itemNumber_Start_m3346982453 ();
+extern "C" void itemNumber_Update_m2835248660 ();
 extern "C" void MainSceneButtonController__ctor_m2887304150 ();
 extern "C" void MainSceneButtonController_Restart_m3661489295 ();
 extern "C" void MainSceneButtonController_BackHome_m104322040 ();
@@ -12163,6 +12174,9 @@ extern "C" void player__ctor_m4144406576 ();
 extern "C" void player_Start_m1004576464 ();
 extern "C" void player_Update_m2878195153 ();
 extern "C" void player_OnCollisionEnter2D_m3701593854 ();
+extern "C" void ResultManager__ctor_m2498715521 ();
+extern "C" void ResultManager_Start_m2243666657 ();
+extern "C" void ResultManager_Update_m387734342 ();
 extern "C" void SliderController__ctor_m3702861044 ();
 extern "C" void SliderController_Start_m1936277888 ();
 extern "C" void SliderController_Update_m3697823395 ();
@@ -12177,7 +12191,7 @@ extern "C" void StartSceneButtonController_TapStart_m3103234968 ();
 extern "C" void UfoControllerScript__ctor_m3733302702 ();
 extern "C" void UfoControllerScript_Start_m3478285518 ();
 extern "C" void UfoControllerScript_Update_m3761321201 ();
-extern const Il2CppMethodPointer g_MethodPointers[12163] = 
+extern const Il2CppMethodPointer g_MethodPointers[12177] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -19925,6 +19939,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12163] =
 	ReadWriteAttribute__ctor_m2566248501,
 	WriteOnlyAttribute__ctor_m3761552155,
 	Collider_get_attachedRigidbody_m3279305420,
+	Collider2D_set_isTrigger_m1243156937,
 	Collision__ctor_m635081107,
 	Collision_get_relativeVelocity_m2302609283,
 	Collision_get_rigidbody_m3671561778,
@@ -21313,19 +21328,14 @@ extern const Il2CppMethodPointer g_MethodPointers[12163] =
 	Rigidbody_INTERNAL_CALL_MovePosition_m2709492198,
 	Rigidbody_MoveRotation_m3412525692,
 	Rigidbody_INTERNAL_CALL_MoveRotation_m2205051919,
+	Rigidbody2D_set_gravityScale_m1426625078,
 	Rigidbody2D_AddForce_m3200488178,
 	Rigidbody2D_INTERNAL_CALL_AddForce_m1958598324,
 	RPC__ctor_m1432086380,
 	Scene_get_handle_m1555912301_AdjustorThunk,
-	Scene_get_name_m745914591_AdjustorThunk,
 	Scene_GetHashCode_m3223653899_AdjustorThunk,
 	Scene_Equals_m3588907349_AdjustorThunk,
-	Scene_GetNameInternal_m3140297940,
-	SceneManager_GetActiveScene_m2964039490,
-	SceneManager_INTERNAL_CALL_GetActiveScene_m1595803318,
 	SceneManager_LoadScene_m1386820036,
-	SceneManager_LoadScene_m87258056,
-	SceneManager_LoadScene_m592643733,
 	SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043,
 	SceneManager_Internal_SceneLoaded_m4005732915,
 	SceneManager_Internal_SceneUnloaded_m4108957131,
@@ -24288,6 +24298,9 @@ extern const Il2CppMethodPointer g_MethodPointers[12163] =
 	FieldWithTarget_get_staticString_m3599225804,
 	FieldWithTarget_set_staticString_m2234360111,
 	FieldWithTarget_GetValue_m3773769385,
+	CharController__ctor_m1761968207,
+	CharController_Start_m4287721027,
+	CharController_Update_m1600413798,
 	control__ctor_m2144534888,
 	control_Start_m3516908368,
 	control_Update_m3897501109,
@@ -24298,6 +24311,12 @@ extern const Il2CppMethodPointer g_MethodPointers[12163] =
 	FlickController__ctor_m496695670,
 	FlickController_Start_m1763023718,
 	FlickController_Update_m3090610249,
+	FoodSelect__ctor_m3492246265,
+	FoodSelect_Start_m2442283561,
+	FoodSelect_Update_m2377251210,
+	GameClear__ctor_m3959291158,
+	GameClear_Start_m852472518,
+	GameClear_Update_m4176740233,
 	gameOver__ctor_m2948236363,
 	gameOver_Start_m2596220231,
 	gameOver_Update_m3787536330,
@@ -24305,6 +24324,12 @@ extern const Il2CppMethodPointer g_MethodPointers[12163] =
 	itemGet_Start_m1473858716,
 	itemGet_Update_m1750601601,
 	itemGet_OnCollisionEnter2D_m2248259662,
+	itemManager__ctor_m4185178905,
+	itemManager_Start_m3537561377,
+	itemManager_Update_m2364551652,
+	itemNumber__ctor_m3392102357,
+	itemNumber_Start_m3346982453,
+	itemNumber_Update_m2835248660,
 	MainSceneButtonController__ctor_m2887304150,
 	MainSceneButtonController_Restart_m3661489295,
 	MainSceneButtonController_BackHome_m104322040,
@@ -24328,6 +24353,9 @@ extern const Il2CppMethodPointer g_MethodPointers[12163] =
 	player_Start_m1004576464,
 	player_Update_m2878195153,
 	player_OnCollisionEnter2D_m3701593854,
+	ResultManager__ctor_m2498715521,
+	ResultManager_Start_m2243666657,
+	ResultManager_Update_m387734342,
 	SliderController__ctor_m3702861044,
 	SliderController_Start_m1936277888,
 	SliderController_Update_m3697823395,

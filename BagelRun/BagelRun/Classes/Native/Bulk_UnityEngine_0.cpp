@@ -158,6 +158,7 @@
 #include "UnityEngine_UnityEngine_DrivenRectTransformTracker154385424.h"
 #include "UnityEngine_UnityEngine_RectTransform3349966182.h"
 #include "UnityEngine_UnityEngine_DrivenTransformProperties2488747555.h"
+#include "UnityEngine_UnityEngine_EdgeCollider2D216857133.h"
 #include "UnityEngine_UnityEngine_Event3028476042.h"
 #include "UnityEngine_UnityEngine_EventType3919834026.h"
 #include "UnityEngine_UnityEngine_KeyCode2283395152.h"
@@ -202,7 +203,6 @@
 #include "UnityEngine_UnityEngine_RuntimeAnimatorController670468573.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen3274872481.h"
 #include "mscorlib_System_IndexOutOfRangeException3527622107.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Fram1120735295.h"
 
 // UnityEngine.AddComponentMenu
 struct AddComponentMenu_t1099699699;
@@ -352,6 +352,8 @@ struct WriteOnlyAttribute_t14323075;
 struct Collider_t3497673348;
 // UnityEngine.Rigidbody
 struct Rigidbody_t4233889191;
+// UnityEngine.Collider2D
+struct Collider2D_t646061738;
 // UnityEngine.Collision
 struct Collision_t2876846408;
 // UnityEngine.Transform
@@ -364,8 +366,6 @@ struct IEnumerator_t1466026749;
 struct Il2CppArray;
 // UnityEngine.Collision2D
 struct Collision2D_t1539500754;
-// UnityEngine.Collider2D
-struct Collider2D_t646061738;
 // UnityEngine.Rigidbody2D
 struct Rigidbody2D_t502193897;
 // UnityEngine.ContactPoint2D[]
@@ -8269,6 +8269,15 @@ extern "C"  Rigidbody_t4233889191 * Collider_get_attachedRigidbody_m3279305420 (
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Collider_get_attachedRigidbody_m3279305420_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Collider::get_attachedRigidbody()");
 	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.Collider2D::set_isTrigger(System.Boolean)
+extern "C"  void Collider2D_set_isTrigger_m1243156937 (Collider2D_t646061738 * __this, bool ___value0, const MethodInfo* method)
+{
+	typedef void (*Collider2D_set_isTrigger_m1243156937_ftn) (Collider2D_t646061738 *, bool);
+	static Collider2D_set_isTrigger_m1243156937_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Collider2D_set_isTrigger_m1243156937_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Collider2D::set_isTrigger(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 // Conversion methods for marshalling of: UnityEngine.Collision
 extern "C" void Collision_t2876846408_marshal_pinvoke(const Collision_t2876846408& unmarshaled, Collision_t2876846408_marshaled_pinvoke& marshaled)
