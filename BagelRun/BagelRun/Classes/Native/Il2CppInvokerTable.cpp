@@ -7625,20 +7625,6 @@ void* RuntimeInvoker_CalendarIdentifier_t259698391 (const MethodInfo* method, vo
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
-void* RuntimeInvoker_Scene_t1684909666 (const MethodInfo* method, void* obj, void** args)
-{
-	typedef Scene_t1684909666  (*Func)(void* obj, const MethodInfo* method);
-	Scene_t1684909666  ret = ((Func)method->methodPointer)(obj, method);
-	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
-}
-
-void* RuntimeInvoker_Void_t1841601450_SceneU26_t1773220846 (const MethodInfo* method, void* obj, void** args)
-{
-	typedef void (*Func)(void* obj, Scene_t1684909666 * p1, const MethodInfo* method);
-	((Func)method->methodPointer)(obj, (Scene_t1684909666 *)args[0], method);
-	return NULL;
-}
-
 void* RuntimeInvoker_Void_t1841601450_Scene_t1684909666_Int32_t2071877448 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef void (*Func)(void* obj, Scene_t1684909666  p1, int32_t p2, const MethodInfo* method);
@@ -14779,7 +14765,7 @@ void* RuntimeInvoker_Il2CppObject_FloatTween_t2986189219 (const MethodInfo* meth
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[1948] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[1946] = 
 {
 	RuntimeInvoker_Void_t1841601450,
 	RuntimeInvoker_Boolean_t3825574718_Il2CppObject,
@@ -15707,8 +15693,6 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1948] =
 	RuntimeInvoker_Void_t1841601450_FrameData_t1120735295_Int32_t2071877448,
 	RuntimeInvoker_CalendarUnit_t4134400622,
 	RuntimeInvoker_CalendarIdentifier_t259698391,
-	RuntimeInvoker_Scene_t1684909666,
-	RuntimeInvoker_Void_t1841601450_SceneU26_t1773220846,
 	RuntimeInvoker_Void_t1841601450_Scene_t1684909666_Int32_t2071877448,
 	RuntimeInvoker_Void_t1841601450_Scene_t1684909666,
 	RuntimeInvoker_Void_t1841601450_Scene_t1684909666_Scene_t1684909666,

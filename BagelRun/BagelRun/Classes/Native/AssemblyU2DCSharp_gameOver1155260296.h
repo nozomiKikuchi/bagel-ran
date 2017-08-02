@@ -34,6 +34,8 @@ public:
 	GameObject_t1756533147 * ___reset_3;
 	// UnityEngine.GameObject gameOver::home
 	GameObject_t1756533147 * ___home_4;
+	// UnityEngine.GameObject gameOver::shutter
+	GameObject_t1756533147 * ___shutter_5;
 
 public:
 	inline static int32_t get_offset_of_text_2() { return static_cast<int32_t>(offsetof(gameOver_t1155260296, ___text_2)); }
@@ -61,6 +63,15 @@ public:
 	{
 		___home_4 = value;
 		Il2CppCodeGenWriteBarrier(&___home_4, value);
+	}
+
+	inline static int32_t get_offset_of_shutter_5() { return static_cast<int32_t>(offsetof(gameOver_t1155260296, ___shutter_5)); }
+	inline GameObject_t1756533147 * get_shutter_5() const { return ___shutter_5; }
+	inline GameObject_t1756533147 ** get_address_of_shutter_5() { return &___shutter_5; }
+	inline void set_shutter_5(GameObject_t1756533147 * value)
+	{
+		___shutter_5 = value;
+		Il2CppCodeGenWriteBarrier(&___shutter_5, value);
 	}
 };
 
