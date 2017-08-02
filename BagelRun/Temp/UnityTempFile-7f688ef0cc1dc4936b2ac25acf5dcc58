@@ -108,6 +108,7 @@
 'Assets/script/MainStart.cs'
 'Assets/script/MoveCamera.cs'
 'Assets/script/MovePanel.cs'
+'Assets/script/ResultManager.cs'
 'Assets/script/SliderController.cs'
 'Assets/script/StartSceneButtonController.cs'
 'Assets/script/UfoControllerScript.cs'
