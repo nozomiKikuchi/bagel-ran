@@ -22,7 +22,7 @@ public class gameOver : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("isGameOver") == 1) {
 			
 			if (shutter.transform.position.y > 225) {
-				shutter.transform.position += new Vector3 (0f, -10f, 0f);
+				shutter.transform.position += new Vector3 (0f, -20f, 0f);
 
 			} 
 		}

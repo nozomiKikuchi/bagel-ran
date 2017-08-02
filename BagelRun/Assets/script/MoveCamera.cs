@@ -22,6 +22,7 @@ public class MoveCamera : MonoBehaviour {
 	}
 
 	public void OnRightArrow() {
+		print ("pushRight");
 		if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
 			weight.value = 4;
 			speed.value = 9;
@@ -44,6 +45,7 @@ public class MoveCamera : MonoBehaviour {
 	}
 
 	public void OnLeftArrow() {
+		print ("pushLeft");
 		if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
 			weight.value = 10;
 			speed.value = 2;
