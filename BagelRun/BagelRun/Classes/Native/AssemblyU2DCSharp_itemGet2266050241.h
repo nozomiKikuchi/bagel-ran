@@ -12,8 +12,6 @@
 
 #include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
 
-// UnityEngine.GameObject
-struct GameObject_t1756533147;
 
 
 
@@ -28,17 +26,16 @@ struct GameObject_t1756533147;
 struct  itemGet_t2266050241  : public MonoBehaviour_t1158329972
 {
 public:
-	// UnityEngine.GameObject itemGet::player
-	GameObject_t1756533147 * ___player_2;
+	// System.Int32 itemGet::item_n
+	int32_t ___item_n_2;
 
 public:
-	inline static int32_t get_offset_of_player_2() { return static_cast<int32_t>(offsetof(itemGet_t2266050241, ___player_2)); }
-	inline GameObject_t1756533147 * get_player_2() const { return ___player_2; }
-	inline GameObject_t1756533147 ** get_address_of_player_2() { return &___player_2; }
-	inline void set_player_2(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_item_n_2() { return static_cast<int32_t>(offsetof(itemGet_t2266050241, ___item_n_2)); }
+	inline int32_t get_item_n_2() const { return ___item_n_2; }
+	inline int32_t* get_address_of_item_n_2() { return &___item_n_2; }
+	inline void set_item_n_2(int32_t value)
 	{
-		___player_2 = value;
-		Il2CppCodeGenWriteBarrier(&___player_2, value);
+		___item_n_2 = value;
 	}
 };
 
