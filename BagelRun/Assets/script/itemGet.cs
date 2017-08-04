@@ -9,7 +9,7 @@ public class itemGet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		PlayerPrefs.SetInt (this.gameObject.tag, 0);
 	}
 	
 	// Update is called once per frame
