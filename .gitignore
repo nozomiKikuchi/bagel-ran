@@ -10,6 +10,7 @@ ExportedObj/
 *.pidb
 *.booproj
 *.svd
+*.DS_Store
 
 *.DS_Store
 

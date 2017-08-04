@@ -17,7 +17,11 @@ public class MainStart : MonoBehaviour {
 		ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
 		PlayerPrefs.SetInt ("isGameStart", 0);
 		ufo_c=this.GetComponent<EdgeCollider2D> (); 
+<<<<<<< HEAD
 		PlayerPrefs.SetInt ("bagelNumber",2);
+=======
+		//PlayerPrefs.SetInt ("bagelNumber",2);
+>>>>>>> master
 	}
 
 	// Update is called once per frame

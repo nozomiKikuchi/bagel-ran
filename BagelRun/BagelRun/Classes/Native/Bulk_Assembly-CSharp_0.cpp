@@ -193,9 +193,13 @@ extern Il2CppClass* Object_t1021602117_il2cpp_TypeInfo_var;
 extern const uint32_t MainStart_Update_m3545523221_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral3731991939;
 extern const uint32_t MoveCamera_Start_m2614974443_MetadataUsageId;
+<<<<<<< HEAD
 extern Il2CppCodeGenString* _stringLiteral229540100;
 extern const uint32_t MoveCamera_OnRightArrow_m3989916971_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral2923852345;
+=======
+extern const uint32_t MoveCamera_OnRightArrow_m3989916971_MetadataUsageId;
+>>>>>>> master
 extern const uint32_t MoveCamera_OnLeftArrow_m2476212928_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral2565608231;
 extern const uint32_t MovePanel_Update_m71417553_MetadataUsageId;
@@ -1978,15 +1982,22 @@ extern "C"  void MoveCamera_OnRightArrow_m3989916971 (MoveCamera_t3193441886 * _
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+<<<<<<< HEAD
 		// print ("pushRight");
 		// print ("pushRight");
 		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, _stringLiteral229540100, /*hidden argument*/NULL);
+=======
+>>>>>>> master
 		// if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
 		// if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
 		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)2))))
 		{
+<<<<<<< HEAD
 			goto IL_00f9;
+=======
+			goto IL_00ef;
+>>>>>>> master
 		}
 	}
 	{
@@ -2055,17 +2066,28 @@ extern "C"  void MoveCamera_OnRightArrow_m3989916971 (MoveCamera_t3193441886 * _
 		// PlayerPrefs.SetInt ("bagelNumber", 3);
 		// PlayerPrefs.SetInt ("bagelNumber", 3);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 3, /*hidden argument*/NULL);
+<<<<<<< HEAD
 		goto IL_01e2;
 	}
 
 IL_00f9:
+=======
+		goto IL_01d8;
+	}
+
+IL_00ef:
+>>>>>>> master
 	{
 		// } else if (PlayerPrefs.GetInt ("bagelNumber") == 1){
 		// } else if (PlayerPrefs.GetInt ("bagelNumber") == 1){
 		int32_t L_17 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_17) == ((uint32_t)1))))
 		{
+<<<<<<< HEAD
 			goto IL_01e2;
+=======
+			goto IL_01d8;
+>>>>>>> master
 		}
 	}
 	{
@@ -2136,7 +2158,11 @@ IL_00f9:
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 2, /*hidden argument*/NULL);
 	}
 
+<<<<<<< HEAD
 IL_01e2:
+=======
+IL_01d8:
+>>>>>>> master
 	{
 		// }
 		return;
@@ -2152,15 +2178,22 @@ extern "C"  void MoveCamera_OnLeftArrow_m2476212928 (MoveCamera_t3193441886 * __
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+<<<<<<< HEAD
 		// print ("pushLeft");
 		// print ("pushLeft");
 		MonoBehaviour_print_m3437620292(NULL /*static, unused*/, _stringLiteral2923852345, /*hidden argument*/NULL);
+=======
+>>>>>>> master
 		// if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
 		// if (PlayerPrefs.GetInt ("bagelNumber") == 2) {
 		int32_t L_0 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)2))))
 		{
+<<<<<<< HEAD
 			goto IL_00f9;
+=======
+			goto IL_00ef;
+>>>>>>> master
 		}
 	}
 	{
@@ -2229,17 +2262,28 @@ extern "C"  void MoveCamera_OnLeftArrow_m2476212928 (MoveCamera_t3193441886 * __
 		// PlayerPrefs.SetInt ("bagelNumber", 1);
 		// PlayerPrefs.SetInt ("bagelNumber", 1);
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 1, /*hidden argument*/NULL);
+<<<<<<< HEAD
 		goto IL_01e2;
 	}
 
 IL_00f9:
+=======
+		goto IL_01d8;
+	}
+
+IL_00ef:
+>>>>>>> master
 	{
 		// } else if (PlayerPrefs.GetInt ("bagelNumber") == 3) {
 		// } else if (PlayerPrefs.GetInt ("bagelNumber") == 3) {
 		int32_t L_17 = PlayerPrefs_GetInt_m2889062785(NULL /*static, unused*/, _stringLiteral1726810092, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_17) == ((uint32_t)3))))
 		{
+<<<<<<< HEAD
 			goto IL_01e2;
+=======
+			goto IL_01d8;
+>>>>>>> master
 		}
 	}
 	{
@@ -2310,7 +2354,11 @@ IL_00f9:
 		PlayerPrefs_SetInt_m3351928596(NULL /*static, unused*/, _stringLiteral1726810092, 2, /*hidden argument*/NULL);
 	}
 
+<<<<<<< HEAD
 IL_01e2:
+=======
+IL_01d8:
+>>>>>>> master
 	{
 		// }
 		return;
