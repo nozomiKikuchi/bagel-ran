@@ -46,18 +46,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\script\ButtonController.cs" />
      <Compile Include="Assets\script\CharController.cs" />
      <Compile Include="Assets\script\FadeManager.cs" />
      <Compile Include="Assets\script\FlickController.cs" />
      <Compile Include="Assets\script\FoodSelect.cs" />
      <Compile Include="Assets\script\GameClear.cs" />
-     <Compile Include="Assets\script\MainSceneButtonController.cs" />
      <Compile Include="Assets\script\MainStart.cs" />
      <Compile Include="Assets\script\MoveCamera.cs" />
      <Compile Include="Assets\script\MovePanel.cs" />
      <Compile Include="Assets\script\ResultManager.cs" />
      <Compile Include="Assets\script\SliderController.cs" />
-     <Compile Include="Assets\script\StartSceneButtonController.cs" />
      <Compile Include="Assets\script\UfoControllerScript.cs" />
      <Compile Include="Assets\script\control.cs" />
      <Compile Include="Assets\script\gameOver.cs" />
