@@ -15,6 +15,7 @@ public class UfoControllerScript : MonoBehaviour {
 	float x;
 	float y;
 	float z;
+	private AudioSource sound;
 
 	// Use this for initialization
 	void Start () {
