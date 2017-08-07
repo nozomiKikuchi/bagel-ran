@@ -11,8 +11,10 @@ public class MainStart : MonoBehaviour {
 	int start=0;
 	int stop=0;
 	int right=1;
+	private AudioSource sound;
 	// Use this for initialization
 	void Start () {
+		sound = GetComponent<AudioSource>();
 		uforight.SetActive (false);
 		ufo.transform.position += new Vector3 (0f, -0.02f, 0f);
 		PlayerPrefs.SetInt ("isGameStart", 0);
@@ -26,6 +28,7 @@ public class MainStart : MonoBehaviour {
 		if (start == 0 && ufo.transform.position.y < goal_ufo.transform.position.y && PlayerPrefs.GetInt ("isGameClear") != 1) {
 			stop = 1;
 			uforight.SetActive (true);
+			sound.PlayOneShot(sound.clip);
 			ufo.transform.position += new Vector3 (0f, 0f, 0f);
 			ufo_c.isTrigger = true;
 			PlayerPrefs.SetInt ("isGameStart", 1);

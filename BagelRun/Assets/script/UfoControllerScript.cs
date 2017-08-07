@@ -15,10 +15,13 @@ public class UfoControllerScript : MonoBehaviour {
 	float x;
 	float y;
 	float z;
-	private AudioSource sound;
+	private AudioSource sound01, sound02;
 
 	// Use this for initialization
 	void Start () {
+		AudioSource[] audioSources = GetComponents<AudioSource>();
+		sound01 = audioSources[0];
+		sound02 = audioSources[1];
 		speed = 4.0f;
 		radius = 0.5f;
 		yPosition = 30;
@@ -33,6 +36,7 @@ public class UfoControllerScript : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("StartButton") == 1) { 
 			if (ufo.transform.position.x >= 4.5) {
 				uforight.SetActive (true);
+				sound02.PlayOneShot(sound02.clip);
 				ufo.transform.position += new Vector3 (0, 0, 0);
 				if (wheat1.transform.position.y >= 2.0) {
 					wheat1.SetActive (false);

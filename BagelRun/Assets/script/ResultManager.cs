@@ -7,8 +7,12 @@ public class ResultManager : MonoBehaviour {
 	private int tomatoNum, lettuceNum, baconNum;
 	public GameObject[] tomatos, lettuces, bacons;
 	public GameObject alien, alien_sad;
+	private AudioSource sound;
 	// Use this for initialization
 	void Start () {
+		
+		sound = GetComponent<AudioSource>();
+		Invoke("SoundDelayMethod", 1.8f);
 		tomatoNum = PlayerPrefs.GetInt ("tomato");
 		lettuceNum = PlayerPrefs.GetInt ("lettuce");
 		baconNum = PlayerPrefs.GetInt ("bacon");
@@ -45,6 +49,10 @@ public class ResultManager : MonoBehaviour {
 		} else {
 			alien.SetActive (true);
 		}
+	}
+
+	void SoundDelayMethod () {
+		sound.PlayOneShot(sound.clip);
 	}
 	
 	// Update is called once per frame
