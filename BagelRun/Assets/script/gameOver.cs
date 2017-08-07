@@ -9,9 +9,10 @@ public class gameOver : MonoBehaviour {
 	public GameObject home;
 	public GameObject shutter;
 
-
+	private AudioSource sound;
 	// Use this for initialization
 	void Start () {
+		sound = GetComponent<AudioSource>();
 		PlayerPrefs.SetInt ("isGameOver", 0);
 
 	}
@@ -22,16 +23,10 @@ public class gameOver : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("isGameOver") == 1) {
 			
 			if (shutter.transform.position.y > 225) {
-				shutter.transform.position += new Vector3 (0f, -40f, 0f);
-
-			} 
+				sound.PlayOneShot(sound.clip);
+				shutter.transform.position += new Vector3 (0f, -30f, 0f);
+			}
 		}
-
-
-
-
-
-		
 	}
 }
 

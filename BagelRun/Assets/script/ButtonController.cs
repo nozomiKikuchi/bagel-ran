@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour {
 
-	// StartScene
-	public GameObject bagel, run;
+	public GameObject titleLogo;
 	private float currentRemainTime;
 	private SpriteRenderer spRenderer;
 	public float fadeTime = 1f;
-	private AudioSource sound01;
+	private AudioSource sound01, sound02;
 
 	// Use this for initialization
 	void Start () {
 		sound01 = GetComponent<AudioSource>();
+		sound02 = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -24,8 +24,7 @@ public class ButtonController : MonoBehaviour {
 
 	public void OnClick() { // MUST public
 		PlayerPrefs.SetInt("StartButton", 1);
-		bagel.gameObject.SetActive (false);
-		run.gameObject.SetActive (false);
+		titleLogo.gameObject.SetActive (false);
 		sound01.PlayOneShot(sound01.clip);
 		print ("clicked");
 	}
@@ -35,7 +34,9 @@ public class ButtonController : MonoBehaviour {
 	}
 
 	public void TapOption() {
+		sound01.PlayOneShot(sound02.clip);
 		Application.LoadLevel ("OptionScene");
+		print("Option");
 	}
 
 	public void Restart(){
