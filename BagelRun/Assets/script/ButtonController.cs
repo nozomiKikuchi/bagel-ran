@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour {
 
-	public GameObject bagel, run;
+	public GameObject titleLogo;
 	private float currentRemainTime;
 	private SpriteRenderer spRenderer;
 	public float fadeTime = 1f;
@@ -24,8 +24,7 @@ public class ButtonController : MonoBehaviour {
 
 	public void OnClick() { // MUST public
 		PlayerPrefs.SetInt("StartButton", 1);
-		bagel.gameObject.SetActive (false);
-		run.gameObject.SetActive (false);
+		titleLogo.gameObject.SetActive (false);
 		sound01.PlayOneShot(sound01.clip);
 		print ("clicked");
 	}

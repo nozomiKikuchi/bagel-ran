@@ -6,9 +6,10 @@ public class itemGet : MonoBehaviour {
 	
 	int item_n;
 
-
+	private AudioSource sound01;
 	// Use this for initialization
 	void Start () {
+		sound01 = GetComponent<AudioSource>();
 		PlayerPrefs.SetInt (this.gameObject.tag, 0);
 	}
 	
@@ -21,15 +22,13 @@ public class itemGet : MonoBehaviour {
 		//}
 	}
 	void OnCollisionEnter2D(Collision2D col){
+		sound01.PlayOneShot(sound01.clip);
 		if (col.gameObject.tag == "player") {
 			
+			print ("Get");
 			item_n = PlayerPrefs.GetInt (this.gameObject.tag) + 1;
 			PlayerPrefs.SetInt (this.gameObject.tag, item_n);
-
-
-
 			this.gameObject.SetActive (false);
-
 		}
 	}
 }

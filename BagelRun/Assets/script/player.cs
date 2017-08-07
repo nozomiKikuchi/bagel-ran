@@ -12,8 +12,10 @@ public class player : MonoBehaviour {
 	public GameObject bagel;
 	public int number;
 	int S=0;
+	private AudioSource sound01;
 	// Use this for initialization
 	void Start () {
+		sound01 = GetComponent<AudioSource>();
 		_rigid = this.GetComponent<Rigidbody2D> (); 
 		//GetComponent<Image>().color = new Color(255, 255, 255, 0);
 		//_rigid.gravityScale = 0;
@@ -61,6 +63,7 @@ public class player : MonoBehaviour {
 	}
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "stage") {
+			sound01.PlayOneShot(sound01.clip);
 			PlayerPrefs.SetInt ("jumpping", 1);
 		}
 	}
