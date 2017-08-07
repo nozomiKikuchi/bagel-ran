@@ -3,16 +3,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOver : MonoBehaviour {
+public class gameOver : MonoBehaviour {
 	public GameObject text;
 	public GameObject reset;
 	public GameObject home;
 	public GameObject shutter;
 
-	private AudioSource sound;
+//	private AudioSource sound;
 	// Use this for initialization
 	void Start () {
-		sound = GetComponent<AudioSource>();
+//		sound = GetComponent<AudioSource>();
 		PlayerPrefs.SetInt ("isGameOver", 0);
 
 	}
@@ -23,7 +23,7 @@ public class GameOver : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("isGameOver") == 1) {
 			
 			if (shutter.transform.position.y > 225) {
-				sound.PlayOneShot(sound.clip);
+//				sound.PlayOneShot(sound.clip);
 				shutter.transform.position += new Vector3 (0f, -30f, 0f);
 			}
 		}

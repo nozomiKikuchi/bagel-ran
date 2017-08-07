@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour {
+public class player : MonoBehaviour {
 
 	private Rigidbody2D _rigid;
 	public GameObject goal_ufo;
