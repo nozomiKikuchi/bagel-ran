@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResultManager : MonoBehaviour {
 
-	private int tomatoNum, lettuceNum, baconNum;
+	private int tomatoNum, lettuceNum, baconNum, ketya, mayo;
 	public GameObject[] tomatos, lettuces, bacons;
 	public GameObject alien, alien_sad;
 	private AudioSource sound;
@@ -16,6 +16,8 @@ public class ResultManager : MonoBehaviour {
 		tomatoNum = PlayerPrefs.GetInt ("tomato");
 		lettuceNum = PlayerPrefs.GetInt ("lettuce");
 		baconNum = PlayerPrefs.GetInt ("bacon");
+		ketya = PlayerPrefs.GetInt ("ketya");
+		mayo = PlayerPrefs.GetInt ("mayo");
 		print (tomatoNum);
 		print (lettuceNum);
 		print (baconNum);
@@ -33,6 +35,14 @@ public class ResultManager : MonoBehaviour {
 			for (int i = 0; i < 2; i++) {
 				bacons [i].SetActive (true);
 			}
+		}
+
+		if (ketya > 0) {
+			
+		}
+
+		if (mayo > 0) {
+			
 		}
 
 //		for (int i = tomatoNum; i > 0; i--) {
