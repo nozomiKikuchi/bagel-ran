@@ -13,7 +13,7 @@ public class MoveCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerPrefs.SetInt ("panelColor", 2);
+		PlayerPrefs.SetInt ("bagelNumber", 2);
 	}
 	
 	// Update is called once per frame
