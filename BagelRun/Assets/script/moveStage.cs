@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveStage : MonoBehaviour {
+public class MoveStage : MonoBehaviour {
 	public float speed = 1.0f;
 	public float startPosition;
 	public float endPosition;

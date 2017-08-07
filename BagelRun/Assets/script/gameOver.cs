@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameOver : MonoBehaviour {
+public class GameOver : MonoBehaviour {
 	public GameObject text;
 	public GameObject reset;
 	public GameObject home;

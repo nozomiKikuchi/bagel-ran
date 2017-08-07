@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class ResultManager : MonoBehaviour {
 
-	private int tomatoNum, lettuceNum, baconNum;
+	private int tomatoNum, lettuceNum, baconNum, ketya, mayo;
 	public GameObject[] tomatos, lettuces, bacons;
 	public GameObject alien, alien_sad;
+	private AudioSource sound;
 	// Use this for initialization
 	void Start () {
+		
+		sound = GetComponent<AudioSource>();
+		Invoke("SoundDelayMethod", 1.8f);
 		tomatoNum = PlayerPrefs.GetInt ("tomato");
 		lettuceNum = PlayerPrefs.GetInt ("lettuce");
 		baconNum = PlayerPrefs.GetInt ("bacon");
+		ketya = PlayerPrefs.GetInt ("ketya");
+		mayo = PlayerPrefs.GetInt ("mayo");
 		print (tomatoNum);
 		print (lettuceNum);
 		print (baconNum);
@@ -31,6 +37,14 @@ public class ResultManager : MonoBehaviour {
 			}
 		}
 
+		if (ketya > 0) {
+			
+		}
+
+		if (mayo > 0) {
+			
+		}
+
 //		for (int i = tomatoNum; i > 0; i--) {
 //			tomatos [i].SetActive (true);
 //		}
@@ -45,6 +59,10 @@ public class ResultManager : MonoBehaviour {
 		} else {
 			alien.SetActive (true);
 		}
+	}
+
+	void SoundDelayMethod () {
+		sound.PlayOneShot(sound.clip);
 	}
 	
 	// Update is called once per frame

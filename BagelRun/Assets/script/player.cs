@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class player : MonoBehaviour {
+public class Player : MonoBehaviour {
 
 	private Rigidbody2D _rigid;
 	public GameObject goal_ufo;
@@ -12,10 +12,12 @@ public class player : MonoBehaviour {
 	public GameObject bagel;
 	public int number;
 	int S=0;
-	private AudioSource sound01;
+	private AudioSource sound01, sound02;
 	// Use this for initialization
 	void Start () {
-		sound01 = GetComponent<AudioSource>();
+		AudioSource[] audioSources = GetComponents<AudioSource>();
+		sound01 = audioSources[0];
+		sound02 = audioSources[1];
 		_rigid = this.GetComponent<Rigidbody2D> (); 
 		//GetComponent<Image>().color = new Color(255, 255, 255, 0);
 		//_rigid.gravityScale = 0;
@@ -63,8 +65,10 @@ public class player : MonoBehaviour {
 	}
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "stage") {
-			sound01.PlayOneShot(sound01.clip);
+			sound02.PlayOneShot (sound02.clip);
 			PlayerPrefs.SetInt ("jumpping", 1);
+		} else if (col.gameObject.name == "item") {
+			sound01.PlayOneShot (sound01.clip);
 		}
 	}
 }

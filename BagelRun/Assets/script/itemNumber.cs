@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI; // <---- 追加1
 
 
-public class itemNumber : MonoBehaviour {
+public class ItemNumber : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		

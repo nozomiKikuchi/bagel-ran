@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameClear : MonoBehaviour {
 	public GameObject goal_ufo;
 	public GameObject goal_right;
-
 	// Use this for initialization
 	void Start () {
 		//goal_ufo.gameObject.SetActive (false);
@@ -24,11 +23,8 @@ public class GameClear : MonoBehaviour {
 			goal_ufo.transform.position += new Vector3 (0.1f, 0.05f, 0f);
 			PlayerPrefs.SetInt ("ufoMoveRight", 1);
 			if (goal_ufo.transform.position.x >= 5) {
-			
 				Application.LoadLevel ("resultScene");
 			}
-
-
 		}
 	}
 }
