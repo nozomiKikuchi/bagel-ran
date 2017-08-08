@@ -135,14 +135,14 @@
  <Reference Include="DOTween">
  <HintPath>/Users/daiki/Documents/works/Unity/bagel-run/BagelRun/Assets/AssetStore/DOTween/DOTween.dll</HintPath>
  </Reference>
- <Reference Include="DOTween50">
- <HintPath>/Users/daiki/Documents/works/Unity/bagel-run/BagelRun/Assets/AssetStore/DOTween/DOTween50.dll</HintPath>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/daiki/Documents/works/Unity/bagel-run/BagelRun/Assets/AssetStore/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
  <HintPath>/Users/daiki/Documents/works/Unity/bagel-run/BagelRun/Assets/AssetStore/DOTween/DOTween46.dll</HintPath>
  </Reference>
- <Reference Include="DOTween43">
- <HintPath>/Users/daiki/Documents/works/Unity/bagel-run/BagelRun/Assets/AssetStore/DOTween/DOTween43.dll</HintPath>
+ <Reference Include="DOTween50">
+ <HintPath>/Users/daiki/Documents/works/Unity/bagel-run/BagelRun/Assets/AssetStore/DOTween/DOTween50.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

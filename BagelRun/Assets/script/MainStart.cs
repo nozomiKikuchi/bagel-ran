@@ -32,27 +32,22 @@ public class MainStart : MonoBehaviour {
 			ufo.transform.position += new Vector3 (0f, 0f, 0f);
 			ufo_c.isTrigger = true;
 			PlayerPrefs.SetInt ("isGameStart", 1);
-			print ("A");
 
 		} else if(stop!=1){
 			ufo.transform.position += new Vector3 (0f, -0.05f, 0f);
-			print ("B");
 		}
 
 		if (PlayerPrefs.GetInt ("jumpping") == 1) {
 			start = 1;
-			print ("C");
 		}
 		if (start == 1) {
 			if (right == 1) {
 				Destroy (uforight);
 				right = 0;
-				print ("D");
 			}
 			ufo.transform.position += new Vector3 (-0.05f, 0f, 0f);
 			if (ufo.transform.position.x <= -12) {
 				Destroy(ufo);
-				print ("E");
 			}
 		}
 

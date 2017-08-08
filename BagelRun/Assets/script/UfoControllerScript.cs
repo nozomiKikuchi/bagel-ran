@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UfoControllerScript : MonoBehaviour {
 
@@ -12,9 +13,9 @@ public class UfoControllerScript : MonoBehaviour {
 	private float speed;
 	private float radius;
 	private float yPosition;
-	float x;
-	float y;
-	float z;
+	private float x;
+	private float y;
+	private float z;
 	private AudioSource sound01, sound02;
 
 	// Use this for initialization
@@ -44,7 +45,7 @@ public class UfoControllerScript : MonoBehaviour {
 					uforight.SetActive (false);
 					if (ufo.transform.position.x > 20) {
 						ufo.transform.position += new Vector3 (0, 0, 0);
-						Application.LoadLevel ("SelectScene");
+						SceneManager.LoadScene ("SelectScene");
 					} else {
 						ufo.transform.position += new Vector3 (0.1f, 0, 0);
 						PlayerPrefs.SetInt ("ufoMoveRight", 1);

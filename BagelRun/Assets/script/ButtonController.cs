@@ -30,22 +30,21 @@ public class ButtonController : MonoBehaviour {
 
 	public void TapStart() {
 //		sound01.PlayOneShot(sound01.clip);
-		Application.LoadLevel ("mainScene");
+		SceneManager.LoadScene ("mainScene");
 	}
 
 	public void TapOption() {
 //		sound01.PlayOneShot(sound01.clip);
-		Application.LoadLevel ("OptionScene");
-		print("Option");
+		SceneManager.LoadScene ("OptionScene");
 	}
 
 	public void Restart(){
-		Application.LoadLevel ("mainScene");
+		SceneManager.LoadScene ("mainScene");
 	}
 	public void BackHome(){
-		Application.LoadLevel ("startScene");
+		SceneManager.LoadScene ("startScene");
 	}
 	public void gameStart(){
-		Application.LoadLevel ("mainScene");
+		SceneManager.LoadScene ("mainScene");
 	}
 }

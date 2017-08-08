@@ -25,10 +25,11 @@ public class ItemGet : MonoBehaviour {
 		
 		if (col.gameObject.tag == "player") {
 //			sound01.PlayOneShot(sound01.clip);
-			print ("Get");
 			item_n = PlayerPrefs.GetInt (this.gameObject.tag) + 1;
 			PlayerPrefs.SetInt (this.gameObject.tag, item_n);
 			this.gameObject.SetActive (false);
+			print (this.gameObject.tag);
+			print (item_n);
 		}
 	}
 }

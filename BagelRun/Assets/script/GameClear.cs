@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameClear : MonoBehaviour {
 	public GameObject goal_ufo;
@@ -23,7 +24,7 @@ public class GameClear : MonoBehaviour {
 			goal_ufo.transform.position += new Vector3 (0.1f, 0.05f, 0f);
 			PlayerPrefs.SetInt ("ufoMoveRight", 1);
 			if (goal_ufo.transform.position.x >= 5) {
-				Application.LoadLevel ("resultScene");
+				SceneManager.LoadScene ("resultScene");
 			}
 		}
 	}

@@ -1,26 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResultManager : MonoBehaviour {
 
-	private int tomatoNum, lettuceNum, baconNum, ketya, mayo;
+	private int tomatoNum, lettuceNum, baconNum, ketyaNum, mayoNum;
 	public GameObject[] tomatos, lettuces, bacons;
 	public GameObject alien, alien_sad;
-	private AudioSource sound;
+//	private AudioSource sound;
+	public GameObject ketya, mayo;
+	public Text tomatoTxt, lettuceTxt, baconTxt;
+
 	// Use this for initialization
 	void Start () {
-		
-		sound = GetComponent<AudioSource>();
-		Invoke("SoundDelayMethod", 1.8f);
+//		sound = GetComponent<AudioSource>();
+//		Invoke("SoundDelayMethod", 1.8f);
 		tomatoNum = PlayerPrefs.GetInt ("tomato");
 		lettuceNum = PlayerPrefs.GetInt ("lettuce");
 		baconNum = PlayerPrefs.GetInt ("bacon");
-		ketya = PlayerPrefs.GetInt ("ketya");
-		mayo = PlayerPrefs.GetInt ("mayo");
-		print (tomatoNum);
-		print (lettuceNum);
-		print (baconNum);
+		ketyaNum = PlayerPrefs.GetInt ("ketya");
+		mayoNum = PlayerPrefs.GetInt ("mayo");
+		print ("k" + ketyaNum);
+		print ("m" + mayoNum);
+
+		tomatoTxt.GetComponent<Text> ().text = ":" + tomatoNum.ToString ();
+		lettuceTxt.GetComponent<Text> ().text = ":" + lettuceNum.ToString ();
+		baconTxt.GetComponent<Text> ().text = ":" + baconNum.ToString ();
+
 		if (tomatoNum > 0) {
 			for (int i = 0; i < 3; i++) {
 				tomatos [i].SetActive (true);
@@ -37,12 +44,12 @@ public class ResultManager : MonoBehaviour {
 			}
 		}
 
-		if (ketya > 0) {
-			
+		if (ketyaNum > 0) {
+			ketya.GetComponent<Image>().color = new Color(255, 255, 255, 255);
 		}
 
-		if (mayo > 0) {
-			
+		if (mayoNum > 0) {
+			mayo.GetComponent<Image>().color = new Color(255, 255, 255, 255);
 		}
 
 //		for (int i = tomatoNum; i > 0; i--) {
@@ -59,10 +66,6 @@ public class ResultManager : MonoBehaviour {
 		} else {
 			alien.SetActive (true);
 		}
-	}
-
-	void SoundDelayMethod () {
-		sound.PlayOneShot(sound.clip);
 	}
 	
 	// Update is called once per frame
