@@ -7,15 +7,12 @@ public class ResultManager : MonoBehaviour {
 
 	private int tomatoNum, lettuceNum, baconNum, ketyaNum, mayoNum;
 	public GameObject[] tomatos, lettuces, bacons;
-	public GameObject alien, alien_sad;
-//	private AudioSource sound;
-	public GameObject ketya, mayo;
+	public GameObject alien, alien_sad, ketya, mayo;
+	public GameObject ketya_icon, mayo_icon;
 	public Text tomatoTxt, lettuceTxt, baconTxt;
 
 	// Use this for initialization
 	void Start () {
-//		sound = GetComponent<AudioSource>();
-//		Invoke("SoundDelayMethod", 1.8f);
 		tomatoNum = PlayerPrefs.GetInt ("tomato");
 		lettuceNum = PlayerPrefs.GetInt ("lettuce");
 		baconNum = PlayerPrefs.GetInt ("bacon");
@@ -43,13 +40,19 @@ public class ResultManager : MonoBehaviour {
 				bacons [i].SetActive (true);
 			}
 		}
+		if (ketyaNum > 0) {
+			ketya.SetActive (true);
+		}
+		if (mayoNum > 0) {
+			mayo.SetActive (true);
+		}
 
 		if (ketyaNum > 0) {
-			ketya.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+			ketya_icon.GetComponent<Image>().color = new Color(255, 255, 255, 255);
 		}
 
 		if (mayoNum > 0) {
-			mayo.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+			mayo_icon.GetComponent<Image>().color = new Color(255, 255, 255, 255);
 		}
 
 //		for (int i = tomatoNum; i > 0; i--) {
@@ -63,8 +66,10 @@ public class ResultManager : MonoBehaviour {
 //		}
 		if (tomatoNum + lettuceNum + baconNum < 2) {
 			alien_sad.SetActive (true);
+			PlayerPrefs.SetInt ("Fanfare", 1);
 		} else {
 			alien.SetActive (true);
+			PlayerPrefs.SetInt ("Fanfare", 0);
 		}
 	}
 	

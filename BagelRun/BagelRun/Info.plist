@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>BagelRun</string>
+	<string>BagelGO</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
@@ -19,7 +19,7 @@
 		<string>AppIcon76x76~ipad.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.Company.${PRODUCT_NAME}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -27,7 +27,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>0</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -64,7 +64,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UnityCloudProjectID</key>
-	<string>001a3a32-8a9e-4ad1-920e-a2bc4d6b0b6c</string>
+	<string>84bfbf22-881d-4a4c-9386-1ba90922f05a</string>
 	<key>UnityCrashSubmissionURL</key>
 	<string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
 	<key>Unity_LoadingActivityIndicatorStyle</key>

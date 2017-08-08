@@ -98,6 +98,7 @@
      <Compile Include="Assets\Script\MovePanel.cs" />
      <Compile Include="Assets\Script\MoveStage.cs" />
      <Compile Include="Assets\Script\PushMessage.cs" />
+     <Compile Include="Assets\Script\ResultBagle.cs" />
      <Compile Include="Assets\Script\ResultManager.cs" />
      <Compile Include="Assets\Script\SliderController.cs" />
      <Compile Include="Assets\Script\UfoControllerScript.cs" />
