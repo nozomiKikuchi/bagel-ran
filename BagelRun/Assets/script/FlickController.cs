@@ -17,6 +17,7 @@ public class FlickController : MonoBehaviour {
 	void Start () {
 		minSwipeDistX = 30;
 		minSwipeDistY = 30;
+		print ("Flick");
 	}
 	
 	// Update is called once per frame
@@ -46,6 +47,7 @@ public class FlickController : MonoBehaviour {
 					if (SignValueX > 0) {
 						//右方向にスワイプしたとき
 						if (PlayerPrefs.GetInt ("selectBagel") == 2) {
+							print ("SwipeRight");
 							weight.value = 10;
 							speed.value = 2;
 							luck.value = 6;
@@ -69,6 +71,7 @@ public class FlickController : MonoBehaviour {
 					} else if (SignValueX < 0) {
 						//左方向にスワイプしたとき
 						if (PlayerPrefs.GetInt ("selectBagel") == 2) {
+							print ("SwipeLeft");
 							weight.value = 4;
 							speed.value = 9;
 							luck.value = 10;

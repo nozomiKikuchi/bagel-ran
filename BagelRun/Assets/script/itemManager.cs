@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemManager : MonoBehaviour {
+public class itemManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
