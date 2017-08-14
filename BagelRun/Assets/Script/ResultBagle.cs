@@ -19,7 +19,9 @@ public class ResultBagle : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if (PlayerPrefs.GetInt ("Fanfare") == 1) {
 			if (col.gameObject.tag == "item") {
-				sound.PlayOneShot(sound.clip);
+				if (PlayerPrefs.GetInt ("isHappy") == 1) {
+					sound.PlayOneShot(sound.clip);
+				}
 			}
 		}
 	}

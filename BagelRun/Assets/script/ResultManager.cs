@@ -65,9 +65,11 @@ public class ResultManager : MonoBehaviour {
 //			bacons [i].SetActive (true);
 //		}
 		if (tomatoNum + lettuceNum + baconNum < 2) {
+			PlayerPrefs.SetInt ("isHappy", 0);
 			alien_sad.SetActive (true);
 			PlayerPrefs.SetInt ("Fanfare", 1);
 		} else {
+			PlayerPrefs.SetInt ("isHappy", 1);
 			alien.SetActive (true);
 			PlayerPrefs.SetInt ("Fanfare", 0);
 		}
